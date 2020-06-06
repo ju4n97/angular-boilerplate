@@ -11,7 +11,16 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
-    "lib": ["es2018", "dom"]
+    "lib": ["es2018", "dom"],
+    "paths": {
+      "@app/*": ["src/app/*"],
+      "@core/*": ["src/app/@core/*"],
+      "@shared/*": ["src/app/@shared/*"],
+      "@ui/*": ["src/app/@ui/*"],
+      "@pages/*": ["src/app/pages/*"],
+      "@assets/*": ["src/assets/*"],
+      "@environments/*": ["src/environments/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableIvy": true,
