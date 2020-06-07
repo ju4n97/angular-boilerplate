@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SeoService } from './@core/services/seo.service';
+import { SeoService } from './@core/services';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
