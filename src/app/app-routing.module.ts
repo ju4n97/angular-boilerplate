@@ -13,11 +13,20 @@ const routes: Routes = [
       import('@features/home/home.module').then((m) => m.HomeModule),
   },
 
+  // Internal server error page response
+  {
+    path: 'internal-server-error',
+    loadChildren: () =>
+      import('@ui/_internal-server-error/internal-server-error.module').then(
+        (m) => m.InternalServerErrorModule
+      ),
+  },
+
   // Not found page (must go at the bottom)
   {
     path: '**',
     loadChildren: () =>
-      import('@ui/responses/responses.module').then((m) => m.ResponsesModule),
+      import('@ui/_not-found/not-found.module').then((m) => m.NotFoundModule),
   },
 ];
 

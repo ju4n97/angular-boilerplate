@@ -1,2 +1,3 @@
 export { LayoutModule } from './layout/layout.module';
-export { ResponsesModule } from './responses/responses.module';
+export { InternalServerErrorModule } from './_internal-server-error/internal-server-error.module';
+export { NotFoundModule } from './_not-found/not-found.module';
