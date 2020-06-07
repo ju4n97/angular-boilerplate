@@ -12,6 +12,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('@features/home/home.module').then((m) => m.HomeModule),
   },
+
+  // Not found page (must go at the bottom)
+  {
+    path: '**',
+    loadChildren: () =>
+      import('@ui/responses/responses.module').then((m) => m.ResponsesModule),
+  },
 ];
 
 @NgModule({

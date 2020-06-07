@@ -32,6 +32,8 @@ export class SeoService {
             const { title, description, robots } = child.snapshot.data;
             return [title, description, robots];
           }
+
+          return [null, null, null];
         })
       )
       .subscribe((data) => {
