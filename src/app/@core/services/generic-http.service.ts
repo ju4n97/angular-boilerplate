@@ -19,7 +19,7 @@ export class GenericHttpService<T> implements GenericHttp<T> {
   }
 
   getAll(args?: { httpParams?: HttpParams; extra?: string }): Observable<T[]> {
-    const { httpParams, extra } = args;
+    const { httpParams, extra } = Object(args);
     const url = `${this.baseUrl}/${this.endpoint}/${extra || ''}`;
 
     return this.httpClient
