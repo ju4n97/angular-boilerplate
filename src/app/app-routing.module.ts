@@ -1,11 +1,21 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { PathMap } from './@core/enums/path-map.enum';
 
+const routes: Routes = [
+  // ===== Uncomment if pathMap.Home is different from empty =====
+  // { path: '', redirectTo: PathMap.Home, pathMatch: 'full' },
 
-const routes: Routes = [];
+  // Home page
+  {
+    path: PathMap.Home,
+    loadChildren: () =>
+      import('@features/home/home.module').then((m) => m.HomeModule),
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
