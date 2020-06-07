@@ -21,6 +21,6 @@ export class ErrorService {
   }
 
   getServerStack(error: HttpErrorResponse): string {
-    return error.url;
+    return JSON.stringify(error);
   }
 }
