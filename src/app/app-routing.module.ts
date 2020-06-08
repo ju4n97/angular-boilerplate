@@ -13,6 +13,13 @@ const routes: Routes = [
       import('@features/home/home.module').then((m) => m.HomeModule),
   },
 
+  // Auth
+  {
+    path: PathMap.Auth,
+    loadChildren: () =>
+      import('@app/@auth/auth.module').then((m) => m.AuthModule),
+  },
+
   // Internal server error page response
   {
     path: 'internal-server-error',
