@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { GlobalErrorHandler } from './handlers';
-import { ServerErrorInterceptor } from './interceptors';
+import { JwtInterceptor, ServerErrorInterceptor } from './interceptors';
 
 @NgModule({
   declarations: [],
@@ -14,6 +14,7 @@ import { ServerErrorInterceptor } from './interceptors';
       useClass: ServerErrorInterceptor,
       multi: true,
     },
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
   ],
 })
 export class CoreModule {}
