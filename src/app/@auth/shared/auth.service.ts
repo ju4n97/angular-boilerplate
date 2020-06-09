@@ -26,21 +26,28 @@ export class AuthService extends GenericHttpService<Partial<User>> {
   }
 
   login(username: string, password: string) {
-    return super
-      .post({
-        username,
-        password,
-      })
-      .pipe(
-        map((user) => {
-          // Store user details and jwt token in local storage
-          // to keep user logged in between page refreshes
+    return super.post({ username, password }, 'login').pipe(
+      map((user) => {
+        // Store user details and jwt token in local storage
+        // to keep user logged in between page refreshes
 
-          localStorage.setItem('currentUser', JSON.stringify(user));
-          this.currentUserSubject.next(user as User);
-          return user;
-        })
-      );
+        localStorage.setItem('currentUser', JSON.stringify(user));
+        this.currentUserSubject.next(user as User);
+        return user;
+      })
+    );
+  }
+
+  register(user: User) {
+    return super.post(user, 'register');
+  }
+
+  beginPasswordReset(email: string) {
+    return super.post({ email }, 'begin-password-reset');
+  }
+
+  resetPassword(username: string, password: string, token: string) {
+    return super.post({ username, password, token }, 'reset-password');
   }
 
   logout() {
