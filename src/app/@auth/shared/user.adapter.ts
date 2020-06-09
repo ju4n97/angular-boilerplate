@@ -9,6 +9,7 @@ export class UserAdapter implements ModelAdapter<User> {
       item.password,
       item.name,
       item.lastname,
+      item.role,
       item.token
     );
   }
@@ -19,6 +20,7 @@ export class UserAdapter implements ModelAdapter<User> {
       password: item.password,
       name: item.name,
       lastname: item.lastname,
+      role: item.role,
       toke: item.token,
     };
   }
