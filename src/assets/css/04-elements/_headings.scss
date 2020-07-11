@@ -11,7 +11,6 @@ h5,
 h6,
 .h6 {
   font-family: $fontDisplay;
-  font-weight: $fontDisplayWeight;
   margin-top: 0;
   margin-bottom: 0.5rem;
   line-height: 1.25;
@@ -50,24 +49,20 @@ h6,
 
 .display-1 {
   font-size: 6rem;
-  font-weight: $fontDisplayWeight;
   line-height: 1.2;
 }
 
 .display-2 {
   font-size: 5.5rem;
-  font-weight: $fontDisplayWeight;
   line-height: 1.2;
 }
 
 .display-3 {
   font-size: 4.5rem;
-  font-weight: $fontDisplayWeight;
   line-height: 1.2;
 }
 
 .display-4 {
   font-size: 3.5rem;
-  font-weight: $fontDisplayWeight;
   line-height: 1.2;
 }

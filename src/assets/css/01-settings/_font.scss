@@ -1,0 +1,23 @@
+@font-face {
+  font-family: $fontBody;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../../fonts/noto-sans/NotoSans-Regular.ttf) format("woff");
+}
+
+@font-face {
+  font-family: $fontBody;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../../fonts/noto-sans/NotoSans-Bold.ttf) format("woff");
+}
+
+@font-face {
+  font-family: $fontDisplay;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../../fonts/staatliches/Staatliches-Regular.ttf) format("woff");
+}
