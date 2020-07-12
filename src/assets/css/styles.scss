@@ -5,9 +5,7 @@
 @import "01-settings/transitions";
 
 // 02. tools
-@import "02-tools/chevron";
 @import "02-tools/media-queries";
-@import "02-tools/mixins";
 
 // 03. generic
 @import "03-generic/reset";
@@ -28,8 +26,6 @@
 @import "06-components/card";
 
 // 07. trumps
-@import "07-trumps/flexbox";
 @import "07-trumps/margins";
 @import "07-trumps/paddings";
-@import "07-trumps/hidden";
 @import "07-trumps/shadows";
