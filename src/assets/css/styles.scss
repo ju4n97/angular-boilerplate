@@ -2,10 +2,10 @@
 @import "01-settings/variables";
 @import "01-settings/font";
 @import "01-settings/theming";
-@import "01-settings/transitions";
 
 // 02. tools
 @import "02-tools/media-queries";
+@import "02-tools/animations";
 
 // 03. generic
 @import "03-generic/reset";
