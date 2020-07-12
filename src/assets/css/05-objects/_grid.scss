@@ -106,14 +106,6 @@
   width: 91.666667%;
 }
 
-.w-full {
-  width: 100%;
-}
-
-.w-screen {
-  width: 100vw;
-}
-
 .sm\:w-1\/2 {
   @include match-media(sm) {
     width: 50%;
@@ -267,18 +259,6 @@
 .sm\:w-11\/12 {
   @include match-media(sm) {
     width: 91.666667%;
-  }
-}
-
-.sm\:w-full {
-  @include match-media(sm) {
-    width: 100%;
-  }
-}
-
-.sm\:w-screen {
-  @include match-media(sm) {
-    width: 100vw;
   }
 }
 
@@ -438,18 +418,6 @@
   }
 }
 
-.md\:w-full {
-  @include match-media(md) {
-    width: 100%;
-  }
-}
-
-.md\:w-screen {
-  @include match-media(md) {
-    width: 100vw;
-  }
-}
-
 .lg\:w-1\/2 {
   @include match-media(lg) {
     width: 50%;
@@ -606,18 +574,6 @@
   }
 }
 
-.lg\:w-full {
-  @include match-media(lg) {
-    width: 100%;
-  }
-}
-
-.lg\:w-screen {
-  @include match-media(lg) {
-    width: 100vw;
-  }
-}
-
 .xl\:w-1\/2 {
   @include match-media(xl) {
     width: 50%;
@@ -771,17 +727,5 @@
 .xl\:w-11\/12 {
   @include match-media(xl) {
     width: 91.666667%;
-  }
-}
-
-.xl\:w-full {
-  @include match-media(xl) {
-    width: 100%;
-  }
-}
-
-.xl\:w-screen {
-  @include match-media(xl) {
-    width: 100vw;
   }
 }
