@@ -1,23 +1,5 @@
-@font-face {
-  font-family: $font-body;
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(../../fonts/noto-sans/NotoSans-Regular.ttf) format("woff");
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;700&display=swap");
 
-@font-face {
-  font-family: $font-body;
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(../../fonts/noto-sans/NotoSans-Bold.ttf) format("woff");
-}
-
-@font-face {
-  font-family: $font-display;
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(../../fonts/staatliches/Staatliches-Regular.ttf) format("woff");
+html {
+  font-family: "Roboto Mono", monospace;
 }
