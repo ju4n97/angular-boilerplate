@@ -28,7 +28,8 @@
               "src/assets",
               "src/manifest.webmanifest",
               "src/sitemap.xml",
-              "src/robots.txt"
+              "src/robots.txt",
+              "src/_redirects"
             ],
             "styles": ["src/assets/css/styles.scss"],
             "scripts": []
