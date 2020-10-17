@@ -1,23 +1,45 @@
-<div class="max-w-screen-lg mx-auto px-5">
-  <div class="flex justify-end">
-    <div class="w-full lg:w-3/4"></div>
-    <div class="w-full lg:w-2/4">
-      <div class="card shadow-lg">
-        <h2 class="mb-4">Login</h2>
-        <form class="w-full">
-          <div class="field mb-6">
-            <label for="username"></label>
-            <input id="username" type="text" placeholder="Username" />
-          </div>
-
-          <div class="field mb-6">
-            <label for="username"></label>
-            <input id="username" type="password" placeholder="Password" />
-          </div>
-
-          <button class="btn btn-blue btn-lg btn-block">Sign in</button>
-        </form>
-      </div>
+<!-- card -->
+<div class="shadow-xl card">
+  <h2 class="mb-6">Sign in</h2>
+  <!-- form end -->
+  <form class="mb-4">
+    <!-- social -->
+    <div class="mb-6">
+      <button class="btn btn-neutral btn-lg btn-block">
+        <img
+          src="../../../../assets/icons/google.svg"
+          alt="Sign up with google"
+          class="w-4"
+        />
+        Sign up with google
+      </button>
     </div>
-  </div>
+    <!-- social end -->
+
+    <!-- field -->
+    <div class="mb-6 rounded field outlined">
+      <input
+        id="username"
+        type="text"
+        placeholder="Username or email address"
+      />
+    </div>
+    <!-- field end -->
+
+    <!-- field -->
+    <div class="mb-6 rounded field with-icon outlined">
+      <i class="im im-fingerprint"></i>
+      <input id="password" type="password" placeholder="Password" />
+      <button type="button">
+        <i class="im im-eye"></i>
+      </button>
+    </div>
+    <!-- field end -->
+
+    <!-- button -->
+    <button class="btn btn-blue btn-lg btn-block">Sign in</button>
+    <!-- button end -->
+  </form>
+  <!-- form end -->
 </div>
+<!-- card end -->
