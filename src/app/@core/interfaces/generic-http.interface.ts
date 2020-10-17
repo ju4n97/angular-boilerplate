@@ -7,5 +7,5 @@ export interface GenericHttp<T> {
   post(viewModel: T, extra?: string): Observable<T>;
   patch(id: string, viewModel: T): Observable<T>;
   put(id: string, viewModel: T): Observable<T>;
-  delete(id: string);
+  delete(id: string): Observable<T>;
 }

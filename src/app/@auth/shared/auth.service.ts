@@ -4,7 +4,6 @@ import { GenericHttpService } from '@app/@core/services';
 import { environment } from '@environments/environment';
 import { BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { UserAdapter } from './user.adapter';
 import { User } from './user.model';
 
 @Injectable({
@@ -14,7 +13,7 @@ export class AuthService extends GenericHttpService<Partial<User>> {
   private currentUserSubject: BehaviorSubject<User>;
 
   constructor(httpClient: HttpClient) {
-    super(httpClient, environment.apiUrl, 'auth', new UserAdapter());
+    super(httpClient, environment.apiUrl, 'auth');
 
     this.currentUserSubject = new BehaviorSubject<User>(
       JSON.parse(localStorage.getItem('currentUser'))
