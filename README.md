@@ -27,6 +27,10 @@ This is a clean, intuitive, and fast starter project which contains a robust, ma
 - PWA (Progressive web app).
 - i18n configuration.
 
+## Current lighthouse report (Will be improved)
+
+![Light house metrics](https://imgur.com/7OSn60k.png)
+
 ## Arquitecture
 
 ```
