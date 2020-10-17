@@ -7,7 +7,8 @@
   color: var(--text-body);
 }
 
-.app {
+.app,
+.app.light {
   @include apply-theme(light);
 }
 
