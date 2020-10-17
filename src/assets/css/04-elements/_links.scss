@@ -1,0 +1,17 @@
+a {
+  &:link {
+    color: $blue-400;
+  }
+
+  &:visited {
+    color: $blue-600;
+  }
+
+  &:hover {
+    font-weight: bold;
+  }
+
+  &:active {
+    color: $red-400;
+  }
+}

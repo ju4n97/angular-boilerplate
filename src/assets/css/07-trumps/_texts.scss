@@ -1,0 +1,419 @@
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-tiny {
+  font-size: 0.875rem;
+}
+
+.text-base {
+  font-size: 1rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+}
+
+.text-6xl {
+  font-size: 4rem;
+}
+
+.text-7xl {
+  font-size: 4.3rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+}
+
+.leading-3 {
+  line-height: 0.75rem;
+}
+
+.leading-4 {
+  line-height: 1rem;
+}
+
+.leading-5 {
+  line-height: 1.25rem;
+}
+
+.leading-6 {
+  line-height: 1.5rem;
+}
+
+.leading-7 {
+  line-height: 1.75rem;
+}
+
+.leading-8 {
+  line-height: 2rem;
+}
+
+.leading-9 {
+  line-height: 2.25rem;
+}
+
+.leading-10 {
+  line-height: 2.5rem;
+}
+
+.leading-none {
+  line-height: 1;
+}
+
+.leading-tight {
+  line-height: 1.25;
+}
+
+.leading-snug {
+  line-height: 1.375;
+}
+
+.leading-normal {
+  line-height: 1.5;
+}
+
+.leading-relaxed {
+  line-height: 1.625;
+}
+
+.leading-loose {
+  line-height: 2;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-transparent {
+  color: transparent;
+}
+
+.text-current {
+  color: currentColor;
+}
+
+.text-black {
+  color: $black;
+}
+
+.text-white {
+  color: $white;
+}
+
+.text-gray-100 {
+  color: $grey-100;
+}
+
+.text-gray-200 {
+  color: $grey-200;
+}
+
+.text-gray-300 {
+  color: $grey-300;
+}
+
+.text-gray-400 {
+  color: $grey-400;
+}
+
+.text-gray-500 {
+  color: $grey-500;
+}
+
+.text-gray-600 {
+  color: $grey-600;
+}
+
+.text-gray-700 {
+  color: $grey-700;
+}
+
+.text-red-100 {
+  color: $red-100;
+}
+
+.text-red-200 {
+  color: $red-200;
+}
+
+.text-red-300 {
+  color: $red-300;
+}
+
+.text-red-400 {
+  color: $red-400;
+}
+
+.text-red-500 {
+  color: $red-500;
+}
+
+.text-red-600 {
+  color: $red-600;
+}
+
+.text-red-700 {
+  color: $red-700;
+}
+
+.text-orange-100 {
+  color: $orange-100;
+}
+
+.text-orange-200 {
+  color: $orange-200;
+}
+
+.text-orange-300 {
+  color: $orange-300;
+}
+
+.text-orange-400 {
+  color: $orange-400;
+}
+
+.text-orange-500 {
+  color: $orange-500;
+}
+
+.text-orange-600 {
+  color: $orange-600;
+}
+
+.text-orange-700 {
+  color: $orange-700;
+}
+
+.text-yellow-100 {
+  color: $yellow-100;
+}
+
+.text-yellow-200 {
+  color: $yellow-200;
+}
+
+.text-yellow-300 {
+  color: $yellow-300;
+}
+
+.text-yellow-400 {
+  color: $yellow-400;
+}
+
+.text-yellow-500 {
+  color: $yellow-500;
+}
+
+.text-yellow-600 {
+  color: $yellow-600;
+}
+
+.text-yellow-700 {
+  color: $yellow-700;
+}
+
+.text-green-100 {
+  color: $green-100;
+}
+
+.text-green-200 {
+  color: $green-200;
+}
+
+.text-green-300 {
+  color: $green-300;
+}
+
+.text-green-400 {
+  color: $green-400;
+}
+
+.text-green-500 {
+  color: $green-500;
+}
+
+.text-green-600 {
+  color: $green-600;
+}
+
+.text-green-700 {
+  color: $green-700;
+}
+
+.text-teal-100 {
+  color: $teal-100;
+}
+
+.text-teal-200 {
+  color: $teal-200;
+}
+
+.text-teal-300 {
+  color: $teal-300;
+}
+
+.text-teal-400 {
+  color: $teal-400;
+}
+
+.text-teal-500 {
+  color: $teal-500;
+}
+
+.text-teal-600 {
+  color: $teal-600;
+}
+
+.text-teal-700 {
+  color: $teal-700;
+}
+
+.text-blue-100 {
+  color: $blue-100;
+}
+
+.text-blue-200 {
+  color: $blue-200;
+}
+
+.text-blue-300 {
+  color: $blue-300;
+}
+
+.text-blue-400 {
+  color: $blue-400;
+}
+
+.text-blue-500 {
+  color: $blue-500;
+}
+
+.text-blue-600 {
+  color: $blue-600;
+}
+
+.text-blue-700 {
+  color: $blue-700;
+}
+
+.text-indigo-100 {
+  color: $indigo-100;
+}
+
+.text-indigo-200 {
+  color: $indigo-200;
+}
+
+.text-indigo-300 {
+  color: $indigo-300;
+}
+
+.text-indigo-400 {
+  color: $indigo-400;
+}
+
+.text-indigo-500 {
+  color: $indigo-500;
+}
+
+.text-indigo-600 {
+  color: $indigo-600;
+}
+
+.text-indigo-700 {
+  color: $indigo-700;
+}
+
+.text-purple-100 {
+  color: $purple-100;
+}
+
+.text-purple-200 {
+  color: $purple-200;
+}
+
+.text-purple-300 {
+  color: $purple-300;
+}
+
+.text-purple-400 {
+  color: $purple-400;
+}
+
+.text-purple-500 {
+  color: $purple-500;
+}
+
+.text-purple-600 {
+  color: $purple-600;
+}
+
+.text-purple-700 {
+  color: $purple-700;
+}
+
+.text-pink-100 {
+  color: $pink-100;
+}
+
+.text-pink-200 {
+  color: $pink-200;
+}
+
+.text-pink-300 {
+  color: $pink-300;
+}
+
+.text-pink-400 {
+  color: $pink-400;
+}
+
+.text-pink-500 {
+  color: $pink-500;
+}
+
+.text-pink-600 {
+  color: $pink-600;
+}
+
+.text-pink-700 {
+  color: $pink-700;
+}
