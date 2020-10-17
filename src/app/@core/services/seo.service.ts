@@ -22,12 +22,12 @@ export class SeoService {
         map(() => {
           let child = this.activatedRoute.firstChild;
 
-          // Loop until finds the last child.
+          // Loops until finds the last child.
           while (child.firstChild) {
             child = child.firstChild;
           }
 
-          // Return values if the route has data object.
+          // Returns values if the route has data object.
           if (Object.keys(child.snapshot.data).length > 0) {
             const { title, description, robots } = child.snapshot.data;
             return [title, description, robots];

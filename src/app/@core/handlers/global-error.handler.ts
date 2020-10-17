@@ -1,6 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { ErrorHandler, Injectable, Injector } from '@angular/core';
-import { AlertService, ErrorService, LoggingService } from '../services';
+import { AlertService, ErrorService, LoggerService } from '../services';
 
 @Injectable()
 export class GlobalErrorHandler implements ErrorHandler {
@@ -8,7 +8,7 @@ export class GlobalErrorHandler implements ErrorHandler {
 
   handleError(error: Error | HttpErrorResponse): void {
     const errorService = this.injector.get(ErrorService);
-    const loggingService = this.injector.get(LoggingService);
+    const loggerService = this.injector.get(LoggerService);
     const alertService = this.injector.get(AlertService);
 
     let message: string;
@@ -25,6 +25,6 @@ export class GlobalErrorHandler implements ErrorHandler {
     }
 
     console.error(error);
-    loggingService.logError(message, stackTrace);
+    loggerService.logError(message, stackTrace);
   }
 }

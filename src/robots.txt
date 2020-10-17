@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://angularboilerplate.netlify.app/sitemap.xml
