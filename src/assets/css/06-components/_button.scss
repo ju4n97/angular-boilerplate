@@ -1,1 +1,209 @@
-// Your button styles
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0.8rem 1.7rem;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  transition: 0.3s;
+  outline: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn-block {
+  width: 100%;
+  display: block;
+}
+
+.btn-xs {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+.btn-sm {
+  padding: 0.375rem 0.75rem;
+}
+
+.btn-lg {
+  padding: 1rem 2.7rem;
+  font-size: 1.2rem;
+}
+
+.btn-xl {
+  padding: 1.2rem 4.5rem;
+  font-size: 1.7rem;
+}
+
+.btn-neutral {
+  background-color: transparent;
+  color: var(--text-body);
+
+  &:hover {
+    color: var(--text-body-lighter);
+  }
+
+  &:active,
+  &:focus {
+    color: var(--text-body-darker);
+  }
+}
+
+.btn-white {
+  background-color: $grey-100;
+  box-shadow: 0 6px 12px 0 rgba(163, 163, 163, 0.2);
+
+  &:hover {
+    background-color: $white;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $grey-200;
+    box-shadow: 0 6px 12px 0 rgba(163, 163, 163, 0.4);
+  }
+}
+
+.btn-dark {
+  background-color: $grey-600;
+  color: $white;
+  box-shadow: 0 6px 12px 0 rgba(68, 68, 68, 0.2);
+
+  &:hover {
+    background-color: $grey-500;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $grey-700;
+    box-shadow: 0 6px 12px 0 rgba(68, 68, 68, 0.4);
+  }
+}
+
+.btn-grey {
+  background-color: $grey-300;
+  box-shadow: 0 6px 12px 0 rgba(163, 163, 163, 0.2);
+
+  &:hover {
+    background-color: $grey-200;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $grey-400;
+    box-shadow: 0 6px 12px 0 rgba(163, 163, 163, 0.4);
+  }
+}
+
+.btn-red {
+  background-color: $red-600;
+  color: $white;
+  box-shadow: 0 6px 12px 0 rgba(255, 14, 14, 0.2);
+
+  &:hover {
+    background-color: $red-500;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $red-700;
+    box-shadow: 0 6px 12px 0 rgba(255, 14, 14, 0.4);
+  }
+}
+
+.btn-orange {
+  background-color: $orange-600;
+  color: $white;
+  box-shadow: 0 6px 12px 0 rgba(255, 151, 14, 0.2);
+
+  &:hover {
+    background-color: $orange-500;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $orange-700;
+    box-shadow: 0 6px 12px 0 rgba(255, 151, 14, 0.4);
+  }
+}
+
+.btn-yellow {
+  background-color: $yellow-600;
+  box-shadow: 0 6px 12px 0 rgba(251, 255, 14, 0.2);
+
+  &:hover {
+    background-color: $yellow-500;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $yellow-700;
+    box-shadow: 0 6px 12px 0 rgba(251, 255, 14, 0.4);
+  }
+}
+
+.btn-green {
+  background-color: $green-600;
+  color: $white;
+  box-shadow: 0 6px 12px 0 rgba(39, 255, 28, 0.2);
+
+  &:hover {
+    background-color: $green-500;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $green-700;
+    box-shadow: 0 6px 12px 0 rgba(39, 255, 28, 0.4);
+  }
+}
+
+.btn-blue {
+  background-color: $blue-600;
+  color: $white;
+  box-shadow: 0 6px 12px 0 rgba(50, 125, 255, 0.2);
+
+  &:hover {
+    background-color: $blue-500;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $blue-700;
+    box-shadow: 0 6px 12px 0 rgba(50, 125, 255, 0.4);
+  }
+}
+
+.btn-purple {
+  background-color: $purple-600;
+  color: $white;
+  box-shadow: 0 6px 12px 0 rgba(231, 50, 255, 0.2);
+
+  &:hover {
+    background-color: $purple-500;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $purple-700;
+    box-shadow: 0 6px 12px 0 rgba(231, 50, 255, 0.4);
+  }
+}
+
+.btn-pink {
+  background-color: $pink-600;
+  color: $white;
+  box-shadow: 0 6px 12px 0 rgba(255, 50, 163, 0.2);
+
+  &:hover {
+    background-color: $pink-500;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $pink-700;
+    box-shadow: 0 6px 12px 0 rgba(255, 50, 163, 0.4);
+  }
+}

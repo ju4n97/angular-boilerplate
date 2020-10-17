@@ -1,4 +1,5 @@
 // 01. settings
+@import "01-settings/reset";
 @import "01-settings/variables";
 @import "01-settings/font";
 @import "01-settings/theming";
@@ -8,7 +9,6 @@
 @import "02-tools/animations";
 
 // 03. generic
-@import "03-generic/reset";
 
 // 04. elements
 @import "04-elements/document";
