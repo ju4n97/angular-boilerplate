@@ -6,3 +6,9 @@ body {
 body {
   font-size: $font-size;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

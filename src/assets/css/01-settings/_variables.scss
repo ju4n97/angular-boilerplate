@@ -18,17 +18,18 @@ $shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 $shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
 $shadow-outline: 0 0 0 3px rgba(66, 153, 225, 0.5);
 
+$rounded: 8px;
+
 $black: #121212;
-$black-tone: #1e1e1e;
 $white: #fff;
 
 $grey-100: #f8fafc;
-$grey-200: #f1f5f8;
-$grey-300: #dae1e7;
-$grey-400: #b8c2cc;
-$grey-500: #8795a1;
-$grey-600: #606f7b;
-$grey-700: #3d4852;
+$grey-200: #eeeeee;
+$grey-300: #dfdfdf;
+$grey-400: #c7c7c7;
+$grey-500: #8f8f8f;
+$grey-600: #6b6b6b;
+$grey-700: #4d4d4d;
 
 $red-100: #fa8b8b;
 $red-200: #fd7d7d;
@@ -93,12 +94,14 @@ $themes: (
     text-body-darker: #2c323a,
     text-body-lighter: #616b74,
     text-display: #121212,
+    tone: #e8e8e8,
   ),
   dark: (
-    background-color: #121212,
+    background-color: #1e2121,
     text-body: #edecec,
     text-body-darker: #bbbbbb,
     text-body-lighter: #fff,
     text-display: #fff,
+    tone: #3f4144,
   ),
 );

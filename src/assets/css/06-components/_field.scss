@@ -1,0 +1,10 @@
+.field {
+  input {
+    width: 100%;
+    background-color: inherit;
+    border: none;
+    border-bottom: solid 1px $grey-600;
+    padding: 1.2rem 0;
+    color: var(--text-body);
+  }
+}
