@@ -1,0 +1,106 @@
+.field {
+  @apply border-solid;
+  @apply border-2;
+  @apply border-transparent;
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply overflow-hidden;
+  @apply transition;
+  @apply duration-200;
+  @apply ease-in-out;
+  border-bottom-color: theme("colors.gray.500");
+  color: var(--text-body-darker);
+
+  &:focus-within {
+    color: var(--text-body);
+    border-bottom-color: theme("colors.blue.300") !important;
+
+    ::placeholder {
+      color: var(--text-body);
+    }
+  }
+
+  input {
+    @apply w-full;
+    @apply h-12;
+    @apply bg-inherit;
+    @apply text-inherit;
+    @apply py-5;
+    @apply px-3;
+
+    &:focus {
+      @apply outline-none;
+    }
+
+    :not(:placeholder-shown) {
+      color: var(--text-body) !important;
+    }
+  }
+
+  &.field-sm {
+    input {
+      @apply h-8;
+    }
+  }
+
+  &.field-lg {
+    input {
+      @apply h-16;
+    }
+  }
+
+  &.field-xl {
+    input {
+      @apply h-20;
+    }
+  }
+
+  &.with-icon {
+    @apply py-0;
+    @apply px-3;
+
+    button,
+    a {
+      @apply bg-transparent;
+      @apply bg-inherit;
+      @apply text-inherit;
+      @apply cursor-pointer;
+    }
+
+    * + input {
+      @apply ml-1;
+    }
+
+    input + * {
+      @apply ml-1;
+      @apply grid;
+      @apply place-items-center;
+    }
+  }
+
+  &.outlined {
+    @apply border-gray-500;
+
+    &:focus-within {
+      border-color: theme("colors.blue.300") !important;
+    }
+  }
+
+  &.filled {
+    border-color: var(--background-color) !important;
+    background-color: var(--background-color);
+
+    &:focus-within {
+      @apply border-gray-500;
+    }
+  }
+
+  &.rounded {
+    @apply rounded-lg;
+  }
+
+  &.rounded-full {
+    @apply rounded-full;
+  }
+}

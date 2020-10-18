@@ -15,7 +15,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "outputPath": "dist/angular-boilerplate",
             "index": "src/index.html",
@@ -31,8 +31,13 @@
               "src/robots.txt",
               "src/_redirects"
             ],
-            "styles": ["src/assets/css/styles.scss"],
-            "scripts": []
+            "styles": [
+              "src/assets/css/styles.scss"
+            ],
+            "scripts": [],
+            "customWebpackConfig": {
+              "path": "webpack.config.js"
+            }
           },
           "configurations": {
             "production": {
@@ -68,9 +73,12 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "angular-boilerplate:build"
+            "browserTarget": "angular-boilerplate:build",
+            "customWebpackConfig": {
+              "path": "webpack.config.js"
+            }
           },
           "configurations": {
             "production": {
@@ -96,7 +104,9 @@
               "src/assets",
               "src/manifest.webmanifest"
             ],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              "src/styles.scss"
+            ],
             "scripts": []
           }
         },
@@ -108,7 +118,9 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "e2e": {

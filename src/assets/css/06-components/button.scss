@@ -1,209 +1,224 @@
 .btn {
-  display: inline-block;
-  vertical-align: middle;
-  padding: 0.8rem 1.7rem;
-  text-align: center;
-  border: none;
-  border-radius: $rounded;
-  transition: 0.3s;
-  outline: none;
+  @apply h-12;
+  @apply inline-flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply py-3;
+  @apply px-6;
+  @apply text-center;
+  @apply rounded-lg;
+  @apply text-gray-800;
+  @apply transition-colors;
+  @apply duration-200;
+  @apply ease-in-out;
 
   &:hover {
-    cursor: pointer;
+    @apply cursor-pointer;
+  }
+
+  &:focus {
+    @apply outline-none;
+  }
+
+  > * {
+    @apply px-2;
   }
 }
 
 .btn-block {
-  width: 100%;
-  display: block;
-}
-
-.btn-xs {
-  padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  @apply w-full;
+  @apply flex;
 }
 
 .btn-sm {
-  padding: 0.375rem 0.75rem;
+  @apply h-8;
+  @apply py-2;
+  @apply px-3;
+  @apply text-base;
 }
 
 .btn-lg {
-  padding: 1rem 2.7rem;
-  font-size: 1.2rem;
+  @apply h-16;
+  @apply py-4;
+  @apply px-10;
+  @apply text-xl;
 }
 
 .btn-xl {
-  padding: 1.2rem 4.5rem;
-  font-size: 1.7rem;
+  @apply h-20;
+  @apply py-5;
+  @apply px-12;
+  @apply text-2xl;
 }
 
 .btn-neutral {
-  background-color: transparent;
+  background-color: var(--background-color);
   color: var(--text-body);
+  filter: contrast(0.9);
 
   &:hover {
-    color: var(--text-body-lighter);
+    filter: contrast(1);
   }
 
   &:active,
   &:focus {
-    color: var(--text-body-darker);
+    filter: contrast(0.8);
   }
 }
 
 .btn-white {
-  background-color: $grey-100;
+  @apply bg-gray-100;
   box-shadow: 0 6px 12px 0 rgba(163, 163, 163, 0.2);
 
   &:hover {
-    background-color: $white;
+    @apply bg-white;
   }
 
   &:active,
   &:focus {
-    background-color: $grey-200;
+    @apply bg-gray-200;
     box-shadow: 0 6px 12px 0 rgba(163, 163, 163, 0.4);
   }
 }
 
 .btn-dark {
-  background-color: $grey-600;
-  color: $white;
+  @apply bg-gray-600;
+  @apply text-white;
   box-shadow: 0 6px 12px 0 rgba(68, 68, 68, 0.2);
 
   &:hover {
-    background-color: $grey-500;
+    @apply bg-gray-500;
   }
 
   &:active,
   &:focus {
-    background-color: $grey-700;
+    @apply bg-gray-700;
     box-shadow: 0 6px 12px 0 rgba(68, 68, 68, 0.4);
   }
 }
 
 .btn-grey {
-  background-color: $grey-300;
+  @apply bg-gray-300;
   box-shadow: 0 6px 12px 0 rgba(163, 163, 163, 0.2);
 
   &:hover {
-    background-color: $grey-200;
+    @apply bg-gray-200;
   }
 
   &:active,
   &:focus {
-    background-color: $grey-400;
+    @apply bg-gray-400;
     box-shadow: 0 6px 12px 0 rgba(163, 163, 163, 0.4);
   }
 }
 
 .btn-red {
-  background-color: $red-600;
-  color: $white;
+  @apply bg-red-600;
+  @apply text-white;
   box-shadow: 0 6px 12px 0 rgba(255, 14, 14, 0.2);
 
   &:hover {
-    background-color: $red-500;
+    @apply bg-red-500;
   }
 
   &:active,
   &:focus {
-    background-color: $red-700;
+    @apply bg-red-700;
     box-shadow: 0 6px 12px 0 rgba(255, 14, 14, 0.4);
   }
 }
 
 .btn-orange {
-  background-color: $orange-600;
-  color: $white;
+  @apply bg-orange-600;
+  @apply text-white;
   box-shadow: 0 6px 12px 0 rgba(255, 151, 14, 0.2);
 
   &:hover {
-    background-color: $orange-500;
+    @apply bg-orange-500;
   }
 
   &:active,
   &:focus {
-    background-color: $orange-700;
+    @apply bg-orange-700;
     box-shadow: 0 6px 12px 0 rgba(255, 151, 14, 0.4);
   }
 }
 
 .btn-yellow {
-  background-color: $yellow-600;
+  @apply bg-yellow-600;
   box-shadow: 0 6px 12px 0 rgba(251, 255, 14, 0.2);
 
   &:hover {
-    background-color: $yellow-500;
+    @apply bg-yellow-500;
   }
 
   &:active,
   &:focus {
-    background-color: $yellow-700;
+    @apply bg-yellow-700;
     box-shadow: 0 6px 12px 0 rgba(251, 255, 14, 0.4);
   }
 }
 
 .btn-green {
-  background-color: $green-600;
-  color: $white;
+  @apply bg-green-600;
+  @apply text-white;
   box-shadow: 0 6px 12px 0 rgba(39, 255, 28, 0.2);
 
   &:hover {
-    background-color: $green-500;
+    @apply bg-green-500;
   }
 
   &:active,
   &:focus {
-    background-color: $green-700;
+    @apply bg-green-700;
     box-shadow: 0 6px 12px 0 rgba(39, 255, 28, 0.4);
   }
 }
 
 .btn-blue {
-  background-color: $blue-600;
-  color: $white;
+  @apply bg-blue-600;
+  @apply text-white;
   box-shadow: 0 6px 12px 0 rgba(50, 125, 255, 0.2);
 
   &:hover {
-    background-color: $blue-500;
+    @apply bg-blue-500;
   }
 
   &:active,
   &:focus {
-    background-color: $blue-700;
+    @apply bg-blue-700;
     box-shadow: 0 6px 12px 0 rgba(50, 125, 255, 0.4);
   }
 }
 
 .btn-purple {
-  background-color: $purple-600;
-  color: $white;
+  @apply bg-purple-600;
+  @apply text-white;
   box-shadow: 0 6px 12px 0 rgba(231, 50, 255, 0.2);
 
   &:hover {
-    background-color: $purple-500;
+    @apply bg-purple-500;
   }
 
   &:active,
   &:focus {
-    background-color: $purple-700;
+    @apply bg-purple-700;
     box-shadow: 0 6px 12px 0 rgba(231, 50, 255, 0.4);
   }
 }
 
 .btn-pink {
-  background-color: $pink-600;
-  color: $white;
+  @apply bg-pink-600;
+  @apply text-white;
   box-shadow: 0 6px 12px 0 rgba(255, 50, 163, 0.2);
 
   &:hover {
-    background-color: $pink-500;
+    @apply bg-pink-500;
   }
 
   &:active,
   &:focus {
-    background-color: $pink-700;
+    @apply bg-pink-700;
     box-shadow: 0 6px 12px 0 rgba(255, 50, 163, 0.4);
   }
 }
