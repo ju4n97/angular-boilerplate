@@ -1,33 +1,27 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 // 01. settings
-@import "01-settings/reset";
-@import "01-settings/variables";
-@import "01-settings/font";
-@import "01-settings/theming";
+@import "01-settings/variables.scss";
+@import "01-settings/theming.scss";
+// @import "01-settings/font";
 
 // 02. tools
-@import "02-tools/media-queries";
-@import "02-tools/animations";
+// @import "02-tools/media-queries";
+// @import "02-tools/animations";
 
 // 03. generic
 
 // 04. elements
-@import "04-elements/document";
-@import "04-elements/headings";
-@import "04-elements/links";
-
+// @import "04-elements/document";
+// @import "04-elements/headings";
+// @import "04-elements/links";
 // 05. objects
-@import "05-objects/container";
-@import "05-objects/grid";
 
 // 06. components
-@import "06-components/button";
-@import "06-components/field";
-@import "06-components/card";
+// @import "06-components/button.scss";
+// @import "06-components/field.scss";
+// @import "06-components/card.scss";
 
 // 07. trumps
-@import "07-trumps/margins";
-@import "07-trumps/paddings";
-@import "07-trumps/shadows";
-@import "07-trumps/texts";
-@import "07-trumps/backgrounds";
-@import "07-trumps/rounded";
