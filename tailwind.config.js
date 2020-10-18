@@ -1,12 +1,25 @@
 module.exports = {
+  important: true,
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: [],
+  purge: {
+    enabled: true,
+    content: ["./src/**/*.html", "./src/**/*.scss"],
+  },
   theme: {
+    container: {
+      center: true,
+      padding: "1.5rem",
+    },
     extend: {
+      fontSize: {
+        "7xl": "5rem",
+        "8xl": "6rem",
+      },
       colors: {
+        inherit: "inherit",
         gray: {
           100: "#f8fafc",
           200: "#eeeeee",
