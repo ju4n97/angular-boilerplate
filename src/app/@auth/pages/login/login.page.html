@@ -1,6 +1,8 @@
-<div class="relative flex items-center h-full overflow-hidden pattern">
+<div class="relative flex h-full pattern">
   <!-- waves -->
-  <div class="absolute top-0 right-0 w-full h-full opacity-75">
+  <div
+    class="absolute top-0 right-0 hidden w-full h-full overflow-hidden opacity-75 sm:block"
+  >
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 490 768"
@@ -27,9 +29,9 @@
   <!-- waves end -->
 
   <!-- container -->
-  <div class="container relative">
+  <div class="container relative px-0 my-0 sm:my-auto">
     <!-- row -->
-    <div class="max-w-md mx-auto">
+    <div class="max-w-full mx-auto sm:max-w-md">
       <!-- login form -->
       <app-login-form></app-login-form>
       <!-- login form end -->

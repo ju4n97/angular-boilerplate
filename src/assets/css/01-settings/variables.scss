@@ -1,18 +1,18 @@
 $themes: (
   light: (
     background-color: #f3f1f1,
+    accent: #fff,
     text-body: #3d4852,
     text-body-darker: #2c323a,
     text-body-lighter: #616b74,
     text-display: #121212,
-    tone: #fff,
   ),
   dark: (
     background-color: #1e2121,
+    accent: #3f4144,
     text-body: #edecec,
     text-body-darker: #bbbbbb,
     text-body-lighter: #fff,
     text-display: #fff,
-    tone: #3f4144,
   ),
 );

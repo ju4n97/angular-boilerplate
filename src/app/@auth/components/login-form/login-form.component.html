@@ -1,45 +1,45 @@
 <!-- card -->
-<div class="z-10 shadow-2xl card">
+
+<div
+  class="z-10 flex flex-col justify-center w-full p-6 bg-transparent rounded-none sm:rounded sm:h-auto sm:bg-accent md:shadow-2xl"
+>
   <h2>Sign in</h2>
   <!-- form end -->
-  <form class="mb-4">
+  <form>
     <!-- social -->
-    <div class="flex items-center">
-      <button class="w-1/3 btn btn-neutral btn-lg" type="button">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6">
+      <button class="btn btn-neutral" type="button">
         <img
           src="../../../../assets/icons/google.svg"
           alt="Sign up with google"
-          class="w-16 h-16 px-0"
+          class="w-10 h-16 px-0"
         />
+        <span>Google</span>
       </button>
 
-      <button class="w-1/3 mx-4 btn btn-neutral btn-lg" type="button">
+      <button class="btn btn-neutral" type="button">
         <img
           src="../../../../assets/icons/facebook.svg"
           alt="Sign up with Facebook"
-          class="w-16 h-16 px-0"
+          class="w-10 h-16 px-0"
         />
-      </button>
-      <button class="w-1/3 btn btn-neutral btn-lg" type="button">
-        <img
-          src="../../../../assets/icons/github.svg"
-          alt="Sign up with GitHub"
-          class="w-16 h-16 px-0"
-        />
+        <span>Facebook</span>
       </button>
     </div>
     <!-- social end -->
 
     <!-- divider -->
     <div
-      class="block w-full mt-8 mb-4 text-center border-t border-gray-500 opacity-75"
+      class="block w-full mt-12 text-center border-t border-gray-500 opacity-75"
     >
-      <span class="relative px-6 split"> Or </span>
+      <span class="relative px-6 text-white bg-red-400 rounded-full split">
+        Or
+      </span>
     </div>
     <!-- divider end -->
 
     <!-- field -->
-    <div class="mb-6 rounded field field-lg with-icon outlined">
+    <div class="mb-6 field field-lg with-icon">
       <svg
         class="w-8"
         xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +64,7 @@
     <!-- field end -->
 
     <!-- field -->
-    <div class="mb-2 rounded field field-lg with-icon outlined">
+    <div class="mb-2 field field-lg with-icon">
       <svg
         class="w-8"
         xmlns="http://www.w3.org/2000/svg"
@@ -127,7 +127,7 @@
     <!-- button end -->
 
     <!-- link -->
-    <span class="text-sm text-gray-400">
+    <span class="text-sm text-gray-500">
       Don't have an account?
       <a [routerLink]="pathMap.SignUp" class="link">Sign up</a>
     </span>
