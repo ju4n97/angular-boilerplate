@@ -9,7 +9,7 @@ const routes: Routes = [
     data: {
       title: 'Focus on the business logic of your next application',
       description:
-        'Angular boilerplate is a clean, intuitive, and fast starter project which contains a robust, maintainable, scalable, and agile architecture, allowing the developer to focus on the business logic and not on Front-end architecture matters.',
+        'Angular Boilerplate is a starter for large front-end projects built under a clean architecture that helps to scale and maintain a fast workflow.',
       robots: 'index, follow',
     },
   },
