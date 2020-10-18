@@ -1,11 +1,12 @@
+// Tailwindcss
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
 // 01. settings
+@import "01-settings/font.scss";
 @import "01-settings/variables.scss";
 @import "01-settings/theming.scss";
-// @import "01-settings/font";
 
 // 02. tools
 // @import "02-tools/media-queries";
@@ -14,14 +15,15 @@
 // 03. generic
 
 // 04. elements
-// @import "04-elements/document";
-// @import "04-elements/headings";
+@import "04-elements/document.scss";
+@import "04-elements/headings.scss";
 // @import "04-elements/links";
 // 05. objects
 
 // 06. components
-// @import "06-components/button.scss";
-// @import "06-components/field.scss";
-// @import "06-components/card.scss";
+@import "06-components/field.scss";
+@import "06-components/button.scss";
+@import "06-components/link.scss";
+@import "06-components/card.scss";
 
 // 07. trumps

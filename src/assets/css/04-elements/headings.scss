@@ -9,64 +9,69 @@ h4,
 h5,
 .h5,
 h6,
-.h6 {
-  font-weight: 700;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  line-height: 1.25;
+.h6,
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  @apply font-bold;
+  @apply mt-0;
+  @apply leading-5;
   color: var(--text-display);
 }
 
 h1,
 .h1 {
-  font-size: 2.25em;
+  @apply text-4xl;
+  @apply mb-12;
 }
 
 h2,
 .h2 {
-  font-size: 1.875em;
+  @apply text-3xl;
+  @apply mb-10;
 }
 
 h3,
 .h3 {
-  font-size: 1.5em;
+  @apply text-2xl;
+  @apply mb-8;
 }
 
 h4,
 .h4 {
-  font-size: 1.25em;
+  @apply text-xl;
+  @apply mb-6;
 }
 
 h5,
 .h5 {
-  font-size: 1.125em;
+  @apply text-lg;
+  @apply mb-4;
 }
 
 h6,
 .h6 {
-  font-size: 1em;
+  @apply text-base;
+  @apply mb-2;
 }
 
 .display-1 {
-  font-size: 6rem;
-  line-height: 1.2;
-  color: var(--text-display);
+  @apply text-8xl;
+  @apply mb-32;
 }
 
 .display-2 {
-  font-size: 5.5rem;
-  line-height: 1.2;
-  color: var(--text-display);
+  @apply text-7xl;
+  @apply mb-24;
 }
 
 .display-3 {
-  font-size: 4.5rem;
-  line-height: 1.2;
-  color: var(--text-display);
+  @apply text-6xl;
+  @apply mb-20;
 }
 
 .display-4 {
-  font-size: 3.5rem;
-  line-height: 1.2;
-  color: var(--text-display);
+  @apply text-5xl;
+  @apply mb-16;
 }
