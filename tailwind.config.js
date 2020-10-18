@@ -5,7 +5,7 @@ module.exports = {
     purgeLayersByDefault: true,
   },
   purge: {
-    enabled: true,
+    enabled: false,
     content: ["./src/**/*.html", "./src/**/*.scss"],
   },
   theme: {
@@ -20,6 +20,12 @@ module.exports = {
       },
       colors: {
         inherit: "inherit",
+        background: "var(--background-color)",
+        accent: "var(--accent)",
+        "body-text": "var(--text-body)",
+        "body-text-darker": "var(--text-body-darker)",
+        "body-text-lighter": "var(--text-body-lighter)",
+        "body-text-display": "var(--text-display)",
         gray: {
           100: "#f8fafc",
           200: "#eeeeee",
