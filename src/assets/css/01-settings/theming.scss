@@ -7,19 +7,20 @@
   color: var(--text-body);
 }
 
-.app {
+.app,
+.app.light {
   @include apply-theme(light);
 }
 
 .app.dark {
   @include apply-theme(dark);
-  filter: brightness(0.8) contrast(1.2);
+  filter: brightness(0.9) contrast(1.2);
 }
 
 @media (prefers-color-scheme: dark) {
   /* defaults to dark theme */
   .app {
     @include apply-theme(dark);
-    filter: brightness(0.8) contrast(1.2);
+    filter: brightness(0.9) contrast(1.2);
   }
 }

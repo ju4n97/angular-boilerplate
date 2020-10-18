@@ -1,0 +1,224 @@
+.btn {
+  @apply h-12;
+  @apply inline-flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply py-3;
+  @apply px-6;
+  @apply text-center;
+  @apply rounded-lg;
+  @apply text-gray-800;
+  @apply transition-colors;
+  @apply duration-200;
+  @apply ease-in-out;
+
+  &:hover {
+    @apply cursor-pointer;
+  }
+
+  &:focus {
+    @apply outline-none;
+  }
+
+  > * {
+    @apply px-2;
+  }
+}
+
+.btn-block {
+  @apply w-full;
+  @apply flex;
+}
+
+.btn-sm {
+  @apply h-8;
+  @apply py-2;
+  @apply px-3;
+  @apply text-base;
+}
+
+.btn-lg {
+  @apply h-16;
+  @apply py-4;
+  @apply px-10;
+  @apply text-xl;
+}
+
+.btn-xl {
+  @apply h-20;
+  @apply py-5;
+  @apply px-12;
+  @apply text-2xl;
+}
+
+.btn-neutral {
+  background-color: var(--background-color);
+  color: var(--text-body);
+  filter: contrast(0.9);
+
+  &:hover {
+    filter: contrast(1);
+  }
+
+  &:active,
+  &:focus {
+    filter: contrast(0.8);
+  }
+}
+
+.btn-white {
+  @apply bg-gray-100;
+  box-shadow: 0 6px 12px 0 rgba(163, 163, 163, 0.2);
+
+  &:hover {
+    @apply bg-white;
+  }
+
+  &:active,
+  &:focus {
+    @apply bg-gray-200;
+    box-shadow: 0 6px 12px 0 rgba(163, 163, 163, 0.4);
+  }
+}
+
+.btn-dark {
+  @apply bg-gray-600;
+  @apply text-white;
+  box-shadow: 0 6px 12px 0 rgba(68, 68, 68, 0.2);
+
+  &:hover {
+    @apply bg-gray-500;
+  }
+
+  &:active,
+  &:focus {
+    @apply bg-gray-700;
+    box-shadow: 0 6px 12px 0 rgba(68, 68, 68, 0.4);
+  }
+}
+
+.btn-grey {
+  @apply bg-gray-300;
+  box-shadow: 0 6px 12px 0 rgba(163, 163, 163, 0.2);
+
+  &:hover {
+    @apply bg-gray-200;
+  }
+
+  &:active,
+  &:focus {
+    @apply bg-gray-400;
+    box-shadow: 0 6px 12px 0 rgba(163, 163, 163, 0.4);
+  }
+}
+
+.btn-red {
+  @apply bg-red-600;
+  @apply text-white;
+  box-shadow: 0 6px 12px 0 rgba(255, 14, 14, 0.2);
+
+  &:hover {
+    @apply bg-red-500;
+  }
+
+  &:active,
+  &:focus {
+    @apply bg-red-700;
+    box-shadow: 0 6px 12px 0 rgba(255, 14, 14, 0.4);
+  }
+}
+
+.btn-orange {
+  @apply bg-orange-600;
+  @apply text-white;
+  box-shadow: 0 6px 12px 0 rgba(255, 151, 14, 0.2);
+
+  &:hover {
+    @apply bg-orange-500;
+  }
+
+  &:active,
+  &:focus {
+    @apply bg-orange-700;
+    box-shadow: 0 6px 12px 0 rgba(255, 151, 14, 0.4);
+  }
+}
+
+.btn-yellow {
+  @apply bg-yellow-600;
+  box-shadow: 0 6px 12px 0 rgba(251, 255, 14, 0.2);
+
+  &:hover {
+    @apply bg-yellow-500;
+  }
+
+  &:active,
+  &:focus {
+    @apply bg-yellow-700;
+    box-shadow: 0 6px 12px 0 rgba(251, 255, 14, 0.4);
+  }
+}
+
+.btn-green {
+  @apply bg-green-600;
+  @apply text-white;
+  box-shadow: 0 6px 12px 0 rgba(39, 255, 28, 0.2);
+
+  &:hover {
+    @apply bg-green-500;
+  }
+
+  &:active,
+  &:focus {
+    @apply bg-green-700;
+    box-shadow: 0 6px 12px 0 rgba(39, 255, 28, 0.4);
+  }
+}
+
+.btn-blue {
+  @apply bg-blue-600;
+  @apply text-white;
+  box-shadow: 0 6px 12px 0 rgba(50, 125, 255, 0.2);
+
+  &:hover {
+    @apply bg-blue-500;
+  }
+
+  &:active,
+  &:focus {
+    @apply bg-blue-700;
+    box-shadow: 0 6px 12px 0 rgba(50, 125, 255, 0.4);
+  }
+}
+
+.btn-purple {
+  @apply bg-purple-600;
+  @apply text-white;
+  box-shadow: 0 6px 12px 0 rgba(231, 50, 255, 0.2);
+
+  &:hover {
+    @apply bg-purple-500;
+  }
+
+  &:active,
+  &:focus {
+    @apply bg-purple-700;
+    box-shadow: 0 6px 12px 0 rgba(231, 50, 255, 0.4);
+  }
+}
+
+.btn-pink {
+  @apply bg-pink-600;
+  @apply text-white;
+  box-shadow: 0 6px 12px 0 rgba(255, 50, 163, 0.2);
+
+  &:hover {
+    @apply bg-pink-500;
+  }
+
+  &:active,
+  &:focus {
+    @apply bg-pink-700;
+    box-shadow: 0 6px 12px 0 rgba(255, 50, 163, 0.4);
+  }
+}

@@ -1,0 +1,9 @@
+.link {
+  @apply inline-block;
+  @apply text-sm;
+  @apply text-blue-300;
+
+  &:hover {
+    @apply underline;
+  }
+}
