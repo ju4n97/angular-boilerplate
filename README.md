@@ -1,40 +1,36 @@
 # Angular Boilerplate
 
-This is a clean, intuitive, and fast starter project which contains a robust, maintainable, scalable, and agile architecture, allowing the developer to focus on the business logic and not on Front-end architecture matters.
+Clean, intuitive, lightweight and fast starter project which contains a robust, maintainable, scalable, and agile architecture, allowing the developer to focus on the business logic and not on Front-end architecture matters.
 
 ## Main features
 
-### What comes for default
-
-- Works amazing on Angular >= 9
 - Angular 9+ components types (e.g. component, page).
 - Smart and dumb components pattern.
-- Model adapter pattern.
-- Dependency injection pattern.
 - Lazy loading.
 - Lazy loading - preload strategies.
-- Route configuration with `PathMap` enum.
-- SEO friendly with dynamic titles and content meta tags.
+-  with dynamic titles and content meta tags.
 - Global error handler.
 - Generic type-safe HTTP service.
 - Generic partial UI modules.
 - Scalable CSS architecture with [ITCSS](https://itcss.io/).
-- Core module for generic utilities.
-- Roll-up exports with barrel technique.
 - [Webpack bundler analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer) ready to use.
-- [Lighthouse](https://developers.google.com/web/tools/lighthouse) metrics improved to the maximum.
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse) reports improved to the maximum.
 - Authentication scheme based on roles, JWT interceptor, role guard, auth guard, and no-auth guard.
 - PWA (Progressive web app).
-- i18n configuration.
+- Offline first
+- i18n - three sample languages (english, spanish, japanese).
+- SEO good practices.
+- Code quality and best practices on each language.
 
-## Current lighthouse report (Will be improved)
+## Current page speed insights (Will be improved)
 
-![Light house metrics](https://imgur.com/7OSn60k.png)
+### Mobile
+![Light house metrics](https://i.imgur.com/ppul95L.png)
 
-## Arquitecture
+### Desktop
+![Light house metrics](https://imgur.com/eMCTu25.png)
 
-```
+If you want to check that out by yourself, you can do it [here](https://developers.google.com/speed/pagespeed/insights/?hl=es&url=https%3A%2F%2Fangularboilerplate.netlify.app%2Flogin%3FreturnUrl%3D%252F&tab=desktop)
 
-```
 
-## Quickstart
+### 🚧 🚧 🚧 ----- Under construction ----- 🚧 🚧 🚧
