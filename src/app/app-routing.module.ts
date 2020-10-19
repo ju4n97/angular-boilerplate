@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { PathMap } from './@core/enums/path-map.enum';
-import { NoAuthGuard } from './@core/guards';
+import { AuthGuard, NoAuthGuard } from './@core/guards';
 import { NotFoundPage } from './public/pages/not-found/not-found.page';
 
 const routes: Routes = [
@@ -20,16 +20,18 @@ const routes: Routes = [
     path: PathMap.Auth,
     canActivate: [NoAuthGuard],
     loadChildren: () =>
-      import('@features/@auth/auth.module').then((m) => m.AuthModule),
+      import('@features/_auth/auth.module').then((m) => m.AuthModule),
   },
 
-  // Home page
-  // {
-  //   path: PathMap.Home,
-  //   canActivate: [AuthGuard],
-  //   loadChildren: () =>
-  //     import('@features/home/home.module').then((m) => m.HomeModule),
-  // },
+  // Dashboard
+  {
+    path: PathMap.Home,
+    canActivate: [AuthGuard],
+    loadChildren: () =>
+      import('@features/dashboard/dashboard.module').then(
+        (m) => m.DashboardModule
+      ),
+  },
 
   // Not found page (must go at the bottom)
   {
