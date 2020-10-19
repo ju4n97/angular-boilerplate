@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { PathMap } from './@core/enums/path-map.enum';
-import { AuthGuard, NoAuthGuard } from './@core/guards';
+import { NoAuthGuard } from './@core/guards';
+import { NotFoundPage } from './public/pages/not-found/not-found.page';
 
 const routes: Routes = [
   // ===== Uncomment if pathMap.Home is different from empty =====
   // { path: '', redirectTo: PathMap.Home, pathMatch: 'full' },
 
-  // Home page
+  // Public
   {
-    path: PathMap.Home,
-    canActivate: [AuthGuard],
+    path: '',
     loadChildren: () =>
-      import('@features/home/home.module').then((m) => m.HomeModule),
+      import('@public/public.module').then((m) => m.PublicModule),
   },
 
   // Auth
@@ -20,24 +20,21 @@ const routes: Routes = [
     path: PathMap.Auth,
     canActivate: [NoAuthGuard],
     loadChildren: () =>
-      import('@app/@auth/auth.module').then((m) => m.AuthModule),
+      import('@features/@auth/auth.module').then((m) => m.AuthModule),
   },
 
-  // Internal server error page response
-  {
-    path: 'internal-server-error',
-    loadChildren: () =>
-      import('@ui/_internal-server-error/internal-server-error.module').then(
-        (m) => m.InternalServerErrorModule
-      ),
-  },
-  { path: 'public', loadChildren: () => import('./public/public.module').then(m => m.PublicModule) },
+  // Home page
+  // {
+  //   path: PathMap.Home,
+  //   canActivate: [AuthGuard],
+  //   loadChildren: () =>
+  //     import('@features/home/home.module').then((m) => m.HomeModule),
+  // },
 
   // Not found page (must go at the bottom)
   {
     path: '**',
-    loadChildren: () =>
-      import('@ui/_not-found/not-found.module').then((m) => m.NotFoundModule),
+    component: NotFoundPage,
   },
 ];
 
