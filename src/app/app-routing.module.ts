@@ -31,6 +31,7 @@ const routes: Routes = [
         (m) => m.InternalServerErrorModule
       ),
   },
+  { path: 'public', loadChildren: () => import('./public/public.module').then(m => m.PublicModule) },
 
   // Not found page (must go at the bottom)
   {
