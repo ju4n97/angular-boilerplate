@@ -5,7 +5,7 @@ import {
   HttpRequest,
 } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { AuthService } from '@app/@auth';
+import { AuthService } from '@app/features/_auth';
 import { environment } from '@environments/environment';
 import { Observable } from 'rxjs';
 
