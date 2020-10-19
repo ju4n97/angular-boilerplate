@@ -4,7 +4,7 @@ Clean, intuitive, lightweight and fast starter project which contains a robust, 
 
 ## Main features
 
-- Angular 9+ components types (e.g. component, page).
+- Angular components types (e.g. component, page).
 - Smart and dumb components pattern.
 - Lazy loading.
 - Lazy loading - preload strategies.
