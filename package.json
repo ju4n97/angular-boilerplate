@@ -24,7 +24,7 @@
     "@angular/router": "~10.1.6",
     "@angular/service-worker": "~10.1.6",
     "rxjs": "~6.6.3",
-    "tslib": "^2.0.0",
+    "tslib": "^2.0.3",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
