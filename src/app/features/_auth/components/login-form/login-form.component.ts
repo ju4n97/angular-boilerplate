@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { PathMap } from '@app/@core/enums';
+import { Path } from '@app/@core/enums';
 
 @Component({
   selector: 'app-login-form',
@@ -8,7 +8,7 @@ import { PathMap } from '@app/@core/enums';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LoginFormComponent implements OnInit {
-  pathMap = PathMap;
+  Path = Path;
 
   constructor() {}
 

@@ -6,9 +6,9 @@ import {
   RouterStateSnapshot,
   UrlTree,
 } from '@angular/router';
-import { AuthService } from '@app/@auth';
+import { AuthService } from '@app/features/_auth';
 import { Observable } from 'rxjs';
-import { PathMap } from '../enums';
+import { Path } from '../enums';
 
 @Injectable({
   providedIn: 'root',
@@ -31,7 +31,7 @@ export class AuthGuard implements CanActivate {
     }
 
     // not logged in so redirect to login page with the return url
-    this.router.navigate([`/${PathMap.Login}`], {
+    this.router.navigate([`/${Path.Login}`], {
       queryParams: { returnUrl: state.url },
     });
 

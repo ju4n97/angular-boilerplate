@@ -6,7 +6,6 @@ import { environment } from '../environments/environment';
 import { CoreModule } from './@core/core.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PublicModule } from './public/public.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,7 +17,6 @@ import { PublicModule } from './public/public.module';
       enabled: environment.production,
     }),
     CoreModule,
-    PublicModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

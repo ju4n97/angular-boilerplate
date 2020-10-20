@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InternalServerErrorPage } from './internal-server-error.page';
 
@@ -6,12 +6,12 @@ describe('InternalServerErrorPage', () => {
   let component: InternalServerErrorPage;
   let fixture: ComponentFixture<InternalServerErrorPage>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
       declarations: [ InternalServerErrorPage ]
     })
     .compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(InternalServerErrorPage);

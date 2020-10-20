@@ -1,9 +1,9 @@
 import { Route } from '@angular/router';
-import { PathMap } from '@app/@core/enums';
+import { Path } from '@app/@core/enums';
 import { LoginPage } from './login.page';
 
 export const LOGIN_ROUTE: Route = {
-  path: PathMap.Login,
+  path: Path.Login,
   component: LoginPage,
   data: {
     title: 'Login on Angular Boilerplate',

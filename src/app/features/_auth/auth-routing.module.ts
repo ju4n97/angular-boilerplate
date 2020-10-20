@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PathMap } from '@app/@core/enums';
+import { Path } from '@app/@core/enums';
 import { ForgotPasswordEmailSentPage } from './pages/forgot-password-email-sent/forgot-password-email-sent.page';
 import { ForgotPasswordPage } from './pages/forgot-password/forgot-password.page';
 import { LOGIN_ROUTE } from './pages/login/login.page.route';
@@ -12,27 +12,27 @@ import { SignUpPage } from './pages/sign-up/sign-up.page';
 const routes: Routes = [
   LOGIN_ROUTE,
   {
-    path: PathMap.SignUp,
+    path: Path.SignUp,
     component: SignUpPage,
   },
   {
-    path: PathMap.ForgotPassword,
+    path: Path.ForgotPassword,
     component: ForgotPasswordPage,
   },
   {
-    path: PathMap.ForgotPasswordEmailSent,
+    path: Path.ForgotPasswordEmailSent,
     component: ForgotPasswordEmailSentPage,
   },
   {
-    path: PathMap.PasswordReset,
+    path: Path.PasswordReset,
     component: PasswordResetPage,
   },
   {
-    path: PathMap.PasswordResetSucceeded,
+    path: Path.PasswordResetSucceeded,
     component: PasswordResetSucceededPage,
   },
   {
-    path: PathMap.PasswordResetFailed,
+    path: Path.PasswordResetFailed,
     component: PasswordResetFailedPage,
   },
 ];
