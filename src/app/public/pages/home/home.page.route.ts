@@ -1,8 +1,8 @@
 import { Route } from '@angular/router';
-import { PathMap } from '@app/@core/enums';
+import { Path } from '@app/@core/enums';
 import { HomePage } from './home.page';
 
 export const HOME_ROUTE: Route = {
-  path: PathMap.Home,
+  path: Path.Home,
   component: HomePage,
 };

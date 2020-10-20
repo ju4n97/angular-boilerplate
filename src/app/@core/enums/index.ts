@@ -1,1 +1,1 @@
-export { PathMap } from './path-map.enum';
+export { Path } from './path.enum';

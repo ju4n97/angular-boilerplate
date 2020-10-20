@@ -6,7 +6,7 @@ import { NotFoundPage } from './pages/not-found/not-found.page';
 import { PublicRoutingModule } from './public-routing.module';
 
 @NgModule({
-  declarations: [HomePage, NotFoundPage, InternalServerErrorPage],
+  declarations: [HomePage, InternalServerErrorPage, NotFoundPage],
   imports: [CommonModule, PublicRoutingModule],
 })
 export class PublicModule {}

@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { PathMap } from './@core/enums/path-map.enum';
+import { NotFoundPage } from '@public/pages/not-found/not-found.page';
+import { Path } from './@core/enums/path.enum';
 import { AuthGuard, NoAuthGuard } from './@core/guards';
-import { NotFoundPage } from './public/pages/not-found/not-found.page';
 
 const routes: Routes = [
-  // ===== Uncomment if pathMap.Home is different from empty =====
-  // { path: '', redirectTo: PathMap.Home, pathMatch: 'full' },
+  // ===== Uncomment if Path.Home is different from empty =====
+  // { path: '', redirectTo: Path.Home, pathMatch: 'full' },
 
   // Public
   {
@@ -17,20 +17,25 @@ const routes: Routes = [
 
   // Auth
   {
-    path: PathMap.Auth,
+    path: Path.Auth,
     canActivate: [NoAuthGuard],
     loadChildren: () =>
       import('@features/_auth/auth.module').then((m) => m.AuthModule),
   },
 
-  // Dashboard
+  // App
   {
-    path: PathMap.Home,
+    path: Path.App,
     canActivate: [AuthGuard],
-    loadChildren: () =>
-      import('@features/dashboard/dashboard.module').then(
-        (m) => m.DashboardModule
-      ),
+    children: [
+      {
+        path: Path.Dashboard,
+        loadChildren: () =>
+          import('@features/dashboard/dashboard.module').then(
+            (m) => m.DashboardModule
+          ),
+      },
+    ],
   },
 
   // Not found page (must go at the bottom)

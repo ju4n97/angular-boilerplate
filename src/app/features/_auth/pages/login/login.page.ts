@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { PathMap } from '@app/@core/enums';
+import { Path } from '@app/@core/enums';
 
 @Component({
   templateUrl: './login.page.html',
@@ -11,7 +11,7 @@ export class LoginPage implements OnInit {
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
     this.returnUrl =
-      this.activatedRoute.snapshot.queryParams.returnUrl || `/${PathMap.Home}`;
+      this.activatedRoute.snapshot.queryParams.returnUrl || `/${Path.Home}`;
   }
 
   ngOnInit(): void {}
