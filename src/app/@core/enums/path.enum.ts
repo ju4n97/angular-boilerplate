@@ -1,5 +1,9 @@
-export enum PathMap {
-  App = '',
+export enum Path {
+  // Public
+  Home = '',
+  InternalServerError = 'internal-server-error',
+  NotFound = '404',
+
   // Auth
   Auth = '',
   Login = 'login',
@@ -9,5 +13,10 @@ export enum PathMap {
   PasswordReset = 'password-reset',
   PasswordResetSucceeded = 'password-reset-succeeded',
   PasswordResetFailed = 'password-reset-failed',
-  Home = '',
+
+  // App base url
+  App = 'app',
+
+  // Features
+  Dashboard = 'dashboard',
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AuthService } from '@app/@auth/shared/auth.service';
-import { PathMap } from '@app/@core/enums';
+import { Path } from '@app/@core/enums';
 
 @Component({
   templateUrl: './login.page.html',
@@ -10,13 +9,9 @@ import { PathMap } from '@app/@core/enums';
 export class LoginPage implements OnInit {
   returnUrl: string;
 
-  constructor(
-    private router: Router,
-    private activatedRoute: ActivatedRoute,
-    private authService: AuthService
-  ) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
     this.returnUrl =
-      this.activatedRoute.snapshot.queryParams.returnUrl || `/${PathMap.Home}`;
+      this.activatedRoute.snapshot.queryParams.returnUrl || `/${Path.Home}`;
   }
 
   ngOnInit(): void {}
