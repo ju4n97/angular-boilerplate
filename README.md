@@ -18,7 +18,7 @@ Angular starter for large front-end projects built under a clean architecture th
 - Authentication scheme based on roles, JWT interceptor, role guard, auth guard, and no-auth guard.
 - PWA (Progressive web app).
 - Offline first
-- i18n - three sample languages (english, spanish, french, japanese).
+- i18n - four sample languages (english, spanish, french, japanese).
 - SEO good practices.
 - Code quality and best practices on each language.
 
