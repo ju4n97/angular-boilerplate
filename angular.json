@@ -69,6 +69,15 @@
               ],
               "serviceWorker": true,
               "ngswConfigPath": "ngsw-config.json"
+            },
+            "es": {
+              "localize": ["es"]
+            },
+            "fr": {
+              "localize": ["fr"]
+            },
+            "ja": {
+              "localize": ["ja"]
             }
           }
         },
@@ -83,6 +92,15 @@
           "configurations": {
             "production": {
               "browserTarget": "angular-boilerplate:build:production"
+            },
+            "es": {
+              "browserTarget": "angular-boilerplate:build:es"
+            },
+            "fr": {
+              "browserTarget": "angular-boilerplate:build:fr"
+            },
+            "ja": {
+              "browserTarget": "angular-boilerplate:build:ja"
             }
           }
         },
@@ -134,6 +152,14 @@
               "devServerTarget": "angular-boilerplate:serve:production"
             }
           }
+        }
+      },
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "es": "src/locale/messages.es.xlf",
+          "fr": "src/locale/messages.fr.xlf",
+          "ja": "src/locale/messages.ja.xlf"
         }
       }
     }
