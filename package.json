@@ -9,6 +9,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:prod": "ng build --prod",
+    "build:optimized": "ng build --prod --build-optimizer --aot",
     "build:stats": "ng build --stats-json",
     "test": "ng test",
     "lint": "ng lint",
