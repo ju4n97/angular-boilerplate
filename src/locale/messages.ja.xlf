@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="ea9617fe8ec2236d8aafade119967b7c737da5b7" datatype="html">
+        <source> Welcome to Angular Boilerplate. You can start creating your next awesome project. </source>
+        <target>プロジェクトスターターへようこそ。 次の素晴らしいプロジェクトの作成を開始できます。</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/pages/home/home.page.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+        <note priority="1" from="description"> Welcome message</note>
+        <note priority="1" from="meaning">Main title </note>
+      </trans-unit>
+      <trans-unit id="c06ae0555d063728896274c79443fd0cd8f78149" datatype="html">
+        <source> If you need to develop a real-world API using an amazing technology like <x id="START_LINK" equiv-text="ike
+      &lt;a href=&quot;https://ne"/>NestJs<x id="CLOSE_LINK" equiv-text=" Boilerplate,&lt;/a
+"/>, you can use the <x id="START_LINK_1" equiv-text=" the
+      &lt;a href=&quot;https://github.com/juanmesa2097/nestjs-boilerplat"/>NestJs Boilerplate,<x id="CLOSE_LINK" equiv-text=" Boilerplate,&lt;/a
+"/> which already has authentication, role-based access, file uploading, swagger UI, email sendings, dynamic queries, and much more. </source>
+        <target>次のような驚くべきテクノロジーを使用して、実際のアプリケーションプログラミングインターフェイスを開発する必要がある場合 <x id="START_LINK" equiv-text="like
+          &lt;a href=&quot;https://nestj"/>NestJs<x id="CLOSE_LINK" equiv-text="oilerplate"/>、あなたは使用することができます <x id="START_LINK_1" equiv-text="e the
+          &lt;a href=&quot;https://github.com/juanmesa2097/nestjs-boilerpla"/>NestJs Boilerplate,<x id="CLOSE_LINK" equiv-text="oilerplate"/> すでに認証、役割ベースのアクセス、ファイルのアップロード、スワッガー、電子メールの送信、動的クエリなどがあります。
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/pages/home/home.page.html</context>
+          <context context-type="linenumber">11,18</context>
+        </context-group>
+        <note priority="1" from="description"> Attribution to the backend project developed by the same author to make API&apos;s</note>
+        <note priority="1" from="meaning">Backend attribution </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
