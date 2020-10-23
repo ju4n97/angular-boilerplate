@@ -1,6 +1,6 @@
 {
   "name": "angular-boilerplate",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Angular starter for large front-end projects built under a clean architecture that helps to scale and maintain a fast workflow.",
   "author": "juanmesa2097",
   "license": "MIT",
