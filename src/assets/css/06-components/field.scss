@@ -1,62 +1,58 @@
+// parent field
 .field {
-  @apply border-solid;
-  @apply border-2;
-  @apply border-transparent;
-  @apply flex;
-  @apply items-center;
-  @apply justify-center;
-  @apply overflow-hidden;
-  @apply transition;
-  @apply duration-200;
-  @apply ease-in-out;
-  border-bottom-color: theme("colors.gray.500");
-  color: var(--text-body-darker);
+  @apply relative;
 
-  &:focus-within {
-    color: var(--text-body);
-    border-bottom-color: theme("colors.blue.300") !important;
+  // defaults
+  .field-item {
+    @apply border-solid;
+    @apply border-b-2;
+    border-color: theme("colors.gray.500");
+    @apply flex;
+    @apply items-center;
+    @apply justify-center;
+    @apply overflow-hidden;
+    @apply transition;
+    @apply duration-200;
+    @apply ease-in-out;
+    color: var(--text-body-darker);
 
-    ::placeholder {
+    input {
+      height: $md;
+      @apply w-full;
+      @apply bg-inherit;
+      @apply text-inherit;
+      @apply py-5;
+      @apply px-3;
+
+      &:focus {
+        @apply outline-none;
+      }
+
+      :not(:placeholder-shown) {
+        color: var(--text-body);
+      }
+    }
+
+    &:focus-within {
       color: var(--text-body);
+      border-color: theme("colors.blue.300");
+
+      ::placeholder {
+        color: var(--text-body);
+      }
     }
   }
 
-  input {
-    @apply w-full;
-    @apply h-12;
-    @apply bg-inherit;
-    @apply text-inherit;
-    @apply py-5;
-    @apply px-3;
-
-    &:focus {
-      @apply outline-none;
-    }
-
-    :not(:placeholder-shown) {
-      color: var(--text-body) !important;
-    }
+  // field sizes
+  &.field-sm .field-item input {
+    height: $sm;
+  }
+  &.field-lg .field-item input {
+    height: $lg;
   }
 
-  &.field-sm {
-    input {
-      @apply h-8;
-    }
-  }
-
-  &.field-lg {
-    input {
-      @apply h-16;
-    }
-  }
-
-  &.field-xl {
-    input {
-      @apply h-20;
-    }
-  }
-
-  &.with-icon {
+  // field styles with icons
+  &.with-icon > .field-item {
     @apply py-0;
     @apply px-3;
 
@@ -79,28 +75,38 @@
     }
   }
 
-  &.outlined {
-    @apply border-gray-500;
-
-    &:focus-within {
-      border-color: theme("colors.blue.300") !important;
-    }
+  // outlined styling mode
+  &.outlined > .field-item {
+    @apply border-2;
   }
 
-  &.filled {
-    border-color: var(--background-color) !important;
+  // filled styling mode
+  &.filled > .field-item {
+    @apply border-2;
+    border-color: var(--background-color);
     background-color: var(--background-color);
+  }
 
-    &:focus-within {
-      @apply border-gray-500;
+  // styles for field states
+  &.valid > .field-item {
+    border-color: theme("colors.green.100") !important;
+  }
+  &.invalid > .field-item {
+    border-color: theme("colors.red.100") !important;
+  }
+
+  // styles for error messages
+  & > .field-messages {
+    @apply text-xs;
+    @apply list-none;
+    @apply bg-red-100;
+    @apply rounded;
+    @apply px-4;
+    @apply py-2;
+
+    li {
+      @apply my-1;
+      @apply text-white;
     }
-  }
-
-  &.rounded {
-    @apply rounded-lg;
-  }
-
-  &.rounded-full {
-    @apply rounded-full;
   }
 }
