@@ -1,3 +1,2 @@
 export { AuthModule } from './auth.module';
-export { AuthService } from './shared/auth.service';
-export { User } from './shared/user.model';
+export { AuthService } from './shared/services/auth.service';
