@@ -1,1 +1,25 @@
-<p>navbar works!</p>
+<nav class="shadow bg-accent">
+  <div class="container flex items-center justify-between py-3 mx-auto">
+    <!-- mobile -->
+    <a
+      routerLink="/"
+      class="block text-2xl font-bold tracking-tighter no-underline cursor-pointer text-body-text md:hidden"
+    >
+      <span class="text-red-100">A</span> B
+    </a>
+
+    <!-- desktop -->
+    <a
+      routerLink="/"
+      class="hidden text-2xl font-bold no-underline cursor-pointer text-body-text md:block"
+    >
+      <span class="text-red-100">Angular</span>
+      Boilerplate
+    </a>
+
+    <div>
+      <a routerLink="/login" class="mr-3 rounded-lg btn btn-neutral">Login</a>
+      <a routerLink="/register" class="rounded-lg btn btn-blue">Register</a>
+    </div>
+  </div>
+</nav>
