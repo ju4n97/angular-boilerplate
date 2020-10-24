@@ -1,9 +1,12 @@
-a {
+a:not(.btn) {
   @apply inline-block;
+  @apply font-bold;
   @apply text-sm;
-  @apply text-blue-300;
+  @apply text-red-200;
 
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus {
     @apply underline;
   }
 }
