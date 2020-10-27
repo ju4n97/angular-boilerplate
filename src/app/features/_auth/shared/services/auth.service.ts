@@ -1,43 +1,56 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { GenericHttpService } from '@app/@core/services';
-import { User } from '@app/@core/shared/user';
+import { GenericHttpService } from '@core/services';
+import { User } from '@core/shared/user';
 import { environment } from '@environments/environment';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { LoginResult, Token } from '../interfaces';
 
 @Injectable({
   providedIn: 'root',
 })
-export class AuthService extends GenericHttpService<Partial<User>> {
-  private currentUserSubject: BehaviorSubject<User>;
-  private readonly USER_ITEM = 'currentUser';
+export class AuthService extends GenericHttpService<User | LoginResult> {
+  private readonly USER_ITEM = '_user';
+  private readonly TOKEN_ITEM = '_token';
+
+  private userSubject = new BehaviorSubject<User>(this._getUser());
+  private tokenSubject = new BehaviorSubject<Token>(this._getToken());
+
+  isLoggedIn = new BehaviorSubject<boolean>(this.loggedIn);
 
   constructor(httpClient: HttpClient) {
     super(httpClient, environment.apiUrl, 'auth');
-
-    this.currentUserSubject = new BehaviorSubject<User>(
-      JSON.parse(localStorage.getItem(this.USER_ITEM))
-    );
   }
 
-  get currentUserValue(): User {
-    return this.currentUserSubject.value;
+  get userValue(): User {
+    return this.userSubject?.value;
   }
 
-  login({ username, password }: User) {
+  get tokenValue(): Token {
+    return this.tokenSubject?.value;
+  }
+
+  private get loggedIn(): boolean {
+    const user = this.userSubject?.value;
+    const token = this.tokenSubject?.value;
+    return !!(user && token);
+  }
+
+  login({ username, password }: User): Observable<LoginResult> {
     return super.post({ username, password }, 'login').pipe(
-      map((user) => {
-        // Store user details and jwt token in local storage
-        localStorage.setItem(this.USER_ITEM, JSON.stringify(user));
-        this.currentUserSubject.next(user as User);
-        return user;
+      map((result: LoginResult) => {
+        const { user, token } = result;
+        this._saveUser(user);
+        this._saveToken(token);
+        this.isLoggedIn.next(true);
+        return result;
       })
     );
   }
 
-  register(user: User) {
-    return super.post(user, 'register');
+  register(user: User): Observable<User> {
+    return super.post(user, 'register') as Observable<User>;
   }
 
   beginPasswordReset(email: string) {
@@ -49,8 +62,28 @@ export class AuthService extends GenericHttpService<Partial<User>> {
   }
 
   logout() {
-    // Remove user from local storage to log user out
-    localStorage.removeItem('currentUser');
-    this.currentUserSubject.next(null);
+    localStorage.removeItem(this.USER_ITEM);
+    localStorage.removeItem(this.TOKEN_ITEM);
+    this.userSubject.next(null);
+    this.tokenSubject.next(null);
+    this.isLoggedIn.next(false);
+  }
+
+  private _getUser(): User {
+    return JSON.parse(localStorage.getItem(this.USER_ITEM)) as User;
+  }
+
+  private _getToken(): Token {
+    return JSON.parse(localStorage.getItem(this.TOKEN_ITEM)) as Token;
+  }
+
+  private _saveUser(user: User): void {
+    localStorage.setItem(this.USER_ITEM, JSON.stringify(user));
+    this.userSubject.next(user);
+  }
+
+  private _saveToken(token: Token): void {
+    localStorage.setItem(this.TOKEN_ITEM, JSON.stringify(token));
+    this.tokenSubject.next(token);
   }
 }
