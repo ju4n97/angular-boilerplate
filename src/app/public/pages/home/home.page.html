@@ -1,20 +1,56 @@
-<div class="container flex items-center justify-center h-full">
-  <div class="text-center md:max-w-xl">
-    <h1 i18n="Main title | Welcome message">
-      Welcome to Angular Boilerplate. You can start creating your next awesome
-      project.
-    </h1>
-
-    <p
-      i18n="Backend attribution | Attribution to the backend project developed by the same author to make API's"
+<nav class="shadow bg-accent">
+  <div class="container flex items-center justify-between py-3 mx-auto">
+    <!-- mobile -->
+    <a
+      routerLink="/"
+      class="block text-2xl font-bold tracking-tighter no-underline cursor-pointer text-body-text md:hidden"
     >
-      If you need to develop a real-world API using an amazing technology like
-      <a href="https://nestjs.com/">NestJs</a>, you can use the
-      <a href="https://github.com/juanmesa2097/nestjs-boilerplate"
-        >NestJs Boilerplate,</a
+      <span class="text-red-100">A</span> B
+    </a>
+
+    <!-- desktop -->
+    <a
+      routerLink="/"
+      class="hidden text-2xl font-bold no-underline cursor-pointer text-body-text md:block"
+    >
+      <span class="text-red-100">Angular</span>
+      Boilerplate
+    </a>
+
+    <div>
+      <a
+        [routerLink]="['/', path.Login]"
+        class="mr-3 rounded-lg btn btn-neutral"
       >
-      which already has authentication, role-based access, file uploading,
-      swagger UI, email sendings, dynamic queries, and much more.
-    </p>
+        Login
+      </a>
+      <a [routerLink]="['/', path.SignUp]" class="rounded-lg btn btn-blue">
+        Register
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="h-full pattern">
+  <div class="container flex items-center justify-center h-full">
+    <div class="-mt-20 text-center md:max-w-xl">
+      <h1 i18n class="mb-3">👋 Welcome to Angular Boilerplate.</h1>
+
+      <p i18n class="mb-12 text-xl">
+        ⚒️ Start building your next awesome project. ⚒️
+      </p>
+
+      <p i18n class="text-gray-500">
+        If you need to develop a real-world API using an amazing technology like
+        <a href="https://nestjs.com/">NestJs</a>, you can use the
+        <a
+          href="https://github.com/juanmesa2097/nestjs-boilerplate"
+          target="__blank"
+          >NestJs Boilerplate,</a
+        >
+        which already has authentication, role-based access, file uploading,
+        swagger UI, email sendings, dynamic queries, and much more.
+      </p>
+    </div>
   </div>
 </div>
