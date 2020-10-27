@@ -9,7 +9,8 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '@app/features/_auth';
 import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
+import { catchError } from 'rxjs/operators';
+import { Path } from '../enums';
 
 @Injectable()
 export class ServerErrorInterceptor implements HttpInterceptor {
@@ -20,11 +21,11 @@ export class ServerErrorInterceptor implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<unknown>> {
     return next.handle(request).pipe(
-      retry(1),
       catchError((error: HttpErrorResponse) => {
-        if (error.status === 401) {
+        if ([401, 403].includes(error.status)) {
           this.authService.logout();
-          this.router.navigateByUrl('/');
+          this.router.navigateByUrl(Path.Login);
+          return throwError(error);
         } else if (error.status === 500) {
           this.router.navigateByUrl('/internal-server-error');
         } else {
