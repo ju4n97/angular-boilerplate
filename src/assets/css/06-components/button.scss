@@ -21,6 +21,11 @@
     @apply outline-none;
   }
 
+  &:disabled {
+    @apply opacity-75;
+    @apply pointer-events-none;
+  }
+
   > * {
     @apply px-2;
   }
