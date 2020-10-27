@@ -88,6 +88,9 @@
   }
 
   // styles for field states
+  &.disabled {
+    @apply opacity-25;
+  }
   &.valid > .field-item {
     border-color: theme("colors.green.100") !important;
   }
