@@ -8,6 +8,7 @@ import {
 } from '@angular/router';
 import { AuthService } from '@app/features/_auth';
 import { Observable } from 'rxjs';
+import { RoleList } from '../shared/role';
 
 @Injectable({
   providedIn: 'root',
@@ -23,9 +24,16 @@ export class RoleGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    const currentUser = this.authService.currentUserValue;
+    const routeRoles = next.data.roles as RoleList[];
+    const userRoles = this.authService.userValue.roles;
+    const hasRole =
+      routeRoles &&
+      userRoles &&
+      routeRoles.some((routeRole) =>
+        userRoles.some((userRole) => routeRole === userRole.name)
+      );
 
-    if ((next.data.roles as string[]).includes(currentUser.role)) {
+    if (hasRole) {
       return true;
     }
 
