@@ -1,3 +1,13 @@
-<app-navbar></app-navbar>
-<router-outlet></router-outlet>
+<!-- logged in -->
+<ng-container *ngIf="isLoggedIn$ | async; else notLoggedIn">
+  <app-navbar (logout)="onLogout()"></app-navbar>
+  <router-outlet></router-outlet>
+</ng-container>
+
+<!-- not logged in -->
+<ng-template #notLoggedIn>
+  <router-outlet></router-outlet>
+</ng-template>
+
+<!-- show always -->
 <app-footer></app-footer>
