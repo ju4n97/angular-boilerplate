@@ -3,12 +3,16 @@
 <div
   class="z-10 flex flex-col justify-center w-full p-6 bg-transparent rounded-none sm:rounded sm:h-auto sm:bg-accent md:shadow-2xl"
 >
+  <div class="p-4 mb-4 text-white bg-red-100 rounded-lg" *ngIf="errorMessage">
+    {{ errorMessage }}
+  </div>
+
   <h2 class="mb-5">Sign in</h2>
   <!-- form end -->
   <form>
     <!-- social -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6">
-      <button class="btn btn-grey" type="button">
+      <button class="btn btn-grey" type="button" [disabled]="loading">
         <img
           src="../../../../assets/icons/google.svg"
           alt="Sign up with google"
@@ -17,7 +21,7 @@
         <span>Google</span>
       </button>
 
-      <button class="btn btn-grey" type="button">
+      <button class="btn btn-grey" type="button" [disabled]="loading">
         <img
           src="../../../../assets/icons/facebook.svg"
           alt="Sign up with Facebook"
@@ -39,7 +43,10 @@
     <!-- divider end -->
 
     <!-- field -->
-    <div class="mb-6 field field-lg with-icon outlined">
+    <div
+      class="mb-6 field field-lg with-icon outlined"
+      [ngClass]="{ disabled: loading }"
+    >
       <div class="rounded-lg field-item">
         <svg
           class="w-8"
@@ -60,6 +67,7 @@
           type="text"
           placeholder="Username or email address"
           aria-label="Username or email"
+          [disabled]="loading"
         />
       </div>
       <!-- <div class="field-messages">
@@ -71,7 +79,10 @@
     <!-- field end -->
 
     <!-- field -->
-    <div class="mb-2 field field-lg with-icon outlined">
+    <div
+      class="mb-2 field field-lg with-icon outlined"
+      [ngClass]="{ disabled: loading }"
+    >
       <div class="rounded-lg field-item">
         <svg
           class="w-8"
@@ -92,6 +103,7 @@
           type="password"
           placeholder="Password"
           aria-label="Password"
+          [disabled]="loading"
         />
         <button
           type="button"
@@ -128,21 +140,27 @@
     <!-- field end -->
 
     <!-- link -->
-    <a [routerLink]="['/', Path.ForgotPassword]" class="mb-6 link"
+    <a [routerLink]="['/', path.ForgotPassword]" class="mb-6 link"
       >Forgot your password?</a
     >
     <!-- link end -->
 
     <!-- button -->
-    <button class="mb-2 rounded-lg btn btn-blue btn-lg btn-block" type="button">
-      <span>Sign in</span>
+    <button
+      class="mb-2 rounded-lg btn btn-blue btn-lg btn-block"
+      type="button"
+      [disabled]="loading"
+      (click)="onClickSignIn()"
+    >
+      <span *ngIf="!loading">Sign in</span>
+      <span *ngIf="loading" class="spin"></span>
     </button>
     <!-- button end -->
 
     <!-- link -->
     <span class="text-sm text-gray-500">
       Don't have an account?
-      <a [routerLink]="['/', Path.SignUp]" class="link">Sign up</a>
+      <a [routerLink]="['/', path.SignUp]" class="link">Sign up</a>
     </span>
     <!-- link end -->
   </form>
