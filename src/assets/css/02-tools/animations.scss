@@ -1,16 +1,28 @@
-.fade-in {
-  animation-name: fade-in;
-  animation-duration: 800ms;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease;
+.spin {
+  width: 80px;
+  height: 80px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 45px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: spin 1.2s linear infinite;
+  }
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-
-  to {
-    opacity: 1;
+  100% {
+    transform: rotate(360deg);
   }
 }
