@@ -57,7 +57,7 @@
     "karma-jasmine-html-reporter": "^1.5.0",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^4.0.4",
-    "postcss-scss": "^3.0.2",
+    "postcss-scss": "^3.0.4",
     "protractor": "~7.0.0",
     "tailwindcss": "^1.9.6",
     "ts-node": "~9.0.0",
