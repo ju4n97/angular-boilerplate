@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ForgotPasswordEmailSentPage } from './forgot-password-email-sent.page';
 
@@ -6,7 +6,7 @@ describe('ForgotPasswordEmailSentPage', () => {
   let component: ForgotPasswordEmailSentPage;
   let fixture: ComponentFixture<ForgotPasswordEmailSentPage>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ForgotPasswordEmailSentPage ]
     })
