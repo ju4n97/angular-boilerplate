@@ -8,6 +8,7 @@ import {
 } from '@angular/router';
 import { AuthService } from '@app/features/_auth';
 import { Observable } from 'rxjs';
+import { Path } from '../enums';
 
 @Injectable({
   providedIn: 'root',
@@ -23,10 +24,10 @@ export class NoAuthGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    const currentUser = this.authService.currentUserValue;
-
-    if (currentUser) {
-      this.router.navigateByUrl('/');
+    const isLoggedIn = this.authService.isLoggedIn.value;
+    console.log(isLoggedIn);
+    if (isLoggedIn) {
+      this.router.navigate([Path.App, Path.Dashboard]);
       return false;
     }
 

@@ -33,7 +33,11 @@
     <!-- row -->
     <div class="max-w-full mx-auto sm:max-w-md">
       <!-- login form -->
-      <app-login-form></app-login-form>
+      <app-login-form
+        [errorMessage]="errorMessage"
+        [loading]="loading"
+        (signIn)="onSignIn($event)"
+      ></app-login-form>
       <!-- login form end -->
     </div>
     <!-- row end -->

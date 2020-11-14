@@ -3,12 +3,16 @@
 <div
   class="z-10 flex flex-col justify-center w-full p-6 bg-transparent rounded-none sm:rounded sm:h-auto sm:bg-accent md:shadow-2xl"
 >
-  <h2>Sign in</h2>
+  <div class="p-4 mb-4 text-white bg-red-100 rounded-lg" *ngIf="errorMessage">
+    {{ errorMessage }}
+  </div>
+
+  <h2 class="mb-5">Sign in</h2>
   <!-- form end -->
   <form>
     <!-- social -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6">
-      <button class="btn btn-neutral" type="button">
+      <button class="btn btn-grey" type="button" [disabled]="loading">
         <img
           src="../../../../assets/icons/google.svg"
           alt="Sign up with google"
@@ -17,7 +21,7 @@
         <span>Google</span>
       </button>
 
-      <button class="btn btn-neutral" type="button">
+      <button class="btn btn-grey" type="button" [disabled]="loading">
         <img
           src="../../../../assets/icons/facebook.svg"
           alt="Sign up with Facebook"
@@ -30,7 +34,7 @@
 
     <!-- divider -->
     <div
-      class="block w-full mt-12 text-center border-t border-gray-500 opacity-75"
+      class="block w-full mt-10 mb-3 text-center border-t border-gray-500 opacity-75"
     >
       <span class="relative px-6 text-white bg-red-400 rounded-full split">
         Or
@@ -39,57 +43,11 @@
     <!-- divider end -->
 
     <!-- field -->
-    <div class="mb-6 field field-lg with-icon">
-      <svg
-        class="w-8"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-        />
-      </svg>
-      <input
-        id="username"
-        type="text"
-        placeholder="Username or email address"
-        aria-label="Username or email"
-      />
-    </div>
-    <!-- field end -->
-
-    <!-- field -->
-    <div class="mb-2 field field-lg with-icon">
-      <svg
-        class="w-8"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-        />
-      </svg>
-      <input
-        id="password"
-        type="password"
-        placeholder="Password"
-        aria-label="Password"
-      />
-      <button
-        type="button"
-        class="focus:outline-none"
-        aria-label="Show user password"
-      >
+    <div
+      class="mb-6 field field-lg with-icon outlined"
+      [ngClass]="{ disabled: loading }"
+    >
+      <div class="rounded-lg field-item">
         <svg
           class="w-8"
           xmlns="http://www.w3.org/2000/svg"
@@ -101,35 +59,108 @@
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="2"
-            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
           />
+        </svg>
+        <input
+          id="username"
+          type="text"
+          placeholder="Username or email address"
+          aria-label="Username or email"
+          [disabled]="loading"
+        />
+      </div>
+      <!-- <div class="field-messages">
+        <ul>
+          <li>Username invalid</li>
+        </ul>
+      </div> -->
+    </div>
+    <!-- field end -->
+
+    <!-- field -->
+    <div
+      class="mb-2 field field-lg with-icon outlined"
+      [ngClass]="{ disabled: loading }"
+    >
+      <div class="rounded-lg field-item">
+        <svg
+          class="w-8"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="2"
-            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
           />
         </svg>
-      </button>
+        <input
+          id="password"
+          type="password"
+          placeholder="Password"
+          aria-label="Password"
+          [disabled]="loading"
+        />
+        <button
+          type="button"
+          class="focus:outline-none"
+          aria-label="Show user password"
+        >
+          <svg
+            class="w-8"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+            />
+          </svg>
+        </button>
+      </div>
+      <!-- <ul class="field-messages">
+        <li>Username invalid</li>
+        <li>Email invalid</li>
+      </ul> -->
     </div>
     <!-- field end -->
 
     <!-- link -->
-    <a [routerLink]="['/', Path.ForgotPassword]" class="mb-6 link"
+    <a [routerLink]="['/', path.ForgotPassword]" class="mb-6 link"
       >Forgot your password?</a
     >
     <!-- link end -->
 
     <!-- button -->
-    <button class="mb-2 btn btn-blue btn-lg btn-block" type="button">
-      <span>Sign in</span>
+    <button
+      class="mb-2 rounded-lg btn btn-blue btn-lg btn-block"
+      type="button"
+      [disabled]="loading"
+      (click)="onClickSignIn()"
+    >
+      <span *ngIf="!loading">Sign in</span>
+      <span *ngIf="loading" class="spin"></span>
     </button>
     <!-- button end -->
 
     <!-- link -->
     <span class="text-sm text-gray-500">
       Don't have an account?
-      <a [routerLink]="['/', Path.SignUp]" class="link">Sign up</a>
+      <a [routerLink]="['/', path.SignUp]" class="link">Sign up</a>
     </span>
     <!-- link end -->
   </form>

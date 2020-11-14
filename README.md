@@ -100,9 +100,3 @@ Angular starter for large front-end projects built under a clean architecture th
 ![Light house metrics](https://imgur.com/eMCTu25.png)
 
 If you want to check that out by yourself, you can do it [here](https://developers.google.com/speed/pagespeed/insights/?hl=es&url=https%3A%2F%2Fangularboilerplate.netlify.app%2Flogin%3FreturnUrl%3D%252F&tab=desktop)
-
-## 🔜 What's coming for version 1.0.0 🔜
-
-- 👉 Refactor feature modules to acomplish shorter names
-- 👉 User module with the following containers (users overview, users profile)
-- 👉 Account settings module with the following containers (profile settings, account settings)
