@@ -3,7 +3,10 @@
 <div
   class="z-10 flex flex-col justify-center w-full p-6 bg-transparent rounded-none sm:rounded sm:h-auto sm:bg-accent md:shadow-2xl"
 >
-  <div class="p-4 mb-4 text-white bg-red-100 rounded-lg" *ngIf="errorMessage">
+  <div
+    class="p-4 mb-4 text-white rounded-lg bg-danger-100"
+    *ngIf="errorMessage"
+  >
     {{ errorMessage }}
   </div>
 
@@ -12,7 +15,7 @@
   <form>
     <!-- social -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6">
-      <button class="btn btn-grey" type="button" [disabled]="loading">
+      <button class="btn btn-secondary" type="button" [disabled]="loading">
         <img
           src="../../../../assets/icons/google.svg"
           alt="Sign up with google"
@@ -21,7 +24,7 @@
         <span>Google</span>
       </button>
 
-      <button class="btn btn-grey" type="button" [disabled]="loading">
+      <button class="btn btn-secondary" type="button" [disabled]="loading">
         <img
           src="../../../../assets/icons/facebook.svg"
           alt="Sign up with Facebook"
@@ -36,7 +39,7 @@
     <div
       class="block w-full mt-10 mb-3 text-center border-t border-gray-500 opacity-75"
     >
-      <span class="relative px-6 text-white bg-red-400 rounded-full split">
+      <span class="relative px-6 text-white rounded-full bg-danger-400 split">
         Or
       </span>
     </div>
@@ -147,7 +150,7 @@
 
     <!-- button -->
     <button
-      class="mb-2 rounded-lg btn btn-blue btn-lg btn-block"
+      class="mb-2 rounded-lg btn btn-primary btn-lg btn-block"
       type="button"
       [disabled]="loading"
       (click)="onClickSignIn()"

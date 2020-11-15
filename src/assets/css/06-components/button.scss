@@ -52,15 +52,15 @@
 
 .btn-neutral {
   @apply bg-transparent;
-  @apply text-body-text;
+  @apply text-body;
 
   &:hover {
-    @apply text-body-text-darker;
+    @apply text-body-darker;
   }
 
   &:active,
   &:focus {
-    @apply text-body-text-darker;
+    @apply text-body-darker;
   }
 }
 
@@ -94,129 +94,82 @@
   }
 }
 
-.btn-grey {
-  @apply bg-gray-600;
+.btn-secondary {
+  @apply bg-gray-500;
   @apply text-white;
   box-shadow: 0 6px 12px 0 rgba(68, 68, 68, 0.2);
 
   &:hover {
-    @apply bg-gray-500;
+    @apply bg-gray-400;
   }
 
   &:active,
   &:focus {
-    @apply bg-gray-700;
+    @apply bg-gray-600;
     box-shadow: 0 6px 12px 0 rgba(68, 68, 68, 0.4);
   }
 }
 
-.btn-red {
-  @apply bg-red-600;
-  @apply text-white;
-  box-shadow: 0 6px 12px 0 rgba(255, 14, 14, 0.2);
-
-  &:hover {
-    @apply bg-red-500;
-  }
-
-  &:active,
-  &:focus {
-    @apply bg-red-700;
-    box-shadow: 0 6px 12px 0 rgba(255, 14, 14, 0.4);
-  }
-}
-
-.btn-orange {
-  @apply bg-orange-600;
-  @apply text-white;
-  box-shadow: 0 6px 12px 0 rgba(255, 151, 14, 0.2);
-
-  &:hover {
-    @apply bg-orange-500;
-  }
-
-  &:active,
-  &:focus {
-    @apply bg-orange-700;
-    box-shadow: 0 6px 12px 0 rgba(255, 151, 14, 0.4);
-  }
-}
-
-.btn-yellow {
-  @apply bg-yellow-600;
-  box-shadow: 0 6px 12px 0 rgba(251, 255, 14, 0.2);
-
-  &:hover {
-    @apply bg-yellow-500;
-  }
-
-  &:active,
-  &:focus {
-    @apply bg-yellow-700;
-    box-shadow: 0 6px 12px 0 rgba(251, 255, 14, 0.4);
-  }
-}
-
-.btn-green {
-  @apply bg-green-600;
+.btn-success {
+  @apply bg-success-500;
   @apply text-white;
   box-shadow: 0 6px 12px 0 rgba(39, 255, 28, 0.2);
 
   &:hover {
-    @apply bg-green-500;
+    @apply bg-success-400;
   }
 
   &:active,
   &:focus {
-    @apply bg-green-700;
+    @apply bg-success-600;
     box-shadow: 0 6px 12px 0 rgba(39, 255, 28, 0.4);
   }
 }
 
-.btn-blue {
-  @apply bg-blue-600;
+.btn-primary {
+  @apply bg-primary-500;
   @apply text-white;
   box-shadow: 0 6px 12px 0 rgba(50, 125, 255, 0.2);
 
   &:hover {
-    @apply bg-blue-500;
+    @apply bg-primary-400;
   }
 
   &:active,
   &:focus {
-    @apply bg-blue-700;
+    @apply bg-primary-600;
     box-shadow: 0 6px 12px 0 rgba(50, 125, 255, 0.4);
   }
 }
 
-.btn-purple {
-  @apply bg-purple-600;
+.btn-warning {
+  @apply bg-warning-500;
   @apply text-white;
-  box-shadow: 0 6px 12px 0 rgba(231, 50, 255, 0.2);
+  box-shadow: 0 6px 12px 0 rgba(255, 151, 14, 0.2);
 
   &:hover {
-    @apply bg-purple-500;
+    @apply bg-warning-400;
   }
 
   &:active,
   &:focus {
-    @apply bg-purple-700;
-    box-shadow: 0 6px 12px 0 rgba(231, 50, 255, 0.4);
+    @apply bg-warning-600;
+    box-shadow: 0 6px 12px 0 rgba(255, 151, 14, 0.4);
   }
 }
 
-.btn-pink {
-  @apply bg-pink-600;
+.btn-danger {
+  @apply bg-danger-500;
   @apply text-white;
-  box-shadow: 0 6px 12px 0 rgba(255, 50, 163, 0.2);
+  box-shadow: 0 6px 12px 0 rgba(255, 14, 14, 0.2);
 
   &:hover {
-    @apply bg-pink-500;
+    @apply bg-danger-400;
   }
 
   &:active,
   &:focus {
-    @apply bg-pink-700;
-    box-shadow: 0 6px 12px 0 rgba(255, 50, 163, 0.4);
+    @apply bg-danger-600;
+    box-shadow: 0 6px 12px 0 rgba(255, 14, 14, 0.4);
   }
 }

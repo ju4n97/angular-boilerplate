@@ -35,7 +35,7 @@
 
     &:focus-within {
       color: var(--text-body);
-      border-color: theme("colors.blue.300");
+      border-color: theme("colors.primary.300");
 
       ::placeholder {
         color: var(--text-body);
@@ -92,17 +92,17 @@
     @apply opacity-25;
   }
   &.valid > .field-item {
-    border-color: theme("colors.green.100") !important;
+    border-color: theme("colors.success.100") !important;
   }
   &.invalid > .field-item {
-    border-color: theme("colors.red.100") !important;
+    border-color: theme("colors.danger.100") !important;
   }
 
   // styles for error messages
   & > .field-messages {
     @apply text-xs;
     @apply list-none;
-    @apply bg-red-100;
+    @apply bg-danger-100;
     @apply rounded;
     @apply px-4;
     @apply py-2;
