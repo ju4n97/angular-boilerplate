@@ -1,2 +1,2 @@
-export { LoginResult } from './login-result.interface';
+export { SignInResult } from './sign-in-result.interface';
 export { Token } from './token.interface';
