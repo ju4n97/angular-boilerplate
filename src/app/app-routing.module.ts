@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { NotFoundPage } from '@public/pages/not-found/not-found.page';
 import { Path } from './@core/enums/path.enum';
 import { AuthGuard, NoAuthGuard } from './@core/guards';
+import { NotFoundPage } from './public/pages/not-found/not-found.page';
 
 const routes: Routes = [
   // ===== Uncomment if Path.Home is different from empty =====
@@ -12,15 +12,14 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('@public/public.module').then((m) => m.PublicModule),
+      import('./public/public.module').then((m) => m.PublicModule),
   },
 
   // Auth
   {
     path: Path.Auth,
     canActivate: [NoAuthGuard],
-    loadChildren: () =>
-      import('@features/_auth/auth.module').then((m) => m.AuthModule),
+    loadChildren: () => import('./+auth/auth.module').then((m) => m.AuthModule),
   },
 
   // App
@@ -36,9 +35,7 @@ const routes: Routes = [
       {
         path: Path.Dashboard,
         loadChildren: () =>
-          import('@features/dashboard/dashboard.module').then(
-            (m) => m.DashboardModule
-          ),
+          import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
       },
     ],
   },
@@ -52,7 +49,10 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules, relativeLinkResolution: 'legacy' }),
+    RouterModule.forRoot(routes, {
+      preloadingStrategy: PreloadAllModules,
+      relativeLinkResolution: 'legacy',
+    }),
   ],
   exports: [RouterModule],
 })
