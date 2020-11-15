@@ -17,6 +17,9 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "customWebpackConfig": {
+              "path": "config/webpack-prod.config.js"
+            },
             "outputPath": "dist/angular-boilerplate",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -34,10 +37,7 @@
             "styles": [
               "src/assets/css/styles.scss"
             ],
-            "scripts": [],
-            "customWebpackConfig": {
-              "path": "webpack.config.js"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -81,13 +81,27 @@
             }
           }
         },
-        "serve": {
-          "builder": "@angular-builders/custom-webpack:dev-server",
+        "build-dev": {
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "browserTarget": "angular-boilerplate:build",
             "customWebpackConfig": {
-              "path": "webpack.config.js"
-            }
+              "path": "config/webpack-dev.config.js"
+            },
+            "outputPath": "dist/angular-boilerplate",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              "src/manifest.webmanifest"
+            ],
+            "styles": [
+              "src/assets/css/styles.scss"
+            ],
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -102,6 +116,12 @@
             "ja": {
               "browserTarget": "angular-boilerplate:build:ja"
             }
+          }
+        },
+        "serve": {
+          "builder": "@angular-builders/custom-webpack:dev-server",
+          "options": {
+            "browserTarget": "angular-boilerplate:build-dev"
           }
         },
         "extract-i18n": {
