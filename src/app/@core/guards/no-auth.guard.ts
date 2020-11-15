@@ -6,7 +6,7 @@ import {
   RouterStateSnapshot,
   UrlTree,
 } from '@angular/router';
-import { AuthService } from '@app/features/_auth';
+import { AuthService } from '@app/+auth';
 import { Observable } from 'rxjs';
 import { Path } from '../enums';
 

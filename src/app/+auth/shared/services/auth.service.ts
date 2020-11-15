@@ -5,12 +5,12 @@ import { User } from '@core/shared/user';
 import { environment } from '@environments/environment';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { LoginResult, Token } from '../interfaces';
+import { SignInResult, Token } from '../interfaces';
 
 @Injectable({
   providedIn: 'root',
 })
-export class AuthService extends GenericHttpService<User | LoginResult> {
+export class AuthService extends GenericHttpService<User | SignInResult> {
   private readonly USER_ITEM = '_user';
   private readonly TOKEN_ITEM = '_token';
 
@@ -37,9 +37,9 @@ export class AuthService extends GenericHttpService<User | LoginResult> {
     return !!(user && token);
   }
 
-  login({ username, password }: User): Observable<LoginResult> {
-    return super.post({ username, password }, 'login').pipe(
-      map((result: LoginResult) => {
+  signIn({ username, password }: User): Observable<SignInResult> {
+    return super.post({ username, password }, 'sign-in').pipe(
+      map((result: SignInResult) => {
         const { user, token } = result;
         this._saveUser(user);
         this._saveToken(token);
@@ -49,8 +49,8 @@ export class AuthService extends GenericHttpService<User | LoginResult> {
     );
   }
 
-  register(user: User): Observable<User> {
-    return super.post(user, 'register') as Observable<User>;
+  signUp(user: User): Observable<User> {
+    return super.post(user, 'sign-up') as Observable<User>;
   }
 
   beginPasswordReset(email: string) {

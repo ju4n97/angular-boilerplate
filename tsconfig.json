@@ -16,8 +16,6 @@
       "@app/*": ["src/app/*"],
       "@core/*": ["src/app/@core/*"],
       "@ui/*": ["src/app/@ui/*"],
-      "@features/*": ["src/app/features/*"],
-      "@public/*": ["src/app/public/*"],
       "@assets/*": ["src/assets/*"],
       "@environments/*": ["src/environments/*"]
     }
