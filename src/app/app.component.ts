@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { AuthService } from './+auth';
 import { Path } from './@core/enums';
 import { SeoService } from './@core/services';
-import { AuthService } from './features/_auth';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
