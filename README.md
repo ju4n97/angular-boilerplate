@@ -21,69 +21,53 @@ Angular starter for enterprise-grade front-end projects built under a clean arch
 ### Project structure
 
 ```
-📁---app
-  📁---@core
-    📁---enums
-    📁---guards
-    📁---handlers
-    📁---interceptors
-    📁---interfaces
-    📁---services
-    🟥---core.module.ts
-
-  📁---@ui
-    📁---layout
-      📁---components
-        📁---footer
-        📁---navbar
-    🟥---layout.module.ts
-
-    ➕---additional UI modules
-
-  📁---features
-    📁---_auth
-      📁---components
-      📁---pages
-      📁---shared
-      🟥---auth-routing.module.ts
-      🟥---auth.module.ts
-
-    📁---dashboard
-      📁---components
-      📁---pages
-      📁---shared
-      🟥---dashboard-routing.module.ts
-      🟥---dashboard.module.ts
-
-    ➕---additional feature modules
-
-  📁---public
-    📁---pages
-      📁---home
-      📁---internal-server-error
-      📁---not-found
-      ➕---additional public components
-    🟥---public-routing.module.ts
-    🟥---public.module.ts
-
-📁---assets
-  📁---animations
-  📁---icons
-  📁---css
-    📁---01-settings
-    📁---02-tools
-    📁---03-generic
-    📁---04-elements
-    📁---05-objects
-    📁---06-components
-    📁---07-trumps
-    🗄️---styles.scss
-  ➕---additional assets
-
-📁---environments
-  🗄️---environment.prod.ts
-  🗄️---environment.ts
-  ➕---additional environments
+└───src
+    ├───app
+│   ├───+auth
+│   │   └───pages
+│   │       ├───forgot-password
+│   │       ├───forgot-password-email-sent
+│   │       ├───password-reset
+│   │       ├───password-reset-failed
+│   │       ├───password-reset-succeeded
+│   │       ├───sign-in
+│   │       └───sign-up
+│   ├───+settings
+│   │   └───pages
+│   ├───+user
+│   │   └───pages
+│   ├───@components
+│   │   ├───breadcrumb
+│   │   ├───footer
+│   │   └───header
+│   ├───@containers
+│   │   ├───home
+│   │   └───not-found
+│   ├───@core
+│   │   ├───directives
+│   │   │   └───click-outside
+│   │   ├───guards
+│   │   ├───interceptors
+│   │   ├───pipes
+│   │   │   └───bytes
+│   │   ├───services
+│   │   │   └───seo
+│   │   ├───structs
+│   │   └───utils
+│   └───features
+├───assets
+├───css
+│   ├───01-settings
+│   ├───02-tools
+│   ├───03-generic
+│   ├───04-elements
+│   ├───05-objects
+│   ├───06-components
+│   └───07-trumps
+├───environments
+├───locale
+└───public
+    └───icons
 ```
 
 ## Current page speed insights
