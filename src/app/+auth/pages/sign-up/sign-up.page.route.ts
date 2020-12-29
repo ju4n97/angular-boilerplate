@@ -1,5 +1,5 @@
 import { Route } from '@angular/router';
-import { Path } from '../structs';
+import { Path } from '@app/@core/structs';
 import { SignUpPage } from './sign-up.page';
 
 export const SIGN_UP_ROUTE: Route = {

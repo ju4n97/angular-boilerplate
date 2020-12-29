@@ -1,40 +1,7 @@
-<nav class="shadow bg-accent">
-  <div class="container flex items-center justify-between py-3 mx-auto">
-    <!-- mobile -->
-    <a
-      routerLink="/"
-      class="block text-2xl font-bold tracking-tighter no-underline cursor-pointer text-primary md:hidden"
-    >
-      <span class="text-danger-100">A</span> B
-    </a>
-
-    <!-- desktop -->
-    <a
-      routerLink="/"
-      class="hidden text-2xl font-bold no-underline cursor-pointer text-primary md:block"
-    >
-      <span class="text-danger-100">Angular</span>
-      Boilerplate
-    </a>
-
-    <div>
-      <a
-        [routerLink]="['/', path.SignIn]"
-        class="mr-3 rounded-lg btn btn-neutral"
-      >
-        Sign in
-      </a>
-      <a [routerLink]="['/', path.SignUp]" class="rounded-lg btn btn-primary">
-        Sign up
-      </a>
-    </div>
-  </div>
-</nav>
-
 <div class="h-full pattern">
   <div class="container flex items-center justify-center h-full">
     <div class="-mt-20 text-center md:max-w-xl">
-      <h1 i18n class="mb-3">👋 Welcome to Angular Boilerplate.</h1>
+      <h1 i18n class="mb-4">👋 Welcome to Angular Boilerplate.</h1>
 
       <p i18n class="mb-12 text-xl">
         ⚒️ Start building your next awesome project. ⚒️

@@ -1,5 +1,5 @@
 import { Route } from '@angular/router';
-import { Path } from '../structs';
+import { Path } from '@app/@core/structs';
 import { PasswordResetFailedPage } from './password-reset-failed.page';
 
 export const PASSWORD_RESET_FAILED_ROUTE: Route = {

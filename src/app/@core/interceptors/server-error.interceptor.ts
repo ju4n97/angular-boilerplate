@@ -7,9 +7,9 @@ import {
 } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { Path } from '@app/@core/structs';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { Path } from '../structs';
 
 @Injectable()
 export class ServerErrorInterceptor implements HttpInterceptor {

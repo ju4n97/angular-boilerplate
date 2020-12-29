@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { NOT_FOUND_ROUTE } from './not-found.page.route';
 
-import { NotFoundComponent } from './not-found.component';
-
-const routes: Routes = [{ path: '', component: NotFoundComponent }];
+const routes: Routes = [NOT_FOUND_ROUTE];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class NotFoundRoutingModule { }
+export class NotFoundRoutingModule {}
