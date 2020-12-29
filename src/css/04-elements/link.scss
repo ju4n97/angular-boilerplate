@@ -1,0 +1,12 @@
+a.link {
+  @apply inline-block;
+  @apply font-bold;
+  @apply text-sm;
+  @apply text-danger-200;
+
+  &:hover,
+  &:active,
+  &:focus {
+    @apply underline;
+  }
+}
