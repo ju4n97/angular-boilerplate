@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Path } from '@app/@core/structs';
+import { Path } from '@core/structs';
 
 @Component({
   templateUrl: './sign-in.page.html',

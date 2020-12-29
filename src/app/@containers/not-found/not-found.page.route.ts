@@ -1,5 +1,5 @@
 import { Route } from '@angular/router';
-import { Path } from '@app/@core/structs';
+import { Path } from '@core/structs';
 import { NotFoundPage } from './not-found.page';
 
 export const NOT_FOUND_ROUTE: Route = {

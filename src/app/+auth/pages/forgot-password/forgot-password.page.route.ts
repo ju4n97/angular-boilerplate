@@ -1,5 +1,5 @@
 import { Route } from '@angular/router';
-import { Path } from '@app/@core/structs';
+import { Path } from '@core/structs';
 import { ForgotPasswordPage } from './forgot-password.page';
 
 export const FORGOT_PASSWORD_ROUTE: Route = {
