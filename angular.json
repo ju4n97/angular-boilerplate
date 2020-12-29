@@ -29,11 +29,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/public/manifest.webmanifest",
-              "src/public/sitemap.xml",
-              "src/public/robots.txt",
-              "src/public/web.config",
-              "src/public/_redirects"
+              "src/public"
             ],
             "styles": [
               "src/css/styles.scss"
