@@ -6,7 +6,7 @@ export const NOT_FOUND_ROUTE: Route = {
   path: Path.NotFound,
   component: NotFoundPage,
   data: {
-    title: "The page you were looking for couldn't be found",
+    title: 'The page you were looking for could not be found',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, expedita!',
     robots: 'noindex, nofollow',
