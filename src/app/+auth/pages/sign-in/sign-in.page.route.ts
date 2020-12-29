@@ -1,5 +1,5 @@
 import { Route } from '@angular/router';
-import { Path } from '@app/@core/enums';
+import { Path } from '../structs';
 import { SignInPage } from './sign-in.page';
 
 export const SIGN_IN_ROUTE: Route = {

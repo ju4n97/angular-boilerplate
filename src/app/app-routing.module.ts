@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { Path } from './@core/enums/path.enum';
 import { AuthGuard, NoAuthGuard } from './@core/guards';
+import { Path } from './@core/structs';
 
 const routes: Routes = [
   // ===== Uncomment if Path.Home is different from empty =====
@@ -37,6 +37,15 @@ const routes: Routes = [
       //     import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
       // },
     ],
+  },
+  {
+    path: 'settings',
+    loadChildren: () =>
+      import('./+settings/settings.module').then((m) => m.SettingsModule),
+  },
+  {
+    path: 'user',
+    loadChildren: () => import('./+user/user.module').then((m) => m.UserModule),
   },
 
   // Not found page (must go at the bottom)

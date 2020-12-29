@@ -1,5 +1,5 @@
 import { Route } from '@angular/router';
-import { Path } from '@app/@core/enums';
+import { Path } from '../structs';
 import { ForgotPasswordPage } from './forgot-password.page';
 
 export const FORGOT_PASSWORD_ROUTE: Route = {

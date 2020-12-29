@@ -1,5 +1,5 @@
 import { Route } from '@angular/router';
-import { Path } from '@app/@core/enums';
+import { Path } from '../structs';
 import { PasswordResetPage } from './password-reset.page';
 
 export const PASSWORD_RESET_ROUTE: Route = {
