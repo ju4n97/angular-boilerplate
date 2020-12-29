@@ -97,9 +97,10 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              "src/manifest.webmanifest"
+              "src/public/favicon.ico",
+              "src/public/assets",
+              "src/public/icons",
+              "src/public/manifest.webmanifest"
             ],
             "styles": [
               "src/css/styles.scss"
@@ -141,9 +142,10 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-              "src/favicon.ico",
+              "src/public/favicon.ico",
               "src/assets",
-              "src/manifest.webmanifest"
+              "src/public/icons",
+              "src/public/manifest.webmanifest"
             ],
             "styles": [
               "src/css/styles.scss"

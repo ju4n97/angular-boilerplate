@@ -1,11 +1,9 @@
-<div class="h-full app">
-  <ng-container *ngIf="isLoggedIn$ | async; else notAuthorized">
-    <app-header></app-header>
-    <router-outlet></router-outlet>
-    <app-footer></app-footer>
-  </ng-container>
+<ng-container *ngIf="isLoggedIn$ | async; else notAuthorized">
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</ng-container>
 
-  <ng-template #notAuthorized>
-    <router-outlet></router-outlet>
-  </ng-template>
-</div>
+<ng-template #notAuthorized>
+  <router-outlet></router-outlet>
+</ng-template>
