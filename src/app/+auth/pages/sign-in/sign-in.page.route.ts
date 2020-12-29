@@ -1,5 +1,5 @@
 import { Route } from '@angular/router';
-import { Path } from '@app/@core/enums';
+import { Path } from '@app/@core/structs';
 import { SignInPage } from './sign-in.page';
 
 export const SIGN_IN_ROUTE: Route = {
@@ -8,7 +8,7 @@ export const SIGN_IN_ROUTE: Route = {
   data: {
     title: 'Sign into Angular Boilerplate',
     description:
-      'Start writing your business logic without any concern on architecture matters.',
+      'Start writing your business logic right away without any concern on architecture matters.',
     robots: 'index, follow',
   },
 };

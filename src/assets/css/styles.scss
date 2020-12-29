@@ -9,7 +9,6 @@
 @import "01-settings/theming.scss";
 
 // 02. tools
-// @import "02-tools/media-queries";
 @import "02-tools/animations.scss";
 
 // 03. generic
@@ -18,10 +17,11 @@
 @import "04-elements/document.scss";
 @import "04-elements/headings.scss";
 @import "04-elements/link.scss";
+
 // 05. objects
+@import "05-objects/shapes.scss";
 
 // 06. components
-@import "06-components/field.scss";
 @import "06-components/button.scss";
 
 // 07. trumps

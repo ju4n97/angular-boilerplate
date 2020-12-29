@@ -6,15 +6,14 @@ import {
   RouterStateSnapshot,
   UrlTree,
 } from '@angular/router';
-import { AuthService } from '@app/+auth';
+import { Path } from '@app/@core/structs';
 import { Observable } from 'rxjs';
-import { RoleList } from '../shared/role';
 
 @Injectable({
   providedIn: 'root',
 })
 export class RoleGuard implements CanActivate {
-  constructor(private router: Router, private authService: AuthService) {}
+  constructor(private router: Router) {}
 
   canActivate(
     next: ActivatedRouteSnapshot,
@@ -24,8 +23,8 @@ export class RoleGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    const routeRoles = next.data.roles as RoleList[];
-    const userRoles = this.authService.userValue.roles;
+    const routeRoles = next.data.roles;
+    const userRoles = [];
     const hasRole =
       routeRoles &&
       userRoles &&
@@ -37,7 +36,7 @@ export class RoleGuard implements CanActivate {
       return true;
     }
 
-    this.router.navigate(['/not-found']);
+    this.router.navigate([`/${Path.NotFound}`]);
     return false;
   }
 }

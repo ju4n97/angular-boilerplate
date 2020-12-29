@@ -1,26 +1,22 @@
 # Angular Boilerplate
 
-Angular starter for large front-end projects built under a clean architecture that helps to scale and maintain a fast workflow.
+Angular starter for enterprise-grade front-end projects built under a clean architecture that helps to scale and maintain a fast workflow.
 
 ## Main features
 
-- Angular components types (e.g. component, page).
-- Smart and dumb components pattern.
 - Lazy loading.
-- Lazy loading - preload strategies.
-- with dynamic titles and content meta tags.
+- Smart and dumb components pattern.
+- Components types (e.g. component, page).
+- Dynamic titles and content meta tags.
 - Global error handler.
 - Generic type-safe HTTP service.
 - Generic partial UI modules.
 - Scalable CSS architecture with [ITCSS](https://itcss.io/).
-- [Webpack bundler analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer) ready to use.
-- [Lighthouse](https://developers.google.com/web/tools/lighthouse) reports improved to the maximum.
-- Authentication scheme based on roles, JWT interceptor, role guard, auth guard, and no-auth guard.
-- PWA (Progressive web app).
-- Offline first
-- i18n - four sample languages (english, spanish, french, japanese).
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse) reports improved.
+- Authentication based on roles.
+- PWA.
+- i18n
 - SEO good practices.
-- Code quality and best practices on each language.
 
 ### Project structure
 
@@ -76,6 +72,7 @@ Angular starter for large front-end projects built under a clean architecture th
   📁---css
     📁---01-settings
     📁---02-tools
+    📁---03-generic
     📁---04-elements
     📁---05-objects
     📁---06-components
@@ -89,7 +86,7 @@ Angular starter for large front-end projects built under a clean architecture th
   ➕---additional environments
 ```
 
-## Current page speed insights (Will be improved)
+## Current page speed insights
 
 ### Mobile
 

@@ -24,12 +24,10 @@ module.exports = {
       white: "#fff",
       black: "#000",
 
-      background: "var(--background-color)",
+      background: "var(--bg)",
       accent: "var(--accent)",
-      body: "var(--text-body)",
-      "body-lighter": "var(--text-body-lighter)",
-      "body-darker": "var(--text-body-darker)",
-      "body-display": "var(--text-display)",
+      primary: "var(--primary)",
+      secondary: "var(--secondary)",
 
       gray: {
         100: "#e8eaed",

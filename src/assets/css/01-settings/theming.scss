@@ -3,8 +3,8 @@
     --#{$key}: #{$value};
   }
 
-  background-color: var(--background-color);
-  color: var(--text-body);
+  background-color: var(--bg);
+  color: var(--primary);
 }
 
 .app,
@@ -14,13 +14,10 @@
 
 .app.dark {
   @include apply-theme(dark);
-  filter: brightness(0.9) contrast(1.2);
 }
 
 @media (prefers-color-scheme: dark) {
-  /* defaults to dark theme */
   .app {
     @include apply-theme(dark);
-    filter: brightness(0.9) contrast(1.2);
   }
 }

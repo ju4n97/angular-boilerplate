@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { Path } from './@core/enums/path.enum';
 import { AuthGuard, NoAuthGuard } from './@core/guards';
-import { NotFoundPage } from './public/pages/not-found/not-found.page';
+import { Path } from './@core/structs';
 
 const routes: Routes = [
   // ===== Uncomment if Path.Home is different from empty =====
@@ -10,9 +9,9 @@ const routes: Routes = [
 
   // Public
   {
-    path: '',
+    path: Path.Home,
     loadChildren: () =>
-      import('./public/public.module').then((m) => m.PublicModule),
+      import('./@containers/home/home.module').then((m) => m.HomeModule),
   },
 
   // Auth
@@ -32,18 +31,30 @@ const routes: Routes = [
     path: Path.App,
     canActivate: [AuthGuard],
     children: [
-      {
-        path: Path.Dashboard,
-        loadChildren: () =>
-          import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
-      },
+      // {
+      //   path: Path.Dashboard,
+      //   loadChildren: () =>
+      //     import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
+      // },
     ],
+  },
+  {
+    path: 'settings',
+    loadChildren: () =>
+      import('./+settings/settings.module').then((m) => m.SettingsModule),
+  },
+  {
+    path: 'user',
+    loadChildren: () => import('./+user/user.module').then((m) => m.UserModule),
   },
 
   // Not found page (must go at the bottom)
   {
     path: '**',
-    component: NotFoundPage,
+    loadChildren: () =>
+      import('./@containers/not-found/not-found.module').then(
+        (m) => m.NotFoundModule
+      ),
   },
 ];
 
