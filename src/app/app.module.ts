@@ -2,9 +2,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { LayoutModule } from '@ui/layout/layout.module';
 import { environment } from '../environments/environment';
-import { CoreModule } from './@core/core.module';
+import { FooterModule } from './@components/footer/footer.module';
+import { HeaderModule } from './@components/header/header.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -17,8 +17,8 @@ import { AppComponent } from './app.component';
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
     }),
-    CoreModule,
-    LayoutModule,
+    HeaderModule,
+    FooterModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
