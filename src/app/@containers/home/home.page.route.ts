@@ -1,5 +1,5 @@
 import { Route } from '@angular/router';
-import { Path } from '@app/@core/structs';
+import { Path } from '@core/structs';
 import { HomePage } from './home.page';
 
 export const HOME_ROUTE: Route = {

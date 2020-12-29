@@ -29,13 +29,14 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/manifest.webmanifest",
-              "src/sitemap.xml",
-              "src/robots.txt",
-              "src/_redirects"
+              "src/public/manifest.webmanifest",
+              "src/public/sitemap.xml",
+              "src/public/robots.txt",
+              "src/public/web.config",
+              "src/public/_redirects"
             ],
             "styles": [
-              "src/assets/css/styles.scss"
+              "src/css/styles.scss"
             ],
             "scripts": []
           },
@@ -105,7 +106,7 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/assets/css/styles.scss"
+              "src/css/styles.scss"
             ],
             "scripts": []
           },
@@ -149,7 +150,7 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/css/styles.scss"
             ],
             "scripts": []
           }

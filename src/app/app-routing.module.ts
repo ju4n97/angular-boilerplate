@@ -11,7 +11,7 @@ const routes: Routes = [
   {
     path: Path.Home,
     loadChildren: () =>
-      import('./@containers/home/home.module').then((m) => m.HomeModule),
+      import('@containers/home/home.module').then((m) => m.HomeModule),
   },
 
   // Auth
@@ -52,7 +52,7 @@ const routes: Routes = [
   {
     path: '**',
     loadChildren: () =>
-      import('./@containers/not-found/not-found.module').then(
+      import('@containers/not-found/not-found.module').then(
         (m) => m.NotFoundModule
       ),
   },

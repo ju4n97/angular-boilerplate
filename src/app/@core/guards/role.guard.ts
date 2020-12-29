@@ -6,7 +6,7 @@ import {
   RouterStateSnapshot,
   UrlTree,
 } from '@angular/router';
-import { Path } from '@app/@core/structs';
+import { Path } from '@core/structs';
 import { Observable } from 'rxjs';
 
 @Injectable({

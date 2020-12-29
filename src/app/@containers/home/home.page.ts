@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Path } from '@app/@core/structs';
+import { Path } from '@core/structs';
 
 @Component({
   templateUrl: './home.page.html',
