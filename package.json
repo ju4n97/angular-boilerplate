@@ -64,7 +64,7 @@
     "@typescript-eslint/parser": "4.3.0",
     "codelyzer": "^6.0.1",
     "eslint": "^7.6.0",
-    "eslint-plugin-jsdoc": "30.7.6",
+    "eslint-plugin-jsdoc": "30.7.9",
     "eslint-plugin-prefer-arrow": "1.2.2",
     "husky": "^4.3.6",
     "jasmine-core": "~3.6.0",
