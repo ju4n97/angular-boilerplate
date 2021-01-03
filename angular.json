@@ -96,6 +96,12 @@
               "src/css/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "serve": {
+          "builder": "@angular-builders/custom-webpack:dev-server",
+          "options": {
+            "browserTarget": "angular-boilerplate:build-dev"
           },
           "configurations": {
             "production": {
@@ -104,12 +110,6 @@
             "es": {
               "browserTarget": "angular-boilerplate:build:es"
             }
-          }
-        },
-        "serve": {
-          "builder": "@angular-builders/custom-webpack:dev-server",
-          "options": {
-            "browserTarget": "angular-boilerplate:build-dev"
           }
         },
         "extract-i18n": {
