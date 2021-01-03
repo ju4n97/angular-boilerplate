@@ -96,7 +96,7 @@ Angular starter for enterprise-grade front-end projects, built under a clean arc
 | start      | Run your app in development mode                 | npm start          | yarn start      | ng serve                                                           |
 | start:es   | Run your app in development mode in spanish      | npm run start:es   | yarn start:es   | ng serve -c=es --port 4201                                         |
 | build      | Build your app                                   | npm run build      | yarn build      | ng build                                                           |
-| build      | Build your app ready for production              | npm run build:prod | yarn build:prod | ng build --prod --build-optimizer --aot --stats-json               |
+| build:prod | Build your app ready for production              | npm run build:prod | yarn build:prod | ng build --prod --build-optimizer --aot --stats-json               |
 | build:i18n | Build your multilingual app ready for production | npm run build:i18n | yarn build:i18n | ng build --prod --build-optimizer --aot --stats-json --localize    |
 | test       | Run your unit tests                              | npm run test       | yarn test       | ng test                                                            |
 | lint       | Use ESLint to lint your app                      | npm run lint       | yarn lint       | ng lint                                                            |
