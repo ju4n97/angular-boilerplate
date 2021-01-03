@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { RouterTestingModule } from '@angular/router/testing';
 import { SignInPage } from './sign-in.page';
 
 describe('SignInPage', () => {
@@ -8,9 +8,9 @@ describe('SignInPage', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SignInPage ]
-    })
-    .compileComponents();
+      declarations: [SignInPage],
+      imports: [RouterTestingModule],
+    }).compileComponents();
   });
 
   beforeEach(() => {

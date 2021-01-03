@@ -71,16 +71,6 @@
               "localize": [
                 "es"
               ]
-            },
-            "fr": {
-              "localize": [
-                "fr"
-              ]
-            },
-            "ja": {
-              "localize": [
-                "ja"
-              ]
             }
           }
         },
@@ -113,12 +103,6 @@
             },
             "es": {
               "browserTarget": "angular-boilerplate:build:es"
-            },
-            "fr": {
-              "browserTarget": "angular-boilerplate:build:fr"
-            },
-            "ja": {
-              "browserTarget": "angular-boilerplate:build:ja"
             }
           }
         },
@@ -178,9 +162,7 @@
       "i18n": {
         "sourceLocale": "en-US",
         "locales": {
-          "es": "src/locale/messages.es.xlf",
-          "fr": "src/locale/messages.fr.xlf",
-          "ja": "src/locale/messages.ja.xlf"
+          "es": "src/locale/messages.es.xlf"
         }
       }
     }

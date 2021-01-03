@@ -26,7 +26,7 @@ export class NoAuthGuard implements CanActivate {
     const isLoggedIn = true;
 
     if (isLoggedIn) {
-      this.router.navigate([Path.App, Path.Dashboard]);
+      this.router.navigate([Path.App]);
       return false;
     }
 

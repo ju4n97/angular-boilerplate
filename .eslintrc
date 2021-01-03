@@ -1,7 +1,12 @@
-
 {
   "root": true,
   "overrides": [
+    {
+      "files": ["*.js"],
+      "parserOptions": {
+        "ecmaVersion": 2018
+      }
+    },
     {
       "files": ["*.ts"],
       "parserOptions": {
