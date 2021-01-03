@@ -2,6 +2,14 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="b45d01f61abb874a71b314051193f4b72c3d4cf2" datatype="html">
+        <source>Repository</source>
+        <target>Repositorio</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/@components/header/header.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="13a61074e8c62851e6f25bb04129c81ebcc1e27e" datatype="html">
         <source> Built in planet 🌎 by YOUR_NAME</source>
         <target> Construído en el planeta 🌎 por TU_NOMBRE</target>
