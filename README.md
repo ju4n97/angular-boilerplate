@@ -74,7 +74,7 @@ Angular starter for enterprise-grade front-end projects, built under a clean arc
 
 - Change titles, descriptions, and robots of the pages:
 
-  Every page has a `.route` file that contains an exported constant that holds the title and description and a robot's metatag that indicates if it can be indexed or followed by a web crawler.
+  Every page has a `.route` file that contains an exported constant that holds the title, description and a robot's metatag that indicates if it can be indexed or followed by a web crawler.
 
 - Change light and dark mode colors:
 
