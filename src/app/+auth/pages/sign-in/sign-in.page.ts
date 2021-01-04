@@ -12,7 +12,7 @@ export class SignInPage implements OnInit {
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
     this.returnUrl =
       this.activatedRoute.snapshot.queryParamMap.get('returnUrl') ||
-      `/${Path.App}/${Path.Dashboard}`;
+      `/${Path.App}`;
   }
 
   ngOnInit(): void {}

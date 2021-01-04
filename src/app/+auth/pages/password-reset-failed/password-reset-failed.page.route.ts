@@ -7,8 +7,6 @@ export const PASSWORD_RESET_FAILED_ROUTE: Route = {
   component: PasswordResetFailedPage,
   data: {
     title: 'Password reset failed',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt?',
     robots: 'noindex, nofollow',
   },
 };

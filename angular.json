@@ -71,16 +71,6 @@
               "localize": [
                 "es"
               ]
-            },
-            "fr": {
-              "localize": [
-                "fr"
-              ]
-            },
-            "ja": {
-              "localize": [
-                "ja"
-              ]
             }
           }
         },
@@ -106,6 +96,12 @@
               "src/css/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "serve": {
+          "builder": "@angular-builders/custom-webpack:dev-server",
+          "options": {
+            "browserTarget": "angular-boilerplate:build-dev"
           },
           "configurations": {
             "production": {
@@ -113,19 +109,7 @@
             },
             "es": {
               "browserTarget": "angular-boilerplate:build:es"
-            },
-            "fr": {
-              "browserTarget": "angular-boilerplate:build:fr"
-            },
-            "ja": {
-              "browserTarget": "angular-boilerplate:build:ja"
             }
-          }
-        },
-        "serve": {
-          "builder": "@angular-builders/custom-webpack:dev-server",
-          "options": {
-            "browserTarget": "angular-boilerplate:build-dev"
           }
         },
         "extract-i18n": {
@@ -178,9 +162,7 @@
       "i18n": {
         "sourceLocale": "en-US",
         "locales": {
-          "es": "src/locale/messages.es.xlf",
-          "fr": "src/locale/messages.fr.xlf",
-          "ja": "src/locale/messages.ja.xlf"
+          "es": "locale/messages.es.xlf"
         }
       }
     }

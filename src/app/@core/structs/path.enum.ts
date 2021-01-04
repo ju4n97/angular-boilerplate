@@ -1,7 +1,6 @@
 export enum Path {
-  // Public
+  // General containers
   Home = '',
-  InternalServerError = 'internal-server-error',
   NotFound = '404',
 
   // Auth
@@ -11,12 +10,24 @@ export enum Path {
   ForgotPassword = 'forgot-password',
   ForgotPasswordEmailSent = 'forgot-password-email-sent',
   PasswordReset = 'password-reset',
-  PasswordResetSucceeded = 'password-reset-succeeded',
   PasswordResetFailed = 'password-reset-failed',
+  PasswordResetSucceeded = 'password-reset-succeeded',
 
   // App base url
   App = 'app',
 
-  // Features
-  Dashboard = 'dashboard',
+  // Settings
+  Settings = 'settings',
+  SettingsAccount = 'account',
+  SettingsAppearance = 'appearance',
+  SettingsBilling = 'billing',
+  SettingsBlockedUsers = 'blocked-users',
+  SettingsNotifications = 'notifications',
+  SettingsSecurity = 'security',
+  SettingsSecurityLog = 'security-log',
+
+  // User
+  User = 'users',
+  UserOverview = 'overview',
+  UserProfile = ':username',
 }

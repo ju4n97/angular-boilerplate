@@ -24,7 +24,7 @@ const routes: Routes = [
   // App
   {
     path: Path.App,
-    redirectTo: `${Path.App}/${Path.Dashboard}`,
+    redirectTo: `${Path.App}`,
     pathMatch: 'full',
   },
   {

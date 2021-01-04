@@ -7,8 +7,6 @@ export const PASSWORD_RESET_SUCCEEDED_ROUTE: Route = {
   component: PasswordResetSucceededPage,
   data: {
     title: 'Your password was restablished',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt?',
     robots: 'noindex, nofollow',
   },
 };

@@ -7,8 +7,6 @@ export const PASSWORD_RESET_ROUTE: Route = {
   component: PasswordResetPage,
   data: {
     title: 'Enter your new password',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt?',
     robots: 'noindex, nofollow',
   },
 };

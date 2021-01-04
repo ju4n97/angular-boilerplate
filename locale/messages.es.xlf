@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="b45d01f61abb874a71b314051193f4b72c3d4cf2" datatype="html">
+        <source>Repository</source>
+        <target>Repositorio</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/@components/header/header.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="13a61074e8c62851e6f25bb04129c81ebcc1e27e" datatype="html">
+        <source> Built in planet 🌎 by YOUR_NAME</source>
+        <target> Construído en el planeta 🌎 por TU_NOMBRE</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/@components/footer/footer.component.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="442c2488698ff302f27c5ce492aa920eec5a5d08" datatype="html">
+        <source>👋 Welcome to Angular Boilerplate!</source>
+        <target>👋 ¡Te damos la bienvenida a Angular Boilerplate!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/@containers/home/home.page.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cae40b4d26a06d8d5104348f2b869f199d67593a" datatype="html">
+        <source>⚒️ Start building your SPA easily. ⚒️</source>
+        <target>⚒️ Comienza a crear tu SPA fácilmente. ⚒️</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/@containers/home/home.page.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
