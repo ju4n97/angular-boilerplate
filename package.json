@@ -12,8 +12,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "extract": "ng extract-i18n --output-path locale --ivy",
-    "analyze": "webpack-bundle-analyzer dist/angular-boilerplate/stats-es2015.json"
+    "i18n:extract": "ng extract-i18n --output-path locale --ivy",
+    "analyze": "webpack-bundle-analyzer dist/angular-boilerplate/stats.json"
   },
   "husky": {
     "hooks": {

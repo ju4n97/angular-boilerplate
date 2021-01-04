@@ -150,16 +150,16 @@ Angular starter for enterprise-grade front-end projects, built under a clean arc
 
 ## 🧙‍♂️ Commands
 
-| Command    | Description                                      | NPM                | Yarn            | Background command                                                 |
-| ---------- | ------------------------------------------------ | ------------------ | --------------- | ------------------------------------------------------------------ |
-| ng         | See available commands                           | npm run ng         | yarn ng         | ng                                                                 |
-| start      | Run your app in development mode                 | npm start          | yarn start      | ng serve                                                           |
-| start:es   | Run your app in development mode in spanish      | npm run start:es   | yarn start:es   | ng serve -c=es --port 4201                                         |
-| build      | Build your app                                   | npm run build      | yarn build      | ng build                                                           |
-| build:prod | Build your app ready for production              | npm run build:prod | yarn build:prod | ng build --prod --build-optimizer --aot --stats-json               |
-| build:i18n | Build your multilingual app ready for production | npm run build:i18n | yarn build:i18n | ng build --prod --build-optimizer --aot --stats-json --localize    |
-| test       | Run your unit tests                              | npm run test       | yarn test       | ng test                                                            |
-| lint       | Use ESLint to lint your app                      | npm run lint       | yarn lint       | ng lint                                                            |
-| e2e        | Run your e2e integration tests                   | npm run e2e        | yarn e2e        | ng e2e                                                             |
-| extract    | Extract i18n messages from i18n directives       | npm run extract    | yarn extract    | ng extract-i18n --output-path locale --ivy                         |
-| analyze    | Open webpack-bundle-analyzer                     | npm run analyze    | yarn analyze    | webpack-bundle-analyzer dist/angular-boilerplate/stats-es2015.json |
+| Command      | Description                                      | NPM                | Yarn            | Background command                                              |
+| ------------ | ------------------------------------------------ | ------------------ | --------------- | --------------------------------------------------------------- |
+| ng           | See available commands                           | npm run ng         | yarn ng         | ng                                                              |
+| start        | Run your app in development mode                 | npm start          | yarn start      | ng serve                                                        |
+| start:es     | Run your app in development mode in spanish      | npm run start:es   | yarn start:es   | ng serve -c=es --port 4201                                      |
+| build        | Build your app                                   | npm run build      | yarn build      | ng build                                                        |
+| build:prod   | Build your app ready for production              | npm run build:prod | yarn build:prod | ng build --prod --build-optimizer --aot --stats-json            |
+| build:i18n   | Build your multilingual app ready for production | npm run build:i18n | yarn build:i18n | ng build --prod --build-optimizer --aot --stats-json --localize |
+| test         | Run your unit tests                              | npm run test       | yarn test       | ng test                                                         |
+| lint         | Use ESLint to lint your app                      | npm run lint       | yarn lint       | ng lint                                                         |
+| e2e          | Run your e2e integration tests                   | npm run e2e        | yarn e2e        | ng e2e                                                          |
+| i18n:extract | Extract i18n messages from i18n directives       | npm run extract    | yarn extract    | ng extract-i18n --output-path locale --ivy                      |
+| analyze      | Open webpack-bundle-analyzer                     | npm run analyze    | yarn analyze    | webpack-bundle-analyzer dist/angular-boilerplate/stats.json     |
