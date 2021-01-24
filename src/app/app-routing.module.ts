@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { NotFoundPage } from './@containers/not-found/not-found.page';
 import { AuthGuard, NoAuthGuard } from './@core/guards';
 import { Path } from './@core/structs';
 
@@ -55,6 +56,7 @@ const routes: Routes = [
       import('@containers/not-found/not-found.module').then(
         (m) => m.NotFoundModule
       ),
+    component: NotFoundPage,
   },
 ];
 
