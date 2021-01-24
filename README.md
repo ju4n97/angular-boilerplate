@@ -45,6 +45,8 @@ Angular starter for enterprise-grade front-end projects, built under a clean arc
 - User
   - my-profile
   - overview
+- Features
+  - dashboard
 
 ## 🧱 Self-contained components
 
@@ -133,6 +135,7 @@ Angular starter for enterprise-grade front-end projects, built under a clean arc
 │   │       ├───my-profile
 │   │       └───overview
 │   └───features
+|       └───dashboard
 ├───assets
 ├───css
 │   ├───01-settings
