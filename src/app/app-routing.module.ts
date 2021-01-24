@@ -32,11 +32,13 @@ const routes: Routes = [
     path: Path.App,
     canActivate: [AuthGuard],
     children: [
-      // {
-      //   path: Path.Dashboard,
-      //   loadChildren: () =>
-      //     import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
-      // },
+      {
+        path: Path.Dashboard,
+        loadChildren: () =>
+          import('./features/dashboard/dashboard.module').then(
+            (m) => m.DashboardModule
+          ),
+      },
     ],
   },
   {
