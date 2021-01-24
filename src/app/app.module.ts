@@ -8,6 +8,7 @@ import { environment } from '../environments/environment';
 import { JwtInterceptor, ServerErrorInterceptor } from './@core/interceptors';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DashboardModule } from './features/dashboard/dashboard.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +21,7 @@ import { AppComponent } from './app.component';
     }),
     HeaderModule,
     FooterModule,
+    DashboardModule,
   ],
   providers: [
     {
