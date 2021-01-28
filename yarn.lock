@@ -5853,10 +5853,10 @@ karma-source-map-support@1.4.0:
   dependencies:
     source-map-support "^0.5.5"
 
-karma@~6.0.2:
-  version "6.0.2"
-  resolved "https://registry.yarnpkg.com/karma/-/karma-6.0.2.tgz#4bf52f7586fdcc51122e206431fd5510795cacfa"
-  integrity sha512-GBm8vPkQvjJL1ye//iH6yk9ROHOW+1TaFzRvbc6TbbCOFszbEG66dyDMoFjMMTAHy0ERNqRrMHap/LEHWeijNA==
+karma@~6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/karma/-/karma-6.0.3.tgz#a35b4371306e08e3f8e46b5753aff46eaf3eec2c"
+  integrity sha512-dmiLQdsNAvnbV1G6VvUK7Cl5xpwiMisZNT8MjBtOo49jKlnZSWLxQIemuLT8sGSzvx5IGgMfMQEtf/CALiUEVQ==
   dependencies:
     body-parser "^1.19.0"
     braces "^3.0.2"
