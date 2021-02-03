@@ -70,7 +70,7 @@
     "karma-jasmine-html-reporter": "^1.5.0",
     "lint-staged": "^10.5.3",
     "postcss-import": "^12.0.1",
-    "postcss-loader": "^4.2.0",
+    "postcss-loader": "^5.0.0",
     "postcss-scss": "^3.0.4",
     "protractor": "~7.0.0",
     "tailwindcss": "^1.9.6",
