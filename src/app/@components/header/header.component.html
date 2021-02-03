@@ -11,6 +11,24 @@
     </a>
 
     <div class="flex items-center">
+      <button
+        class="mr-6 btn btn-success"
+        (click)="onClickToggleTheme(theme.System)"
+      >
+        System
+      </button>
+      <button
+        class="mr-6 btn btn-secondary"
+        (click)="onClickToggleTheme(theme.Light)"
+      >
+        Light
+      </button>
+      <button
+        class="mr-6 btn btn-warning"
+        (click)="onClickToggleTheme(theme.Dark)"
+      >
+        Dark
+      </button>
       <a
         href="https://github.com/juanmesa2097/angular-boilerplate"
         i18n-title
