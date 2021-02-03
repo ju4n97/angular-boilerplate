@@ -114,13 +114,15 @@ Angular starter for enterprise-grade front-end projects, built under a clean arc
 │   │   └───utils
 │   ├───+auth
 │   │   └───pages
-│   │       ├───forgot-password
-│   │       ├───forgot-password-email-sent
-│   │       ├───password-reset
-│   │       ├───password-reset-failed
-│   │       ├───password-reset-succeeded
-│   │       ├───sign-in
-│   │       └───sign-up
+│   │   |   ├───forgot-password
+│   │   |   ├───forgot-password-email-sent
+│   │   |   ├───password-reset
+│   │   |   ├───password-reset-failed
+│   │   |   ├───password-reset-succeeded
+│   │   |   ├───sign-in
+│   │   |   └───sign-up
+│   │   └───services
+│   │   |   └───auth.service
 │   ├───+settings
 │   │   └───pages
 │   │       ├───account
@@ -156,6 +158,7 @@ Angular starter for enterprise-grade front-end projects, built under a clean arc
 | Command      | Description                                      | NPM                | Yarn            | Background command                                              |
 | ------------ | ------------------------------------------------ | ------------------ | --------------- | --------------------------------------------------------------- |
 | ng           | See available commands                           | npm run ng         | yarn ng         | ng                                                              |
+| dev          | Run your app in development mode & open app      | npm run dev        | yarn dev        | ng serve -o                                                     |
 | start        | Run your app in development mode                 | npm start          | yarn start      | ng serve                                                        |
 | start:es     | Run your app in development mode in spanish      | npm run start:es   | yarn start:es   | ng serve -c=es --port 4201                                      |
 | build        | Build your app                                   | npm run build      | yarn build      | ng build                                                        |

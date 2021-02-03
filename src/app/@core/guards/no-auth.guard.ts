@@ -6,6 +6,7 @@ import {
   RouterStateSnapshot,
   UrlTree,
 } from '@angular/router';
+import { AuthService } from '@app/+auth/services/auth.service';
 import { Path } from '@core/structs';
 import { Observable } from 'rxjs';
 
@@ -13,7 +14,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class NoAuthGuard implements CanActivate {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authService: AuthService) {}
 
   canActivate(
     next: ActivatedRouteSnapshot,
@@ -23,7 +24,7 @@ export class NoAuthGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    const isLoggedIn = true;
+    const isLoggedIn = this.authService.isLoggedIn;
 
     if (isLoggedIn) {
       this.router.navigate([Path.App]);
