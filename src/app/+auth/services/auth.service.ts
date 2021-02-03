@@ -2,19 +2,23 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
   isLoggedIn$ = new BehaviorSubject<boolean>(!!this.getToken());
 
-  constructor() { }
+  constructor() {}
 
   get isLoggedIn(): boolean {
     return this.isLoggedIn$.getValue();
   }
 
   signIn(): void {
-    this.storeToken();
+    const token = Array(4)
+      .fill(0)
+      .map((_) => Math.random() * 99)
+      .join('-');
+    this.storeToken(token);
     this.isLoggedIn$.next(true);
   }
 
@@ -27,8 +31,7 @@ export class AuthService {
     return localStorage.getItem('token');
   }
 
-  private storeToken(): void {
-    const token = 'ABC';
+  private storeToken(token: string): void {
     localStorage.setItem('token', token);
   }
 

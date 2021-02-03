@@ -13,7 +13,11 @@ import { Path } from './@core/structs';
 export class AppComponent implements OnInit {
   isLoggedIn$: Observable<boolean>;
 
-  constructor(private router: Router, private seoService: SeoService, private authService: AuthService) {}
+  constructor(
+    private router: Router,
+    private seoService: SeoService,
+    private authService: AuthService
+  ) {}
 
   ngOnInit(): void {
     this.isLoggedIn$ = this.authService.isLoggedIn$;
