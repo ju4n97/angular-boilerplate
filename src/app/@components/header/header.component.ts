@@ -1,4 +1,11 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  OnInit,
+  Output,
+} from '@angular/core';
+import { Path } from '@app/@core/structs';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +15,8 @@ import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output } from
 })
 export class HeaderComponent implements OnInit {
   @Output() logout = new EventEmitter<void>();
+
+  path = Path;
 
   constructor() {}
 

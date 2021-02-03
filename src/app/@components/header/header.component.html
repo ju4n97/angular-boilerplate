@@ -2,7 +2,10 @@
   <nav
     class="container flex items-center justify-between h-full py-3 mx-auto center"
   >
-    <a routerLink="/" class="text-2xl font-bold no-underline cursor-pointer">
+    <a
+      [routerLink]="[path.Home]"
+      class="text-2xl font-bold no-underline cursor-pointer"
+    >
       <span class="text-danger-400">Angular</span>
       Boilerplate
     </a>
@@ -30,12 +33,7 @@
           ></path>
         </svg>
       </a>
-      <button
-        class="px-6 py-3 font-semibold text-white transition duration-300 ease-in-out rounded-lg bg-danger-500 hover:bg-danger-400"
-        (click)="onClickLogout()"
-      >
-        Logout
-      </button>
+      <button class="btn btn-danger" (click)="onClickLogout()">Sign out</button>
     </div>
   </nav>
 </header>
