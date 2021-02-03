@@ -5,6 +5,7 @@ import {
   OnInit,
   Output,
 } from '@angular/core';
+import { ThemeList, ThemeService } from '@app/@core/services/theme';
 import { Path } from '@app/@core/structs';
 
 @Component({
@@ -17,12 +18,17 @@ export class HeaderComponent implements OnInit {
   @Output() logout = new EventEmitter<void>();
 
   path = Path;
+  theme = ThemeList;
 
-  constructor() {}
+  constructor(private themeService: ThemeService) {}
 
   ngOnInit(): void {}
 
   onClickLogout(): void {
     this.logout.emit();
+  }
+
+  onClickToggleTheme(theme: ThemeList): void {
+    this.themeService.changeTheme(theme);
   }
 }
