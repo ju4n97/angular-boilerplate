@@ -62,7 +62,7 @@ Angular starter for enterprise-grade front-end projects, built under a clean arc
 
 - bytes (transforms a numeric value into bytes, KB, MB, GB, etc.).
 
-## 🛠️ Customizing to your preference
+## 🛠️ Make some initial tweaks
 
 - Change application title:
 
@@ -78,17 +78,41 @@ Angular starter for enterprise-grade front-end projects, built under a clean arc
 
   Every page has a `.route` file that contains an exported constant that holds the title, description and a robot's metatag that indicates if it can be indexed or followed by a web crawler.
 
-- Change light and dark mode colors:
-
-  Go to `src/css/01-settings/variables.scss` and tweak it to your preference.
-
 - Change your TailwindCSS configuration:
 
-  Go to `config/tailwind.config.js` and tweak it to your preference. You can refer to https://tailwindcss.com/docs/configuration to learn how to do it.
+  You can find the config file in `config/tailwind.config.js`, then you can refer to https://tailwindcss.com/docs/configuration to learn how to make your own adjustments.
 
-- Add new PostCSS plugins
+- Change light and dark mode colors:
 
-  Go to `config/webpack-dev.config.js` for development and testing or to `config/webpack-prod.config.js` for production settings and add the new plugins inside the plugins array.
+  Go to `src/css/01-settings/variables.scss` and change them to your preference.
+
+- Set a default theme (First time load)
+
+  Go to `src\app\@core\services\theme\theme.service.ts` and change the following line of code:
+
+  from operating system preference
+
+  ```ts
+  private currentTheme$ = new BehaviorSubject<ThemeList>(
+    this.currentTheme || ThemeList.System
+  );
+  ```
+
+  to light mode
+
+  ```ts
+  private currentTheme$ = new BehaviorSubject<ThemeList>(
+    this.currentTheme || ThemeList.Light
+  );
+  ```
+
+  or dark mode
+
+  ```ts
+  private currentTheme$ = new BehaviorSubject<ThemeList>(
+    this.currentTheme || ThemeList.Dark
+  );
+  ```
 
 ## ⛩️ Project structure
 
@@ -98,6 +122,7 @@ Angular starter for enterprise-grade front-end projects, built under a clean arc
 │   │   ├───breadcrumb
 │   │   ├───footer
 │   │   └───header
+│   │   └───theme-panel
 │   ├───@containers
 │   │   ├───home
 │   │   └───not-found
@@ -110,6 +135,7 @@ Angular starter for enterprise-grade front-end projects, built under a clean arc
 │   │   │   └───bytes
 │   │   ├───services
 │   │   │   └───seo
+│   │   │   └───theme
 │   │   ├───structs
 │   │   └───utils
 │   ├───+auth
