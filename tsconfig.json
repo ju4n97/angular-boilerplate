@@ -7,6 +7,9 @@
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
     "module": "es2020",
     "moduleResolution": "node",
     "importHelpers": true,
@@ -24,6 +27,7 @@
   "angularCompilerOptions": {
     "enableIvy": true,
     "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
+    "strictInjectionParameters": true,
+    "strictTemplates": true
   }
 }

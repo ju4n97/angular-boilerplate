@@ -10,7 +10,15 @@ import { NotificationsPage } from './pages/notifications/notifications.page';
 import { BlockedUsersPage } from './pages/blocked-users/blocked-users.page';
 
 @NgModule({
-  declarations: [AccountPage, SecurityPage, SecurityLogPage, AppearancePage, BillingPage, NotificationsPage, BlockedUsersPage],
+  declarations: [
+    AccountPage,
+    SecurityPage,
+    SecurityLogPage,
+    AppearancePage,
+    BillingPage,
+    NotificationsPage,
+    BlockedUsersPage,
+  ],
   imports: [CommonModule, SettingsRoutingModule],
 })
 export class SettingsModule {}

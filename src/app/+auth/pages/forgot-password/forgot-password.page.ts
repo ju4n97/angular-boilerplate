@@ -2,13 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   templateUrl: './forgot-password.page.html',
-  styleUrls: ['./forgot-password.page.scss']
+  styleUrls: ['./forgot-password.page.scss'],
 })
 export class ForgotPasswordPage implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

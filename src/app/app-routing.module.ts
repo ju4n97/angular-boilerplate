@@ -36,7 +36,7 @@ const routes: Routes = [
         path: Path.Dashboard,
         loadChildren: () =>
           import('./features/dashboard/dashboard.module').then(
-            (m) => m.DashboardModule
+            (m) => m.DashboardModule,
           ),
       },
     ],
@@ -58,7 +58,7 @@ const routes: Routes = [
     path: '**',
     loadChildren: () =>
       import('@containers/not-found/not-found.module').then(
-        (m) => m.NotFoundModule
+        (m) => m.NotFoundModule,
       ),
     component: NotFoundPage,
   },

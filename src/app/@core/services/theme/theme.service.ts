@@ -9,16 +9,16 @@ import { ThemeList } from './theme.config';
 })
 export class ThemeService {
   private currentTheme$ = new BehaviorSubject<ThemeList>(
-    this.currentTheme || ThemeList.System
+    this.currentTheme || ThemeList.System,
   );
 
   constructor(@Inject(DOCUMENT) private document: Document) {}
 
   get currentTheme(): ThemeList {
-    return getItem(StorageItem.Theme);
+    return getItem(StorageItem.Theme) as ThemeList;
   }
 
-  init() {
+  init(): void {
     if (!this.currentTheme) {
       this.listenForMediaQuery();
     }
@@ -50,7 +50,6 @@ export class ThemeService {
   }
 
   private setTheme(theme: ThemeList): void {
-    console.log(theme);
     this.clearThemes();
     this.document.body.classList.add(theme);
     setItem(StorageItem.Theme, theme);
@@ -58,7 +57,8 @@ export class ThemeService {
 
   private clearThemes(): void {
     for (const theme in ThemeList) {
-      this.document.body.classList.remove(ThemeList[theme]);
+      const key: ThemeList = ThemeList[theme as keyof typeof ThemeList];
+      this.document.body.classList.remove(key);
     }
   }
 }
