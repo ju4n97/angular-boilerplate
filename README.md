@@ -39,7 +39,7 @@ Angular starter for enterprise-grade front-end projects, built under a clean arc
   - appearance
   - billing
   - blocked-Users
-  - Notifications
+  - notifications
   - security
   - security-log
 - User
