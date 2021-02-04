@@ -10,7 +10,7 @@ export class SeoService {
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private titleService: Title,
-    private metaTagService: Meta
+    private metaTagService: Meta,
   ) {}
 
   init(): void {
@@ -22,19 +22,21 @@ export class SeoService {
         map(() => {
           let child = this.activatedRoute.firstChild;
 
-          // Loops until finds the last child.
-          while (child.firstChild) {
-            child = child.firstChild;
-          }
+          if (child) {
+            // Loops until finds the last child.
+            while (child.firstChild) {
+              child = child.firstChild;
+            }
 
-          // Returns values if the route has data object.
-          if (Object.keys(child.snapshot.data).length > 0) {
-            const { title, description, robots } = child.snapshot.data;
-            return [title, description, robots];
+            // Returns values if the route has data object.
+            if (Object.keys(child.snapshot.data).length > 0) {
+              const { title, description, robots } = child.snapshot.data;
+              return [title, description, robots];
+            }
           }
 
           return [null, null, null];
-        })
+        }),
       )
       .subscribe((data) => {
         // Set title and meta tag description.

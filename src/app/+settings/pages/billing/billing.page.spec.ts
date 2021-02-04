@@ -8,9 +8,8 @@ describe('BillingPage', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BillingPage ]
-    })
-    .compileComponents();
+      declarations: [BillingPage],
+    }).compileComponents();
   });
 
   beforeEach(() => {

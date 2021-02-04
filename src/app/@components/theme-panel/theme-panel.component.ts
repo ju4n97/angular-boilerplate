@@ -7,7 +7,7 @@ import { ThemeList, ThemeService } from '@app/@core/services/theme';
   styleUrls: ['./theme-panel.component.scss'],
 })
 export class ThemePanelComponent implements OnInit {
-  theme: ThemeList;
+  theme!: ThemeList;
   popupOpen = false;
   themeList = ThemeList;
 
@@ -18,7 +18,7 @@ export class ThemePanelComponent implements OnInit {
   }
 
   @HostListener('window:keyup', ['$event'])
-  keyEvent(e: KeyboardEvent) {
+  keyEvent(e: KeyboardEvent): void {
     if (e.key === 'Esc' || e.key === 'Escape') {
       this.popupOpen = false;
     }

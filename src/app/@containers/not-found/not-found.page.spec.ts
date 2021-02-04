@@ -8,9 +8,8 @@ describe('NotFoundPage', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NotFoundPage ]
-    })
-    .compileComponents();
+      declarations: [NotFoundPage],
+    }).compileComponents();
   });
 
   beforeEach(() => {

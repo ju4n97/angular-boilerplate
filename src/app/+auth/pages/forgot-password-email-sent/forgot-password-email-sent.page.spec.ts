@@ -6,12 +6,13 @@ describe('ForgotPasswordEmailSentPage', () => {
   let component: ForgotPasswordEmailSentPage;
   let fixture: ComponentFixture<ForgotPasswordEmailSentPage>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [ ForgotPasswordEmailSentPage ]
-    })
-    .compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [ForgotPasswordEmailSentPage],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ForgotPasswordEmailSentPage);
