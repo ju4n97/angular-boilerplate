@@ -7,7 +7,7 @@
     justify-content: center;
 
     &::after {
-      content: "";
+      content: '';
       display: block;
       width: 45px;
       height: 45px;
@@ -26,5 +26,31 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+.source {
+  & ~ .target {
+    top: -50rem;
+    transform: translateY(20px);
+    opacity: 0;
+    z-index: -1;
+  }
+
+  & + .target.open {
+    top: 5rem;
+    transform: translateY(0);
+    opacity: 1;
+    z-index: 50;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .source {
+    & ~ .target {
+      transition: transform 300ms ease,
+        opacity 300ms linear z-index 400ms linear;
+      will-change: transform, opacity, z-index;
+    }
   }
 }
