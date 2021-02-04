@@ -53,6 +53,13 @@ Angular starter for enterprise-grade front-end projects, built under a clean arc
 - breadcrumb
 - footer
 - header
+- theme-panel
+
+## 📡 Services
+
+- AuthService
+- SeoService
+- ThemeService
 
 ## 📛 Custom directives
 
