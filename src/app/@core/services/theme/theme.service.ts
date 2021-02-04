@@ -2,7 +2,7 @@ import { DOCUMENT } from '@angular/common';
 import { Inject, Injectable } from '@angular/core';
 import { getItem, setItem, StorageItem } from '@app/@core/utils';
 import { BehaviorSubject } from 'rxjs';
-import { ThemeList } from '.';
+import { ThemeList } from './theme.config';
 
 @Injectable({
   providedIn: 'root',

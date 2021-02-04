@@ -11,36 +11,19 @@
     </a>
 
     <div class="flex items-center">
-      <button
-        class="mr-6 btn btn-success"
-        (click)="onClickToggleTheme(theme.System)"
-      >
-        System
-      </button>
-      <button
-        class="mr-6 btn btn-secondary"
-        (click)="onClickToggleTheme(theme.Light)"
-      >
-        Light
-      </button>
-      <button
-        class="mr-6 btn btn-warning"
-        (click)="onClickToggleTheme(theme.Dark)"
-      >
-        Dark
-      </button>
+      <app-theme-panel class="mr-6"></app-theme-panel>
       <a
         href="https://github.com/juanmesa2097/angular-boilerplate"
         i18n-title
         title="Repository"
-        class="mr-6 transition-transform duration-200 ease-out transform hover:scale-125"
+        class="mr-6 btn btn-secondary"
       >
         <svg
           aria-hidden="true"
           focusable="false"
           data-prefix="fab"
           data-icon="github"
-          class="w-10"
+          class="w-8"
           role="img"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 496 512"
