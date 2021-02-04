@@ -12,13 +12,13 @@ import { Path } from './@core/structs';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  isLoggedIn$: Observable<boolean>;
+  isLoggedIn$!: Observable<boolean>;
 
   constructor(
     private router: Router,
     private seoService: SeoService,
     private themeService: ThemeService,
-    private authService: AuthService
+    private authService: AuthService,
   ) {}
 
   ngOnInit(): void {
@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
     this.themeService.init();
   }
 
-  onLogout() {
+  onLogout(): void {
     this.authService.signOut();
     this.router.navigate([`/${Path.SignIn}`]);
   }

@@ -4,6 +4,7 @@ Angular starter for enterprise-grade front-end projects, built under a clean arc
 
 ## ⚗️ Features
 
+- Strict mode.
 - Lazy loading.
 - Smart and pure components pattern.
 - Components types (e.g. component, page).
@@ -19,7 +20,7 @@ Angular starter for enterprise-grade front-end projects, built under a clean arc
 - Scalable CSS architecture with [ITCSS](https://itcss.io/).
 - [Lighthouse](https://developers.google.com/web/tools/lighthouse) reports improved.
 - Migration from TSLint to ESLint.
-- Husky hooks
+- ESLint migration.
 
 ## 📄 Pages
 

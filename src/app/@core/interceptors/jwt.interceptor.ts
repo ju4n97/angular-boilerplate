@@ -14,7 +14,7 @@ export class JwtInterceptor implements HttpInterceptor {
 
   intercept(
     request: HttpRequest<unknown>,
-    next: HttpHandler
+    next: HttpHandler,
   ): Observable<HttpEvent<unknown>> {
     const isLoggedIn = true;
     const token = 'ABC';

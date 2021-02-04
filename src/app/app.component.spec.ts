@@ -9,7 +9,7 @@ describe('AppComponent', () => {
         imports: [RouterTestingModule],
         declarations: [AppComponent],
       }).compileComponents();
-    })
+    }),
   );
 
   it('should create the app', () => {

@@ -2,13 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   templateUrl: './my-profile.page.html',
-  styleUrls: ['./my-profile.page.scss']
+  styleUrls: ['./my-profile.page.scss'],
 })
 export class MyProfilePage implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

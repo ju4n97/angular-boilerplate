@@ -6,12 +6,13 @@ describe('PasswordResetFailedPage', () => {
   let component: PasswordResetFailedPage;
   let fixture: ComponentFixture<PasswordResetFailedPage>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [ PasswordResetFailedPage ]
-    })
-    .compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [PasswordResetFailedPage],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(PasswordResetFailedPage);
