@@ -28,7 +28,7 @@
     ]
   },
   "dependencies": {
-    "@angular-eslint/builder": "^1.1.0",
+    "@angular-eslint/builder": "^1.2.0",
     "@angular-eslint/template-parser": "^1.2.0",
     "@angular/animations": "~11.0.0",
     "@angular/common": "~11.0.0",
