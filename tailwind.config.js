@@ -1,17 +1,12 @@
 module.exports = {
-  important: true,
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
+  prefix: '',
+  purge: {
+    content: [
+      './src/**/*.{html,ts}',
+    ]
   },
-  purge: [],
+  darkMode: 'class', // or 'media'
   theme: {
-    extend: {
-      fontSize: {
-        '7xl': '5rem',
-        '8xl': '6rem',
-      },
-    },
     container: {
       center: true,
       padding: '1.5rem',
@@ -23,11 +18,6 @@ module.exports = {
 
       white: '#fff',
       black: '#000',
-
-      background: 'var(--bg)',
-      accent: 'var(--accent)',
-      primary: 'var(--primary)',
-      secondary: 'var(--secondary)',
 
       gray: {
         100: '#e8eaed',
