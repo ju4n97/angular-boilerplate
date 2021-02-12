@@ -1,11 +1,10 @@
 module.exports = {
   prefix: '',
   purge: {
-    content: [
-      './src/**/*.{html,ts}',
-    ]
+    enabled: true,
+    content: ['./src/**/*.{html,scss,ts}']
   },
-  darkMode: 'class', // or 'media'
+  darkMode: false, // or 'media' or 'class'
   theme: {
     container: {
       center: true,
@@ -18,6 +17,11 @@ module.exports = {
 
       white: '#fff',
       black: '#000',
+
+      background: 'var(--bg)',
+      accent: 'var(--accent)',
+      primary: 'var(--primary)',
+      secondary: 'var(--secondary)',
 
       gray: {
         100: '#e8eaed',
@@ -78,4 +82,4 @@ module.exports = {
   },
   variants: {},
   plugins: [],
-};
+}

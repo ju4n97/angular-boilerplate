@@ -17,7 +17,7 @@ Angular starter for enterprise-grade front-end projects, built under a clean arc
 - Dynamic titles and content meta tags.
 - TailwindCSS + Autoprefixer + PurgeCSS setup.
 - Dark mode and theme configuration.
-- Scalable CSS architecture with [ITCSS](https://itcss.io/).
+- Scalable CSS architecture in favor of TailwindCSS layers.
 - [Lighthouse](https://developers.google.com/web/tools/lighthouse) reports improved.
 - Migration from TSLint to ESLint.
 - ESLint migration.
@@ -88,11 +88,11 @@ Angular starter for enterprise-grade front-end projects, built under a clean arc
 
 - Change your TailwindCSS configuration:
 
-  You can find the config file in `config/tailwind.config.js`, then you can refer to https://tailwindcss.com/docs/configuration to learn how to make your own adjustments.
+  You can find the config file in the project root, then you can refer to https://tailwindcss.com/docs/configuration to learn how to make your own adjustments.
 
 - Change light and dark mode colors:
 
-  Go to `src/css/01-settings/variables.scss` and change them to your preference.
+  Go to `src/theme/01-base/variables.scss` and change them to your preference.
 
 - Set a default theme (First time load)
 
@@ -126,37 +126,16 @@ Angular starter for enterprise-grade front-end projects, built under a clean arc
 
 ```console
 ├───app
-│   ├───@components
-│   │   ├───breadcrumb
-│   │   ├───footer
-│   │   └───header
-│   │   └───theme-panel
-│   ├───@containers
-│   │   ├───home
-│   │   └───not-found
-│   ├───@core
-│   │   ├───directives
-│   │   │   └───click-outside
-│   │   ├───guards
-│   │   ├───interceptors
-│   │   ├───pipes
-│   │   │   └───bytes
-│   │   ├───services
-│   │   │   └───seo
-│   │   │   └───theme
-│   │   ├───structs
-│   │   └───utils
 │   ├───+auth
-│   │   └───pages
-│   │   |   ├───forgot-password
-│   │   |   ├───forgot-password-email-sent
-│   │   |   ├───password-reset
-│   │   |   ├───password-reset-failed
-│   │   |   ├───password-reset-succeeded
-│   │   |   ├───sign-in
-│   │   |   └───sign-up
+│   │   ├───pages
+│   │   │   ├───forgot-password
+│   │   │   ├───forgot-password-email-sent
+│   │   │   ├───password-reset
+│   │   │   ├───password-reset-failed
+│   │   │   ├───password-reset-succeeded
+│   │   │   ├───sign-in
+│   │   │   └───sign-up
 │   │   └───services
-│   │   |   └───auth.service
 │   ├───+settings
 │   │   └───pages
 │   │       ├───account
@@ -170,21 +149,36 @@ Angular starter for enterprise-grade front-end projects, built under a clean arc
 │   │   └───pages
 │   │       ├───my-profile
 │   │       └───overview
+│   ├───@components
+│   │   ├───breadcrumb
+│   │   ├───footer
+│   │   ├───header
+│   │   └───theme-panel
+│   ├───@containers
+│   │   ├───home
+│   │   └───not-found
+│   ├───@core
+│   │   ├───directives
+│   │   │   └───click-outside
+│   │   ├───guards
+│   │   ├───interceptors
+│   │   ├───pipes
+│   │   │   └───bytes
+│   │   ├───services
+│   │   │   ├───seo
+│   │   │   └───theme
+│   │   ├───structs
+│   │   └───utils
 │   └───features
-|       └───dashboard
+│       └───dashboard
 ├───assets
-├───css
-│   ├───01-settings
-│   ├───02-tools
-│   ├───03-generic
-│   ├───04-elements
-│   ├───05-objects
-│   ├───06-components
-│   └───07-trumps
 ├───environments
-├───locale
-└───public
-    └───icons
+├───public
+│   └───icons
+└───theme
+    ├───01-base
+    ├───02-components
+    └───03-utilities
 ```
 
 ## 🧙‍♂️ Commands

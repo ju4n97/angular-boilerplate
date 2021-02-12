@@ -1,27 +1,21 @@
-// Tailwindcss
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-// 01. settings
-@import "01-settings/font.scss";
-@import "01-settings/variables.scss";
-@import "01-settings/theming.scss";
+@layer base {
+  @import '01-base/variables.scss';
+  @import '01-base/theming.scss';
+  @import '01-base/font.scss';
+  @import '01-base/document.scss';
+  @import '01-base/headings.scss';
+}
 
-// 02. tools
-@import "02-tools/animations.scss";
+@layer components {
+  @import '02-components/button.scss';
+}
 
-// 03. generic
-
-// 04. elements
-@import "04-elements/document.scss";
-@import "04-elements/headings.scss";
-@import "04-elements/link.scss";
-
-// 05. objects
-@import "05-objects/shapes.scss";
-
-// 06. components
-@import "06-components/button.scss";
-
-// 07. trumps
+@layer utilities {
+  @import '03-utilities/animations.scss';
+  @import '03-utilities/link.scss';
+  @import '03-utilities/shapes.scss';
+}
