@@ -31,5 +31,6 @@
       "source.fixAll.eslint": true
     },
     "editor.formatOnSave": true
-  }
+  },
+  "scss.validate": false
 }

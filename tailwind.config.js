@@ -1,17 +1,11 @@
 module.exports = {
-  important: true,
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
+  prefix: '',
+  purge: {
+    enabled: true,
+    content: ['./src/**/*.{html,scss,ts}']
   },
-  purge: [],
+  darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {
-      fontSize: {
-        '7xl': '5rem',
-        '8xl': '6rem',
-      },
-    },
     container: {
       center: true,
       padding: '1.5rem',
@@ -88,4 +82,4 @@ module.exports = {
   },
   variants: {},
   plugins: [],
-};
+}

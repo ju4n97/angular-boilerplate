@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -18,11 +21,8 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:browser",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "customWebpackConfig": {
-              "path": "config/webpack-prod.config.js"
-            },
             "outputPath": "dist/angular-boilerplate",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -35,7 +35,7 @@
               "src/public"
             ],
             "styles": [
-              "src/css/styles.scss"
+              "src/theme/styles.scss"
             ],
             "scripts": []
           },
@@ -76,34 +76,10 @@
             }
           }
         },
-        "build-dev": {
-          "builder": "@angular-builders/custom-webpack:browser",
-          "options": {
-            "customWebpackConfig": {
-              "path": "config/webpack-dev.config.js"
-            },
-            "outputPath": "dist/angular-boilerplate",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
-            "aot": true,
-            "assets": [
-              "src/public/favicon.ico",
-              "src/public/assets",
-              "src/public/icons",
-              "src/public/manifest.webmanifest"
-            ],
-            "styles": [
-              "src/css/styles.scss"
-            ],
-            "scripts": []
-          }
-        },
         "serve": {
-          "builder": "@angular-builders/custom-webpack:dev-server",
+          "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-boilerplate:build-dev"
+            "browserTarget": "angular-boilerplate:build"
           },
           "configurations": {
             "production": {
@@ -129,12 +105,10 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/public/favicon.ico",
-              "src/assets",
-              "src/public/icons",
-              "src/public/manifest.webmanifest"
+              "src/assets"
             ],
             "styles": [
-              "src/css/styles.scss"
+              "src/theme/styles.scss"
             ],
             "scripts": []
           }
@@ -169,8 +143,5 @@
       }
     }
   },
-  "defaultProject": "angular-boilerplate",
-  "cli": {
-    "analytics": "1481a11a-ad4d-4bb4-aa48-1d5a54c39a0b"
-  }
+  "defaultProject": "angular-boilerplate"
 }
