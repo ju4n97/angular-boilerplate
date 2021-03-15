@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@angular-eslint/builder": "^2.0.1",
-    "@angular-eslint/template-parser": "^1.2.0",
+    "@angular-eslint/template-parser": "^2.0.1",
     "@angular/animations": "~11.2.0",
     "@angular/common": "~11.2.0",
     "@angular/compiler": "~11.2.0",
