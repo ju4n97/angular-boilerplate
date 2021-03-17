@@ -149,10 +149,10 @@
   dependencies:
     "@typescript-eslint/experimental-utils" "4.16.1"
 
-"@angular-eslint/template-parser@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@angular-eslint/template-parser/-/template-parser-2.0.1.tgz#f61991f756762ad46de669e4cb3d6373d5005966"
-  integrity sha512-VP6qj7ECwKj/KL8c0+CvGldIIbNZRCAScs+C1DmrlXjFsXuL0+D6nDzd0xnLF2eek3apMWJ6fwRznPHNnsDEeQ==
+"@angular-eslint/template-parser@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@angular-eslint/template-parser/-/template-parser-2.0.2.tgz#ca1abafdbfd7a59679ff2b5e0ca1dc00aa617b81"
+  integrity sha512-oMXNAokWWnJF/Jp4fJwm5F/tv+9sShc5yio5cELHFCsn8l1wetTmHMe9xqbwS7aFosJ7BnGj6aSq3WpckWzXTg==
   dependencies:
     eslint-scope "^5.1.0"
 
