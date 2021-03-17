@@ -133,10 +133,10 @@
   resolved "https://registry.yarnpkg.com/@angular-eslint/builder/-/builder-2.0.1.tgz#d65799a342d0f7b894f416156a3a455124b5f4d8"
   integrity sha512-qZqTONCCBG7hzv5xpjieaGnXOgYJdaY3FwVlg5fmfPaUwP7lm+La3A8yBKJwpG7h1D9Se4/qa70SCaDGmXyTXA==
 
-"@angular-eslint/eslint-plugin-template@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@angular-eslint/eslint-plugin-template/-/eslint-plugin-template-2.0.1.tgz#81c47e8c9c4b288702984282c64b76595bcde1bb"
-  integrity sha512-tKdfa6cf1nzUAiEMHOOkE7wv/YxwCNpFw/MEfK21ecMzy59Mv9zgAULobCQIEfmbGTsjSNiIqaRAc+klRI3q6A==
+"@angular-eslint/eslint-plugin-template@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@angular-eslint/eslint-plugin-template/-/eslint-plugin-template-2.0.2.tgz#1d874e08c70f31c77218d8ff92b8ba55ccf0b5b6"
+  integrity sha512-STk9bTVSJwX8ctHFNx7G+HanbMfpeX5B3hmaUQ7qloM+JPihk+b7BmXT8BjOnXOT+yN8r3NHF9agekyAiYGRkg==
   dependencies:
     "@typescript-eslint/experimental-utils" "4.16.1"
     aria-query "^4.2.2"
