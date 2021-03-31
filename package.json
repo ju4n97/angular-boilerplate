@@ -30,7 +30,7 @@
     "@angular/router": "~11.2.0",
     "@angular/service-worker": "~11.2.0",
     "autoprefixer": "^10.2.5",
-    "postcss": "^8.2.8",
+    "postcss": "^8.2.9",
     "rxjs": "~6.6.7",
     "tailwindcss": "^2.0.4",
     "tslib": "^2.1.0",
