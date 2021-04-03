@@ -1,8 +1,8 @@
 module.exports = {
   prefix: '',
   purge: {
-    enabled: true,
-    content: ['./src/**/*.{html,scss,ts}']
+    enabled: process.env.NODE_ENV === 'production',
+    content: ['./src/**/*.{html,scss,ts}'],
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -82,4 +82,4 @@ module.exports = {
   },
   variants: {},
   plugins: [],
-}
+};
