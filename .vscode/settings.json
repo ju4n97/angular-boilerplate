@@ -1,7 +1,7 @@
 {
   "editor.codeActionsOnSave": {
-    "source.organizeImports": false,
-    "source.fixAll": true,
+    "source.organizeImports": true,
+    "source.fixAll": true
   },
   "css.validate": false,
   "eslint.validate": [
