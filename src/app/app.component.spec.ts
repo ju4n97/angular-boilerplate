@@ -1,12 +1,14 @@
 import { TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { FooterModule } from './@components/footer/footer.module';
+import { HeaderModule } from './@components/header/header.module';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
-        imports: [RouterTestingModule],
+        imports: [RouterTestingModule, HeaderModule, FooterModule],
         declarations: [AppComponent],
       }).compileComponents();
     }),
