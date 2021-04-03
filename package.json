@@ -12,6 +12,7 @@
     "build:prod": "ng build --prod --build-optimizer --aot --stats-json",
     "build:i18n": "ng build --prod --build-optimizer --aot --stats-json --localize",
     "test": "ng test",
+    "test:prod": "ng test --browsers=ChromeHeadless --watch=false --code-coverage",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "i18n:extract": "ng extract-i18n --output-path locale --ivy",
