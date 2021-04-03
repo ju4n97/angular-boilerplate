@@ -7,11 +7,11 @@ Angular starter for enterprise-grade front-end projects, built under a clean arc
 - Strict mode.
 - Lazy loading.
 - Smart and pure components pattern.
-- Components types (e.g. component, page).
+- SCAM pattern.
 - Self-contained components and encapsulated modules.
-- Auth scheme
-- Settings scheme
-- User scheme
+- Components types (e.g. component, page).
+- Amazing directory structure.
+- Replace Karma & Jasmine with Jest.
 - PWA
 - i18n
 - Dynamic titles and content meta tags.
