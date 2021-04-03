@@ -17,7 +17,7 @@ export class AuthService {
   signIn(): void {
     const token = Array(4)
       .fill(0)
-      .map((_) => Math.random() * 99)
+      .map(() => Math.random() * 99)
       .join('-');
 
     setItem(StorageItem.Auth, token);
