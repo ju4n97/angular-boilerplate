@@ -1,6 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npm run test:prod-coverage
-npm run lint
+# npm run test:prod
+# npm run lint
 
