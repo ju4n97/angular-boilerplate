@@ -11,7 +11,8 @@ Angular starter for enterprise-grade front-end projects, built under a clean arc
 - Self-contained components and encapsulated modules.
 - Components types (e.g. component, page).
 - Amazing directory structure.
-- Replace Karma & Jasmine with Jest.
+- Unit tests with Jest instead of Karma & Jasmine.
+- e2e tests with Cypress instead of Protractor.
 - PWA
 - i18n
 - Dynamic titles and content meta tags.
@@ -271,6 +272,6 @@ npm uninstall tailwindcss autoprefixer postcss
 | test          | Run your unit tests                               | npm run test          | yarn test          | ng test                                                         |
 | test:coverage | Run your unit tests & generates a coverage report | npm run test:coverage | yarn test:coverage | ng test --coverage                                              |
 | lint          | Use ESLint to lint your app                       | npm run lint          | yarn lint          | ng lint                                                         |
-| e2e           | Run your e2e integration tests                    | npm run e2e           | yarn e2e           | ng e2e                                                          |
+| e2e           | Run your e2e tests                                | npm run e2e           | yarn e2e           | ng e2e                                                          |
 | i18n:extract  | Extract i18n messages from i18n directives        | npm run extract       | yarn extract       | ng extract-i18n --output-path locale --ivy                      |
 | analyze       | Open webpack-bundle-analyzer                      | npm run analyze       | yarn analyze       | webpack-bundle-analyzer dist/angular-boilerplate/stats.json     |
