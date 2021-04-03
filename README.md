@@ -20,7 +20,8 @@ Angular starter for enterprise-grade front-end projects, built under a clean arc
 - Scalable CSS architecture in favor of TailwindCSS layers.
 - [Lighthouse](https://developers.google.com/web/tools/lighthouse) reports improved.
 - Migration from TSLint to ESLint.
-- ESLint migration.
+- Run unit tests & lint code on Git Hooks using [Husky](https://github.com/typicode/husky) & validate commit messages using [commitlint](https://github.com/conventional-changelog/commitlint)
+- GitHub Actions workflows for code analysis and unit tests.
 
 ## 📄 Pages
 
@@ -122,6 +123,83 @@ Angular starter for enterprise-grade front-end projects, built under a clean arc
   );
   ```
 
+## 🗑️ Remove features
+
+There are certain features that you may or may not like to have in your projects, and here's how to remove them:
+
+### 🌠 Husky & commitlint
+
+> Husky allows you to easily run scripts on Git Hooks & commitlint validates if a commit message follows a certain convention.
+
+- Remove execution of tests and linting on pre-commit:
+
+  - Go to `angular-boilerplate\.husky` and remove the npm scripts inside the `pre-commit` file or the file itself.
+
+- Remove execution of build on pre-push:
+
+  - Go to `angular-boilerplate\.husky` and remove the npm scripts inside the `pre-push` file or the file itself.
+
+- Remove conventional commit messages validation:
+
+  1. Go to `angular-boilerplate\.husky` and remove the command `npx commitlint --edit $1` inside the `commit-msg` file or the file itself.
+  2. Remove the file `angular-boilerplate\.commitlintrc`.
+  3. Run the following command:
+
+  ```
+  yarn remove @commitlint/cli @commitlint/config-conventional
+  ```
+
+  OR
+
+  ```
+  npm uninstall @commitlint/cli @commitlint/config-conventional
+  ```
+
+- Fully remove Husky & commitlint
+
+  1. Remove the folder `angular-boilerplate\.husky`.
+  2. Remove the file `angular-boilerplate\.commitlintrc`.
+  3. Run the following commands:
+
+  ```
+  yarn remove husky @commitlint/cli @commitlint/config-conventional
+  ```
+
+  OR
+
+  ```
+  npm uninstall husky @commitlint/cli @commitlint/config-conventional
+  ```
+
+### 🌠 GitHub Actions workflows
+
+> A GitHub Action workflow is a configurable automated process made up of one or more jobs that will help us to validate if some actions pass before we integrate new code into the repository (E.g., run unit tests on pull-requests or branch pushes).
+
+- Remove CodeQL analysis:
+
+  - Go to `angular-boilerplate\.github\workflows` and remove the file codeql-analysis.yml
+
+- Remove tests workflow:
+
+  - Go to `angular-boilerplate\.github\workflows` and remove the file test.yml
+
+### 🌠 TailwindCSS
+
+> TailwindCSS is a utility-first CSS Framework fully customizable & fully tree shakeable. If you want to replace it with another CSS framework or don't want to use a CSS framework at all, you can easily remove it from the project.
+
+1. Remove `angular-boilerplate\tailwind.config.js` file.
+2. Run the following command:
+
+```
+yarn remove tailwindcss autoprefixer postcss
+```
+
+OR
+
+```
+npm uninstall tailwindcss autoprefixer postcss
+```
+
 ## ⛩️ Project structure
 
 ```console
@@ -183,17 +261,19 @@ Angular starter for enterprise-grade front-end projects, built under a clean arc
 
 ## 🧙‍♂️ Commands
 
-| Command      | Description                                      | NPM                | Yarn            | Background command                                              |
-| ------------ | ------------------------------------------------ | ------------------ | --------------- | --------------------------------------------------------------- |
-| ng           | See available commands                           | npm run ng         | yarn ng         | ng                                                              |
-| dev          | Run your app in development mode & open app      | npm run dev        | yarn dev        | ng serve -o                                                     |
-| start        | Run your app in development mode                 | npm start          | yarn start      | ng serve                                                        |
-| start:es     | Run your app in development mode in spanish      | npm run start:es   | yarn start:es   | ng serve -c=es --port 4201                                      |
-| build        | Build your app                                   | npm run build      | yarn build      | ng build                                                        |
-| build:prod   | Build your app ready for production              | npm run build:prod | yarn build:prod | ng build --prod --build-optimizer --aot --stats-json            |
-| build:i18n   | Build your multilingual app ready for production | npm run build:i18n | yarn build:i18n | ng build --prod --build-optimizer --aot --stats-json --localize |
-| test         | Run your unit tests                              | npm run test       | yarn test       | ng test                                                         |
-| lint         | Use ESLint to lint your app                      | npm run lint       | yarn lint       | ng lint                                                         |
-| e2e          | Run your e2e integration tests                   | npm run e2e        | yarn e2e        | ng e2e                                                          |
-| i18n:extract | Extract i18n messages from i18n directives       | npm run extract    | yarn extract    | ng extract-i18n --output-path locale --ivy                      |
-| analyze      | Open webpack-bundle-analyzer                     | npm run analyze    | yarn analyze    | webpack-bundle-analyzer dist/angular-boilerplate/stats.json     |
+| Command            | Description                                                                                                      | NPM                        | Yarn                    | Background command                                              |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------- | -------------------------- | ----------------------- | --------------------------------------------------------------- |
+| ng                 | See available commands                                                                                           | npm run ng                 | yarn ng                 | ng                                                              |
+| dev                | Run your app in development mode & open app                                                                      | npm run dev                | yarn dev                | ng serve -o                                                     |
+| start              | Run your app in development mode                                                                                 | npm start                  | yarn start              | ng serve                                                        |
+| start:es           | Run your app in development mode in spanish                                                                      | npm run start:es           | yarn start:es           | ng serve -c=es --port 4201                                      |
+| build              | Build your app                                                                                                   | npm run build              | yarn build              | ng build                                                        |
+| build:prod         | Build your app ready for production                                                                              | npm run build:prod         | yarn build:prod         | ng build --prod --build-optimizer --aot --stats-json            |
+| build:i18n         | Build your multilingual app ready for production                                                                 | npm run build:i18n         | yarn build:i18n         | ng build --prod --build-optimizer --aot --stats-json --localize |
+| test               | Run your unit tests                                                                                              | npm run test               | yarn test               | ng test                                                         |
+| test:prod          | Run your unit tests with a headless chrome browser & without watching changes                                    | npm run test:prod          | yarn test:prod          | ng test --browsers=ChromeHeadless --watch=false                 |
+| test:prod-coverage | Run your unit tests with a headless chrome browser & without watching changes + generates a code coverage report | npm run test:prod-coverage | yarn test:prod-coverage | ng test --browsers=ChromeHeadless --watch=false --code-coverage |
+| lint               | Use ESLint to lint your app                                                                                      | npm run lint               | yarn lint               | ng lint                                                         |
+| e2e                | Run your e2e integration tests                                                                                   | npm run e2e                | yarn e2e                | ng e2e                                                          |
+| i18n:extract       | Extract i18n messages from i18n directives                                                                       | npm run extract            | yarn extract            | ng extract-i18n --output-path locale --ivy                      |
+| analyze            | Open webpack-bundle-analyzer                                                                                     | npm run analyze            | yarn analyze            | webpack-bundle-analyzer dist/angular-boilerplate/stats.json     |
