@@ -52,10 +52,8 @@ Angular starter for enterprise-grade front-end projects, built under a clean arc
 
 ## 🧱 Self-contained components
 
-- breadcrumb
 - footer
 - header
-- theme-panel
 
 ## 📡 Services
 
