@@ -28,7 +28,7 @@ export enum Path {
   SettingsSecurityLog = 'security-log',
 
   // User
-  User = 'users',
-  UserOverview = 'overview',
-  UserProfile = ':username',
+  Users = 'users',
+  UsersOverview = 'overview',
+  UsersProfile = ':username',
 }

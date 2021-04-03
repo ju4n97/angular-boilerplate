@@ -3,7 +3,7 @@ import { Path } from '@app/@core/structs';
 import { OverviewPage } from './overview.page';
 
 export const USERS_OVERVIEW_ROUTE: Route = {
-  path: Path.UserOverview,
+  path: Path.UsersOverview,
   component: OverviewPage,
   data: {
     title: 'Users overview',
