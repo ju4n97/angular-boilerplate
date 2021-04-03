@@ -16,7 +16,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "i18n:extract": "ng extract-i18n --output-path locale --ivy",
-    "analyze": "webpack-bundle-analyzer dist/angular-boilerplate/stats.json"
+    "analyze": "webpack-bundle-analyzer dist/angular-boilerplate/stats.json",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@angular-eslint/builder": "^2.0.2",
@@ -70,6 +71,7 @@
     "protractor": "~7.0.0",
     "ts-node": "~9.1.1",
     "typescript": "^4.1.5",
-    "webpack-bundle-analyzer": "^4.4.0"
+    "webpack-bundle-analyzer": "^4.4.0",
+    "husky": "^6.0.0"
   }
 }
