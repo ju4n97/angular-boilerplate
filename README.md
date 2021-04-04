@@ -1,6 +1,39 @@
-# Angular Boilerplate
+<h1 align="center">Angular Boilerplate</h1>
 
-Angular starter for enterprise-grade front-end projects, built under a clean architecture that helps to scale and maintain a fast workflow.
+<p align="center">
+  <img src="https://img.icons8.com/ios-filled/150/000000/angularjs.png" alt="angular-logo" width="120px" height="120px"/>
+  <br>
+  <i>Angular starter for enterprise-grade front-end projects, built under a clean architecture 
+    <br> that helps to scale and maintain a fast workflow.</i>
+  <br>
+</p>
+
+<p align="center">
+  <a href="angularboilerplate.netlify.app"><strong>angularboilerplate.netlify.app</strong></a>
+  <br>
+</p>
+
+<p align="center">
+  <a href="CONTRIBUTING.md">Contributing Guidelines</a>
+  ·
+  <a href="https://github.com/juanmesa2097/angular-boilerplate/issues">Submit an Issue</a>
+  <br>
+  <br>
+</p>
+
+<p align="center">
+  <a href="https://github.com/facebook/jest">
+    <img src="https://jestjs.io/img/jest-badge.svg" alt="unit tests with Jest" />
+  </a>&nbsp;
+  <a href="https://www.cypress.io">
+    <img src="https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg" alt="e2e with Cypress" />
+  </a>&nbsp;
+  <a href="https://github.com/juanmesa2097/angular-boilerplate/issues">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="Contributions welcome" />
+  </a>
+</p>
+
+<hr>
 
 ## ⚗️ Features
 
