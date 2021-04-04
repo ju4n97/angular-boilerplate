@@ -178,13 +178,13 @@ There are certain features that you may or may not like to have in your projects
   3. Run the following command:
 
   ```
-  yarn remove @commitlint/cli @commitlint/config-conventional
+  npm uninstall @commitlint/cli @commitlint/config-conventional
   ```
 
   OR
 
   ```
-  npm uninstall @commitlint/cli @commitlint/config-conventional
+  yarn remove @commitlint/cli @commitlint/config-conventional
   ```
 
 - Fully remove Husky & commitlint
@@ -194,13 +194,13 @@ There are certain features that you may or may not like to have in your projects
   3. Run the following commands:
 
   ```
-  yarn remove husky @commitlint/cli @commitlint/config-conventional
+  npm uninstall husky @commitlint/cli @commitlint/config-conventional
   ```
 
   OR
 
   ```
-  npm uninstall husky @commitlint/cli @commitlint/config-conventional
+  yarn remove husky @commitlint/cli @commitlint/config-conventional
   ```
 
 ### 🌠 GitHub Actions workflows
@@ -223,13 +223,13 @@ There are certain features that you may or may not like to have in your projects
 2. Run the following command:
 
 ```
-yarn remove tailwindcss autoprefixer postcss
+npm uninstall tailwindcss autoprefixer postcss
 ```
 
 OR
 
 ```
-npm uninstall tailwindcss autoprefixer postcss
+yarn remove tailwindcss autoprefixer postcss
 ```
 
 ## ⛩️ Project structure
