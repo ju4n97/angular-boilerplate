@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { NotFoundPage } from './@containers/not-found/not-found.page';
-import { AuthGuard, NoAuthGuard } from './@core/guards';
-import { Path } from './@core/structs';
+import { NotFoundPage } from '@containers/not-found/not-found.page';
+import { AuthGuard, NoAuthGuard } from '@core/guards';
+import { Path } from '@core/structs';
 
 const routes: Routes = [
   // ===== Uncomment if Path.Home is different from empty =====
@@ -19,7 +19,7 @@ const routes: Routes = [
   {
     path: Path.Auth,
     canActivate: [NoAuthGuard],
-    loadChildren: () => import('./+auth/auth.module').then((m) => m.AuthModule),
+    loadChildren: () => import('@pages/+auth/auth.module').then((m) => m.AuthModule),
   },
 
   // App
@@ -35,22 +35,22 @@ const routes: Routes = [
       {
         path: Path.Dashboard,
         loadChildren: () =>
-          import('./features/dashboard/dashboard.module').then(
+          import('@pages/dashboard/dashboard.module').then(
             (m) => m.DashboardModule,
           ),
       },
     ],
   },
   {
-    path: 'settings',
+    path: Path.Settings,
     canActivate: [AuthGuard],
     loadChildren: () =>
-      import('./+settings/settings.module').then((m) => m.SettingsModule),
+      import('@pages/+settings/settings.module').then((m) => m.SettingsModule),
   },
   {
-    path: 'user',
+    path: Path.Users,
     canActivate: [AuthGuard],
-    loadChildren: () => import('./+user/user.module').then((m) => m.UserModule),
+    loadChildren: () => import('@pages/+user/user.module').then((m) => m.UserModule),
   },
 
   // Not found page (must go at the bottom)

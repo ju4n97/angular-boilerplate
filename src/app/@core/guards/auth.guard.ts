@@ -4,10 +4,10 @@ import {
   CanActivate,
   Router,
   RouterStateSnapshot,
-  UrlTree,
+  UrlTree
 } from '@angular/router';
-import { AuthService } from '@app/+auth/services/auth.service';
 import { Path } from '@core/structs';
+import { AuthService } from '@pages/+auth/services/auth.service';
 import { Observable } from 'rxjs';
 
 @Injectable({
