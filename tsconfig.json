@@ -17,8 +17,7 @@
     "lib": ["es2018", "dom"],
     "paths": {
       "@app/*": ["src/app/*"],
-      "@components/*": ["src/app/@components/*"],
-      "@containers/*": ["src/app/@containers/*"],
+      "@components/*": ["src/app/components/*"],
       "@core/*": ["src/app/@core/*"],
       "@pages/*": ["src/app/pages/*"],
       "@assets/*": ["src/assets/*"],
