@@ -1,7 +1,4 @@
-import { CommonModule } from '@angular/common';
-import { Component, NgModule, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { BILLING_SETTINGS_ROUTE } from './billing.page.route';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   templateUrl: './billing.page.html',
@@ -12,9 +9,3 @@ export class BillingPage implements OnInit {
 
   ngOnInit(): void {}
 }
-
-@NgModule({
-  declarations: [BillingPage],
-  imports: [CommonModule, RouterModule.forChild([BILLING_SETTINGS_ROUTE])],
-})
-export class BillingModule {}

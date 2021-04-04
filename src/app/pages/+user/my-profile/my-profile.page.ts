@@ -1,7 +1,4 @@
-import { CommonModule } from '@angular/common';
-import { Component, NgModule, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { MY_PROFILE_ROUTE } from './my-profile.page.route';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   templateUrl: './my-profile.page.html',
@@ -12,9 +9,3 @@ export class MyProfilePage implements OnInit {
 
   ngOnInit(): void {}
 }
-
-@NgModule({
-  declarations: [MyProfilePage],
-  imports: [CommonModule, RouterModule.forChild([MY_PROFILE_ROUTE])],
-})
-export class MyProfileModule {}

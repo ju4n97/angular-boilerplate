@@ -1,7 +1,4 @@
-import { CommonModule } from '@angular/common';
-import { Component, NgModule, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { NOTIFICATIONS_SETTINGS_ROUTE } from './notifications.page.route';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   templateUrl: './notifications.page.html',
@@ -12,12 +9,3 @@ export class NotificationsPage implements OnInit {
 
   ngOnInit(): void {}
 }
-
-@NgModule({
-  declarations: [NotificationsPage],
-  imports: [
-    CommonModule,
-    RouterModule.forChild([NOTIFICATIONS_SETTINGS_ROUTE]),
-  ],
-})
-export class NotificationsModule {}

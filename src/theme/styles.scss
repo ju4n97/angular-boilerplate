@@ -3,19 +3,14 @@
 @import 'tailwindcss/utilities';
 
 @layer base {
-  @import '01-base/variables.scss';
-  @import '01-base/theming.scss';
   @import '01-base/font.scss';
   @import '01-base/document.scss';
   @import '01-base/headings.scss';
 }
 
 @layer components {
-  @import '02-components/button.scss';
+  @import '02-components/link.scss';
 }
 
 @layer utilities {
-  @import '03-utilities/animations.scss';
-  @import '03-utilities/link.scss';
-  @import '03-utilities/shapes.scss';
 }
