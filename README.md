@@ -59,6 +59,14 @@
 
 ## 📄 Pages
 
+```
+Types of pages
+
++ = main page
+- = response page
+  = regular page
+```
+
 - General
   - home
   - not-found
@@ -88,6 +96,7 @@
 
 - footer
 - header
+- layout
 
 ## 📡 Services
 
@@ -236,38 +245,8 @@ yarn remove tailwindcss autoprefixer postcss
 
 ```console
 ├───app
-│   ├───+auth
-│   │   ├───pages
-│   │   │   ├───forgot-password
-│   │   │   ├───forgot-password-email-sent
-│   │   │   ├───password-reset
-│   │   │   ├───password-reset-failed
-│   │   │   ├───password-reset-succeeded
-│   │   │   ├───sign-in
-│   │   │   └───sign-up
-│   │   └───services
-│   ├───+settings
-│   │   └───pages
-│   │       ├───account
-│   │       ├───appearance
-│   │       ├───billing
-│   │       ├───blocked-users
-│   │       ├───notifications
-│   │       ├───security
-│   │       └───security-log
-│   ├───+user
-│   │   └───pages
-│   │       ├───my-profile
-│   │       └───overview
-│   ├───@components
-│   │   ├───breadcrumb
-│   │   ├───footer
-│   │   ├───header
-│   │   └───theme-panel
-│   ├───@containers
-│   │   ├───home
-│   │   └───not-found
 │   ├───@core
+│   │   ├───core
 │   │   ├───directives
 │   │   │   └───click-outside
 │   │   ├───guards
@@ -279,8 +258,34 @@ yarn remove tailwindcss autoprefixer postcss
 │   │   │   └───theme
 │   │   ├───structs
 │   │   └───utils
-│   └───features
-│       └───dashboard
+│   ├───components
+│   │   ├───footer
+│   │   ├───header
+│   │   └───layout
+│   └───pages
+│       ├───+auth
+│       │   ├───forgot-password
+│       │   ├───forgot-password-email-sent
+│       │   ├───password-reset
+│       │   ├───password-reset-failed
+│       │   ├───password-reset-succeeded
+│       │   ├───sign-in
+│       │   ├───sign-up
+│       │   └───_services
+│       ├───+home
+│       ├───+settings
+│       │   ├───account
+│       │   ├───appearance
+│       │   ├───billing
+│       │   ├───blocked-users
+│       │   ├───notifications
+│       │   ├───security
+│       │   └───security-log
+│       ├───+user
+│       │   ├───my-profile
+│       │   └───overview
+│       ├───dashboard
+│       └───_not-found
 ├───assets
 ├───environments
 ├───public
