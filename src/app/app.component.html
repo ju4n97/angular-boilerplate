@@ -1,9 +1,6 @@
-<ng-container *ngIf="isLoggedIn$ | async; 
-else notAuthorized">
-  <app-header (logout)="onLogout()"></app-header>
-      <router-outlet></router-outlet>
-  <app-footer></app-footer>
-</ng-container>
+<app-layout *ngIf="isLoggedIn$ | async; else notAuthorized">
+  <router-outlet></router-outlet>
+</app-layout>
 
 <ng-template #notAuthorized>
   <router-outlet></router-outlet>
