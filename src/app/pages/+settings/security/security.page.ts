@@ -1,7 +1,4 @@
-import { CommonModule } from '@angular/common';
-import { Component, NgModule, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { SECURITY_SETTINGS_ROUTE } from './security.page.route';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   templateUrl: './security.page.html',
@@ -12,9 +9,3 @@ export class SecurityPage implements OnInit {
 
   ngOnInit(): void {}
 }
-
-@NgModule({
-  declarations: [SecurityPage],
-  imports: [CommonModule, RouterModule.forChild([SECURITY_SETTINGS_ROUTE])],
-})
-export class SecurityModule {}

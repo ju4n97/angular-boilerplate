@@ -1,8 +1,8 @@
 a.link {
   @apply inline-block;
-  @apply font-bold;
+  @apply font-semibold;
   @apply text-sm;
-  @apply text-danger-400;
+  @apply text-red-400;
 
   &:hover,
   &:active,

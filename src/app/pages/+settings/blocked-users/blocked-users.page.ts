@@ -1,7 +1,4 @@
-import { CommonModule } from '@angular/common';
-import { Component, NgModule, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { BLOCKED_USERS_SETTINGS_ROUTE } from './blocked-users.page.route';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   templateUrl: './blocked-users.page.html',
@@ -12,12 +9,3 @@ export class BlockedUsersPage implements OnInit {
 
   ngOnInit(): void {}
 }
-
-@NgModule({
-  declarations: [BlockedUsersPage],
-  imports: [
-    CommonModule,
-    RouterModule.forChild([BLOCKED_USERS_SETTINGS_ROUTE]),
-  ],
-})
-export class BlockedUsersModule {}

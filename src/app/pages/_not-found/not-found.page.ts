@@ -1,7 +1,4 @@
-import { CommonModule } from '@angular/common';
-import { Component, NgModule, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { NOT_FOUND_ROUTE } from './not-found.page.route';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   templateUrl: './not-found.page.html',
@@ -12,9 +9,3 @@ export class NotFoundPage implements OnInit {
 
   ngOnInit(): void {}
 }
-
-@NgModule({
-  declarations: [NotFoundPage],
-  imports: [CommonModule, RouterModule.forChild([NOT_FOUND_ROUTE])],
-})
-export class NotFoundModule {}

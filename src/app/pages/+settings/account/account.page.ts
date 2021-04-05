@@ -1,7 +1,4 @@
-import { CommonModule } from '@angular/common';
-import { Component, NgModule, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { ACCOUNT_SETTINGS_ROUTE } from './account.page.route';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   templateUrl: './account.page.html',
@@ -12,9 +9,3 @@ export class AccountPage implements OnInit {
 
   ngOnInit(): void {}
 }
-
-@NgModule({
-  declarations: [AccountPage],
-  imports: [CommonModule, RouterModule.forChild([ACCOUNT_SETTINGS_ROUTE])],
-})
-export class AccountModule {}

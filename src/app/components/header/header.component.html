@@ -1,4 +1,4 @@
-<header class="h-20 shadow-sm bg-accent">
+<header class="h-16 shadow-sm bg-gray-50 dark:bg-gray-700">
   <nav
     class="container flex items-center justify-between h-full py-3 mx-auto center"
   >
@@ -6,8 +6,7 @@
       [routerLink]="[path.Home]"
       class="text-2xl font-bold no-underline cursor-pointer"
     >
-      <span class="text-danger-400">Angular</span>
-      Boilerplate
+      <span class="text-gray-400">A</span>B
     </a>
 
     <div class="flex items-center">
@@ -33,7 +32,12 @@
           ></path>
         </svg>
       </a>
-      <button class="btn btn-danger" (click)="onClickLogout()">Sign out</button>
+      <button
+        class="inline-block h-12 px-6 py-3 font-semibold text-gray-600 bg-gray-200 rounded-lg hover:bg-gray-300 focus:ring-4 focus:ring-offset-gray-300 focus:outline-none"
+        (click)="onClickSignOut()"
+      >
+        Sign out
+      </button>
     </div>
   </nav>
 </header>

@@ -1,9 +1,7 @@
-import { CommonModule } from '@angular/common';
-import { Component, NgModule, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '@app/pages/+auth/_services/auth.service';
 import { Path } from '@core/structs';
-import { SIGN_IN_ROUTE } from './sign-in.page.route';
 
 @Component({
   templateUrl: './sign-in.page.html',
@@ -29,9 +27,3 @@ export class SignInPage implements OnInit {
     this.router.navigate([this.returnUrl]);
   }
 }
-
-@NgModule({
-  declarations: [SignInPage],
-  imports: [CommonModule, RouterModule.forChild([SIGN_IN_ROUTE])],
-})
-export class SignInModule {}

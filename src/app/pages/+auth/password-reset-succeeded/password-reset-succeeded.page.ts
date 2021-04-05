@@ -1,7 +1,4 @@
-import { CommonModule } from '@angular/common';
-import { Component, NgModule, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { PASSWORD_RESET_SUCCEEDED_ROUTE } from './password-reset-succeeded.page.route';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   templateUrl: './password-reset-succeeded.page.html',
@@ -12,12 +9,3 @@ export class PasswordResetSucceededPage implements OnInit {
 
   ngOnInit(): void {}
 }
-
-@NgModule({
-  declarations: [PasswordResetSucceededPage],
-  imports: [
-    CommonModule,
-    RouterModule.forChild([PASSWORD_RESET_SUCCEEDED_ROUTE]),
-  ],
-})
-export class PasswordResetSucceededModule {}

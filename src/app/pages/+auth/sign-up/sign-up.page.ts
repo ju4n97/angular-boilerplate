@@ -1,7 +1,4 @@
-import { CommonModule } from '@angular/common';
-import { Component, NgModule, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { SIGN_UP_ROUTE } from './sign-up.page.route';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   templateUrl: './sign-up.page.html',
@@ -12,9 +9,3 @@ export class SignUpPage implements OnInit {
 
   ngOnInit(): void {}
 }
-
-@NgModule({
-  declarations: [SignUpPage],
-  imports: [CommonModule, RouterModule.forChild([SIGN_UP_ROUTE])],
-})
-export class SignUpModule {}

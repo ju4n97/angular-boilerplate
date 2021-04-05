@@ -1,7 +1,4 @@
-import { CommonModule } from '@angular/common';
-import { Component, NgModule, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { USERS_OVERVIEW_ROUTE } from './overview.page.route';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   templateUrl: './overview.page.html',
@@ -12,9 +9,3 @@ export class OverviewPage implements OnInit {
 
   ngOnInit(): void {}
 }
-
-@NgModule({
-  declarations: [OverviewPage],
-  imports: [CommonModule, RouterModule.forChild([USERS_OVERVIEW_ROUTE])],
-})
-export class OverviewModule {}

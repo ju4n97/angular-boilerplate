@@ -1,7 +1,4 @@
-import { CommonModule } from '@angular/common';
-import { Component, NgModule, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { PASSWORD_RESET_ROUTE } from './password-reset.page.route';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   templateUrl: './password-reset.page.html',
@@ -12,9 +9,3 @@ export class PasswordResetPage implements OnInit {
 
   ngOnInit(): void {}
 }
-
-@NgModule({
-  declarations: [PasswordResetPage],
-  imports: [CommonModule, RouterModule.forChild([PASSWORD_RESET_ROUTE])],
-})
-export class PasswordResetModule {}
