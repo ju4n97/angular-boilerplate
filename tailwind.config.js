@@ -19,14 +19,6 @@ module.exports = {
         inherit: 'inherit',
         transparent: 'transparent',
         current: 'currentColor',
-
-        white: '#fff',
-        black: '#000',
-
-        background: 'var(--bg)',
-        accent: 'var(--accent)',
-        primary: 'var(--primary)',
-        secondary: 'var(--secondary)',
       },
     },
   },

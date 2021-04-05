@@ -1,15 +1,8 @@
-import { CommonModule } from '@angular/common';
-import {
-  ChangeDetectionStrategy,
-  Component,
-  EventEmitter,
-  NgModule,
-  OnInit,
-  Output,
-} from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ThemeList, ThemeService } from '@app/@core/services/theme';
 import { Path } from '@app/@core/structs';
+import { AuthService } from '@app/pages/+auth/_services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -18,27 +11,23 @@ import { Path } from '@app/@core/structs';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent implements OnInit {
-  @Output() logout = new EventEmitter<void>();
-
   path = Path;
   theme = ThemeList;
 
-  constructor(private themeService: ThemeService) {}
+  constructor(
+    private router: Router,
+    private themeService: ThemeService,
+    private authService: AuthService,
+  ) {}
 
   ngOnInit(): void {}
 
-  onClickLogout(): void {
-    this.logout.emit();
+  onClickSignOut(): void {
+    this.authService.signOut();
+    this.router.navigate(['/', Path.SignIn]);
   }
 
   onClickToggleTheme(theme: ThemeList): void {
     this.themeService.changeTheme(theme);
   }
 }
-
-@NgModule({
-  declarations: [HeaderComponent],
-  imports: [CommonModule, RouterModule],
-  exports: [HeaderComponent],
-})
-export class HeaderModule {}

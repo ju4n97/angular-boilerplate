@@ -1,10 +1,4 @@
-import { CommonModule } from '@angular/common';
-import {
-  ChangeDetectionStrategy,
-  Component,
-  NgModule,
-  OnInit,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-layout',
@@ -17,10 +11,3 @@ export class LayoutComponent implements OnInit {
 
   ngOnInit(): void {}
 }
-
-@NgModule({
-  declarations: [LayoutComponent],
-  imports: [CommonModule],
-  exports: [LayoutComponent],
-})
-export class LayoutModule {}
