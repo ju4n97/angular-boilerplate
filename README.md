@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="angularboilerplate.netlify.app"><strong>angularboilerplate.netlify.app</strong></a>
+  <a href="https://angularboilerplate.vercel.app"><strong>https://angularboilerplate.vercel.app</strong></a>
   <br>
 </p>
 
