@@ -45,7 +45,7 @@
     "@angular/localize": "^11.2.8",
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
-    "@cypress/webpack-preprocessor": "5.6.0",
+    "@cypress/webpack-preprocessor": "5.7.0",
     "@types/jasmine": "~3.6.9",
     "@types/jest": "26.0.22",
     "@types/node": "^14.14.37",
