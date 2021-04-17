@@ -132,36 +132,26 @@ Types of pages
 
   You can find the config file in the project root, then you can refer to https://tailwindcss.com/docs/configuration to learn how to make your own adjustments.
 
-- Change light and dark mode colors:
-
-  Go to `src/theme/01-base/variables.scss` and change them to your preference.
-
 - Set a default theme (First time load)
 
-  Go to `src\app\@core\services\theme\theme.service.ts` and change the following line of code:
+  Go to `src\app\@core\services\theme\theme.config.ts` and change the following line of code
 
   from operating system preference
 
   ```ts
-  private currentTheme$ = new BehaviorSubject<ThemeList>(
-    this.currentTheme || ThemeList.System
-  );
+  export const defaultBaseTheme = ThemeList.System;
   ```
 
   to light mode
 
   ```ts
-  private currentTheme$ = new BehaviorSubject<ThemeList>(
-    this.currentTheme || ThemeList.Light
-  );
+  export const defaultBaseTheme = ThemeList.Light;
   ```
 
   or dark mode
 
   ```ts
-  private currentTheme$ = new BehaviorSubject<ThemeList>(
-    this.currentTheme || ThemeList.Dark
-  );
+  export const defaultBaseTheme = ThemeList.Dark;
   ```
 
 ## 🗑️ Remove features
