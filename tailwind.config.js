@@ -1,7 +1,7 @@
 module.exports = {
   prefix: '',
+  mode: 'jit',
   purge: {
-    enabled: process.env.NODE_ENV === 'production',
     content: ['./src/**/*.{html,scss,ts}'],
   },
   darkMode: 'class',
