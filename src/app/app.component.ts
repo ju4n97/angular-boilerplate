@@ -22,9 +22,9 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.isLoggedIn$ = this.authService.isLoggedIn$;
     this.seoService.init();
     this.themeService.init();
+    this.isLoggedIn$ = this.authService.isLoggedIn$;
   }
 
   onLogout(): void {
