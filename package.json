@@ -19,7 +19,7 @@
     "analyze": "webpack-bundle-analyzer dist/angular-boilerplate/stats.json"
   },
   "dependencies": {
-    "@angular/animations": "~11.2.8",
+    "@angular/animations": "~11.2.11",
     "@angular/common": "~11.2.8",
     "@angular/compiler": "~11.2.8",
     "@angular/core": "~11.2.8",
