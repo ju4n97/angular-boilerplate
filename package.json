@@ -40,7 +40,7 @@
     "@angular-eslint/eslint-plugin-template": "2.1.0",
     "@angular-eslint/schematics": "2.1.0",
     "@angular-eslint/template-parser": "2.1.0",
-    "@angular/cli": "~11.2.9",
+    "@angular/cli": "~11.2.10",
     "@angular/compiler-cli": "~11.2.8",
     "@angular/localize": "^11.2.11",
     "@commitlint/cli": "^12.1.1",
