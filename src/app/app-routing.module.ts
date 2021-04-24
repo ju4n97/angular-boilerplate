@@ -75,11 +75,6 @@ const routes: Routes = [
   // App
   {
     path: Path.App,
-    redirectTo: `${Path.App}`,
-    pathMatch: 'full',
-  },
-  {
-    path: Path.App,
     canActivate: [AuthGuard],
     children: [
       {
