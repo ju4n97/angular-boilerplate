@@ -29,14 +29,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              "src/public"
-            ],
-            "styles": [
-              "src/theme/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets", "src/public"],
+            "styles": ["src/theme/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -68,11 +62,6 @@
               ],
               "serviceWorker": true,
               "ngswConfigPath": "ngsw-config.json"
-            },
-            "es": {
-              "localize": [
-                "es"
-              ]
             }
           }
         },
@@ -84,16 +73,7 @@
           "configurations": {
             "production": {
               "browserTarget": "angular-boilerplate:build:production"
-            },
-            "es": {
-              "browserTarget": "angular-boilerplate:build:es"
             }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "angular-boilerplate:build"
           }
         },
         "test": {
@@ -101,23 +81,15 @@
           "options": {
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
-            "assets": [
-              "src/public/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/theme/styles.scss"
-            ],
+            "assets": ["src/public/favicon.ico", "src/assets"],
+            "styles": ["src/theme/styles.scss"],
             "scripts": []
           }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "src/**/*.ts",
-              "src/**/*.html"
-            ]
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
         },
         "e2e": {
@@ -156,12 +128,6 @@
               "devServerTarget": "angular-boilerplate:serve:production"
             }
           }
-        }
-      },
-      "i18n": {
-        "sourceLocale": "en-US",
-        "locales": {
-          "es": "locale/messages.es.xlf"
         }
       }
     }
