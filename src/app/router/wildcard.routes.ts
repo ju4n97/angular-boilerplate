@@ -1,4 +1,5 @@
 import { Route } from '@angular/router';
+import { NotFoundPage } from '@app/pages/public/not-found/not-found.page';
 
 export const WILDCARD_ROUTE: Route = {
   path: '**',
@@ -6,4 +7,5 @@ export const WILDCARD_ROUTE: Route = {
     import('@pages/public/not-found/not-found.module').then(
       (m) => m.NotFoundModule,
     ),
+  component: NotFoundPage,
 };
