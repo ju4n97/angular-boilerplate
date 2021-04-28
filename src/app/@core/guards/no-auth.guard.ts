@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, Router, UrlTree } from '@angular/router';
-import { AuthService } from '@app/pages/+auth/_services/auth.service';
+import { AuthService } from '@app/pages/public/auth/_services/auth.service';
 import { Path } from '@core/structs';
 import { Observable } from 'rxjs';
 
@@ -18,7 +18,7 @@ export class NoAuthGuard implements CanActivate {
     const isLoggedIn = this.authService.isLoggedIn;
 
     if (isLoggedIn) {
-      this.router.navigate([Path.App]);
+      this.router.navigate([Path.Dashboard]);
       return false;
     }
 

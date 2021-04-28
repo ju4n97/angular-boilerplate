@@ -5,17 +5,13 @@
   "private": true,
   "scripts": {
     "ng": "ng",
-    "dev": "ng serve -o",
     "start": "ng serve",
-    "start:es": "ng serve -c=es --port 4201",
     "build": "ng build",
     "build:prod": "set NODE_ENV=production&& ng build --prod --build-optimizer --aot --stats-json",
-    "build:i18n": "set NODE_ENV=production&& ng build --prod --build-optimizer --aot --stats-json --localize",
-    "test": "ng test",
+    "test:unit": "ng test",
+    "test:e2e": "ng e2e",
     "test:coverage": "ng test --coverage",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "i18n:extract": "ng extract-i18n --output-path locale --ivy",
     "analyze": "webpack-bundle-analyzer dist/angular-boilerplate/stats.json"
   },
   "dependencies": {
@@ -48,7 +44,7 @@
     "@cypress/webpack-preprocessor": "5.7.0",
     "@types/jasmine": "~3.6.9",
     "@types/jest": "26.0.23",
-    "@types/node": "^14.14.39",    
+    "@types/node": "^14.14.39",
     "@typescript-eslint/eslint-plugin": "4.22.0",
     "@typescript-eslint/parser": "4.22.0",
     "autoprefixer": "^10.2.5",

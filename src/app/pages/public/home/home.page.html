@@ -1,0 +1,223 @@
+<section class="container flex items-center justify-center">
+  <main class="mx-auto my-16 md:max-w-xl">
+    <div class="text-center">
+      <h1 class="mb-4 text-2xl md:text-4xl">
+        👋 Welcome to Angular Boilerplate
+      </h1>
+      <p class="mb-12 text-base md:text-xl">
+        ⚒️ Start building your SPA easily ⚒️
+      </p>
+
+      <a
+        [routerLink]="['/', path.Dashboard]"
+        class="inline-block h-12 px-6 py-3 mb-12 font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-500 focus:ring-4 focus:ring-offset-blue-600 focus:outline-none"
+      >
+        Go to dashboard
+      </a>
+    </div>
+
+    <h3>Choose a theme</h3>
+    <div class="grid grid-cols-1 mb-12 gap-x-6 gap-y-3 md:grid-cols-3">
+      <button
+        class="inline-flex items-center h-12 px-6 py-3 font-semibold text-center text-white bg-gray-600 rounded-lg hover:bg-gray-500 focus:ring-4 focus:ring-offset-gray-600 focus:outline-none"
+        (click)="onClickChangeTheme(theme.System)"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6 mr-3"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+          />
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+          />
+        </svg>
+        System
+      </button>
+      <button
+        class="inline-flex items-center h-12 px-6 py-3 font-semibold text-center text-white bg-gray-600 rounded-lg hover:bg-gray-500 focus:ring-4 focus:ring-offset-gray-600 focus:outline-none"
+        (click)="onClickChangeTheme(theme.Light)"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6 mr-3"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+          />
+        </svg>
+        Light
+      </button>
+      <button
+        class="inline-flex items-center h-12 px-6 py-3 font-semibold text-center text-white bg-gray-600 rounded-lg hover:bg-gray-500 focus:ring-4 focus:ring-offset-gray-600 focus:outline-none"
+        (click)="onClickChangeTheme(theme.Dark)"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6 mr-3"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+          />
+        </svg>
+        Dark
+      </button>
+    </div>
+
+    <h3>👉 Recommendations</h3>
+    <p class="mb-6">
+      If you don't know where to take it from here, there are a few
+      recommendations that could be useful:
+    </p>
+
+    <h4 class="h5">State management</h4>
+    <p class="mb-6">
+      You can think about the complexity of your application and conclude if you
+      should use a state management tool to handle the data of your application
+      on a centralized spot.
+    </p>
+
+    <p>Here are some options ordered in less-to-major boilerplate code:</p>
+
+    <div class="mt-6 mb-12 ml-8">
+      <ol class="inline-block">
+        <li class="list-decimal">
+          <a
+            href="https://datorama.github.io/akita"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link"
+          >
+            Akita
+          </a>
+        </li>
+        <li class="list-decimal">
+          <a
+            href="https://www.ngxs.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link"
+          >
+            NGXS
+          </a>
+        </li>
+        <li class="list-decimal">
+          <a
+            href="https://ngrx.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link"
+          >
+            NgRx
+          </a>
+        </li>
+      </ol>
+    </div>
+
+    <h4 class="h5">i18n</h4>
+    <p class="mb-6">
+      If you need to have your application in multiple languages, you need to
+      think if you want server-side translations or runtime translations; if you
+      want the first, the way to go is with the
+      <a
+        href="https://angular.io/guide/i18n"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="link"
+      >
+        official solution </a
+      >, on the other hand, if you want to translate your app on runtime, the
+      most popular solutions are
+      <a
+        href="https://github.com/ngneat/transloco"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="link"
+      >
+        transloco
+      </a>
+      and
+      <a
+        href=" https://github.com/ngx-translate/corengx-translate"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="link"
+      >
+        ngx-translate </a
+      >.
+    </p>
+
+    <h4 class="h5">Keep your styles consistent</h4>
+    <p>
+      Please keep in mind that all the code that you find on the templates is
+      disposable; that's why the HTML is bloated with classes. In a real-world
+      approach, to keep consistency across your application, you should consider
+      extracting your components (buttons, inputs, modals, etc.) into
+      <a
+        href="https://tailwindcss.com/docs/extracting-components"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="link"
+      >
+        Tailwind Components
+      </a>
+      or use some UI components suite like (<a
+        href="https://taiga-ui.dev"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="link"
+        >TaigaUI</a
+      >,
+      <a
+        href="https://akveo.github.io/nebular"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="link"
+        >Nebular</a
+      >,
+      <a
+        href="https://ng.ant.design/docs/introduce/en"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="link"
+        >NgZorro</a
+      >,
+      <a
+        href="https://js.devexpress.com/Overview/Angular"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="link"
+        >DevExtreme</a
+      >,
+      <a
+        href="https://material.angular.io"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="link"
+        >Angular Material</a
+      >, etc.).
+    </p>
+  </main>
+</section>
