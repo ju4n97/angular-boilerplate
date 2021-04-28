@@ -1,8 +1,12 @@
 <section class="container flex items-center justify-center">
-  <main class="my-16 md:max-w-xl">
+  <main class="mx-auto my-16 md:max-w-xl">
     <div class="text-center">
-      <h1 class="mb-4">👋 Welcome to Angular Boilerplate</h1>
-      <p class="mb-12 text-xl">⚒️ Start building your SPA easily ⚒️</p>
+      <h1 class="mb-4 text-2xl md:text-4xl">
+        👋 Welcome to Angular Boilerplate
+      </h1>
+      <p class="mb-12 text-base md:text-xl">
+        ⚒️ Start building your SPA easily ⚒️
+      </p>
 
       <a
         [routerLink]="['/', path.Dashboard]"
@@ -13,45 +17,69 @@
     </div>
 
     <h3>Choose a theme</h3>
-    <div class="flex items-center justify-start space-x-6">
+    <div class="grid grid-cols-1 mb-12 gap-x-6 gap-y-3 md:grid-cols-3">
       <button
-        class="inline-block h-12 px-6 py-3 mb-12 font-semibold text-white bg-gray-600 rounded-lg hover:bg-gray-500 focus:ring-4 focus:ring-offset-gray-600 focus:outline-none"
+        class="inline-flex items-center h-12 px-6 py-3 font-semibold text-center text-white bg-gray-600 rounded-lg hover:bg-gray-500 focus:ring-4 focus:ring-offset-gray-600 focus:outline-none"
         (click)="onClickChangeTheme(theme.System)"
       >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6 mr-3"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+          />
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+          />
+        </svg>
         System
       </button>
       <button
-        class="inline-flex items-center h-12 px-6 py-3 mb-12 font-semibold text-white bg-gray-600 rounded-lg hover:bg-gray-500 focus:ring-4 focus:ring-offset-gray-600 focus:outline-none"
+        class="inline-flex items-center h-12 px-6 py-3 font-semibold text-center text-white bg-gray-600 rounded-lg hover:bg-gray-500 focus:ring-4 focus:ring-offset-gray-600 focus:outline-none"
         (click)="onClickChangeTheme(theme.Light)"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="26"
-          height="26"
-          class="mr-3"
+          class="w-6 h-6 mr-3"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
         >
           <path
-            fill="#FFF"
-            fill-rule="evenodd"
-            d="M13 21a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-5.657-2.343a1 1 0 010 1.414l-2.121 2.121a1 1 0 01-1.414-1.414l2.12-2.121a1 1 0 011.415 0zm12.728 0l2.121 2.121a1 1 0 01-1.414 1.414l-2.121-2.12a1 1 0 011.414-1.415zM13 8a5 5 0 110 10 5 5 0 010-10zm12 4a1 1 0 110 2h-3a1 1 0 110-2h3zM4 12a1 1 0 110 2H1a1 1 0 110-2h3zm18.192-8.192a1 1 0 010 1.414l-2.12 2.121a1 1 0 01-1.415-1.414l2.121-2.121a1 1 0 011.414 0zm-16.97 0l2.121 2.12A1 1 0 015.93 7.344L3.808 5.222a1 1 0 011.414-1.414zM13 0a1 1 0 011 1v3a1 1 0 11-2 0V1a1 1 0 011-1z"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
           />
         </svg>
         Light
       </button>
       <button
-        class="inline-flex items-center h-12 px-6 py-3 mb-12 font-semibold text-white bg-gray-600 rounded-lg hover:bg-gray-500 focus:ring-4 focus:ring-offset-gray-600 focus:outline-none"
+        class="inline-flex items-center h-12 px-6 py-3 font-semibold text-center text-white bg-gray-600 rounded-lg hover:bg-gray-500 focus:ring-4 focus:ring-offset-gray-600 focus:outline-none"
         (click)="onClickChangeTheme(theme.Dark)"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="26"
-          height="26"
-          class="mr-3"
+          class="w-6 h-6 mr-3"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
         >
           <path
-            fill="#FFF"
-            fill-rule="evenodd"
-            d="M13 0c.81 0 1.603.074 2.373.216C10.593 1.199 7 5.43 7 10.5 7 16.299 11.701 21 17.5 21c2.996 0 5.7-1.255 7.613-3.268C23.22 22.572 18.51 26 13 26 5.82 26 0 20.18 0 13S5.82 0 13 0z"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
           />
         </svg>
         Dark
