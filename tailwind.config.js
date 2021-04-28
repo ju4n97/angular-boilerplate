@@ -1,6 +1,6 @@
 module.exports = {
   prefix: '',
-  mode: 'jit',
+  // mode: 'jit', Still not working correctly with Angular
   purge: {
     enabled: process.env.NODE_ENV === 'production',
     content: ['./src/**/*.{html,scss,ts}'],

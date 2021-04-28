@@ -2,3 +2,13 @@ html,
 body {
   @apply h-full;
 }
+
+body {
+  @apply bg-gray-100;
+  @apply text-gray-800;
+
+  &.dark {
+    @apply bg-gray-800;
+    @apply text-gray-50;
+  }
+}

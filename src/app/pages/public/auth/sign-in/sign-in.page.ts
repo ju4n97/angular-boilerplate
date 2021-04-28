@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AuthService } from '@app/pages/+auth/_services/auth.service';
 import { Path } from '@core/structs';
+import { AuthService } from '../_services/auth.service';
 
 @Component({
   templateUrl: './sign-in.page.html',
@@ -17,7 +17,7 @@ export class SignInPage implements OnInit {
   ) {
     this.returnUrl =
       this.activatedRoute.snapshot.queryParamMap.get('returnUrl') ||
-      `/${Path.App}`;
+      `/${Path.Dashboard}`;
   }
 
   ngOnInit(): void {}
