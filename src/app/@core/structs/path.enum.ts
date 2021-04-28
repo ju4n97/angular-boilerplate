@@ -4,7 +4,6 @@ export enum Path {
   NotFound = '404',
 
   // Auth
-  Auth = '',
   SignIn = 'sign-in',
   SignUp = 'sign-up',
   ForgotPassword = 'forgot-password',
@@ -14,8 +13,7 @@ export enum Path {
   PasswordResetSucceeded = 'password-reset-succeeded',
 
   // App base url
-  App = 'app',
-  Dashboard = '',
+  Dashboard = 'dashboard',
 
   // Settings
   Settings = 'settings',

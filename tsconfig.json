@@ -20,6 +20,7 @@
       "@components/*": ["src/app/components/*"],
       "@core/*": ["src/app/@core/*"],
       "@pages/*": ["src/app/pages/*"],
+      "@router/*": ["src/app/router/*"],
       "@assets/*": ["src/assets/*"],
       "@environments/*": ["src/environments/*"]
     }

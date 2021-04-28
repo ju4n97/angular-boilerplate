@@ -61,9 +61,8 @@
 ```
 Types of pages
 
-+ = main page
-- = response page
-  = regular page
+public: everybody can see them
+private: only logged in users can see them
 ```
 
 - General
@@ -235,7 +234,6 @@ yarn remove tailwindcss autoprefixer postcss
 ```console
 ├───app
 │   ├───@core
-│   │   ├───core
 │   │   ├───directives
 │   │   │   └───click-outside
 │   │   ├───guards
@@ -251,34 +249,36 @@ yarn remove tailwindcss autoprefixer postcss
 │   │   ├───footer
 │   │   ├───header
 │   │   └───layout
-│   └───pages
-│       ├───+auth
-│       │   ├───forgot-password
-│       │   ├───forgot-password-email-sent
-│       │   ├───password-reset
-│       │   ├───password-reset-failed
-│       │   ├───password-reset-succeeded
-│       │   ├───sign-in
-│       │   ├───sign-up
-│       │   └───_services
-│       ├───+home
-│       ├───+settings
-│       │   ├───account
-│       │   ├───appearance
-│       │   ├───billing
-│       │   ├───blocked-users
-│       │   ├───notifications
-│       │   ├───security
-│       │   └───security-log
-│       ├───+user
-│       │   ├───my-profile
-│       │   └───overview
-│       ├───dashboard
-│       └───_not-found
+│   ├───pages
+│   │   ├───private
+│   │   │   ├───dashboard
+│   │   │   ├───settings
+│   │   │   │   ├───account
+│   │   │   │   ├───appearance
+│   │   │   │   ├───billing
+│   │   │   │   ├───blocked-users
+│   │   │   │   ├───notifications
+│   │   │   │   ├───security
+│   │   │   │   └───security-log
+│   │   │   └───user
+│   │   │       ├───my-profile
+│   │   │       └───overview
+│   │   └───public
+│   │       ├───auth
+│   │       │   ├───forgot-password
+│   │       │   ├───forgot-password-email-sent
+│   │       │   ├───password-reset
+│   │       │   ├───password-reset-failed
+│   │       │   ├───password-reset-succeeded
+│   │       │   ├───sign-in
+│   │       │   ├───sign-up
+│   │       │   └───_services
+│   │       ├───home
+│   │       └───not-found
+│   └───router
 ├───assets
-├───environments
-├───public
 │   └───icons
+├───environments
 └───theme
     ├───01-base
     ├───02-components
