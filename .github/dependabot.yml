@@ -1,0 +1,80 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "10:00"
+  open-pull-requests-limit: 99
+  target-branch: main
+  reviewers:
+  - juanmesa2097
+  ignore:
+  - dependency-name: "@angular/compiler-cli"
+    versions:
+    - 11.2.10
+    - 11.2.11
+    - 11.2.12
+  - dependency-name: "@angular/animations"
+    versions:
+    - 11.2.10
+    - 11.2.11
+    - 11.2.12
+  - dependency-name: "@types/node"
+    versions:
+    - 14.14.36
+    - 14.14.41
+    - 15.0.0
+  - dependency-name: eslint-plugin-jsdoc
+    versions:
+    - 32.3.2
+  - dependency-name: "@angular-eslint/schematics"
+    versions:
+    - 4.0.0
+  - dependency-name: "@angular/platform-browser"
+    versions:
+    - 11.2.10
+    - 11.2.11
+  - dependency-name: "@angular/common"
+    versions:
+    - 11.2.10
+    - 11.2.11
+  - dependency-name: "@angular/compiler"
+    versions:
+    - 11.2.10
+  - dependency-name: "@angular/forms"
+    versions:
+    - 11.2.11
+  - dependency-name: "@angular/service-worker"
+    versions:
+    - 11.2.11
+  - dependency-name: "@angular/localize"
+    versions:
+    - 11.2.11
+  - dependency-name: "@angular/core"
+    versions:
+    - 11.2.11
+  - dependency-name: ts-loader
+    versions:
+    - 9.1.0
+  - dependency-name: "@angular/router"
+    versions:
+    - 11.2.11
+  - dependency-name: "@angular/platform-browser-dynamic"
+    versions:
+    - 11.2.11
+  - dependency-name: cypress
+    versions:
+    - 7.0.1
+  - dependency-name: "@typescript-eslint/parser"
+    versions:
+    - 4.20.0
+  - dependency-name: "@typescript-eslint/eslint-plugin"
+    versions:
+    - 4.20.0
+  - dependency-name: typescript
+    versions:
+    - 4.0.6
+  - dependency-name: "@angular/cli"
+    versions:
+    - 11.1.3
