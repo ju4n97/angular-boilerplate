@@ -36,7 +36,7 @@
     "@angular-eslint/eslint-plugin-template": "4.2.0",
     "@angular-eslint/schematics": "4.2.0",
     "@angular-eslint/template-parser": "4.2.0",
-    "@angular/cli": "~11.2.11",
+    "@angular/cli": "~11.2.12",
     "@angular/compiler-cli": "~11.2.8",
     "@briebug/cypress-schematic": "^5.0.0",
     "@commitlint/cli": "^12.1.1",
