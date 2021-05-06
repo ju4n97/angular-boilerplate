@@ -22,7 +22,7 @@
     "@angular/forms": "~11.2.12",
     "@angular/platform-browser": "~11.2.12",
     "@angular/platform-browser-dynamic": "~11.2.12",
-    "@angular/router": "~11.2.12",
+    "@angular/router": "~11.2.13",
     "@angular/service-worker": "~11.2.12",
     "rxjs": "~6.6.7",
     "tslib": "^2.2.0",
