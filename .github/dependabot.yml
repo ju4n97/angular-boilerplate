@@ -7,8 +7,6 @@ updates:
     time: "10:00"
   open-pull-requests-limit: 99
   target-branch: main
-  reviewers:
-  - juanmesa2097
   ignore:
   - dependency-name: "@angular/compiler-cli"
     versions:
