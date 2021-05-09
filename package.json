@@ -7,7 +7,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "set NODE_ENV=production&& ng build --prod --build-optimizer --aot --stats-json",
+    "build:prod": "cross-env NODE_ENV=production ng build --prod --build-optimizer --aot --stats-json",
     "test:unit": "ng test",
     "test:e2e": "ng e2e",
     "test:coverage": "ng test --coverage",
@@ -48,6 +48,7 @@
     "@typescript-eslint/eslint-plugin": "4.22.0",
     "@typescript-eslint/parser": "4.22.0",
     "autoprefixer": "^10.2.5",
+    "cross-env": "^7.0.3",
     "cypress": "7.2.0",
     "eslint": "^7.25.0",
     "eslint-config-prettier": "^8.3.0",
@@ -66,7 +67,7 @@
     "tailwindcss": "^2.1.2",
     "ts-loader": "9.1.1",
     "ts-node": "~9.1.1",
-    "typescript": "^4.1.5",
+    "typescript": "4.1.5",
     "webpack-bundle-analyzer": "^4.4.1"
   }
 }
