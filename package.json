@@ -34,7 +34,7 @@
     "@angular-eslint/builder": "4.2.0",
     "@angular-eslint/eslint-plugin": "4.2.0",
     "@angular-eslint/eslint-plugin-template": "4.2.0",
-    "@angular-eslint/schematics": "4.2.0",
+    "@angular-eslint/schematics": "4.3.0",
     "@angular-eslint/template-parser": "4.2.0",
     "@angular/cli": "~11.2.11",
     "@angular/compiler-cli": "~11.2.8",
