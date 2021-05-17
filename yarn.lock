@@ -4827,10 +4827,10 @@ eslint-plugin-angular@4.0.1:
   resolved "https://registry.yarnpkg.com/eslint-plugin-angular/-/eslint-plugin-angular-4.0.1.tgz#f6c01d2a1e549d603e29eceb8615b5a989863a5e"
   integrity sha512-OaW5G461C2lIkOG+/bhnBoXB9UQm/r0Dj2Qf9uiIN0/ncvf2Llp30L0q1tqWkN8/CxyBwQKh1v0hpCLLDjaIKQ==
 
-eslint-plugin-import@2.23.0:
-  version "2.23.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.23.0.tgz#557160f501e4beaefb768fb4165d36eb2a4e543a"
-  integrity sha512-W5v1f7Cbam6BwbSSKtN6+yoUAms07ozbqAEhLOtf5erEqRv7w67PeZuAuBThaUkzdq2GfBx/5GBvxF+NWJshrQ==
+eslint-plugin-import@2.23.2:
+  version "2.23.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.23.2.tgz#ee15dd68fc7a1a1ba4c653c734e0d01c100d3484"
+  integrity sha512-LmNoRptHBxOP+nb0PIKz1y6OSzCJlB+0g0IGS3XV4KaKk2q4szqQ6s6F1utVf5ZRkxk/QOTjdxe7v4VjS99Bsg==
   dependencies:
     array-includes "^3.1.3"
     array.prototype.flat "^1.2.4"
