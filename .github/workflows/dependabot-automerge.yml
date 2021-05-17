@@ -1,2 +1,0 @@
-- name: Dependabot Auto Merge
-  uses: ahmadnassri/action-dependabot-auto-merge@v2.3.1
