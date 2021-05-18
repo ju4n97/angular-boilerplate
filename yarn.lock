@@ -178,19 +178,10 @@
     ora "5.3.0"
     rxjs "6.6.3"
 
-"@angular-eslint/builder@4.2.0":
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/@angular-eslint/builder/-/builder-4.2.0.tgz#3a00adf8384cdc983c73e959e919486c0d1175d9"
-  integrity sha512-qM4hpweuQ14ul8CU6LKpUWFZs6POUE7HZKdTllUrYuoZMrTpNB1XGelR0pweYzbfo4XRnUaO1NVgWhWOWiD5MA==
-
-"@angular-eslint/eslint-plugin-template@4.2.0":
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/@angular-eslint/eslint-plugin-template/-/eslint-plugin-template-4.2.0.tgz#2716583530bf2b20069076994816630e299ab67c"
-  integrity sha512-LC8qqqqVmA/OJAsUt6fQCXLmWP5BL30XFvVsPtrORdxMFt0HI1gvkuz5EVak7PeAXEmerdVarNZr5zmCXIWf3g==
-  dependencies:
-    "@typescript-eslint/experimental-utils" "4.16.1"
-    aria-query "^4.2.2"
-    axobject-query "^2.2.0"
+"@angular-eslint/builder@4.3.0":
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/@angular-eslint/builder/-/builder-4.3.0.tgz#368659e9c7539a1b61ec636b0918ca90a352decd"
+  integrity sha512-OzCA4jyELbHt8pyRuW6asib26rc+Ihr2SDjp+uoMivfpqjWVPOw0CvvEZj4SbpGvYOHtcAezyS526D2q2tKHvg==
 
 "@angular-eslint/eslint-plugin-template@4.3.0":
   version "4.3.0"
@@ -200,13 +191,6 @@
     "@typescript-eslint/experimental-utils" "4.16.1"
     aria-query "^4.2.2"
     axobject-query "^2.2.0"
-
-"@angular-eslint/eslint-plugin@4.2.0":
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/@angular-eslint/eslint-plugin/-/eslint-plugin-4.2.0.tgz#134203c3ac340ae4ae76703434f636dc0a110d7d"
-  integrity sha512-G8D8Pso6GcHW8vFkUSvgoKPIOtGTqO+eb5aytGtpogMgzxBRyr0juU/9Uz5dAhO6TOERIj1gPpJQ61R/n/Aaew==
-  dependencies:
-    "@typescript-eslint/experimental-utils" "4.16.1"
 
 "@angular-eslint/eslint-plugin@4.3.0":
   version "4.3.0"
@@ -226,10 +210,10 @@
     strip-json-comments "3.1.1"
     tmp "0.2.1"
 
-"@angular-eslint/template-parser@4.2.0":
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/@angular-eslint/template-parser/-/template-parser-4.2.0.tgz#02f98c72692880b81cd6b4cc137306b346c0b193"
-  integrity sha512-77lJ9MDNWmW4ik9l3g149iO9SGRx3qLGZvfSTwmbPxpCgNripWerla9Ia1X+gLkitI8CLpcpiZybxH3EWxj/qQ==
+"@angular-eslint/template-parser@4.3.0":
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/@angular-eslint/template-parser/-/template-parser-4.3.0.tgz#5b37d3ce5d2dabbe350d3a9eeab749ab82a3ab13"
+  integrity sha512-TH+UCrDmOWNLgNgTTR46+wpvgJ3q9Vf9kzqUA5vUNbg/Hhrdbi++DPeCiKagSAXkNBQavqcmyYuT9fzUReIDIg==
   dependencies:
     eslint-scope "^5.1.0"
 
