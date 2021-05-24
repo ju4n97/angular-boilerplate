@@ -5,8 +5,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "cross-env NODE_ENV=production ng build",
-    "build:stats": "cross-env NODE_ENV=production ng build --stats-json",
+    "build": "ng build",
+    "build:stats": "ng build --stats-json",
     "watch": "ng build --watch --configuration development",
     "test:unit": "ng test",
     "test:e2e": "ng e2e",
@@ -47,7 +47,6 @@
     "@typescript-eslint/eslint-plugin": "4.24.0",
     "@typescript-eslint/parser": "4.24.0",
     "autoprefixer": "10.2.5",
-    "cross-env": "7.0.3",
     "cypress": "7.3.0",
     "eslint": "7.27.0",
     "eslint-config-prettier": "8.3.0",
