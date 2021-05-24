@@ -1,9 +1,8 @@
 module.exports = {
   prefix: '',
-  // mode: 'jit', Still not working correctly with Angular
   purge: {
-    enabled: process.env.NODE_ENV === 'production',
-    content: ['./src/**/*.{html,scss,ts}'],
+    enabled: process.env.TAILWIND_MODE === 'build',
+    content: ['./src/**/*.{html,ts}', './projects/**/*.{html,ts}'],
   },
   darkMode: 'class',
   theme: {
