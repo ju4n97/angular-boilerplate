@@ -287,14 +287,14 @@ yarn remove tailwindcss autoprefixer postcss
 
 ## 🧙‍♂️ Commands
 
-| Command       | Description                                       | NPM                   | Yarn               | Background command                                          |
-| ------------- | ------------------------------------------------- | --------------------- | ------------------ | ----------------------------------------------------------- |
-| ng            | See available commands                            | npm run ng            | yarn ng            | ng                                                          |
-| start         | Run your app in development mode                  | npm start             | yarn start         | ng serve                                                    |
-| build         | Build your app                                    | npm run build         | yarn build         | ng build                                                    |
-| build:prod    | Build your app ready for production               | npm run build:prod    | yarn build:prod    | ng build --prod --build-optimizer --aot --stats-json        |
-| test:unit     | Run your unit tests                               | npm run test          | yarn test          | ng test                                                     |
-| test:e2e      | Run your e2e tests                                | npm run e2e           | yarn e2e           | ng e2e                                                      |
-| test:coverage | Run your unit tests & generates a coverage report | npm run test:coverage | yarn test:coverage | ng test --coverage                                          |
-| lint          | Use ESLint to lint your app                       | npm run lint          | yarn lint          | ng lint                                                     |
-| analyze       | Open webpack-bundle-analyzer                      | npm run analyze       | yarn analyze       | webpack-bundle-analyzer dist/angular-boilerplate/stats.json |
+| Command       | Description                                       | NPM                   | Yarn               | Background command                                                             |
+| ------------- | ------------------------------------------------- | --------------------- | ------------------ | ------------------------------------------------------------------------------ |
+| ng            | See available commands                            | npm run ng            | yarn ng            | ng                                                                             |
+| start         | Run your app in development mode                  | npm start             | yarn start         | ng serve                                                                       |
+| build         | Build your app                                    | npm run build         | yarn build         | ng build                                                                       |
+| build:prod    | Build your app ready for production               | npm run build:prod    | yarn build:prod    | cross-env NODE_ENV=production ng build --configuration production --stats-json |
+| test:unit     | Run your unit tests                               | npm run test          | yarn test          | ng test                                                                        |
+| test:e2e      | Run your e2e tests                                | npm run e2e           | yarn e2e           | ng e2e                                                                         |
+| test:coverage | Run your unit tests & generates a coverage report | npm run test:coverage | yarn test:coverage | ng test --coverage                                                             |
+| lint          | Use ESLint to lint your app                       | npm run lint          | yarn lint          | ng lint                                                                        |
+| analyze       | Open webpack-bundle-analyzer                      | npm run analyze       | yarn analyze       | webpack-bundle-analyzer dist/angular-boilerplate/stats.json                    |
