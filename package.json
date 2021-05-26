@@ -40,7 +40,7 @@
     "@briebug/cypress-schematic": "5.0.0",
     "@commitlint/cli": "12.1.4",
     "@commitlint/config-conventional": "12.1.4",
-    "@cypress/webpack-preprocessor": "5.8.0",
+    "@cypress/webpack-preprocessor": "5.9.0",
     "@types/jasmine": "3.7.4",
     "@types/jest": "26.0.23",
     "@types/node": "15.6.0",
