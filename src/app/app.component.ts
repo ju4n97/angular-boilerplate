@@ -22,13 +22,17 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.seoService.init();
-    this.themeService.init();
     this.isLoggedIn$ = this.authService.isLoggedIn$;
+    this.runGlobalServices();
   }
 
   onLogout(): void {
     this.authService.signOut();
     this.router.navigate([`/${Path.SignIn}`]);
+  }
+
+  private runGlobalServices(): void {
+    this.seoService.init();
+    this.themeService.init();
   }
 }

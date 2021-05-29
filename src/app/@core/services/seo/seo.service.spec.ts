@@ -1,11 +1,14 @@
 import { TestBed } from '@angular/core/testing';
-import { SeoService } from './Seo.service';
+import { RouterTestingModule } from '@angular/router/testing';
+import { SeoService } from './seo.service';
 
 describe('SeoService', () => {
   let service: SeoService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
+    });
     service = TestBed.inject(SeoService);
   });
 

@@ -1,16 +1,19 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnDestroy } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { filter, map } from 'rxjs/operators';
+import { Subject } from 'rxjs';
+import { filter, map, takeUntil } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root',
 })
-export class SeoService {
+export class SeoService implements OnDestroy {
+  destroy$ = new Subject();
+
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private titleService: Title,
-    private metaTagService: Meta,
+    private metaService: Meta,
   ) {}
 
   init(): void {
@@ -19,48 +22,52 @@ export class SeoService {
     this.router.events
       .pipe(
         filter((event) => event instanceof NavigationEnd),
-        map(() => {
-          let child = this.activatedRoute.firstChild;
-
-          if (child) {
-            // Loops until finds the last child.
-            while (child.firstChild) {
-              child = child.firstChild;
-            }
-
-            // Returns values if the route has data object.
-            if (Object.keys(child.snapshot.data).length > 0) {
-              const { title, description, robots } = child.snapshot.data;
-              return [title, description, robots];
-            }
-          }
-
-          return [null, null, null];
-        }),
+        map(() => this.getLatestChild().snapshot.data || {}),
+        takeUntil(this.destroy$),
       )
-      .subscribe((data) => {
-        // Set title and meta tag description.
-        const title = data[0];
-        const description = data[1];
-        const robots = data[2];
-
-        if (title) {
-          this.titleService.setTitle(`${appTitle} - ${title}`);
-        }
-
-        if (description) {
-          this.metaTagService.updateTag({
-            name: 'description',
-            content: description,
-          });
-        }
-
-        if (robots) {
-          this.metaTagService.updateTag({
-            name: 'robots',
-            content: robots,
-          });
-        }
+      .subscribe(({ title, description, robots }) => {
+        this.setTitle(appTitle, title);
+        this.setDescription(description);
+        this.setRobots(robots);
       });
+  }
+
+  private getLatestChild(): ActivatedRoute {
+    let child = this.activatedRoute.firstChild as ActivatedRoute;
+
+    while (child.firstChild) {
+      child = child.firstChild;
+    }
+
+    return child;
+  }
+
+  private setTitle(rootTitle: string, title: string): void {
+    if (title) {
+      this.titleService.setTitle(`${rootTitle} - ${title}`);
+    }
+  }
+
+  private setDescription(description: string): void {
+    if (description) {
+      this.metaService.updateTag({
+        name: 'description',
+        content: description,
+      });
+    }
+  }
+
+  private setRobots(robots: string): void {
+    if (robots) {
+      this.metaService.updateTag({
+        name: 'robots',
+        content: robots,
+      });
+    }
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.complete();
+    this.destroy$.unsubscribe();
   }
 }

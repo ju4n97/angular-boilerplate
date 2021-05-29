@@ -3,7 +3,7 @@ import { Inject, Injectable, OnDestroy } from '@angular/core';
 import { getItem, setItem, StorageItem } from '@app/@core/utils';
 import { fromEventPattern, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { defaultBaseTheme, ThemeList } from './theme.config';
+import { ThemeList } from './theme.config';
 
 @Injectable({
   providedIn: 'root',
@@ -21,34 +21,27 @@ export class ThemeService implements OnDestroy {
     return this.mediaQuery.matches ? ThemeList.Dark : ThemeList.Light;
   }
 
-  get currentAppTheme(): ThemeList {
+  get storedTheme(): ThemeList {
     return getItem(StorageItem.Theme) as ThemeList;
   }
 
-  /**
-   * Makes initial check for system preferences and attach mediaQuery listener
-   *
-   */
-  init(): void {
-    if (this.currentAppTheme) {
-      this.setTheme(this.currentAppTheme);
-    } else if (this.currentAppTheme === ThemeList.System) {
-      this.setTheme(this.systemTheme);
-    } else {
-      this.setTheme(defaultBaseTheme);
-    }
+  set storedTheme(theme: ThemeList) {
+    setItem(StorageItem.Theme, theme);
+  }
 
+  init(): void {
+    this.makeAutomaticCheck();
     this.listenForMediaQueryChanges();
   }
 
   /**
-   * Manually changes theme in BehaviorSubject, LocalStorage & HTML element
+   * Manually changes theme in LocalStorage & HTML body
    *
    * @param theme new theme
    */
   setTheme(theme: ThemeList): void {
     this.clearThemes();
-    setItem(StorageItem.Theme, theme);
+    this.storedTheme = theme;
 
     let bodyClass = theme;
 
@@ -59,7 +52,15 @@ export class ThemeService implements OnDestroy {
   }
 
   /**
-   * Handles system color preference changes
+   * Makes initial theme check based on LocalStorage theme
+   *
+   */
+  private makeAutomaticCheck(): void {
+    this.setTheme(this.storedTheme);
+  }
+
+  /**
+   * Handles system theme changes & applies theme automatically
    *
    */
   private listenForMediaQueryChanges(): void {
@@ -70,7 +71,7 @@ export class ThemeService implements OnDestroy {
       .pipe(takeUntil(this.destroy$))
       .subscribe(() => {
         // Only applies changes when the current theme is "system"
-        if (this.currentAppTheme === ThemeList.System) {
+        if (this.storedTheme === ThemeList.System) {
           this.setTheme(ThemeList.System);
         }
       });
