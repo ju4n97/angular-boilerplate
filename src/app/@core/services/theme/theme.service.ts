@@ -3,7 +3,7 @@ import { Inject, Injectable, OnDestroy } from '@angular/core';
 import { getItem, setItem, StorageItem } from '@app/@core/utils';
 import { fromEventPattern, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { ThemeList } from './theme.config';
+import { DEFAULT_BASE_THEME, ThemeList } from './theme.config';
 
 @Injectable({
   providedIn: 'root',
@@ -56,7 +56,7 @@ export class ThemeService implements OnDestroy {
    *
    */
   private makeAutomaticCheck(): void {
-    this.setTheme(this.storedTheme);
+    this.setTheme(this.storedTheme || DEFAULT_BASE_THEME);
   }
 
   /**

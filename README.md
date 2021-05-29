@@ -137,19 +137,19 @@ private: only logged in users can see them
   from operating system preference
 
   ```ts
-  export const defaultBaseTheme = ThemeList.System;
+  export const DEFAULT_BASE_THEME = ThemeList.System;
   ```
 
   to light mode
 
   ```ts
-  export const defaultBaseTheme = ThemeList.Light;
+  export const DEFAULT_BASE_THEME = ThemeList.Light;
   ```
 
   or dark mode
 
   ```ts
-  export const defaultBaseTheme = ThemeList.Dark;
+  export const DEFAULT_BASE_THEME = ThemeList.Dark;
   ```
 
 ## 🗑️ Remove features
