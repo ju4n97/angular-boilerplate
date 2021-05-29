@@ -14,7 +14,7 @@ import { HomePage } from './home.page';
         data: {
           title: 'Home',
           description:
-            'Start writing your business logic right away without any concern on architecture matters.',
+            'Angular starter for enterprise-grade front-end projects, built under a clean architecture that helps to scale and maintain a fast workflow.',
           robots: 'index, follow',
         },
       },
