@@ -2198,10 +2198,10 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jasmine@3.7.8":
-  version "3.7.8"
-  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.7.8.tgz#e558b31bf2418fd63de2329bcfb29f5a42413d4b"
-  integrity sha512-4YTb9L+tFCGJ/dyG8LOz1cYIaq0xF0sELMkTs78/KCMTIpYa0591VQpS5G1iEx6Ejl+GevdRKsR8U/ozwBsxHQ==
+"@types/jasmine@3.8.0":
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.8.0.tgz#cd2be9083e7c6a0aac39eca3a2fb0aa60aa0e679"
+  integrity sha512-FNg4dyOlMq771rSMJuCzB8wP5CFP3tOSOZ8l4I6v4kPYZZbukX1O7lfv5fnPB+/5OJKl5cY6IVDNUpGhOafnVQ==
 
 "@types/jest@26.0.24":
   version "26.0.24"
