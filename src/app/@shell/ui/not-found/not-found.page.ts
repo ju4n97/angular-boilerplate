@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { ROUTER_UTILS } from '@app/@core/utils/router.utils';
 
 @Component({
-  templateUrl: './dashboard.page.html',
-  styleUrls: ['./dashboard.page.scss'],
+  templateUrl: './not-found.page.html',
+  styleUrls: ['./not-found.page.scss'],
 })
-export class DashboardPage {
+export class NotFoundPage {
   path = ROUTER_UTILS.config.base;
 }

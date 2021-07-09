@@ -118,7 +118,7 @@ private: only logged in users can see them
 
 - Change paths of the pages:
 
-  Go to `src/app/core/structs/path.enum.ts` to find all the registered routes in an enum file.
+  Go to `src/app/core/utils/router.utils.ts` to find all the registered routes inside a config object.
 
   For example, you could replace `sign-in` with `SignIn`, `login` or `iniciar_sesion`
 
@@ -243,7 +243,6 @@ yarn remove tailwindcss autoprefixer postcss
 │   │   ├───services
 │   │   │   ├───seo
 │   │   │   └───theme
-│   │   ├───structs
 │   │   └───utils
 │   ├───components
 │   │   ├───footer
