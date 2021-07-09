@@ -10,7 +10,7 @@ export const PRIVATE_ROUTES: Routes = [
       {
         path: Path.Dashboard,
         loadChildren: () =>
-          import('@app/pages/private/dashboard/dashboard.module').then(
+          import('@app/pages/dashboard/dashboard.module').then(
             (m) => m.DashboardModule,
           ),
       },
@@ -23,51 +23,51 @@ export const PRIVATE_ROUTES: Routes = [
       {
         path: Path.SettingsAccount,
         loadChildren: () =>
-          import('@pages/private/settings/account/account.module').then(
+          import('@pages/settings/account/account.module').then(
             (m) => m.AccountModule,
           ),
       },
       {
         path: Path.SettingsAppearance,
         loadChildren: () =>
-          import('@pages/private/settings/appearance/appearance.module').then(
+          import('@pages/settings/appearance/appearance.module').then(
             (m) => m.AppearanceModule,
           ),
       },
       {
         path: Path.SettingsBilling,
         loadChildren: () =>
-          import('@pages/private/settings/billing/billing.module').then(
+          import('@pages/settings/billing/billing.module').then(
             (m) => m.BillingModule,
           ),
       },
       {
         path: Path.SettingsBlockedUsers,
         loadChildren: () =>
-          import(
-            '@pages/private/settings/blocked-users/blocked-users.module'
-          ).then((m) => m.BlockedUsersModule),
+          import('@pages/settings/blocked-users/blocked-users.module').then(
+            (m) => m.BlockedUsersModule,
+          ),
       },
       {
         path: Path.SettingsNotifications,
         loadChildren: () =>
-          import(
-            '@pages/private/settings/notifications/notifications.module'
-          ).then((m) => m.NotificationsModule),
+          import('@pages/settings/notifications/notifications.module').then(
+            (m) => m.NotificationsModule,
+          ),
       },
       {
         path: Path.SettingsSecurity,
         loadChildren: () =>
-          import('@pages/private/settings/security/security.module').then(
+          import('@pages/settings/security/security.module').then(
             (m) => m.SecurityModule,
           ),
       },
       {
         path: Path.SettingsSecurityLog,
         loadChildren: () =>
-          import(
-            '@pages/private/settings/security-log/security-log.module'
-          ).then((m) => m.SecurityLogModule),
+          import('@pages/settings/security-log/security-log.module').then(
+            (m) => m.SecurityLogModule,
+          ),
       },
     ],
   },
@@ -78,14 +78,14 @@ export const PRIVATE_ROUTES: Routes = [
       {
         path: Path.UsersProfile,
         loadChildren: () =>
-          import('@pages/private/user/my-profile/my-profile.module').then(
+          import('@pages/user/my-profile/my-profile.module').then(
             (m) => m.MyProfileModule,
           ),
       },
       {
         path: Path.UsersOverview,
         loadChildren: () =>
-          import('@pages/private/user/overview/overview.module').then(
+          import('@pages/user/overview/overview.module').then(
             (m) => m.OverviewModule,
           ),
       },
