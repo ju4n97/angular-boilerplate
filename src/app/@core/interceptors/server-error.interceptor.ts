@@ -7,9 +7,9 @@ import {
 } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { Path } from '@core/structs';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { ROUTER_UTILS } from '../utils/router.utils';
 
 @Injectable()
 export class ServerErrorInterceptor implements HttpInterceptor {
@@ -22,7 +22,7 @@ export class ServerErrorInterceptor implements HttpInterceptor {
     return next.handle(request).pipe(
       catchError((error: HttpErrorResponse) => {
         if ([401, 403].includes(error.status)) {
-          this.router.navigateByUrl(Path.SignIn);
+          this.router.navigateByUrl(ROUTER_UTILS.config.auth.signIn);
           return throwError(error);
         } else if (error.status === 500) {
           console.error(error);

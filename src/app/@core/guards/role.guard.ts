@@ -26,7 +26,7 @@ export class RoleGuard implements CanActivate {
     //   return true;
     // }
 
-    // this.router.navigate([`/${Path.NotFound}`]);
+    // this.router.navigate([`/${ROUTER_UTILS.config.errorResponse.notFound}`]);
     // return false;
     return true;
   }
