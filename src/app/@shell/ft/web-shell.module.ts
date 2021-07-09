@@ -48,7 +48,6 @@ const APP_ROUTES: Routes = [
 ];
 
 @NgModule({
-  declarations: [],
   imports: [
     CommonModule,
     RouterModule.forRoot(APP_ROUTES),

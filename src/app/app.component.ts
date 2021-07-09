@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { AuthService } from '@app/pages/auth/services/auth.service';
 import { SeoService } from '@core/services/seo';
 import { ThemeService } from '@core/services/theme';
@@ -14,7 +13,6 @@ export class AppComponent implements OnInit {
   isLoggedIn$!: Observable<boolean>;
 
   constructor(
-    private router: Router,
     private seoService: SeoService,
     private themeService: ThemeService,
     private authService: AuthService,

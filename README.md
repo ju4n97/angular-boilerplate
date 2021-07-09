@@ -244,39 +244,41 @@ yarn remove tailwindcss autoprefixer postcss
 │   │   │   ├───seo
 │   │   │   └───theme
 │   │   └───utils
-│   ├───components
-│   │   ├───footer
-│   │   ├───header
-│   │   └───layout
-│   ├───pages
-│   │   ├───private
-│   │   │   ├───dashboard
-│   │   │   ├───settings
-│   │   │   │   ├───account
-│   │   │   │   ├───appearance
-│   │   │   │   ├───billing
-│   │   │   │   ├───blocked-users
-│   │   │   │   ├───notifications
-│   │   │   │   ├───security
-│   │   │   │   └───security-log
-│   │   │   └───user
-│   │   │       ├───my-profile
-│   │   │       └───overview
-│   │   └───public
-│   │       ├───auth
-│   │       │   ├───forgot-password
-│   │       │   ├───forgot-password-email-sent
-│   │       │   ├───password-reset
-│   │       │   ├───password-reset-failed
-│   │       │   ├───password-reset-succeeded
-│   │       │   ├───sign-in
-│   │       │   ├───sign-up
-│   │       │   └───_services
-│   │       ├───home
+│   ├───@shell
+│   │   ├───ft
+│   │   └───ui (layout components)
+│   │       ├───footer
+│   │       ├───header
+│   │       ├───layout
 │   │       └───not-found
-│   └───router
+│   ├───components (generic shared components)
+│   └───pages
+│       ├───auth
+│       │   ├───pages
+│       │   │   ├───forgot-password
+│       │   │   ├───forgot-password-email-sent
+│       │   │   ├───password-reset
+│       │   │   ├───password-reset-failed
+│       │   │   ├───password-reset-succeeded
+│       │   │   ├───sign-in
+│       │   │   └───sign-up
+│       │   └───services
+│       ├───dashboard
+│       ├───home
+│       ├───settings
+│       │   └───pages
+│       │       ├───account
+│       │       ├───appearance
+│       │       ├───billing
+│       │       ├───blocked-users
+│       │       ├───notifications
+│       │       ├───security
+│       │       └───security-log
+│       └───user
+│           └───pages
+│               ├───my-profile
+│               └───overview
 ├───assets
-│   └───icons
 ├───environments
 └───theme
     ├───01-base
