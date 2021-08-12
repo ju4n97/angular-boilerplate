@@ -43,7 +43,7 @@
     "@commitlint/config-conventional": "13.1.0",
     "@cypress/webpack-preprocessor": "5.9.1",
     "@types/jasmine": "3.8.2",
-    "@types/jest": "27.0.0",
+    "@types/jest": "27.0.1",
     "@types/node": "15.6.0",
     "@typescript-eslint/eslint-plugin": "4.29.1",
     "@typescript-eslint/parser": "4.29.1",
