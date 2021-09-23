@@ -5149,10 +5149,10 @@ eslint-module-utils@^2.6.2:
     debug "^3.2.7"
     pkg-dir "^2.0.0"
 
-eslint-plugin-angular@4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-angular/-/eslint-plugin-angular-4.0.1.tgz#f6c01d2a1e549d603e29eceb8615b5a989863a5e"
-  integrity sha512-OaW5G461C2lIkOG+/bhnBoXB9UQm/r0Dj2Qf9uiIN0/ncvf2Llp30L0q1tqWkN8/CxyBwQKh1v0hpCLLDjaIKQ==
+eslint-plugin-angular@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-angular/-/eslint-plugin-angular-4.1.0.tgz#53d03d829edff50d517e81f862782e3efa591953"
+  integrity sha512-dacledMPxVOZA3T0xcYFuvrMCy5dHxg0ZTMWUaHqSBQef3/XLyXJ9s1LNj0NikJ/dYx6OhqlnnNpKmrJhEUB+Q==
 
 eslint-plugin-import@2.24.2:
   version "2.24.2"
