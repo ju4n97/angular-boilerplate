@@ -17,12 +17,11 @@
     "module": "es2020",
     "lib": ["es2018", "dom"],
     "paths": {
-      "@components/*": ["src/app/components/*"],
       "@core/*": ["src/app/@core/*"],
       "@shell/*": ["src/app/@shell/*"],
+      "@components/*": ["src/app/components/*"],
       "@pages/*": ["src/app/pages/*"],
-      "@assets/*": ["src/assets/*"],
-      "@environments/*": ["src/environments/*"]
+      "@env/*": ["src/environments/*"]
     }
   },
   "angularCompilerOptions": {
