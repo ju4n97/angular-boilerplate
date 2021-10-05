@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ROUTER_UTILS } from '@app/@core/utils/router.utils';
-import { AuthService } from '@app/pages/auth/services/auth.service';
+import { ROUTER_UTILS } from '@core/utils/router.utils';
+import { AuthService } from '@pages/auth/services/auth.service';
 
 @Component({
   selector: 'app-header',

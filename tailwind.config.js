@@ -17,8 +17,6 @@ module.exports = {
     extends: {
       color: {
         inherit: 'inherit',
-        transparent: 'transparent',
-        current: 'currentColor',
       },
     },
   },

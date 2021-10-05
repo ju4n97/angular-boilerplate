@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ROUTER_UTILS } from '@app/@core/utils/router.utils';
+import { ROUTER_UTILS } from '@core/utils/router.utils';
 import { NotFoundPage } from './not-found.page';
 
 @NgModule({

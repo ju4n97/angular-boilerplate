@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ROUTER_UTILS } from '@app/@core/utils/router.utils';
+import { ROUTER_UTILS } from '@core/utils/router.utils';
 import { MyProfilePage } from './pages/my-profile/my-profile.page';
 import { OverviewPage } from './pages/overview/overview.page';
 
