@@ -93,43 +93,6 @@
           "options": {
             "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
-        },
-        "e2e": {
-          "builder": "@briebug/cypress-schematic:cypress",
-          "options": {
-            "devServerTarget": "angular-boilerplate:serve",
-            "watch": true,
-            "headless": false
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "angular-boilerplate:serve:production"
-            }
-          }
-        },
-        "cypress-run": {
-          "builder": "@briebug/cypress-schematic:cypress",
-          "options": {
-            "devServerTarget": "angular-boilerplate:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "angular-boilerplate:serve:production"
-            }
-          }
-        },
-        "cypress-open": {
-          "builder": "@briebug/cypress-schematic:cypress",
-          "options": {
-            "devServerTarget": "angular-boilerplate:serve",
-            "watch": true,
-            "headless": false
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "angular-boilerplate:serve:production"
-            }
-          }
         }
       }
     }

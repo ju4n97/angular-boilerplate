@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ROUTER_UTILS } from '@app/@core/utils/router.utils';
+import { ROUTER_UTILS } from '@core/utils/router.utils';
 import { AccountPage } from './pages/account/account.page';
 import { AppearancePage } from './pages/appearance/appearance.page';
 import { BillingPage } from './pages/billing/billing.page';
