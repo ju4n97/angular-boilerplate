@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthGuard, NoAuthGuard } from '@app/@core/guards';
-import { ROUTER_UTILS } from '@app/@core/utils/router.utils';
-import { NotFoundModule } from '@app/@shell/ui/not-found/not-found.module';
+import { AuthGuard, NoAuthGuard } from '@core/guards';
+import { ROUTER_UTILS } from '@core/utils/router.utils';
+import { NotFoundModule } from '@shell/ui/not-found/not-found.module';
 import { FooterModule } from '../ui/footer/footer.module';
 import { HeaderModule } from '../ui/header/header.module';
 import { LayoutModule } from '../ui/layout/layout.module';

@@ -1,6 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Inject, Injectable, OnDestroy } from '@angular/core';
-import { getItem, setItem, StorageItem } from '@app/@core/utils';
+import { getItem, setItem, StorageItem } from '@core/utils';
 import { fromEventPattern, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { DEFAULT_BASE_THEME, ThemeList } from './theme.config';

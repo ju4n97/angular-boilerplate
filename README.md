@@ -25,9 +25,6 @@
   <a href="https://github.com/facebook/jest">
     <img src="https://jestjs.io/img/jest-badge.svg" alt="unit tests with Jest" />
   </a>&nbsp;
-  <a href="https://www.cypress.io">
-    <img src="https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg" alt="e2e with Cypress" />
-  </a>&nbsp;
   <a href="https://github.com/juanmesa2097/angular-boilerplate/issues">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="Contributions welcome" />
   </a>
@@ -45,7 +42,7 @@
 - Components types (e.g. component, page).
 - Amazing directory structure.
 - Unit tests with Jest instead of Karma & Jasmine.
-- e2e tests with Cypress instead of Protractor.
+- e2e tests with Cypress (removed in favor of the official [cypress schematic](https://github.com/cypress-io/cypress/tree/develop/npm/cypress-schematic) as an opt-in feature)
 - PWA
 - Dynamic titles and content meta tags.
 - TailwindCSS + Autoprefixer + PurgeCSS setup.
@@ -288,15 +285,13 @@ yarn remove tailwindcss autoprefixer postcss
 
 ## 🧙‍♂️ Commands
 
-| Command       | Description                                                    | NPM                   | Yarn               | Background command                                          |
-| ------------- | -------------------------------------------------------------- | --------------------- | ------------------ | ----------------------------------------------------------- |
-| ng            | See available commands                                         | npm run ng            | yarn ng            | ng                                                          |
-| start         | Run your app in development mode                               | npm start             | yarn start         | ng serve                                                    |
-| build         | Build your app for production                                  | npm run build         | yarn build         | ng build                                                    |
-| build:stats   | Build your app for production and generate a "stats.json" file | npm run build:stats   | yarn build:stats   | ng build --stats-json                                       |
-| watch         | Run build when files change.                                   | npm run watch         | yarn watch         | ng build --watch --configuration development                |
-| test:unit     | Run your unit tests                                            | npm run test          | yarn test          | ng test                                                     |
-| test:e2e      | Run your e2e tests                                             | npm run e2e           | yarn e2e           | ng e2e                                                      |
-| test:coverage | Run your unit tests & generates a coverage report              | npm run test:coverage | yarn test:coverage | ng test --coverage                                          |
-| lint          | Use ESLint to lint your app                                    | npm run lint          | yarn lint          | ng lint                                                     |
-| analyze       | Open webpack-bundle-analyzer                                   | npm run analyze       | yarn analyze       | webpack-bundle-analyzer dist/angular-boilerplate/stats.json |
+| Command     | Description                                                    | NPM                 | Yarn             | Background command                                          |
+| ----------- | -------------------------------------------------------------- | ------------------- | ---------------- | ----------------------------------------------------------- |
+| ng          | See available commands                                         | npm run ng          | yarn ng          | ng                                                          |
+| start       | Run your app in development mode                               | npm start           | yarn start       | ng serve                                                    |
+| build       | Build your app for production                                  | npm run build       | yarn build       | ng build                                                    |
+| build:stats | Build your app for production and generate a "stats.json" file | npm run build:stats | yarn build:stats | ng build --stats-json                                       |
+| watch       | Run build when files change.                                   | npm run watch       | yarn watch       | ng build --watch --configuration development                |
+| test        | Run your unit tests                                            | npm run test        | yarn test        | ng test                                                     |
+| lint        | Use ESLint to lint your app                                    | npm run lint        | yarn lint        | ng lint                                                     |
+| analyze     | Open webpack-bundle-analyzer                                   | npm run analyze     | yarn analyze     | webpack-bundle-analyzer dist/angular-boilerplate/stats.json |
