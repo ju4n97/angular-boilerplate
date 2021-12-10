@@ -1,31 +1,27 @@
 <section class="container flex items-center justify-center">
   <main class="mx-auto my-16 md:max-w-xl">
     <div class="text-center">
-      <h1 class="mb-4 text-2xl md:text-4xl">
-        👋 Welcome to Angular Boilerplate
-      </h1>
-      <p class="mb-12 text-base md:text-xl">
-        ⚒️ Start building your SPA easily ⚒️
-      </p>
+      <h1 class="mb-12 font-bold">👋 Welcome to Angular Boilerplate</h1>
 
       <a
-        class="link"
+        class="text-sm link"
         [routerLink]="['/', path.base.dashboard]"
-        class="inline-block h-12 px-6 py-3 mb-12 font-semibold text-white bg-blue-600 rounded-lg  hover:bg-blue-500 focus:ring-4 focus:ring-offset-blue-600 focus:outline-none"
+        class="mb-12 btn btn-primary"
       >
         Go to dashboard
       </a>
     </div>
 
-    <h3>Choose a theme</h3>
+    <h3 class="mb-4">Choose a theme</h3>
+
     <div class="grid grid-cols-1 mb-12 gap-x-6 gap-y-3 md:grid-cols-3">
       <button
-        class="inline-flex items-center h-12 px-6 py-3 font-semibold text-center text-white bg-gray-600 rounded-lg  hover:bg-gray-500 focus:ring-4 focus:ring-offset-gray-600 focus:outline-none"
+        class="btn btn-secondary"
         (click)="onClickChangeTheme(theme.System)"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="w-6 h-6 mr-3"
+          class="w-6 h-6 mr-2"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -46,12 +42,12 @@
         System
       </button>
       <button
-        class="inline-flex items-center h-12 px-6 py-3 font-semibold text-center text-white bg-gray-600 rounded-lg  hover:bg-gray-500 focus:ring-4 focus:ring-offset-gray-600 focus:outline-none"
+        class="btn btn-secondary"
         (click)="onClickChangeTheme(theme.Light)"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="w-6 h-6 mr-3"
+          class="w-6 h-6 mr-2"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -66,12 +62,12 @@
         Light
       </button>
       <button
-        class="inline-flex items-center h-12 px-6 py-3 font-semibold text-center text-white bg-gray-600 rounded-lg  hover:bg-gray-500 focus:ring-4 focus:ring-offset-gray-600 focus:outline-none"
+        class="btn btn-secondary"
         (click)="onClickChangeTheme(theme.Dark)"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="w-6 h-6 mr-3"
+          class="w-6 h-6 mr-2"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -87,7 +83,7 @@
       </button>
     </div>
 
-    <h3>👉 Visit the app pages</h3>
+    <h3 class="mb-4">👉 Visit the app pages</h3>
 
     <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
       <div>
@@ -95,7 +91,7 @@
         <ul>
           <li>
             <a
-              class="link"
+              class="text-sm link"
               [routerLink]="['/', path.settings.root, path.settings.account]"
             >
               Account
@@ -103,7 +99,7 @@
           </li>
           <li>
             <a
-              class="link"
+              class="text-sm link"
               [routerLink]="['/', path.settings.root, path.settings.appearance]"
             >
               Appearance
@@ -111,7 +107,7 @@
           </li>
           <li>
             <a
-              class="link"
+              class="text-sm link"
               [routerLink]="['/', path.settings.root, path.settings.billing]"
             >
               Billing
@@ -119,7 +115,7 @@
           </li>
           <li>
             <a
-              class="link"
+              class="text-sm link"
               [routerLink]="['/', path.settings.root, path.settings.blockedUsers]"
             >
               Blocked users
@@ -127,7 +123,7 @@
           </li>
           <li>
             <a
-              class="link"
+              class="text-sm link"
               [routerLink]="['/', path.settings.root, path.settings.notifications]"
             >
               Notifications
@@ -135,7 +131,7 @@
           </li>
           <li>
             <a
-              class="link"
+              class="text-sm link"
               [routerLink]="['/', path.settings.root, path.settings.security]"
             >
               Security
@@ -143,7 +139,7 @@
           </li>
           <li>
             <a
-              class="link"
+              class="text-sm link"
               [routerLink]="['/', path.settings.root, path.settings.securityLog]"
             >
               Security log
@@ -156,13 +152,17 @@
         <h4 class="h5">User</h4>
         <ul>
           <li>
-            <a class="link" [routerLink]="['/', path.user.root, 'john_wick97']">
+            <a
+              class="text-sm link"
+              [routerLink]="['/', path.user.root, 'john_wick97']"
+              text-sm
+            >
               My profile
             </a>
           </li>
           <li>
             <a
-              class="link"
+              class="text-sm link"
               [routerLink]="['/', path.user.root, path.user.overview]"
             >
               Users overview

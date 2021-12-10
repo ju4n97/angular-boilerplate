@@ -7,8 +7,9 @@ describe('SeoService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
-    });
+    imports: [RouterTestingModule],
+    teardown: { destroyAfterEach: false }
+});
     service = TestBed.inject(SeoService);
   });
 

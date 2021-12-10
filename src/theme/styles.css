@@ -1,0 +1,13 @@
+/* base */
+@import './tailwindcss/base.css';
+@import './01-base/document.css';
+@import './01-base/font.css';
+@import './01-base/heading.css';
+
+/* components */
+@import './tailwindcss/components.css';
+@import './02-components/link.css';
+@import './02-components/button.css';
+
+/* utilities */
+@import './tailwindcss/utilities.css';

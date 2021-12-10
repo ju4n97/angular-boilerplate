@@ -1,5 +1,5 @@
 <header
-  class="sticky top-0 w-full h-16 shadow-lg  bg-opacity-10 bg-gray-50 dark:bg-gray-700 backdrop-blur-lg backdrop-filter"
+  class="sticky top-0 w-full h-16 shadow-lg  bg-opacity-10 bg-neutral-50 dark:bg-neutral-700 backdrop-blur-lg backdrop-filter"
 >
   <nav
     class="container flex items-center justify-between h-full py-3 mx-auto  center"
@@ -8,24 +8,24 @@
       [routerLink]="[path.home]"
       class="text-2xl font-bold no-underline cursor-pointer"
     >
-      <span class="text-gray-400">A</span>B
+      <span class="text-neutral-400">A</span>B
     </a>
 
-    <div class="flex items-center">
+    <div class="flex items-center space-x-4">
       <a
         href="https://github.com/juanmesa2097/angular-boilerplate"
         title="Repository"
-        class="mr-6 btn btn-secondary"
+        class="mr-6"
       >
         <svg
           aria-hidden="true"
           focusable="false"
           data-prefix="fab"
           data-icon="github"
-          class="w-8"
           role="img"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 496 512"
+          class="w-8"
         >
           <path
             fill="currentColor"
@@ -33,10 +33,21 @@
           ></path>
         </svg>
       </a>
-      <button
-        class="inline-block h-12 px-6 py-3 font-semibold text-gray-600 bg-gray-200 rounded-lg  hover:bg-gray-300 focus:ring-4 focus:ring-offset-gray-300 focus:outline-none"
-        (click)="onClickSignOut()"
-      >
+      <button (click)="onClickSignOut()" class="btn btn-secondary">
+        <svg
+          class="w-6 h-6 mr-3"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+          ></path>
+        </svg>
         Sign out
       </button>
     </div>

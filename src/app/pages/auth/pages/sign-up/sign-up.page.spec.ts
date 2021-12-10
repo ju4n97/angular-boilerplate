@@ -9,8 +9,9 @@ describe('SignUpPage', () => {
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
-        declarations: [SignUpPage],
-      }).compileComponents();
+    declarations: [SignUpPage],
+    teardown: { destroyAfterEach: false }
+}).compileComponents();
     }),
   );
 

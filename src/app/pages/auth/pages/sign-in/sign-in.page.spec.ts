@@ -8,9 +8,10 @@ describe('SignInPage', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SignInPage],
-      imports: [RouterTestingModule],
-    }).compileComponents();
+    declarations: [SignInPage],
+    imports: [RouterTestingModule],
+    teardown: { destroyAfterEach: false }
+}).compileComponents();
   });
 
   beforeEach(() => {

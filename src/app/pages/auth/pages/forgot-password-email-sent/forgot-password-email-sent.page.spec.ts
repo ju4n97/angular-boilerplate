@@ -9,8 +9,9 @@ describe('ForgotPasswordEmailSentPage', () => {
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
-        declarations: [ForgotPasswordEmailSentPage],
-      }).compileComponents();
+    declarations: [ForgotPasswordEmailSentPage],
+    teardown: { destroyAfterEach: false }
+}).compileComponents();
     }),
   );
 
