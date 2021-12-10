@@ -1,0 +1,16 @@
+a.link {
+  @apply underline;
+  @apply text-indigo-500;
+}
+
+a.link:hover {
+  @apply text-indigo-400;
+}
+
+a.link:focus {
+  @apply text-indigo-400;
+}
+
+a.link:visited {
+  @apply text-pink-500;
+}

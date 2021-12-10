@@ -8,8 +8,9 @@ describe('MyProfilePage', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [MyProfilePage],
-    }).compileComponents();
+    declarations: [MyProfilePage],
+    teardown: { destroyAfterEach: false }
+}).compileComponents();
   });
 
   beforeEach(() => {

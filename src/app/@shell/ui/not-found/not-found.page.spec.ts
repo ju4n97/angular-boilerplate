@@ -8,9 +8,10 @@ describe('NotFoundPage', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [NotFoundPage],
-      imports: [RouterTestingModule],
-    }).compileComponents();
+    declarations: [NotFoundPage],
+    imports: [RouterTestingModule],
+    teardown: { destroyAfterEach: false }
+}).compileComponents();
   });
 
   beforeEach(() => {

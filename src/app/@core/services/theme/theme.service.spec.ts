@@ -8,7 +8,7 @@ describe('ThemeService', () => {
   let document: Document;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({ teardown: { destroyAfterEach: false } });
     service = TestBed.inject(ThemeService);
     document = TestBed.inject(DOCUMENT);
   });
