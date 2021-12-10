@@ -3,13 +3,13 @@
 @import 'tailwindcss/utilities';
 
 @layer base {
-  @import '01-base/font.scss';
-  @import '01-base/document.scss';
-  @import '01-base/headings.scss';
+  @import '01-base/font.css';
+  @import '01-base/document.css';
+  @import '01-base/headings.css';
 }
 
 @layer components {
-  @import '02-components/link.scss';
+  @import '02-components/link.css';
 }
 
 @layer utilities {

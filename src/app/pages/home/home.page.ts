@@ -4,7 +4,7 @@ import { ROUTER_UTILS } from '@core/utils/router.utils';
 
 @Component({
   templateUrl: './home.page.html',
-  styleUrls: ['./home.page.scss'],
+  styleUrls: ['./home.page.css'],
 })
 export class HomePage {
   path = ROUTER_UTILS.config;

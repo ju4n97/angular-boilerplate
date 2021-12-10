@@ -3,7 +3,7 @@ import { ROUTER_UTILS } from '@core/utils/router.utils';
 
 @Component({
   templateUrl: './not-found.page.html',
-  styleUrls: ['./not-found.page.scss'],
+  styleUrls: ['./not-found.page.css'],
 })
 export class NotFoundPage {
   path = ROUTER_UTILS.config.base;

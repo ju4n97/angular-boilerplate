@@ -5,7 +5,7 @@ import { AuthService } from '../../services/auth.service';
 
 @Component({
   templateUrl: './sign-in.page.html',
-  styleUrls: ['./sign-in.page.scss'],
+  styleUrls: ['./sign-in.page.css'],
 })
 export class SignInPage {
   returnUrl: string;
