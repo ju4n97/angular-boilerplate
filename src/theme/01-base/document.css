@@ -4,11 +4,11 @@ body {
 }
 
 body {
-  @apply bg-gray-100;
-  @apply text-gray-800;
+  @apply bg-neutral-100;
+  @apply text-neutral-900;
+}
 
-  &.dark {
-    @apply bg-gray-800;
-    @apply text-gray-50;
-  }
+body.dark {
+  @apply bg-neutral-900;
+  @apply text-neutral-50;
 }

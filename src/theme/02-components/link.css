@@ -1,12 +1,16 @@
 a.link {
-  @apply inline-block;
-  @apply font-semibold;
-  @apply text-sm;
-  @apply text-red-400;
+  @apply underline;
+  @apply text-indigo-500;
+}
 
-  &:hover,
-  &:active,
-  &:focus {
-    @apply underline;
-  }
+a.link:hover {
+  @apply text-indigo-400;
+}
+
+a.link:focus {
+  @apply text-indigo-400;
+}
+
+a.link:visited {
+  @apply text-pink-500;
 }

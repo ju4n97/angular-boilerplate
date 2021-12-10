@@ -15,7 +15,6 @@ h6,
 .display-3,
 .display-4 {
   @apply font-display;
-  @apply font-bold;
   @apply mt-0;
 }
 
