@@ -10,9 +10,10 @@ describe('LayoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LayoutComponent],
-      imports: [RouterTestingModule, HeaderModule, FooterModule],
-    }).compileComponents();
+    declarations: [LayoutComponent],
+    imports: [RouterTestingModule, HeaderModule, FooterModule],
+    teardown: { destroyAfterEach: false }
+}).compileComponents();
   });
 
   beforeEach(() => {

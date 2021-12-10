@@ -8,10 +8,11 @@ describe('AppComponent', () => {
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
-        imports: [RouterTestingModule, WebShellModule],
-        declarations: [AppComponent],
-        providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
-      }).compileComponents();
+    imports: [RouterTestingModule, WebShellModule],
+    declarations: [AppComponent],
+    providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+    teardown: { destroyAfterEach: false }
+}).compileComponents();
     }),
   );
 

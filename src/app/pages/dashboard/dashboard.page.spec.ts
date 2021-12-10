@@ -8,9 +8,10 @@ describe('DashboardPage', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DashboardPage],
-      imports: [RouterTestingModule],
-    }).compileComponents();
+    declarations: [DashboardPage],
+    imports: [RouterTestingModule],
+    teardown: { destroyAfterEach: false }
+}).compileComponents();
   });
 
   beforeEach(() => {

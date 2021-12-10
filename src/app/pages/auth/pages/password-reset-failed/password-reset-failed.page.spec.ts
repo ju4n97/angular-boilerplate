@@ -9,8 +9,9 @@ describe('PasswordResetFailedPage', () => {
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
-        declarations: [PasswordResetFailedPage],
-      }).compileComponents();
+    declarations: [PasswordResetFailedPage],
+    teardown: { destroyAfterEach: false }
+}).compileComponents();
     }),
   );
 

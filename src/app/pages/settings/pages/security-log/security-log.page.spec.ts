@@ -8,8 +8,9 @@ describe('SecurityLogPage', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SecurityLogPage],
-    }).compileComponents();
+    declarations: [SecurityLogPage],
+    teardown: { destroyAfterEach: false }
+}).compileComponents();
   });
 
   beforeEach(() => {
