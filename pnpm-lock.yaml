@@ -19,7 +19,7 @@ specifiers:
   '@angular/router': ~13.1.0
   '@commitlint/cli': 13.2.0
   '@commitlint/config-conventional': 13.2.0
-  '@types/jasmine': 3.9.1
+  '@types/jasmine': 3.10.6
   '@types/node': ^15.6.0
   '@typescript-eslint/eslint-plugin': 5.3.0
   '@typescript-eslint/parser': 5.3.0
@@ -72,7 +72,7 @@ devDependencies:
   '@angular/compiler-cli': 13.1.0_ff37069e3e419d7ea1a2bd9ceb3e2dab
   '@commitlint/cli': 13.2.0
   '@commitlint/config-conventional': 13.2.0
-  '@types/jasmine': 3.9.1
+  '@types/jasmine': 3.10.6
   '@types/node': 15.14.9
   '@typescript-eslint/eslint-plugin': 5.3.0_a44c4c2318fb19c7d858bf8258a11ba9
   '@typescript-eslint/parser': 5.3.0_eslint@8.4.1+typescript@4.5.3
@@ -2167,8 +2167,8 @@ packages:
       '@types/node': 15.14.9
     dev: true
 
-  /@types/jasmine/3.9.1:
-    resolution: {integrity: sha512-PVpjh8S8lqKFKurWSKdFATlfBHGPzgy0PoDdzQ+rr78jTQ0aacyh9YndzZcAUPxhk4kRujItFFGQdUJ7flHumw==}
+  /@types/jasmine/3.10.6:
+    resolution: {integrity: sha512-twY9adK/vz72oWxCWxzXaxoDtF9TpfEEsxvbc1ibjF3gMD/RThSuSud/GKUTR3aJnfbivAbC/vLqhY+gdWCHfA==}
     dev: true
 
   /@types/json-schema/7.0.9:
