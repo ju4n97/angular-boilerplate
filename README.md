@@ -24,68 +24,10 @@
 
 ## ⚗️ Features
 
-- Strict mode.
-- Lazy loading.
-- Smart and pure components pattern.
-- SCAM pattern.
-- Self-contained components and encapsulated modules.
-- Components types (e.g. component, page).
-- Amazing directory structure.
-- PWA
-- Dynamic titles and content meta tags.
-- TailwindCSS.
-- Dark mode and theme configuration.
-- Scalable CSS architecture in favor of TailwindCSS layers.
-- [Lighthouse](https://developers.google.com/web/tools/lighthouse) reports improved.
-- ESLint.
-- Run unit tests & lint code using [Husky](https://github.com/typicode/husky) & validate commit messages using [commitlint](https://github.com/conventional-changelog/commitlint)
-
-## 📄 Pages
-
-- General
-  - home
-  - not-found
-- Auth
-  - sign-in
-  - sign-up
-  - forgot-password
-  - forgot-password-email-sent
-  - password-reset
-  - password-reset-succeeded
-  - password-reset-failed
-- Settings
-  - account
-  - appearance
-  - billing
-  - blocked-Users
-  - notifications
-  - security
-  - security-log
-- User
-  - my-profile
-  - overview
-- Features
-  - dashboard
-
-## 🧱 Self-contained components
-
-- footer
-- header
-- layout
-
-## 📡 Services
-
-- AuthService
-- SeoService
-- ThemeService
-
-## 📛 Custom directives
-
-- click-outside: detects when the user clicks outside an element.
-
-## 🧪 Custom pipes
-
-- bytes: transforms a numeric value into bytes, KB, MB, GB, etc.
+- Lazy loading
+- Standalone components
+- Dark mode
+- Vitest
 
 ## 🛠️ Make some initial tweaks
 
