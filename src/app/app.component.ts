@@ -1,9 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { SeoService } from '@core/services/seo';
-import { ThemeService } from '@core/services/theme';
-import { AuthService } from '@pages/auth/services/auth.service';
+import { AuthService } from '@lib/services';
+import { ThemeService } from '@lib/services/theme';
 import { Observable } from 'rxjs';
 import { LayoutHorizontalComponent } from './lib/components/layouts/layout-horizontal/layout-horizontal.component';
 
@@ -17,19 +16,11 @@ import { LayoutHorizontalComponent } from './lib/components/layouts/layout-horiz
 export class AppComponent implements OnInit {
   isLoggedIn$!: Observable<boolean>;
 
-  constructor(
-    private seoService: SeoService,
-    private themeService: ThemeService,
-    private authService: AuthService,
-  ) {}
+  constructor(private _authService: AuthService, private _themeService: ThemeService) {}
 
   ngOnInit(): void {
-    this.isLoggedIn$ = this.authService.isLoggedIn$;
-    this.runGlobalServices();
-  }
+    this.isLoggedIn$ = this._authService.isLoggedIn$;
 
-  private runGlobalServices(): void {
-    this.seoService.init();
-    this.themeService.init();
+    this._themeService.init();
   }
 }

@@ -3,12 +3,12 @@ import { Route } from '@angular/router';
 export const ROUTES: Route[] = [
   {
     path: 'login',
-    loadComponent: async () =>
-      (await import('./login/login.component')).LoginComponent,
+    title: 'Login',
+    loadComponent: async () => (await import('./login/login.page')).LoginPage,
   },
   {
     path: 'register',
-    loadComponent: async () =>
-      (await import('./register/register.component')).RegisterComponent,
+    title: 'Register',
+    loadComponent: async () => (await import('./register/register.page')).RegisterPage,
   },
 ];

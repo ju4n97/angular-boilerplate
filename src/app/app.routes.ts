@@ -1,28 +1,30 @@
 import { Routes } from '@angular/router';
-import { AuthGuard, NoAuthGuard } from '@core/guards';
+import { AuthGuard, NoAuthGuard } from '@lib/guards';
 
 export const routes: Routes = [
   {
     path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+  {
+    path: 'auth',
     loadChildren: async () => (await import('@pages/auth/auth.routes')).ROUTES,
     canLoad: [NoAuthGuard],
   },
   {
-    path: 'dashboard',
-    loadComponent: async () =>
-      (await import('@pages/home/home.module')).HomeModule,
+    path: 'home',
+    loadChildren: async () => (await import('@pages/home/home.routes')).ROUTES,
+    canLoad: [AuthGuard],
+  },
+  {
+    path: ':username',
+    loadChildren: async () => (await import('@pages/profile/profile.routes')).ROUTES,
     canLoad: [AuthGuard],
   },
   {
     path: 'settings',
-    loadComponent: async () =>
-      (await import('@pages/settings/settings.module')).SettingsModule,
-    canLoad: [AuthGuard],
-  },
-  {
-    path: 'user',
-    loadComponent: async () =>
-      (await import('@pages/user/user.module')).UserModule,
+    loadChildren: async () => (await import('@pages/settings/settings.routes')).ROUTES,
     canLoad: [AuthGuard],
   },
   // {

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '@pages/auth/services/auth.service';
+import { AuthService } from '@lib/services';
 
 @Component({
   selector: 'app-header',
@@ -12,10 +12,10 @@ import { AuthService } from '@pages/auth/services/auth.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
-  constructor(private router: Router, private authService: AuthService) {}
+  constructor(private _router: Router, private _authService: AuthService) {}
 
   onClickSignOut(): void {
-    this.authService.signOut();
-    this.router.navigateByUrl('/login');
+    this._authService.signOut();
+    this._router.navigateByUrl('/login');
   }
 }

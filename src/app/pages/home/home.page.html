@@ -3,11 +3,7 @@
     <div class="text-center">
       <h1 class="mb-12 font-bold">👋 Welcome to Angular Boilerplate</h1>
 
-      <a
-        class="text-sm link"
-        [routerLink]="['/', path.base.dashboard]"
-        class="mb-12 btn btn-primary"
-      >
+      <a class="text-sm link" routerLink="/" class="mb-12 btn btn-primary">
         Go to dashboard
       </a>
     </div>
@@ -17,7 +13,7 @@
     <div class="grid grid-cols-1 mb-12 gap-x-6 gap-y-3 md:grid-cols-3">
       <button
         class="btn btn-secondary"
-        (click)="onClickChangeTheme(theme.System)"
+        (click)="handleThemeChange(theme.System)"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +39,7 @@
       </button>
       <button
         class="btn btn-secondary"
-        (click)="onClickChangeTheme(theme.Light)"
+        (click)="handleThemeChange(theme.Light)"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -61,10 +57,7 @@
         </svg>
         Light
       </button>
-      <button
-        class="btn btn-secondary"
-        (click)="onClickChangeTheme(theme.Dark)"
-      >
+      <button class="btn btn-secondary" (click)="handleThemeChange(theme.Dark)">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="w-6 h-6 mr-2"
@@ -90,60 +83,25 @@
         <h4 class="h5">Settings</h4>
         <ul>
           <li>
-            <a
-              class="text-sm link"
-              [routerLink]="['/', path.settings.root, path.settings.account]"
-            >
-              Account
-            </a>
+            <a class="text-sm link" routerLink="/"> Account </a>
           </li>
           <li>
-            <a
-              class="text-sm link"
-              [routerLink]="['/', path.settings.root, path.settings.appearance]"
-            >
-              Appearance
-            </a>
+            <a class="text-sm link" routerLink="/"> Appearance </a>
           </li>
           <li>
-            <a
-              class="text-sm link"
-              [routerLink]="['/', path.settings.root, path.settings.billing]"
-            >
-              Billing
-            </a>
+            <a class="text-sm link" routerLink="/"> Billing </a>
           </li>
           <li>
-            <a
-              class="text-sm link"
-              [routerLink]="['/', path.settings.root, path.settings.blockedUsers]"
-            >
-              Blocked users
-            </a>
+            <a class="text-sm link" routerLink="/"> Blocked users </a>
           </li>
           <li>
-            <a
-              class="text-sm link"
-              [routerLink]="['/', path.settings.root, path.settings.notifications]"
-            >
-              Notifications
-            </a>
+            <a class="text-sm link" routerLink="/"> Notifications </a>
           </li>
           <li>
-            <a
-              class="text-sm link"
-              [routerLink]="['/', path.settings.root, path.settings.security]"
-            >
-              Security
-            </a>
+            <a class="text-sm link" routerLink="/"> Security </a>
           </li>
           <li>
-            <a
-              class="text-sm link"
-              [routerLink]="['/', path.settings.root, path.settings.securityLog]"
-            >
-              Security log
-            </a>
+            <a class="text-sm link" routerLink="/"> Security log </a>
           </li>
         </ul>
       </div>
@@ -152,21 +110,10 @@
         <h4 class="h5">User</h4>
         <ul>
           <li>
-            <a
-              class="text-sm link"
-              [routerLink]="['/', path.user.root, 'john_wick97']"
-              text-sm
-            >
-              My profile
-            </a>
+            <a class="text-sm link" routerLink="/" text-sm> My profile </a>
           </li>
           <li>
-            <a
-              class="text-sm link"
-              [routerLink]="['/', path.user.root, path.user.overview]"
-            >
-              Users overview
-            </a>
+            <a class="text-sm link" routerLink="/"> Users overview </a>
           </li>
         </ul>
       </div>
