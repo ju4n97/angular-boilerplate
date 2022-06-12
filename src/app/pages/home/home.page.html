@@ -1,20 +1,15 @@
 <section class="container flex items-center justify-center">
   <main class="mx-auto my-16 md:max-w-xl">
     <div class="text-center">
-      <h1 class="mb-12 font-bold">👋 Welcome to Angular Boilerplate</h1>
+      <h1 class="mb-12 font-bold">Angular Boilerplate</h1>
 
-      <a class="text-sm link" routerLink="/" class="mb-12 btn btn-primary">
-        Go to dashboard
-      </a>
+      <a class="text-sm link" routerLink="/" class="mb-12 btn btn-primary"> Go to dashboard </a>
     </div>
 
     <h3 class="mb-4">Choose a theme</h3>
 
     <div class="grid grid-cols-1 mb-12 gap-x-6 gap-y-3 md:grid-cols-3">
-      <button
-        class="btn btn-secondary"
-        (click)="handleThemeChange(theme.System)"
-      >
+      <button class="btn btn-secondary" (click)="handleThemeChange(theme.System)">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="w-6 h-6 mr-2"
@@ -37,10 +32,7 @@
         </svg>
         System
       </button>
-      <button
-        class="btn btn-secondary"
-        (click)="handleThemeChange(theme.Light)"
-      >
+      <button class="btn btn-secondary" (click)="handleThemeChange(theme.Light)">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="w-6 h-6 mr-2"
@@ -76,44 +68,33 @@
       </button>
     </div>
 
-    <h3 class="mb-4">👉 Visit the app pages</h3>
-
     <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
       <div>
         <h4 class="h5">Settings</h4>
         <ul>
           <li>
-            <a class="text-sm link" routerLink="/"> Account </a>
+            <a class="text-sm link" routerLink="/settings/accessibility"> Accessibility </a>
           </li>
           <li>
-            <a class="text-sm link" routerLink="/"> Appearance </a>
+            <a class="text-sm link" routerLink="/settings/account"> Account </a>
           </li>
           <li>
-            <a class="text-sm link" routerLink="/"> Billing </a>
-          </li>
-          <li>
-            <a class="text-sm link" routerLink="/"> Blocked users </a>
-          </li>
-          <li>
-            <a class="text-sm link" routerLink="/"> Notifications </a>
-          </li>
-          <li>
-            <a class="text-sm link" routerLink="/"> Security </a>
-          </li>
-          <li>
-            <a class="text-sm link" routerLink="/"> Security log </a>
+            <a class="text-sm link" routerLink="/settings/appearance"> Appearance </a>
           </li>
         </ul>
       </div>
 
       <div>
-        <h4 class="h5">User</h4>
+        <h4 class="h5">Profiles</h4>
         <ul>
           <li>
-            <a class="text-sm link" routerLink="/" text-sm> My profile </a>
+            <a class="text-sm link" routerLink="/maria" text-sm> Maria </a>
           </li>
           <li>
-            <a class="text-sm link" routerLink="/"> Users overview </a>
+            <a class="text-sm link" routerLink="/pedro" text-sm> Pedro </a>
+          </li>
+          <li>
+            <a class="text-sm link" routerLink="/sara" text-sm> Sara </a>
           </li>
         </ul>
       </div>
