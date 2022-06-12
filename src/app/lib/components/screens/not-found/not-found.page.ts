@@ -1,10 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { ROUTER_UTILS } from '@core/utils/router.utils';
 
 @Component({
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './not-found.page.html',
   styleUrls: ['./not-found.page.css'],
 })
-export class NotFoundPage {
-  path = ROUTER_UTILS.config.base;
-}
+export class NotFoundPage {}

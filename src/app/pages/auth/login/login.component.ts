@@ -1,14 +1,15 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ROUTER_UTILS } from '@core/utils/router.utils';
-import { AuthService } from '../../services/auth.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
-  templateUrl: './sign-in.page.html',
-  styleUrls: ['./sign-in.page.css'],
   standalone: true,
+  imports: [CommonModule],
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css'],
 })
-export class SignInPage {
+export class LoginComponent {
   returnUrl: string;
 
   constructor(
@@ -17,8 +18,7 @@ export class SignInPage {
     private authService: AuthService,
   ) {
     this.returnUrl =
-      this.activatedRoute.snapshot.queryParamMap.get('returnUrl') ||
-      `/${ROUTER_UTILS.config.base.home}`;
+      this.activatedRoute.snapshot.queryParamMap.get('returnUrl') || `/`;
   }
 
   onClickSignIn(): void {
