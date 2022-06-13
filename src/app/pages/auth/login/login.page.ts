@@ -17,7 +17,7 @@ export class LoginPage {
     private _activatedRoute: ActivatedRoute,
     private _authService: AuthService,
   ) {
-    this._callbackURL = this._activatedRoute.snapshot.queryParamMap.get('returnUrl') || `/`;
+    this._callbackURL = this._activatedRoute.snapshot.queryParamMap.get('callbackURL') || `/`;
   }
 
   onClickSignIn(): void {

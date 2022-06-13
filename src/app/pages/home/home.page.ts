@@ -12,9 +12,9 @@ import { ThemeList, ThemeService } from '@lib/services/theme';
 export class HomePage {
   theme = ThemeList;
 
-  constructor(private themeService: ThemeService) {}
+  constructor(private _themeService: ThemeService) {}
 
   handleThemeChange(theme: ThemeList): void {
-    this.themeService.setTheme(theme);
+    this._themeService.setTheme(theme);
   }
 }

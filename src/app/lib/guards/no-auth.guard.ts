@@ -10,7 +10,11 @@ export class NoAuthGuard implements CanLoad {
 
   canLoad(): boolean {
     const isLoggedIn = this._authService.isLoggedIn;
-    console.log(isLoggedIn);
+    if (isLoggedIn) {
+      this._router.navigateByUrl('/');
+      return false;
+    }
+
     return true;
   }
 }

@@ -1,29 +1,27 @@
 import { Injectable } from '@angular/core';
-import { getItem, removeItem, setItem, StorageItem } from '@lib/utils';
+import { storage } from '@lib/utils';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  isLoggedIn$ = new BehaviorSubject<boolean>(!!getItem(StorageItem.Auth));
+  isLoggedIn$ = new BehaviorSubject<boolean>(!!storage.getItem('App/session'));
 
   get isLoggedIn(): boolean {
     return this.isLoggedIn$.getValue();
   }
 
   signIn(): void {
-    const token = Array(4)
-      .fill(0)
-      .map(() => Math.random() * 99)
-      .join('-');
-
-    setItem(StorageItem.Auth, token);
+    storage.setItem('App/session', {
+      user: 'some-user',
+      token: 'abc',
+    });
     this.isLoggedIn$.next(true);
   }
 
   signOut(): void {
-    removeItem(StorageItem.Auth);
+    storage.removeItem('App/session');
     this.isLoggedIn$.next(false);
   }
 }
