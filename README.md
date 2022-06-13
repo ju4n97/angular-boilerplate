@@ -29,7 +29,7 @@
 - Strongly-typed storage
 - TailwindCSS
 
-## 🛠️ Make some initial tweaks
+## 🛠️ Settings
 
 - TailwindCSS configuration:
 
@@ -56,6 +56,15 @@
   ```ts
   export const DEFAULT_BASE_THEME: AppTheme = 'dark' as const;
   ```
+
+- Enable a new local/session storage item
+
+  Go to `src\app\lib\utils\storage\storage.types.ts` and add a new item name in the `StorageObjectType` type and a new key value pair in the `StorageObjectMap` type.
+
+  ![image](https://user-images.githubusercontent.com/64181348/173276010-a4b95a63-2fe0-4104-9b09-34eeea5f0025.png)
+
+  After that, you can use the new item.
+  ![image](https://user-images.githubusercontent.com/64181348/173276575-09322722-387d-4c20-95af-fa9915079e3a.png)
 
 ## ⛩️ Project structure
 
