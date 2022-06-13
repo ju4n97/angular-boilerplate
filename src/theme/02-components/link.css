@@ -8,9 +8,9 @@ a.link:hover {
 }
 
 a.link:focus {
-  @apply text-indigo-400;
+  @apply text-indigo-800 dark:text-indigo-400;
 }
 
 a.link:visited {
-  @apply text-rose-500;
+  @apply text-rose-800 dark:text-rose-400;
 }
