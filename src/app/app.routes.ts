@@ -27,11 +27,8 @@ export const routes: Routes = [
     loadChildren: async () => (await import('@pages/settings/settings.routes')).ROUTES,
     canLoad: [AuthGuard],
   },
-  // {
-  //   path: '**',
-  //   loadComponent: async () =>
-  //     (await import('@lib/components/screens/not-found/not-found-component'))
-  //       .NotFoundComponent,
-  //   component: NotFoundPage,
-  // },
+  {
+    path: '**',
+    loadComponent: async () => (await import('@pages/screens/not-found/not-found.page')).NotFoundPage,
+  },
 ];

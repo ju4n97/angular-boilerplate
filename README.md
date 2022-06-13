@@ -3,8 +3,7 @@
 <p align="center">
   <img src="https://img.icons8.com/ios-filled/150/000000/angularjs.png" alt="angular-logo" width="120px" height="120px"/>
   <br>
-  <i>Angular starter for enterprise-grade front-end projects, built under a clean architecture 
-    <br> that helps to scale and maintain a fast workflow.</i>
+  <i>Lightweight & minimalistic Angular starter</i>
   <br>
 </p>
 
@@ -26,107 +25,85 @@
 
 - Lazy loading
 - Standalone components
-- Dark mode
-- Vitest
+- OS/Light/Dark modes
+- Strongly-typed storage
+- TailwindCSS
 
 ## 🛠️ Make some initial tweaks
 
-- Change pages routes:
+- TailwindCSS configuration:
 
-  Go to `src/app/core/utils/router.utils.ts` to find all the registered routes inside a config object.
+  You can find the `tailwind.config.js` file in the project root, then you can refer to https://tailwindcss.com/docs/configuration to learn how to make your own adjustments.
 
-  For example, you could replace `sign-in` with `SignIn`, `login` or `iniciar_sesion`
+- Set default theme (first time load)
 
-- Change your TailwindCSS configuration:
+  Go to `src\app\lib\constants.ts` and choose the default theme.
 
-  You can find the config file in the project root, then you can refer to https://tailwindcss.com/docs/configuration to learn how to make your own adjustments.
-
-- Set a default theme (First time load)
-
-  Go to `src\app\@core\services\theme\theme.config.ts` and change the following line of code
-
-  from operating system preference
+  OS preference
 
   ```ts
-  export const DEFAULT_BASE_THEME = ThemeList.System;
+  export const DEFAULT_BASE_THEME: AppTheme = 'system' as const;
   ```
 
-  to light mode
+  Light mode
 
   ```ts
-  export const DEFAULT_BASE_THEME = ThemeList.Light;
+  export const DEFAULT_BASE_THEME: AppTheme = 'light' as const;
   ```
 
-  or dark mode
+  Dark mode
 
   ```ts
-  export const DEFAULT_BASE_THEME = ThemeList.Dark;
+  export const DEFAULT_BASE_THEME: AppTheme = 'dark' as const;
   ```
 
 ## ⛩️ Project structure
 
 ```console
 ├───app
-│   ├───@core
-│   │   ├───directives
-│   │   │   └───click-outside
+│   ├───lib
+│   │   ├───components
+│   │   │   ├───footer
+│   │   │   ├───layouts
+│   │   │   │   └───layout-horizontal
+│   │   │   ├───logo
+│   │   │   └───navbar
 │   │   ├───guards
 │   │   ├───interceptors
-│   │   ├───pipes
-│   │   │   └───bytes
 │   │   ├───services
-│   │   │   ├───seo
+│   │   │   ├───auth
 │   │   │   └───theme
 │   │   └───utils
-│   ├───@shell
-│   │   ├───ft
-│   │   └───ui (layout components)
-│   │       ├───footer
-│   │       ├───header
-│   │       ├───layout
-│   │       └───not-found
-│   ├───components (generic shared components)
+│   │       └───storage
 │   └───pages
 │       ├───auth
-│       │   ├───pages
-│       │   │   ├───forgot-password
-│       │   │   ├───forgot-password-email-sent
-│       │   │   ├───password-reset
-│       │   │   ├───password-reset-failed
-│       │   │   ├───password-reset-succeeded
-│       │   │   ├───sign-in
-│       │   │   └───sign-up
-│       │   └───services
-│       ├───dashboard
+│       │   ├───login
+│       │   └───register
 │       ├───home
-│       ├───settings
-│       │   └───pages
-│       │       ├───account
-│       │       ├───appearance
-│       │       ├───billing
-│       │       ├───blocked-users
-│       │       ├───notifications
-│       │       ├───security
-│       │       └───security-log
-│       └───user
-│           └───pages
-│               ├───my-profile
-│               └───overview
+│       ├───profile
+│       ├───screens
+│       │   └───not-found
+│       └───settings
+│           ├───accessibility
+│           ├───account
+│           └───appearance
 ├───assets
 ├───environments
 └───theme
     ├───01-base
     ├───02-components
-    └───03-utilities
+    ├───03-utilities
+    └───tailwindcss
 ```
 
 ## 🧙‍♂️ Commands
 
-| Command | Description                      | NPM           | Yarn       | Pnpm       | Background command                           |
-| ------- | -------------------------------- | ------------- | ---------- | ---------- | -------------------------------------------- |
-| ng      | See available commands           | npm run ng    | yarn ng    | pnpm ng    | ng                                           |
-| start   | Run your app in development mode | npm start     | yarn start | pnpm start | ng serve                                     |
-| build   | Build your app for production    | npm run build | yarn build | pnpm build | ng build                                     |
-| watch   | Run build when files change.     | npm run watch | yarn watch | pnpm watch | ng build --watch --configuration development |
-| test    | Run your unit tests              | npm run test  | yarn test  | pnpm test  | ng test                                      |
-| lint    | Use ESLint to lint your app      | npm run lint  | yarn lint  | pnpm lint  | ng lint                                      |
+| Command  | Description                                                 | NPM              | Yarn          | PNPM          | Background command                              |
+| -------- | ----------------------------------------------------------- | ---------------- | ------------- | ------------- | ----------------------------------------------- |
+| ng       | See available commands                                      | npm run ng       | yarn ng       | pnpm ng       | ng                                              |
+| start    | Run app in development mode                                 | npm start        | yarn start    | pnpm start    | ng serve                                        |
+| build    | Build app for production                                    | npm run build    | yarn build    | pnpm build    | ng build                                        |
+| watch    | Run build when files change                                 | npm run watch    | yarn watch    | pnpm watch    | ng build --watch --configuration development    |
+| test     | Run unit tests                                              | npm run test     | yarn test     | pnpm test     | ng test                                         |
+| test:run | Run unit tests with headless browser and without watch mode | npm run test:run | yarn test:run | pnpm test:run | ng test --watch=false --browsers ChromeHeadless |
+| lint     | Lint code                                                   | npm run lint     | yarn lint     | pnpm lint     | ng lint                                         |
