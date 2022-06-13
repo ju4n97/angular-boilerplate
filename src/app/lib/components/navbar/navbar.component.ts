@@ -19,7 +19,7 @@ export class NavbarComponent {
   constructor(private _router: Router, private _authService: AuthService) {}
 
   onClickSignOut(): void {
-    this._authService.signOut();
-    this._router.navigateByUrl('/login');
+    this._authService.logout();
+    this._router.navigateByUrl('/auth/login');
   }
 }

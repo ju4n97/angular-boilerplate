@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { storage } from '@lib/utils';
+import { storage } from '@lib/utils/storage/storage.utils';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
@@ -12,15 +12,12 @@ export class AuthService {
     return this.isLoggedIn$.getValue();
   }
 
-  signIn(): void {
-    storage.setItem('App/session', {
-      user: 'some-user',
-      token: 'abc',
-    });
+  login(): void {
+    storage.setItem('App/session', { user: 'some-user-id', token: 'abc' });
     this.isLoggedIn$.next(true);
   }
 
-  signOut(): void {
+  logout(): void {
     storage.removeItem('App/session');
     this.isLoggedIn$.next(false);
   }

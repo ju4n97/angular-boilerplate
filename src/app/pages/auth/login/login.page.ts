@@ -21,7 +21,7 @@ export class LoginPage {
   }
 
   onClickSignIn(): void {
-    this._authService.signIn();
+    this._authService.login();
     this._router.navigate([this._callbackURL]);
   }
 }
