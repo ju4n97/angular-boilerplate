@@ -1,39 +1,49 @@
 import { DOCUMENT } from '@angular/common';
 import { Inject, Injectable, OnDestroy } from '@angular/core';
+import { DEFAULT_BASE_THEME } from '@lib/constants';
 import { storage } from '@lib/utils';
-import { fromEventPattern, Subject } from 'rxjs';
+import { BehaviorSubject, fromEventPattern, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { DEFAULT_BASE_THEME, ThemeList } from './theme.config';
+import { AppTheme } from './theme.config';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ThemeService implements OnDestroy {
-  destroy$ = new Subject();
+  //#region attributes
+  currentTheme$ = new BehaviorSubject<AppTheme | null>(this._storedTheme);
 
+  private _destroy$ = new Subject();
   private readonly _mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  //#endregion
 
-  get systemTheme(): ThemeList.Light | ThemeList.Dark {
-    return this._mediaQuery.matches ? ThemeList.Dark : ThemeList.Light;
+  //#region accessors
+  public get currentTheme(): AppTheme | null {
+    return this.currentTheme$.getValue();
   }
 
-  get storedTheme(): ThemeList | null {
+  public get systemTheme(): AppTheme {
+    return this._mediaQuery.matches ? 'dark' : 'light';
+  }
+
+  private get _storedTheme(): AppTheme | null {
     return storage.getItem('App/theme');
   }
 
-  set storedTheme(theme: ThemeList | null) {
-    storage.setItem('App/theme', theme as ThemeList);
+  private set _storedTheme(theme: AppTheme | null) {
+    storage.setItem('App/theme', theme as AppTheme);
   }
+  //#endregion
 
   constructor(@Inject(DOCUMENT) private _document: Document) {}
 
   ngOnDestroy(): void {
-    this.destroy$.complete();
-    this.destroy$.unsubscribe();
+    this._destroy$.complete();
+    this._destroy$.unsubscribe();
   }
 
   init(): void {
-    this.setTheme(this.storedTheme || DEFAULT_BASE_THEME);
+    this.setTheme(this._storedTheme || DEFAULT_BASE_THEME);
     this._listenForMediaQueryChanges();
   }
 
@@ -42,13 +52,14 @@ export class ThemeService implements OnDestroy {
    *
    * @param theme new theme
    */
-  setTheme(theme: ThemeList): void {
+  setTheme(theme: AppTheme): void {
     this._clearThemes();
-    this.storedTheme = theme;
+    this._storedTheme = theme;
 
     let bodyClass = theme;
+    this.currentTheme$.next(bodyClass);
 
-    if (theme === ThemeList.System) {
+    if (theme === 'system') {
       bodyClass = this.systemTheme;
     }
     this._document.body.classList.add(bodyClass);
@@ -63,11 +74,11 @@ export class ThemeService implements OnDestroy {
       this._mediaQuery.addListener.bind(this._mediaQuery),
       this._mediaQuery.removeListener.bind(this._mediaQuery),
     )
-      .pipe(takeUntil(this.destroy$))
+      .pipe(takeUntil(this._destroy$))
       .subscribe(() => {
         // Only applies changes when the current theme is "system"
-        if (this.storedTheme === ThemeList.System) {
-          this.setTheme(ThemeList.System);
+        if (this._storedTheme === 'system') {
+          this.setTheme('system');
         }
       });
   }
@@ -77,9 +88,6 @@ export class ThemeService implements OnDestroy {
    *
    */
   private _clearThemes(): void {
-    for (const theme in ThemeList) {
-      const key: ThemeList = ThemeList[theme as keyof typeof ThemeList];
-      this._document.body.classList.remove(key);
-    }
+    this._document.body.classList.remove('system', 'light', 'dark');
   }
 }

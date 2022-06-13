@@ -4,11 +4,11 @@ body {
 }
 
 body {
-  @apply bg-zinc-100;
-  @apply text-zinc-900;
+  @apply bg-slate-100;
+  @apply text-slate-900;
 }
 
 body.dark {
   @apply bg-zinc-900;
-  @apply text-zinc-50;
+  @apply text-zinc-200;
 }

@@ -1,17 +1,21 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { REPOSITORY_URL } from '@lib/constants';
 import { AuthService } from '@lib/services';
+import { LogoComponent } from '../logo/logo.component';
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule],
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'],
+  imports: [CommonModule, RouterModule, LogoComponent],
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeaderComponent {
+export class NavbarComponent {
+  readonly repositoryURL = REPOSITORY_URL;
+
   constructor(private _router: Router, private _authService: AuthService) {}
 
   onClickSignOut(): void {

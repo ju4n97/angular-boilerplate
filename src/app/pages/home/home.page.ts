@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ThemeList, ThemeService } from '@lib/services/theme';
+import { AppTheme, ThemeService } from '@lib/services/theme';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   standalone: true,
@@ -9,12 +10,25 @@ import { ThemeList, ThemeService } from '@lib/services/theme';
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.css'],
 })
-export class HomePage {
-  theme = ThemeList;
+export class HomePage implements OnInit, OnDestroy {
+  currentTheme!: AppTheme | null;
+
+  private _destroy$ = new Subject();
 
   constructor(private _themeService: ThemeService) {}
 
-  handleThemeChange(theme: ThemeList): void {
+  ngOnInit(): void {
+    this._themeService.currentTheme$
+      .pipe(takeUntil(this._destroy$))
+      .subscribe((theme) => (this.currentTheme = theme));
+  }
+
+  ngOnDestroy(): void {
+    this._destroy$.complete();
+    this._destroy$.unsubscribe();
+  }
+
+  handleThemeChange(theme: AppTheme): void {
     this._themeService.setTheme(theme);
   }
 }

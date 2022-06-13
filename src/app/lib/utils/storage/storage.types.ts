@@ -1,11 +1,11 @@
-import { ThemeList } from '@lib/services/theme';
+import { AppTheme } from '@lib/services/theme';
 
 type StorageObjectMap = {
   'App/session': {
     user: string;
     token: string;
   };
-  'App/theme': ThemeList;
+  'App/theme': AppTheme;
 };
 
 export type StorageObjectType = 'App/session' | 'App/theme';

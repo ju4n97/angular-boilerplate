@@ -12,5 +12,5 @@ a.link:focus {
 }
 
 a.link:visited {
-  @apply text-pink-500;
+  @apply text-rose-500;
 }

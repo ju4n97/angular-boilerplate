@@ -1,6 +1,5 @@
 import { DOCUMENT } from '@angular/common';
 import { TestBed } from '@angular/core/testing';
-import { ThemeList } from './theme.config';
 import { ThemeService } from './theme.service';
 
 describe('ThemeService', () => {
@@ -17,36 +16,36 @@ describe('ThemeService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should set system theme on LocalStorage', () => {
-    service.setTheme(ThemeList.System);
-    expect(service.storedTheme).toBe(ThemeList.System);
+  it('should set system theme as current theme', () => {
+    service.setTheme('system');
+    expect(service.currentTheme).toBe('system');
   });
 
-  it('should set system theme on document body', () => {
-    service.setTheme(ThemeList.System);
+  it('should set system theme as a document.body class', () => {
+    service.setTheme('system');
     const bodyClasses = document.body.classList;
     expect(bodyClasses.contains(service.systemTheme)).toBeTruthy();
   });
 
-  it('should set light theme on LocalStorage', () => {
-    service.setTheme(ThemeList.Light);
-    expect(service.storedTheme).toBe(ThemeList.Light);
+  it('should set light theme as current theme', () => {
+    service.setTheme('light');
+    expect(service.currentTheme).toBe('light');
   });
 
-  it('should set light theme on document body', () => {
-    service.setTheme(ThemeList.Light);
+  it('should set light theme as a document.body class', () => {
+    service.setTheme('light');
     const bodyClasses = document.body.classList;
-    expect(bodyClasses.contains(ThemeList.Light)).toBeTruthy();
+    expect(bodyClasses.contains('light')).toBeTruthy();
   });
 
-  it('should set dark theme on LocalStorage', () => {
-    service.setTheme(ThemeList.Dark);
-    expect(service.storedTheme).toBe(ThemeList.Dark);
+  it('should set dark theme as current theme', () => {
+    service.setTheme('dark');
+    expect(service.currentTheme).toBe('dark');
   });
 
-  it('should set dark theme on document body', () => {
-    service.setTheme(ThemeList.Dark);
+  it('should set dark theme as a document.body class', () => {
+    service.setTheme('dark');
     const bodyClasses = document.body.classList;
-    expect(bodyClasses.contains(ThemeList.Dark)).toBeTruthy();
+    expect(bodyClasses.contains('dark')).toBeTruthy();
   });
 });

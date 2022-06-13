@@ -1,125 +1,32 @@
-/* base */
 .btn {
-  @apply inline-flex items-center justify-center;
-  @apply h-12;
-  @apply px-6 py-3;
-  @apply font-semibold;
-  @apply rounded-lg;
-  @apply cursor-pointer;
-  @apply transition-all duration-300 ease-out;
-  @apply will-change-transform;
+  @apply w-full md:w-auto;
+  @apply border border-transparent rounded-lg outline-none;
+  @apply h-10 min-w-[80px] py-2 px-3;
+  @apply relative inline-flex items-center justify-center;
+  @apply text-sm text-center font-medium leading-none;
+  @apply select-none cursor-pointer;
 }
 
-.btn:focus {
-  @apply outline-none;
+.btn:disabled {
+  @apply opacity-80 cursor-not-allowed;
 }
 
-/* primary */
-.btn.btn-primary {
-  @apply text-white;
-  @apply bg-blue-600 shadow-lg shadow-blue-600/40;
+.btn:not(:disabled):hover {
+  @apply bg-opacity-80;
 }
 
-.dark .btn.btn-primary {
-  @apply bg-blue-600 shadow-lg shadow-blue-600/20;
+.btn:not(:disabled):focus {
+  @apply ring-2 ring-gray-400 ring-offset-2 dark:ring-zinc-700;
 }
 
-.btn.btn-primary:hover,
-.btn.btn-primary:focus {
-  @apply text-white;
-  @apply bg-blue-600 shadow-lg shadow-blue-600/50;
-  @apply transform scale-105;
+.btn-fit {
+  @apply min-w-fit;
 }
 
-.dark .btn.btn-primary:hover,
-.btn.btn-primary:focus {
-  @apply bg-blue-600 shadow-lg shadow-blue-500/20;
+.btn-secondary {
+  @apply bg-zinc-200 text-zinc-900 dark:bg-zinc-700 dark:text-white;
 }
 
-/* secondary */
-.btn.btn-secondary {
-  @apply text-white;
-  @apply shadow-lg bg-neutral-600 shadow-neutral-600/40;
-}
-
-.dark .btn.btn-secondary {
-  @apply shadow-lg bg-neutral-600 shadow-neutral-600/20;
-}
-
-.btn.btn-secondary:hover,
-.btn.btn-secondary:focus {
-  @apply text-white;
-  @apply shadow-lg bg-neutral-600 shadow-neutral-600/50;
-  @apply transform scale-105;
-}
-
-.dark .btn.btn-secondary:hover,
-.btn.btn-secondary:focus {
-  @apply shadow-lg bg-neutral-600 shadow-neutral-500/20;
-}
-
-/* green */
-.btn.btn-green {
-  @apply text-white;
-  @apply bg-green-600 shadow-lg shadow-green-600/40;
-}
-
-.dark .btn.btn-green {
-  @apply bg-green-600 shadow-lg shadow-green-600/20;
-}
-
-.btn.btn-green:hover,
-.btn.btn-green:focus {
-  @apply text-white;
-  @apply bg-green-600 shadow-lg shadow-green-600/50;
-  @apply transform scale-105;
-}
-
-.dark .btn.btn-green:hover,
-.btn.btn-green:focus {
-  @apply bg-green-600 shadow-lg shadow-green-500/20;
-}
-
-/* red */
-.btn.btn-red {
-  @apply text-white;
-  @apply bg-red-600 shadow-lg shadow-red-600/40;
-}
-
-.dark .btn.btn-red {
-  @apply bg-red-600 shadow-lg shadow-red-600/20;
-}
-
-.btn.btn-red:hover,
-.btn.btn-red:focus {
-  @apply text-white;
-  @apply bg-red-600 shadow-lg shadow-red-600/50;
-  @apply transform scale-105;
-}
-
-.dark .btn.btn-red:hover,
-.btn.btn-red:focus {
-  @apply bg-red-600 shadow-lg shadow-red-500/20;
-}
-
-/* yellow */
-.btn.btn-yellow {
-  @apply text-white;
-  @apply bg-yellow-500 shadow-lg shadow-yellow-500/40;
-}
-
-.dark .btn.btn-yellow {
-  @apply bg-yellow-500 shadow-lg shadow-yellow-500/20;
-}
-
-.btn.btn-yellow:hover,
-.btn.btn-yellow:focus {
-  @apply text-white;
-  @apply bg-yellow-500 shadow-lg shadow-yellow-500/50;
-  @apply transform scale-105;
-}
-
-.dark .btn.btn-yellow:hover,
-.btn.btn-yellow:focus {
-  @apply bg-yellow-500 shadow-lg shadow-yellow-500/20;
+.btn-primary {
+  @apply bg-blue-500 text-white;
 }
