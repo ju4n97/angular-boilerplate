@@ -67,7 +67,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "test:build:production"
+              "browserTarget": "angular-boilerplate:build:production"
             },
             "development": {
               "browserTarget": "angular-boilerplate:build:development"

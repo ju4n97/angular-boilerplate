@@ -8,13 +8,9 @@ describe('HeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    declarations: [HeaderComponent],
-    imports: [RouterTestingModule],
-    teardown: { destroyAfterEach: false }
-}).compileComponents();
-  });
+      imports: [HeaderComponent, RouterTestingModule],
+    }).compileComponents();
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
