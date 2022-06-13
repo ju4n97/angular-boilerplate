@@ -29,7 +29,7 @@
 - Strongly-typed storage
 - TailwindCSS
 
-## 🛠️ Settings
+## 🛠️ Tweaks
 
 - TailwindCSS configuration:
 
