@@ -79,6 +79,7 @@
 │   │   │   └───navbar
 │   │   ├───guards
 │   │   ├───interceptors
+│   │   ├───interfaces
 │   │   ├───services
 │   │   │   ├───auth
 │   │   │   └───theme
