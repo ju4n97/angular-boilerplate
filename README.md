@@ -79,6 +79,8 @@
 │   │   │   └───navbar
 │   │   ├───guards
 │   │   ├───interceptors
+│   │   ├───interfaces
+│   │   ├───enums
 │   │   ├───services
 │   │   │   ├───auth
 │   │   │   └───theme
