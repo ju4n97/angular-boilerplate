@@ -4,6 +4,6 @@ export const ROUTES: Route[] = [
   {
     path: '',
     title: 'Home',
-    loadComponent: async () => (await import('./home.page')).HomePage,
+    loadComponent: async () => (await import('./home.component')).HomeComponent,
   },
 ];

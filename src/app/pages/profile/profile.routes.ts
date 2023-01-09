@@ -4,6 +4,6 @@ export const ROUTES: Route[] = [
   {
     path: '',
     title: 'Profile',
-    loadComponent: async () => (await import('./profile.page')).ProfilePage,
+    loadComponent: async () => (await import('./profile.component')).ProfileComponent,
   },
 ];

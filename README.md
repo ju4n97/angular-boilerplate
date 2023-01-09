@@ -109,12 +109,12 @@
 
 ## 🧙‍♂️ Commands
 
-| Command  | Description                                                 | NPM              | Yarn          | PNPM          | Background command                              |
-| -------- | ----------------------------------------------------------- | ---------------- | ------------- | ------------- | ----------------------------------------------- |
-| ng       | See available commands                                      | npm run ng       | yarn ng       | pnpm ng       | ng                                              |
-| start    | Run app in development mode                                 | npm start        | yarn start    | pnpm start    | ng serve                                        |
-| build    | Build app for production                                    | npm run build    | yarn build    | pnpm build    | ng build                                        |
-| watch    | Run build when files change                                 | npm run watch    | yarn watch    | pnpm watch    | ng build --watch --configuration development    |
-| test     | Run unit tests                                              | npm run test     | yarn test     | pnpm test     | ng test                                         |
-| test:run | Run unit tests with headless browser and without watch mode | npm run test:run | yarn test:run | pnpm test:run | ng test --watch=false --browsers ChromeHeadless |
-| lint     | Lint code                                                   | npm run lint     | yarn lint     | pnpm lint     | ng lint                                         |
+| Command       | Description                                                 | NPM              | Yarn          | PNPM          | Background command                              |
+| ------------- | ----------------------------------------------------------- | ---------------- | ------------- | ------------- | ----------------------------------------------- |
+| ng            | See available commands                                      | npm run ng       | yarn ng       | pnpm ng       | ng                                              |
+| start         | Run app in development mode                                 | npm start        | yarn start    | pnpm start    | ng serve                                        |
+| build         | Build app for production                                    | npm run build    | yarn build    | pnpm build    | ng build                                        |
+| watch         | Run build when files change                                 | npm run watch    | yarn watch    | pnpm watch    | ng build --watch --configuration development    |
+| test          | Run unit tests                                              | npm run test     | yarn test     | pnpm test     | ng test                                         |
+| test:headless | Run unit tests with headless browser and without watch mode | npm run test:run | yarn test:run | pnpm test:run | ng test --watch=false --browsers ChromeHeadless |
+| lint          | Lint code                                                   | npm run lint     | yarn lint     | pnpm lint     | ng lint                                         |

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AppTheme, ThemeService } from '@lib/services/theme';
 import { Subject, takeUntil } from 'rxjs';
@@ -7,18 +7,18 @@ import { Subject, takeUntil } from 'rxjs';
 @Component({
   standalone: true,
   imports: [CommonModule, RouterModule],
-  templateUrl: './home.page.html',
-  styleUrls: ['./home.page.css'],
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css'],
 })
-export class HomePage implements OnInit, OnDestroy {
+export class HomeComponent implements OnInit, OnDestroy {
   currentTheme!: AppTheme | null;
 
-  private _destroy$ = new Subject();
+  private readonly _destroy$ = new Subject();
 
-  constructor(private _themeService: ThemeService) {}
+  private readonly themeService = inject(ThemeService);
 
   ngOnInit(): void {
-    this._themeService.currentTheme$
+    this.themeService.currentTheme$
       .pipe(takeUntil(this._destroy$))
       .subscribe((theme) => (this.currentTheme = theme));
   }
@@ -29,6 +29,6 @@ export class HomePage implements OnInit, OnDestroy {
   }
 
   handleThemeChange(theme: AppTheme): void {
-    this._themeService.setTheme(theme);
+    this.themeService.setTheme(theme);
   }
 }

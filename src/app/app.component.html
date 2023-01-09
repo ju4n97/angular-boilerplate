@@ -1,4 +1,4 @@
-<app-layout-horizontal *ngIf="isLoggedIn$ | async; else notAuthorized">
+<app-layout-horizontal *ngIf="isAuthenticated$ | async; else notAuthorized">
   <router-outlet></router-outlet>
 </app-layout-horizontal>
 

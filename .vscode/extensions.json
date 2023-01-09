@@ -1,15 +1,4 @@
 {
-  "recommendations": [
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
-    "angular.ng-template",
-    "cyrilletuzi.angular-schematics",
-    "editorconfig.editorconfig",
-    "bradlc.vscode-tailwindcss",
-    "heybourn.headwind",
-    "austenc.tailwind-docs",
-    "bourhaouta.tailwindshades",
-    "xabikos.javascriptsnippets",
-    "christian-kohler.path-intellisense",
-  ]
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
+  "recommendations": ["angular.ng-template", "bradlc.vscode-tailwindcss"]
 }

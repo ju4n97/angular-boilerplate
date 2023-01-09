@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 @Component({
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './register.page.html',
-  styleUrls: ['./register.page.css'],
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css'],
 })
-export class RegisterPage {}
+export class RegisterComponent {}

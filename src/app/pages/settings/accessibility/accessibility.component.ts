@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 @Component({
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './account.page.html',
-  styleUrls: ['./account.page.css'],
+  templateUrl: './accessibility.component.html',
+  styleUrls: ['./accessibility.component.css'],
 })
-export class AccountPage {}
+export class AccessibilityComponent {}

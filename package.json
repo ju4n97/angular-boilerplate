@@ -9,7 +9,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "test:run": "ng test --watch=false --browsers ChromeHeadless",
+    "test:headless": "ng test --watch=false --browsers ChromeHeadless",
     "lint": "ng lint"
   },
   "dependencies": {

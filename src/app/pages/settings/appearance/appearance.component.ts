@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 @Component({
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './appearance.page.html',
-  styleUrls: ['./appearance.page.css'],
+  templateUrl: './appearance.component.html',
+  styleUrls: ['./appearance.component.css'],
 })
-export class AppearancePage {}
+export class AppearanceComponent {}

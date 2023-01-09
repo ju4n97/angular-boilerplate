@@ -5,7 +5,7 @@
 
   <div class="flex flex-wrap gap-3 mb-6">
     <button
-      class="min-w-[150px] btn {{currentTheme === 'system' ? 'btn-primary' : 'btn-secondary'}}"
+      class="min-w-[150px] btn {{ currentTheme === 'system' ? 'btn-primary' : 'btn-secondary' }}"
       (click)="handleThemeChange('system')"
     >
       <!-- prettier-ignore -->
@@ -13,7 +13,7 @@
       System
     </button>
     <button
-      class="min-w-[150px] btn {{currentTheme === 'light' ? 'btn-primary' : 'btn-secondary'}}"
+      class="min-w-[150px] btn {{ currentTheme === 'light' ? 'btn-primary' : 'btn-secondary' }}"
       (click)="handleThemeChange('light')"
     >
       <!-- prettier-ignore -->
@@ -21,7 +21,7 @@
       Light
     </button>
     <button
-      class="min-w-[150px] btn {{currentTheme === 'dark' ? 'btn-primary' : 'btn-secondary'}}"
+      class="min-w-[150px] btn {{ currentTheme === 'dark' ? 'btn-primary' : 'btn-secondary' }}"
       (click)="handleThemeChange('dark')"
     >
       <!-- prettier-ignore -->
@@ -49,13 +49,13 @@
     <h3 class="h5">Profiles</h3>
     <ul>
       <li>
-        <a class="text-sm link" routerLink="/maria" text-sm> Maria </a>
+        <a class="text-sm link" routerLink="/profile/maria" text-sm> Maria </a>
       </li>
       <li>
-        <a class="text-sm link" routerLink="/pedro" text-sm> Pedro </a>
+        <a class="text-sm link" routerLink="/profile/pedro" text-sm> Pedro </a>
       </li>
       <li>
-        <a class="text-sm link" routerLink="/sara" text-sm> Sara </a>
+        <a class="text-sm link" routerLink="/profile/sara" text-sm> Sara </a>
       </li>
     </ul>
   </div>
