@@ -1,3 +1,4 @@
+import { DOCUMENT } from '@angular/common';
 import { Injectable, OnDestroy, inject } from '@angular/core';
 import { DEFAULT_BASE_THEME } from '@lib/constants';
 import { storage } from '@lib/utils';
@@ -11,7 +12,7 @@ import { AppTheme } from './theme.config';
 export class ThemeService implements OnDestroy {
     currentTheme$ = new BehaviorSubject<AppTheme | null>(this._storedTheme);
 
-    private readonly _document = inject(Document);
+    private readonly _document = inject(DOCUMENT);
 
     private readonly _destroy$ = new Subject();
 

@@ -1,10 +1,13 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import { addDynamicIconSelectors } from '@iconify/tailwind';
+
 const TAILWIND_PLUGINS = [
-    import('@tailwindcss/aspect-ratio').then((o) => o),
-    import('@tailwindcss/forms').then((o) => o),
-    import('@tailwindcss/typography').then((o) => o),
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
 ];
 
-const CUSTOM_PLUGINS = [import('@iconify/tailwind').then((o) => o)];
+const CUSTOM_PLUGINS = [addDynamicIconSelectors()];
 
 /** @type {import('tailwindcss').Config} */
 export default {

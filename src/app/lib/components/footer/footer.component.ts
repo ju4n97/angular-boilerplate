@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { PACKAGE_JSON, providePackageJson } from '@lib/providers/package-json.token';
+import { PACKAGE_JSON, providePackageJson } from '@lib/providers';
 import { LogoComponent } from '../logo/logo.component';
 
 @Component({

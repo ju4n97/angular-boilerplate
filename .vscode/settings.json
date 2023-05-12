@@ -6,7 +6,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.markdown-language-features"
   },
   "[handlebars]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
