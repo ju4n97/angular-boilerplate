@@ -3,32 +3,23 @@ import { authGuard } from '@lib/guards';
 
 export const routes: Routes = [
     {
-        path: '',
-        redirectTo: 'home',
-        pathMatch: 'full',
-    },
-    {
         path: 'auth',
-        loadChildren: async () =>
-            (await import('@pages/auth/auth.routes')).ROUTES,
+        loadChildren: async () => (await import('@pages/auth')).routes,
         canMatch: [authGuard({ requiresAuthentication: false })],
     },
     {
-        path: 'home',
-        loadChildren: async () =>
-            (await import('@pages/home/home.routes')).ROUTES,
+        path: '',
+        loadChildren: async () => (await import('@pages/home')).routes,
         canMatch: [authGuard()],
     },
     {
-        path: 'profile/:username',
-        loadChildren: async () =>
-            (await import('@pages/profile/profile.routes')).ROUTES,
+        path: 'users/:username',
+        loadChildren: async () => (await import('@pages/user')).routes,
         canMatch: [authGuard()],
     },
     {
         path: 'settings',
-        loadChildren: async () =>
-            (await import('@pages/settings/settings.routes')).ROUTES,
+        loadChildren: async () => (await import('@pages/settings')).routes,
         canMatch: [authGuard()],
     },
     {

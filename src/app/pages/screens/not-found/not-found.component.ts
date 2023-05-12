@@ -3,9 +3,8 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  templateUrl: './not-found.component.html',
-  styleUrls: ['./not-found.component.css'],
+    standalone: true,
+    imports: [CommonModule, RouterModule],
+    templateUrl: './not-found.component.html',
 })
 export class NotFoundComponent {}

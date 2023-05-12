@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, Input } from '@angular/core';
 
 @Component({
     standalone: true,
@@ -8,5 +7,5 @@ import { ActivatedRoute } from '@angular/router';
     templateUrl: './profile.component.html',
 })
 export class ProfileComponent {
-    username = inject(ActivatedRoute).snapshot.paramMap.get('username');
+    @Input() username!: string;
 }

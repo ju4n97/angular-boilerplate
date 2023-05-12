@@ -10,8 +10,8 @@
         "watch": "ng build --watch --configuration development",
         "test": "ng test",
         "test:headless": "ng test --watch=false --browsers ChromeHeadless",
-        "lint": "ng lint",
-        "lint:fix": "ng lint --fix",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
         "stylelint": "stylelint **/*.{css,pcss,less,scss,sass} --quiet-deprecation-warnings",
         "stylelint:fix": "stylelint **/*.{css,pcss,less,scss,sass} --quiet-deprecation-warnings --fix"
     },
