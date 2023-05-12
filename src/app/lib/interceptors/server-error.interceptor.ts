@@ -1,8 +1,4 @@
-import {
-    HttpErrorResponse,
-    HttpInterceptorFn,
-    HttpStatusCode,
-} from '@angular/common/http';
+import { HttpErrorResponse, HttpInterceptorFn, HttpStatusCode } from '@angular/common/http';
 import { inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { throwError } from 'rxjs';
@@ -21,16 +17,11 @@ export const serverErrorInterceptor: HttpInterceptorFn = (request, next) => {
 
     return next(request).pipe(
         catchError((error: HttpErrorResponse) => {
-            if (
-                [
-                    HttpStatusCode.Unauthorized,
-                    HttpStatusCode.Forbidden,
-                ].includes(error.status)
-            ) {
+            if ([HttpStatusCode.Unauthorized, HttpStatusCode.Forbidden].includes(error.status)) {
                 router.navigateByUrl('/auth/login');
             }
 
             return throwError(() => error);
-        })
+        }),
     );
 };

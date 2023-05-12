@@ -12,12 +12,12 @@ import { Subject, takeUntil } from 'rxjs';
 export class HomeComponent implements OnInit, OnDestroy {
     currentTheme!: AppTheme | null;
 
+    private readonly _themeService = inject(ThemeService);
+
     private readonly _destroy$ = new Subject();
 
-    private readonly themeService = inject(ThemeService);
-
     ngOnInit(): void {
-        this.themeService.currentTheme$
+        this._themeService.currentTheme$
             .pipe(takeUntil(this._destroy$))
             .subscribe((theme) => (this.currentTheme = theme));
     }
@@ -28,6 +28,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     handleThemeChange(theme: AppTheme): void {
-        this.themeService.setTheme(theme);
+        this._themeService.setTheme(theme);
     }
 }

@@ -1,4 +1,4 @@
 html {
-  @apply font-body;
-  @apply font-light;
+    @apply font-body;
+    @apply font-light;
 }

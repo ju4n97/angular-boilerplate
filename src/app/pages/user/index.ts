@@ -4,7 +4,6 @@ export const routes: Routes = [
     {
         path: '',
         title: 'Profile',
-        loadComponent: async () =>
-            (await import('./profile/profile.component')).ProfileComponent,
+        loadComponent: async () => (await import('./profile/profile.component')).ProfileComponent,
     },
 ];

@@ -11,12 +11,12 @@ import { AuthService } from '@lib/services';
 export class LoginComponent {
     @Input() returnUrl!: string;
 
-    private readonly router = inject(Router);
-    private readonly authService = inject(AuthService);
+    private readonly _router = inject(Router);
+    private readonly _authService = inject(AuthService);
 
     login(): void {
-        this.authService.login();
+        this._authService.login();
 
-        this.router.navigate([this.returnUrl ?? `/`]);
+        this._router.navigate([this.returnUrl ?? `/`]);
     }
 }

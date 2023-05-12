@@ -1,14 +1,14 @@
 html,
 body {
-  @apply h-full;
+    @apply h-full;
 }
 
 body {
-  @apply bg-slate-100;
-  @apply text-slate-900;
+    @apply bg-slate-100;
+    @apply text-slate-900;
 }
 
 body.dark {
-  @apply bg-zinc-900;
-  @apply text-zinc-200;
+    @apply bg-zinc-900;
+    @apply text-zinc-200;
 }

@@ -21,17 +21,13 @@ describe('authGuard', () => {
 
     it(`should block navigation and redirect to '/auth/login' when requiresAuthentication is true and the user is not logged in`, () => {
         authService.isAuthenticated$.next(false);
-        expect(canMatch({} as Route, [] as UrlSegment[])).toEqual(
-            router.createUrlTree(['/auth/login'])
-        );
+        expect(canMatch({} as Route, [] as UrlSegment[])).toEqual(router.createUrlTree(['/auth/login']));
     });
 
     it(`should block navigation and redirect to '/' when requiresAuthentication is false and the user is logged in`, () => {
         authService.isAuthenticated$.next(true);
         canMatch = authGuard({ requiresAuthentication: false });
-        expect(canMatch({} as Route, [] as UrlSegment[])).toEqual(
-            router.createUrlTree(['/'])
-        );
+        expect(canMatch({} as Route, [] as UrlSegment[])).toEqual(router.createUrlTree(['/']));
     });
 
     it('should allow navigation to proceed when requiresAuthentication is false and the user is not logged in', () => {

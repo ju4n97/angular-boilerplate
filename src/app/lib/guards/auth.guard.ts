@@ -40,9 +40,7 @@ const defaultAuthGuardOptions = (): AuthGuardOptions => ({
  *   },
  * ];
  */
-export const authGuard = (
-    options: AuthGuardOptions = defaultAuthGuardOptions()
-): CanMatchFn => {
+export const authGuard = (options: AuthGuardOptions = defaultAuthGuardOptions()): CanMatchFn => {
     return (_: Route, segments: UrlSegment[]) => {
         const router = inject(Router);
         const authService = inject(AuthService);

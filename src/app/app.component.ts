@@ -14,9 +14,9 @@ import { LayoutHorizontalComponent } from './lib/components/layouts/layout-horiz
 export class AppComponent implements OnInit {
     isAuthenticated$ = inject(AuthService).isAuthenticated$;
 
-    private readonly themeService = inject(ThemeService);
+    private readonly _themeService = inject(ThemeService);
 
     ngOnInit(): void {
-        this.themeService.init();
+        this._themeService.init();
     }
 }

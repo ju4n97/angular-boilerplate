@@ -1,17 +1,18 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { REPOSITORY_URL } from '@lib/constants';
+import { PACKAGE_JSON, providePackageJson } from '@lib/providers/package-json.token';
 import { LogoComponent } from '../logo/logo.component';
 
 @Component({
     selector: 'app-footer',
     standalone: true,
     imports: [CommonModule, RouterModule, LogoComponent],
+    providers: [providePackageJson()],
     templateUrl: './footer.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FooterComponent {
-    readonly repositoryURL = REPOSITORY_URL;
+    readonly packageJson = inject(PACKAGE_JSON);
     readonly currentYear = new Date().getFullYear();
 }
