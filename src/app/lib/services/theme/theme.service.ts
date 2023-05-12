@@ -1,5 +1,4 @@
-import { DOCUMENT } from '@angular/common';
-import { Inject, Injectable, OnDestroy } from '@angular/core';
+import { Injectable, OnDestroy, inject } from '@angular/core';
 import { DEFAULT_BASE_THEME } from '@lib/constants';
 import { storage } from '@lib/utils';
 import { BehaviorSubject, Subject, fromEventPattern } from 'rxjs';
@@ -10,14 +9,14 @@ import { AppTheme } from './theme.config';
     providedIn: 'root',
 })
 export class ThemeService implements OnDestroy {
-    //#region attributes
     currentTheme$ = new BehaviorSubject<AppTheme | null>(this._storedTheme);
 
-    private _destroy$ = new Subject();
-    private readonly _mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    //#endregion
+    private readonly _document = inject(Document);
 
-    //#region accessors
+    private readonly _destroy$ = new Subject();
+
+    private readonly _mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
     public get currentTheme(): AppTheme | null {
         return this.currentTheme$.getValue();
     }
@@ -27,15 +26,12 @@ export class ThemeService implements OnDestroy {
     }
 
     private get _storedTheme(): AppTheme | null {
-        return storage.getItem('App/theme');
+        return storage.getItem('appTheme');
     }
 
     private set _storedTheme(theme: AppTheme | null) {
-        storage.setItem('App/theme', theme as AppTheme);
+        storage.setItem('appTheme', theme as AppTheme);
     }
-    //#endregion
-
-    constructor(@Inject(DOCUMENT) private _document: Document) {}
 
     ngOnDestroy(): void {
         this._destroy$.complete();

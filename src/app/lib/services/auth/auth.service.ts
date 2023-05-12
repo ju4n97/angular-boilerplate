@@ -6,19 +6,19 @@ import { BehaviorSubject } from 'rxjs';
     providedIn: 'root',
 })
 export class AuthService {
-    isAuthenticated$ = new BehaviorSubject<boolean>(!!storage.getItem('App/session'));
+    isAuthenticated$ = new BehaviorSubject<boolean>(!!storage.getItem('appSession'));
 
     get isAuthenticated(): boolean {
         return this.isAuthenticated$.getValue();
     }
 
     login(): void {
-        storage.setItem('App/session', { user: 'some-user-id', token: 'abc' });
+        storage.setItem('appSession', { user: 'some-user-id', token: 'abc' });
         this.isAuthenticated$.next(true);
     }
 
     logout(): void {
-        storage.removeItem('App/session');
+        storage.removeItem('appSession');
         this.isAuthenticated$.next(false);
     }
 }
