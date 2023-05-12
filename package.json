@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
-        "postinstall": "npx simple-git-hooks",
+        "prepare": "npx simple-git-hooks",
         "ng": "ng",
         "start": "ng serve",
         "build": "ng build",
@@ -16,7 +16,7 @@
         "stylelint:fix": "stylelint **/*.{css,pcss,less,scss,sass} --quiet-deprecation-warnings --fix"
     },
     "simple-git-hooks": {
-        "pre-commit": "pnpm lint-staged"
+        "pre-commit": "npx lint-staged"
     },
     "lint-staged": {
         "*.{js,jsx,ts,tsx}": [
