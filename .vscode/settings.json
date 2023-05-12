@@ -1,15 +1,5 @@
 {
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": true
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "css.validate": false
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    }
 }

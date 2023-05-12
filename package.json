@@ -19,13 +19,11 @@
         "pre-commit": "pnpm lint-staged"
     },
     "lint-staged": {
-        "*.{js,jsx,ts,tsx,vue,svelte}": [
-            "pnpm lint:fix",
-            "pnpm prettier"
+        "*.{js,jsx,ts,tsx}": [
+            "pnpm lint:fix"
         ],
-        "*.{svelte,vue,tsx,css,pcss,less,scss,sass}": [
-            "pnpm stylelint:fix",
-            "pnpm prettier"
+        "*.{css,pcss,less,scss,sass}": [
+            "pnpm stylelint:fix"
         ]
     },
     "dependencies": {

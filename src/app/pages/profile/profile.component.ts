@@ -3,11 +3,10 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css'],
+    standalone: true,
+    imports: [CommonModule],
+    templateUrl: './profile.component.html',
 })
 export class ProfileComponent {
-  username = inject(ActivatedRoute).snapshot.paramMap.get('username');
+    username = inject(ActivatedRoute).snapshot.paramMap.get('username');
 }

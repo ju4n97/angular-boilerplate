@@ -6,18 +6,17 @@ import { ThemeService } from '@lib/services/theme';
 import { LayoutHorizontalComponent } from './lib/components/layouts/layout-horizontal/layout-horizontal.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterModule, LayoutHorizontalComponent],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+    selector: 'app-root',
+    standalone: true,
+    imports: [CommonModule, RouterModule, LayoutHorizontalComponent],
+    templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {
-  isAuthenticated$ = inject(AuthService).isAuthenticated$;
+    isAuthenticated$ = inject(AuthService).isAuthenticated$;
 
-  private readonly themeService = inject(ThemeService);
+    private readonly themeService = inject(ThemeService);
 
-  ngOnInit(): void {
-    this.themeService.init();
-  }
+    ngOnInit(): void {
+        this.themeService.init();
+    }
 }
