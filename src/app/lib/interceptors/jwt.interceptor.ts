@@ -1,26 +1,32 @@
-import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
+import { HttpInterceptorFn } from '@angular/common/http';
+import { inject } from '@angular/core';
 import { environment } from '@env/environment';
 import { AuthService } from '@lib/services';
-import { Observable } from 'rxjs';
 
-@Injectable()
-export class JwtInterceptor implements HttpInterceptor {
-  private readonly authService = inject(AuthService);
+/**
+ * Interceptor that adds an Authorization header to requests that are authenticated and target the API URL.
+ *
+ * @param request The request object.
+ * @param next The next interceptor in the chain.
+ *
+ * @returns The next Observable.
+ */
+export const jwtInterceptor: HttpInterceptorFn = (request, next) => {
+    const authService = inject(AuthService);
 
-  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    const isAuthenticated = this.authService.isAuthenticated;
-    const token = 'ABC';
-    const isApiUrl = request.url.startsWith(environment.apiUrl);
+    const isRequestAuthorized =
+        authService.isAuthenticated &&
+        request.url.startsWith(environment.apiUrl);
 
-    if (isAuthenticated && isApiUrl) {
-      request = request.clone({
-        setHeaders: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+    if (isRequestAuthorized) {
+        const clonedRequest = request.clone({
+            setHeaders: {
+                Authorization: `Bearer ${'JWT TOKEN'}`,
+            },
+        });
+
+        return next(clonedRequest);
     }
 
-    return next.handle(request);
-  }
-}
+    return next(request);
+};

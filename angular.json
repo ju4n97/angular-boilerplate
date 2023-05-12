@@ -7,7 +7,13 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "inlineStyle": true
+          "standalone": true
+        },
+        "@schematics/angular:directive": {
+          "standalone": true
+        },
+        "@schematics/angular:pipe": {
+          "standalone": true
         }
       },
       "root": "",
@@ -15,7 +21,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:browser-esbuild",
           "options": {
             "outputPath": "dist/angular-boilerplate",
             "index": "src/index.html",
