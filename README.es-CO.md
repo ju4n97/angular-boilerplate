@@ -64,7 +64,7 @@ Este es un iniciador de Angular altamente imperativo diseñado para mantenerse a
 
 ## 🏹 Iniciar desarrollo
 
-> **Nota**
+> **Nota:**
 > Tiene tres opciones para comenzar un nuevo proyecto basado en esta plantilla:
 >
 > 1. Crear un nuevo repositorio de GitHub a partir de esta plantilla.
@@ -101,7 +101,7 @@ pnpm start
 
 ## 📝 Checklist
 
-Please review this checklist and modify it as necessary to meet your project requirements.
+Por favor revise esta lista de verificación y modifíquela según sea necesario para cumplir con los requisitos de su proyecto.
 
 - [ ] Ejecute el script `./scripts/rename_project.sh` para renombrar el proyecto.
 - [ ] Cambie el título en `src/index.html` y el favicon en `src/favicon.ico` para que coincidan con su proyecto.
