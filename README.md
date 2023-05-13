@@ -64,9 +64,18 @@ This is a highly opinionated Angular starter designed to keep up with the latest
 
 ## 🏹 Start development
 
+> **Note:**
+> You have three options to start a new project based on this template:
+>
+> 1. Create a new GitHub repository from this template.
+> 2. Clone this repository to start with a clean git history.
+> 3. Scaffold the project on StackBlitz.
+
 ### Using the GitHub template
 
 [Create a repo from this template on GitHub](https://github.com/juanmesa2097/angular-boilerplate/generate).
+
+---
 
 ### Cloning the repository locally
 
@@ -86,7 +95,7 @@ pnpm install # run `pnpm install -g pnpm` if you don't have pnpm installed
 pnpm start
 ```
 
-Follow the prompts to scaffold the project and start the development server.
+---
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://analogjs.org/new)
 
@@ -94,11 +103,11 @@ Follow the prompts to scaffold the project and start the development server.
 
 Please review this checklist and modify it as necessary to meet your project requirements.
 
-- [] Run the `./scripts/rename_project.sh` script to rename the project.
-- [] Change the title in `src/index.html` and the favicon in `src/favicon.ico` to match your project.
-- [] Decide whether to continue using [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks) and [lint-staged](https://github.com/okonet/lint-staged) for your project.
-- [] Clean up the README file to provide clear instructions about your project.
-- [] Modify the pages in the project to meet your specific requirements.
+- [ ] Run the `./scripts/rename_project.sh` script to rename the project.
+- [ ] Change the title in `src/index.html` and the favicon in `src/favicon.ico` to match your project.
+- [ ] Decide whether to continue using [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks) and [lint-staged](https://github.com/okonet/lint-staged) for your project.
+- [ ] Clean up the README file to provide clear instructions about your project.
+- [ ] Modify the pages in the project to meet your specific requirements.
 
 ## 📦 Deploy to Vercel
 

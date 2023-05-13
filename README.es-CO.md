@@ -64,9 +64,18 @@ Este es un iniciador de Angular altamente imperativo diseñado para mantenerse a
 
 ## 🏹 Iniciar desarrollo
 
+> **Note:**
+> Tiene tres opciones para comenzar un nuevo proyecto basado en esta plantilla:
+>
+> 1. Crear un nuevo repositorio de GitHub a partir de esta plantilla.
+> 2. Clonar este repositorio para comenzar con un historial de git limpio.
+> 3. Crear nuevo proyecto en StackBlitz.
+
 ### Utilizando plantilla de GitHub
 
 [Crear un repositorio de esta plantilla en GitHub](https://github.com/juanmesa2097/angular-boilerplate/generate).
+
+---
 
 ### Clonando el repositorio localmente
 
@@ -86,7 +95,7 @@ pnpm install # run `pnpm install -g pnpm` if you don't have pnpm installed
 pnpm start
 ```
 
-Siga las indicaciones para crear la estructura del proyecto y comenzar el servidor de desarrollo.
+---
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://analogjs.org/new)
 
@@ -94,11 +103,11 @@ Siga las indicaciones para crear la estructura del proyecto y comenzar el servid
 
 Please review this checklist and modify it as necessary to meet your project requirements.
 
-- [] Ejecute el script `./scripts/rename_project.sh` para renombrar el proyecto.
-- [] Cambie el título en `src/index.html` y el favicon en `src/favicon.ico` para que coincidan con su proyecto.
-- [] Decida si desea continuar utilizando [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks) y [lint-staged](https://github.com/okonet/lint-staged) para su proyecto.
-- [] Limpie el archivo README para proporcionar instrucciones claras sobre su proyecto.
-- [] Modifique las páginas del proyecto para cumplir con sus requisitos específicos.
+- [ ] Ejecute el script `./scripts/rename_project.sh` para renombrar el proyecto.
+- [ ] Cambie el título en `src/index.html` y el favicon en `src/favicon.ico` para que coincidan con su proyecto.
+- [ ] Decida si desea continuar utilizando [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks) y [lint-staged](https://github.com/okonet/lint-staged) para su proyecto.
+- [ ] Limpie el archivo README para proporcionar instrucciones claras sobre su proyecto.
+- [ ] Modifique las páginas del proyecto para cumplir con sus requisitos específicos.
 
 ## 📦 Despliegue en Vercel
 
