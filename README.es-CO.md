@@ -64,7 +64,7 @@ Este es un iniciador de Angular altamente imperativo diseñado para mantenerse a
 
 ## 🏹 Iniciar desarrollo
 
-> **Note:**
+> **Nota**
 > Tiene tres opciones para comenzar un nuevo proyecto basado en esta plantilla:
 >
 > 1. Crear un nuevo repositorio de GitHub a partir de esta plantilla.
