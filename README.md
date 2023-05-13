@@ -42,8 +42,8 @@ This is a highly opinionated Angular starter designed to keep up with the latest
 
 ### Icons
 
-- [Iconify](https://iconify.design) - use icons from any icon sets [🔍Icônes](https://icones.netlify.app/)
-- [Pure CSS icons via @iconify/tailwind](https://docs.iconify.design/usage/css/tailwind/)
+- [Iconify](https://iconify.design) - use icons from any icon sets [🔍Icônes](https://icones.netlify.app/).
+- [@iconify/tailwind](https://docs.iconify.design/usage/css/tailwind/) - Pure CSS icons.
 
 ### Add-ons
 

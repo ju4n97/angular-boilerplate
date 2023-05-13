@@ -42,8 +42,8 @@ Este es un iniciador de Angular altamente imperativo diseñado para mantenerse a
 
 ### Íconos
 
-- [Iconify](https://iconify.design) - usar íconos de cualquier conjunto de íconos [🔍Icônes](https://icones.netlify.app/)
-- [Íconos en CSS puro a través de @iconify/tailwind](https://docs.iconify.design/usage/css/tailwind/)
+- [Iconify](https://iconify.design) - usar íconos de cualquier conjunto de íconos [🔍Icônes](https://icones.netlify.app/).
+- [@iconify/tailwind](https://docs.iconify.design/usage/css/tailwind/) - Íconos en CSS puro.
 
 ### Complementos
 
