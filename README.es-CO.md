@@ -73,7 +73,7 @@ Este es un iniciador de Angular altamente imperativo diseñado para mantenerse a
 
 ### Utilizando plantilla de GitHub
 
-[Crear un repositorio de esta plantilla en GitHub](https://github.com/juanmesa2097/angular-boilerplate/generate).
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/juanmesa2097/angular-boilerplate)
 
 ---
 

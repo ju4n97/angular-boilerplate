@@ -69,7 +69,7 @@ This is a highly opinionated Angular starter designed to keep up with the latest
 >
 > 1. Create a new GitHub repository from this template.
 > 2. Clone this repository to start with a clean git history.
-> 3. Scaffold the project on StackBlitz.
+> 3. Scaffold a project fork on StackBlitz.
 
 ### Using the GitHub template
 
@@ -97,7 +97,7 @@ pnpm start
 
 ---
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://analogjs.org/new)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/juanmesa2097/angular-boilerplate)
 
 ## 📝 Checklist
 
