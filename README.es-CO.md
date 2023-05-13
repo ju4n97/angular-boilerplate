@@ -62,7 +62,30 @@ Este es un proyecto que se enfoca en las últimas características y mejores pr�
 - PNPM: <https://pnpm.io/es/>
 - Docker (opcional): <https://www.docker.com/>
 
-## 🏹 Iniciar desarrollo
+## 🤗 Contribución
+
+Este proyecto utiliza trunk-based development para el control de versiones y el proceso de despliegue. Trunk-based development es un enfoque de desarrollo que implica la integración continua de cambios en una única rama principal, conocida como el tronco. Para obtener más información sobre trunk-based development, puede visitar este [enlace](https://trunkbaseddevelopment.com/).
+
+Para comenzar a trabajar en una nueva característica, se deben seguir los siguientes pasos:
+
+1. Asegúrese de que existe un [issue](https://github.com/juanmesa2097/angular-boilerplate/issues) creado para la característica en la que va a trabajar.
+2. Asegúrese de que se encuentra en la rama principal:
+
+   ```sh
+   git checkout main
+   ```
+
+3. Cree una nueva rama a partir de la rama principal con el siguiente comando:
+
+   ```sh
+   git checkout -b nombre-de-la-rama
+   ```
+
+4. Desarrolle y pruebe su nueva característica en la rama recién creada.
+5. Una vez que la característica está lista, haga una [solicitud de extracción (pull request)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) para integrar los cambios en la rama principal.
+6. Si es necesario, haga ajustes en la característica y repita el proceso de revisión y solicitud de extracción.
+
+## 🏹 Comenzar un proyecto nuevo
 
 > **Nota:**
 > Tiene tres opciones para comenzar un nuevo proyecto basado en esta plantilla:

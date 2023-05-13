@@ -62,7 +62,30 @@ This opinionated Angular starter focuses on the latest Angular features and best
 - PNPM: <https://pnpm.io/es/>
 - Docker (optional): <https://www.docker.com/>
 
-## 🏹 Start development
+## 🤗 Contributing
+
+This project uses trunk-based development for version control and deployment process. Trunk-based development is a development approach that involves continuous integration of changes into a single main branch, known as the trunk. To learn more about trunk-based development, you can visit this [link](https://trunkbaseddevelopment.com/).
+
+To start working on a new feature, follow the steps below:
+
+1. Make sure there is an [issue](https://github.com/juanmesa2097/angular-boilerplate/issues) created for the feature you are going to work on.
+2. Make sure you are on the main branch:
+
+   ```sh
+   git checkout main
+   ```
+
+3. Create a new branch from the main branch using the following command:
+
+   ```sh
+   git checkout -b nombre-de-la-rama
+   ```
+
+4. Develop and test your new feature on the newly created branch.
+5. Once the feature is ready, make a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) to integrate the changes into the main branch.
+6. If necessary, make adjustments to the feature and repeat the review and pull request process.
+
+## 🏹 Start a new project
 
 > **Note:**
 > You have three options to start a new project based on this template:
