@@ -19,7 +19,7 @@
 
 <br>
 
-This is a highly opinionated Angular starter designed to keep up with the latest Angular features and best practices. It provides the bare minimum features necessary to remove unnecessary overhead and maintain flexibility and scalability. The goal is to maintain a lightweight codebase while providing a robust set of features. This approach allows other developers to choose the technologies they want to use, such as UI component libraries, state management, server-side rendering (SSR), etc. By keeping the boilerplate flexible, developers can easily customize the code and adapt it to their unique project needs.
+This opinionated Angular starter focuses on the latest Angular features and best practices. It offers essential features for flexibility and scalability, minimizing unnecessary overhead. The codebase is lightweight yet robust, allowing developers to choose their preferred technologies like UI component libraries, state management, server-side rendering, etc. Its flexible boilerplate enables easy customization and adaptation to unique project requirements.
 
 ## ⚗️ Features
 

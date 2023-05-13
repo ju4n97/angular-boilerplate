@@ -19,7 +19,7 @@
 
 <br>
 
-Este es un iniciador de Angular altamente imperativo diseñado para mantenerse al día con las últimas características y mejores prácticas de Angular. Proporciona las características mínimas necesarias para eliminar la sobrecarga innecesaria y mantener la flexibilidad y escalabilidad. El objetivo es mantener una base de código liviana mientras se proporciona un conjunto sólido de características. Este enfoque permite a otros desarrolladores elegir las tecnologías que desean utilizar, como bibliotecas de componentes de IU, gestión de estado, renderización del lado del servidor (SSR), etc. Al mantener el boilerplate flexible, los desarrolladores pueden personalizar fácilmente el código y adaptarlo a sus necesidades únicas del proyecto.
+Este es un proyecto de Angular que se enfoca en las últimas características y mejores prácticas de Angular. Ofrece características esenciales para flexibilidad y escalabilidad, minimizando la sobrecarga innecesaria. El código es liviano pero robusto, permitiendo a los desarrolladores elegir sus tecnologías preferidas, como bibliotecas de componentes de interfaz de usuario, gestión del estado, renderización en el servidor, etc. Su esquema flexible permite una personalización y adaptación sencilla a los requisitos únicos del proyecto.
 
 ## ⚗️ Features
 
