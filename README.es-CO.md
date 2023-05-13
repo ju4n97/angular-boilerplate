@@ -133,16 +133,17 @@ docker run --rm -p 8080:80 -d angular-boilerplate:latest
 
 ## 🧙‍♂️ Comandos
 
-| Comando         | Descripción                                                               | npm                     | yarn                     | pnpm                     |
-| --------------- | ------------------------------------------------------------------------- | ----------------------- | ------------------------ | ------------------------ |
-| `start`         | Inicia el servidor de desarrollo                                          | `npm start`             | `yarn start`             | `pnpm run start`         |
-| `build`         | Compila el código de producción                                           | `npm run build`         | `yarn build`             | `pnpm run build`         |
-| `watch`         | Compila el código de producción y lo vigila para detectar cambios         | `npm run watch`         | `yarn run watch`         | `pnpm run watch`         |
-| `test`          | Ejecuta las pruebas unitarias                                             | `npm run test`          | `yarn run test`          | `pnpm run test`          |
-| `test:headless` | Ejecuta las pruebas unitarias en modo sin cabeza                          | `npm run test:headless` | `yarn run test:headless` | `pnpm run test:headless` |
-| `lint`          | Ejecuta el linter                                                         | `npm run lint`          | `yarn run lint`          | `pnpm run lint`          |
-| `lint:fix`      | Ejecuta el linter y corrige cualquier error de lint                       | `npm run lint:fix`      | `yarn run lint:fix`      | `pnpm run lint:fix`      |
-| `lint:staged`   | Ejecuta el linter en los archivos en cola                                 | `npm run lint:staged`   | `yarn run lint:staged`   | `pnpm run lint:staged`   |
-| `stylelint`     | Ejecuta el linter de estilos                                              | `npm run stylelint`     | `yarn run stylelint`     | `pnpm run stylelint`     |
-| `stylelint:fix` | Ejecuta el linter de estilos y corrige cualquier error de lint de estilos | `npm run stylelint:fix` | `yarn run stylelint:fix` | `pnpm run stylelint:fix` |
-| `format`        | Formatea el código con Prettier                                           | `npm run format`        | `yarn run format`        | `pnpm run format`        |
+| Comando         | Descripción                                                               | npm                     | yarn                 | pnpm                 |
+| --------------- | ------------------------------------------------------------------------- | ----------------------- | -------------------- | -------------------- |
+| `dev`           | Inicia el servidor de desarrollo                                          | `npm start`             | `yarn start`         | `pnpm start`         |
+| `dev:host`      | Inicia el servidor de desarrollo con un host personalizado                | `npm start`             | `yarn start`         | `pnpm start`         |
+| `build`         | Compila el código de producción                                           | `npm run build`         | `yarn build`         | `pnpm build`         |
+| `watch`         | Compila el código de producción y lo vigila para detectar cambios         | `npm run watch`         | `yarn watch`         | `pnpm watch`         |
+| `test`          | Ejecuta las pruebas unitarias                                             | `npm run test`          | `yarn test`          | `pnpm test`          |
+| `test:headless` | Ejecuta las pruebas unitarias en modo sin cabeza                          | `npm run test:headless` | `yarn test:headless` | `pnpm test:headless` |
+| `lint`          | Ejecuta el linter                                                         | `npm run lint`          | `yarn lint`          | `pnpm lint`          |
+| `lint:fix`      | Ejecuta el linter y corrige cualquier error de lint                       | `npm run lint:fix`      | `yarn lint:fix`      | `pnpm lint:fix`      |
+| `lint:staged`   | Ejecuta el linter en los archivos en cola                                 | `npm run lint:staged`   | `yarn lint:staged`   | `pnpm lint:staged`   |
+| `stylelint`     | Ejecuta el linter de estilos                                              | `npm run stylelint`     | `yarn stylelint`     | `pnpm stylelint`     |
+| `stylelint:fix` | Ejecuta el linter de estilos y corrige cualquier error de lint de estilos | `npm run stylelint:fix` | `yarn stylelint:fix` | `pnpm stylelint:fix` |
+| `format`        | Formatea el código con Prettier                                           | `npm run format`        | `yarn format`        | `pnpm format`        |

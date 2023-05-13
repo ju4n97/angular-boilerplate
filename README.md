@@ -136,7 +136,7 @@ docker run --rm -p 8080:80 -d angular-boilerplate:latest
 | Command         | Description                                              | npm                     | yarn                 | pnpm                 |
 | --------------- | -------------------------------------------------------- | ----------------------- | -------------------- | -------------------- |
 | `dev`           | Starts the development server                            | `npm run dev`           | `yarn dev`           | `pnpm dev`           |
-| `dev:host`      | Starts the development server                            | `npm run dev`           | `yarn dev`           | `pnpm dev`           |
+| `dev:host`      | Starts the development server with a custom host         | `npm run dev`           | `yarn dev`           | `pnpm dev`           |
 | `build`         | Builds the production code                               | `npm run build`         | `yarn build`         | `pnpm build`         |
 | `watch`         | Builds the production code and watches for changes       | `npm run watch`         | `yarn watch`         | `pnpm watch`         |
 | `test`          | Runs the unit tests                                      | `npm run test`          | `yarn test`          | `pnpm test`          |
