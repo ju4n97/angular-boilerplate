@@ -1,16 +1,16 @@
 import { AppTheme } from '@lib/services/theme';
 
 type StorageObjectMap = {
-  'App/session': {
-    user: string;
-    token: string;
-  };
-  'App/theme': AppTheme;
+    appSession: {
+        user: string;
+        token: string;
+    };
+    appTheme: AppTheme;
 };
 
-export type StorageObjectType = 'App/session' | 'App/theme';
+export type StorageObjectType = 'appSession' | 'appTheme';
 
 export type StorageObjectData<T extends StorageObjectType> = {
-  type: T;
-  data: StorageObjectMap[T];
+    type: T;
+    data: StorageObjectMap[T];
 };

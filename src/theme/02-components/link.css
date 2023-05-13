@@ -1,16 +1,17 @@
 a.link {
-  @apply underline;
-  @apply text-indigo-500;
+    @apply font-semibold;
+    @apply text-indigo-500 dark:text-indigo-300;
 }
 
 a.link:hover {
-  @apply text-indigo-400;
+    @apply underline;
+    @apply text-indigo-400;
 }
 
 a.link:focus {
-  @apply text-indigo-800 dark:text-indigo-400;
+    @apply text-indigo-800 dark:text-indigo-400;
 }
 
 a.link:visited {
-  @apply text-rose-800 dark:text-rose-400;
+    @apply text-rose-500 dark:text-rose-400;
 }

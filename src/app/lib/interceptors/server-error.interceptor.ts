@@ -1,30 +1,27 @@
-import {
-  HttpErrorResponse,
-  HttpEvent,
-  HttpHandler,
-  HttpInterceptor,
-  HttpRequest,
-} from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { HttpErrorResponse, HttpInterceptorFn, HttpStatusCode } from '@angular/common/http';
+import { inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable, throwError } from 'rxjs';
+import { throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
-@Injectable()
-export class ServerErrorInterceptor implements HttpInterceptor {
-  constructor(private _router: Router) {}
+/**
+ * Interceptor that handles server errors.
+ *
+ * @param request The request object.
+ * @param next The next interceptor in the chain.
+ *
+ * @returns The next Observable.
+ */
+export const serverErrorInterceptor: HttpInterceptorFn = (request, next) => {
+    const router = inject(Router);
 
-  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    return next.handle(request).pipe(
-      catchError((error: HttpErrorResponse) => {
-        if ([401, 403].includes(error.status)) {
-          this._router.navigateByUrl('/auth/login');
-          return throwError(() => error);
-        } else {
-          console.error(error);
-          return throwError(() => error);
-        }
-      }),
+    return next(request).pipe(
+        catchError((error: HttpErrorResponse) => {
+            if ([HttpStatusCode.Unauthorized, HttpStatusCode.Forbidden].includes(error.status)) {
+                router.navigateByUrl('/auth/login');
+            }
+
+            return throwError(() => error);
+        }),
     );
-  }
-}
+};

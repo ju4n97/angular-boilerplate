@@ -1,120 +1,149 @@
+<p align="center">
+  <img src="https://api.iconify.design/logos:angular-icon.svg" alt="Angular brand" width="100" height="100"/>
+</p>
+
 <h1 align="center">Angular Boilerplate</h1>
 
-<p align="center">
-  <img src="https://img.icons8.com/ios-filled/150/000000/angularjs.png" alt="angular-logo" width="120px" height="120px"/>
-  <br>
-  <i>Lightweight & minimalistic Angular starter</i>
-  <br>
+<br>
+
+<p align='center'>
+  <a href="https://angularboilerplate.vercel.app/">Live site (Demo)</a>
 </p>
 
-<p align="center">
-  <a href="https://angularboilerplate.vercel.app"><strong>https://angularboilerplate.vercel.app</strong></a>
-  <br>
+<br>
+
+<p align='center'>
+  <strong>English</strong> |
+  <a href="https://github.com/juanmesa2097/angular-boilerplate/blob/main/README.es-CO.md">Español</a>
 </p>
 
-<p align="center">
-  <a href="CONTRIBUTING.md">Contributing Guidelines</a>
-  ·
-  <a href="https://github.com/juanmesa2097/angular-boilerplate/issues">Submit an Issue</a>
-  <br>
-  <br>
-</p>
-<hr>
+<br>
+
+This is a highly opinionated Angular starter designed to keep up with the latest Angular features and best practices. It provides the bare minimum features necessary to remove unnecessary overhead and maintain flexibility and scalability. The goal is to maintain a lightweight codebase while providing a robust set of features. This approach allows other developers to choose the technologies they want to use, such as UI component libraries, state management, server-side rendering (SSR), etc. By keeping the boilerplate flexible, developers can easily customize the code and adapt it to their unique project needs.
 
 ## ⚗️ Features
 
-- Lazy loading
-- Standalone components
-- OS/Light/Dark modes
-- Strongly-typed storage
-- TailwindCSS
+- [Angular 16](https://angular.io/docs)
+- [PNPM](https://pnpm.io/), [esbuild](https://esbuild.github.io/)
+- [Standalone components](https://angular.io/guide/standalone-components)
+- [Signals](https://angular.io/guide/signals)
+- [Lazy loading](https://angular.io/guide/lazy-loading-ngmodules)
+- [PWA](https://angular.io/guide/service-worker-getting-started)
+- [I18n](https://ngneat.github.io/transloco/)
+- [TailwindCSS](https://tailwindcss.com/)
+- OS/Light/Dark themes
+- Lightweight, fast, and built using state-of-the-art technology.
 
-## 🛠️ Tweaks
+## ✅ Ready-to-use
 
-- TailwindCSS configuration:
+### UI Frameworks
 
-  You can find the `tailwind.config.js` file in the project root, then you can refer to https://tailwindcss.com/docs/configuration to learn how to make your own adjustments.
+- [TailwindCSS](https://tailwindcss.com/)
 
-- Set default theme (first time load)
+### Icons
 
-  Go to `src\app\lib\constants.ts` and choose the default theme.
+- [Iconify](https://iconify.design) - use icons from any icon sets [🔍Icônes](https://icones.netlify.app/).
+- [@iconify/tailwind](https://docs.iconify.design/usage/css/tailwind/) - Pure CSS icons.
 
-  OS preference
+### Add-ons
 
-  ```ts
-  export const DEFAULT_BASE_THEME: AppTheme = 'system' as const;
-  ```
+- <https://github.com/ngneat/transloco>
+- <https://github.com/tailwindlabs/tailwindcss>
+  - <https://github.com/tailwindlabs/tailwindcss-aspect-ratio>
+  - <https://github.com/tailwindlabs/tailwindcss-forms>
+  - <https://github.com/tailwindlabs/tailwindcss-typography>
+  - <https://github.com/tailwindlabs/prettier-plugin-tailwindcss>
+- <https://github.com/iconify/iconify>
+  - <https://github.com/iconify/iconify/tree/main/plugins/tailwind>
 
-  Light mode
+## ⚙ Prerequisites
 
-  ```ts
-  export const DEFAULT_BASE_THEME: AppTheme = 'light' as const;
-  ```
+- Node.js ([^16.14.0 || ^18.10.0](https://angular.io/guide/versions)): <https://nodejs.org/en/>
+- PNPM: <https://pnpm.io/es/>
+- Docker (optional): <https://www.docker.com/>
 
-  Dark mode
+## 🏹 Start development
 
-  ```ts
-  export const DEFAULT_BASE_THEME: AppTheme = 'dark' as const;
-  ```
+> **Note:**
+> You have three options to start a new project based on this template:
+>
+> 1. Create a new GitHub repository from this template.
+> 2. Clone this repository to start with a clean git history.
+> 3. Scaffold a project fork on StackBlitz.
 
-- Enable a new local/session storage item
+### Using the GitHub template
 
-  Go to `src\app\lib\utils\storage\storage.types.ts` and add a new item name in the `StorageObjectType` type and a new key value pair in the `StorageObjectMap` type.
+[Create a repo from this template on GitHub](https://github.com/juanmesa2097/angular-boilerplate/generate).
 
-  ![image](https://user-images.githubusercontent.com/64181348/173276010-a4b95a63-2fe0-4104-9b09-34eeea5f0025.png)
+---
 
-  After that, you can use the new item.
-  ![image](https://user-images.githubusercontent.com/64181348/173276575-09322722-387d-4c20-95af-fa9915079e3a.png)
+### Cloning the repository locally
 
-## ⛩️ Project structure
+```sh
+npx degit juanmesa2097/angular-boilerplate my-app && cd my-app && ./scripts/rename_project.sh my-app
+```
 
-```console
-├───app
-│   ├───lib
-│   │   ├───components
-│   │   │   ├───footer
-│   │   │   ├───layouts
-│   │   │   │   └───layout-horizontal
-│   │   │   ├───logo
-│   │   │   └───navbar
-│   │   ├───guards
-│   │   ├───interceptors
-│   │   ├───interfaces
-│   │   ├───enums
-│   │   ├───services
-│   │   │   ├───auth
-│   │   │   └───theme
-│   │   └───utils
-│   │       └───storage
-│   └───pages
-│       ├───auth
-│       │   ├───login
-│       │   └───register
-│       ├───home
-│       ├───profile
-│       ├───screens
-│       │   └───not-found
-│       └───settings
-│           ├───accessibility
-│           ├───account
-│           └───appearance
-├───assets
-├───environments
-└───theme
-    ├───01-base
-    ├───02-components
-    ├───03-utilities
-    └───tailwindcss
+### Install dependencies
+
+```sh
+pnpm install # run `pnpm install -g pnpm` if you don't have pnpm installed
+```
+
+### Run project
+
+```sh
+pnpm dev
+```
+
+---
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/juanmesa2097/angular-boilerplate)
+
+## 📝 Checklist
+
+Please review this checklist and modify it as necessary to meet your project requirements.
+
+- [ ] Run the `./scripts/rename_project.sh` script to rename the project.
+- [ ] Change the title in `src/index.html` and the favicon in `src/favicon.ico` to match your project.
+- [ ] Decide whether to continue using [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks) and [lint-staged](https://github.com/okonet/lint-staged) for your project.
+- [ ] Clean up the README file to provide clear instructions about your project.
+- [ ] Modify the pages in the project to meet your specific requirements.
+
+## 📦 Deploy to Vercel
+
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/juanmesa2097/angular-boilerplate)
+
+## 📦 Deploy to Netlify
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/juanmesa2097/angular-boilerplate)
+
+## 🐳 Docker
+
+Create an image of the project.
+
+```sh
+docker buildx build -t angular-boilerplate:latest .
+```
+
+Run the image of the project.
+
+```sh
+docker run --rm -p 8080:80 -d angular-boilerplate:latest
 ```
 
 ## 🧙‍♂️ Commands
 
-| Command  | Description                                                 | NPM              | Yarn          | PNPM          | Background command                              |
-| -------- | ----------------------------------------------------------- | ---------------- | ------------- | ------------- | ----------------------------------------------- |
-| ng       | See available commands                                      | npm run ng       | yarn ng       | pnpm ng       | ng                                              |
-| start    | Run app in development mode                                 | npm start        | yarn start    | pnpm start    | ng serve                                        |
-| build    | Build app for production                                    | npm run build    | yarn build    | pnpm build    | ng build                                        |
-| watch    | Run build when files change                                 | npm run watch    | yarn watch    | pnpm watch    | ng build --watch --configuration development    |
-| test     | Run unit tests                                              | npm run test     | yarn test     | pnpm test     | ng test                                         |
-| test:run | Run unit tests with headless browser and without watch mode | npm run test:run | yarn test:run | pnpm test:run | ng test --watch=false --browsers ChromeHeadless |
-| lint     | Lint code                                                   | npm run lint     | yarn lint     | pnpm lint     | ng lint                                         |
+| Command         | Description                                              | npm                     | yarn                 | pnpm                 |
+| --------------- | -------------------------------------------------------- | ----------------------- | -------------------- | -------------------- |
+| `dev`           | Starts the development server                            | `npm run dev`           | `yarn dev`           | `pnpm dev`           |
+| `dev:host`      | Starts the development server with a custom host         | `npm run dev`           | `yarn dev`           | `pnpm dev`           |
+| `build`         | Builds the production code                               | `npm run build`         | `yarn build`         | `pnpm build`         |
+| `watch`         | Builds the production code and watches for changes       | `npm run watch`         | `yarn watch`         | `pnpm watch`         |
+| `test`          | Runs the unit tests                                      | `npm run test`          | `yarn test`          | `pnpm test`          |
+| `test:headless` | Runs the unit tests in headless mode                     | `npm run test:headless` | `yarn test:headless` | `pnpm test:headless` |
+| `lint`          | Runs the linter                                          | `npm run lint`          | `yarn lint`          | `pnpm lint`          |
+| `lint:fix`      | Runs the linter and fixes any linting errors             | `npm run lint:fix`      | `yarn lint:fix`      | `pnpm lint:fix`      |
+| `lint:staged`   | Runs the linter on staged files                          | `npm run lint:staged`   | `yarn lint:staged`   | `pnpm lint:staged`   |
+| `stylelint`     | Runs the style linter                                    | `npm run stylelint`     | `yarn stylelint`     | `pnpm stylelint`     |
+| `stylelint:fix` | Runs the style linter and fixes any style linting errors | `npm run stylelint:fix` | `yarn stylelint:fix` | `pnpm stylelint:fix` |
+| `format`        | Formats the code with prettier                           | `npm run format`        | `yarn format`        | `pnpm format`        |

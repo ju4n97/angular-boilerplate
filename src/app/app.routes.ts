@@ -1,34 +1,29 @@
 import { Routes } from '@angular/router';
-import { AuthGuard, NoAuthGuard } from '@lib/guards';
+import { authGuard } from '@lib/guards';
 
 export const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full',
-  },
-  {
-    path: 'auth',
-    loadChildren: async () => (await import('@pages/auth/auth.routes')).ROUTES,
-    canLoad: [NoAuthGuard],
-  },
-  {
-    path: 'home',
-    loadChildren: async () => (await import('@pages/home/home.routes')).ROUTES,
-    canLoad: [AuthGuard],
-  },
-  {
-    path: ':username',
-    loadChildren: async () => (await import('@pages/profile/profile.routes')).ROUTES,
-    canLoad: [AuthGuard],
-  },
-  {
-    path: 'settings',
-    loadChildren: async () => (await import('@pages/settings/settings.routes')).ROUTES,
-    canLoad: [AuthGuard],
-  },
-  {
-    path: '**',
-    loadComponent: async () => (await import('@pages/screens/not-found/not-found.page')).NotFoundPage,
-  },
+    {
+        path: 'auth',
+        loadChildren: async () => (await import('@pages/auth')).routes,
+        canMatch: [authGuard({ requiresAuthentication: false })],
+    },
+    {
+        path: '',
+        loadChildren: async () => (await import('@pages/home')).routes,
+        canMatch: [authGuard()],
+    },
+    {
+        path: 'users/:username',
+        loadChildren: async () => (await import('@pages/user')).routes,
+        canMatch: [authGuard()],
+    },
+    {
+        path: 'settings',
+        loadChildren: async () => (await import('@pages/settings')).routes,
+        canMatch: [authGuard()],
+    },
+    {
+        path: '**',
+        loadComponent: async () => (await import('@pages/screens/not-found/not-found.component')).NotFoundComponent,
+    },
 ];

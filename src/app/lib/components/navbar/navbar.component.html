@@ -1,13 +1,31 @@
 <header class="w-full py-2 z-20 bg-white/20 dark:bg-zinc-900/40 backdrop-blur border-b border-base">
-  <div class="container flex items-center justify-between h-full mx-auto center">
-    <app-logo></app-logo>
+    <div class="container flex items-center justify-between h-full mx-auto center">
+        <app-logo></app-logo>
 
-    <nav class="flex items-center space-x-2">
-      <button (click)="onClickSignOut()" class="btn btn-secondary">
-        <!-- prettier-ignore -->
-        <svg class xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--material-symbols" width="22" height="22" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M15.325 16.275q-.275-.325-.275-.738q0-.412.275-.687l1.85-1.85H10q-.425 0-.712-.288Q9 12.425 9 12t.288-.713Q9.575 11 10 11h7.175l-1.85-1.85q-.3-.3-.3-.712q0-.413.3-.713q.275-.3.688-.3q.412 0 .687.275l3.6 3.6q.15.15.213.325q.062.175.062.375t-.062.375q-.063.175-.213.325l-3.6 3.6q-.325.325-.712.287q-.388-.037-.663-.312ZM5 21q-.825 0-1.413-.587Q3 19.825 3 19V5q0-.825.587-1.413Q4.175 3 5 3h6q.425 0 .713.287Q12 3.575 12 4t-.287.712Q11.425 5 11 5H5v14h6q.425 0 .713.288q.287.287.287.712t-.287.712Q11.425 21 11 21Z"></path></svg>
-        <span class="ml-2">Log out</span>
-      </button>
-    </nav>
-  </div>
+        <nav class="flex items-center space-x-2">
+            <button
+                class="btn btn-secondary"
+                (click)="onClickSignOut()"
+            >
+                <svg
+                    class
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    aria-hidden="true"
+                    role="img"
+                    class="iconify iconify--material-symbols"
+                    width="22"
+                    height="22"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        fill="currentColor"
+                        d="M15.325 16.275q-.275-.325-.275-.738q0-.412.275-.687l1.85-1.85H10q-.425 0-.712-.288Q9 12.425 9 12t.288-.713Q9.575 11 10 11h7.175l-1.85-1.85q-.3-.3-.3-.712q0-.413.3-.713q.275-.3.688-.3q.412 0 .687.275l3.6 3.6q.15.15.213.325q.062.175.062.375t-.062.375q-.063.175-.213.325l-3.6 3.6q-.325.325-.712.287q-.388-.037-.663-.312ZM5 21q-.825 0-1.413-.587Q3 19.825 3 19V5q0-.825.587-1.413Q4.175 3 5 3h6q.425 0 .713.287Q12 3.575 12 4t-.287.712Q11.425 5 11 5H5v14h6q.425 0 .713.288q.287.287.287.712t-.287.712Q11.425 21 11 21Z"
+                    ></path>
+                </svg>
+                <span class="ml-2">Log out</span>
+            </button>
+        </nav>
+    </div>
 </header>

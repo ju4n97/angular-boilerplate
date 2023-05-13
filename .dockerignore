@@ -1,0 +1,59 @@
+# Ignore node_modules
+node_modules
+
+# Ignore any file or directory that starts with a dot
+.*
+
+# Ignore development files
+*.log
+*.swp
+*.bak
+*.backup
+*.tmp
+
+# Ignore test files
+test
+tests
+*.test.*
+*.spec.*
+
+# Ignore build files
+dist
+build
+*.map
+*.tsbuildinfo
+
+# Ignore package manager cache
+.pnpm-store
+.yarn-cache
+
+# Ignore configuration files
+/envs
+
+# Ignore editor files
+.vscode
+.idea
+*.iml
+
+# Ignore Github files
+.github
+
+# Ignore k8s files
+/charts
+
+# Ignore documentation files
+CHANGELOG
+LICENSE
+AUTHORS
+CONTRIBUTORS
+
+# Ignore version control files
+.git
+.gitignore
+.svn
+.hg
+.bzr
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db

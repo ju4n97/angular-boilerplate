@@ -3,20 +3,20 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { LayoutHorizontalComponent } from './layout-horizontal.component';
 
 describe('LayoutHorizontalComponent', () => {
-  let component: LayoutHorizontalComponent;
-  let fixture: ComponentFixture<LayoutHorizontalComponent>;
+    let component: LayoutHorizontalComponent;
+    let fixture: ComponentFixture<LayoutHorizontalComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [LayoutHorizontalComponent, RouterTestingModule],
-    }).compileComponents();
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            imports: [LayoutHorizontalComponent, RouterTestingModule],
+        }).compileComponents();
 
-    fixture = TestBed.createComponent(LayoutHorizontalComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+        fixture = TestBed.createComponent(LayoutHorizontalComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });

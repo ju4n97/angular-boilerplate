@@ -1,6 +1,18 @@
-node_modules/*
-package.json
+.DS_Store
+node_modules
+/build
+**/build
+/dist
+**/dist
+.env
+.env.*
+!.env.example
+__generated__
+
+# Ignore files for PNPM, NPM and YARN
+pnpm-lock.yaml
 package-lock.json
 yarn.lock
-pnpm-lock.yaml
-dist
+
+# Ignore test coverage
+**/coverage

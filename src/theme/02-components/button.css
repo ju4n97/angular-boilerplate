@@ -1,32 +1,32 @@
 .btn {
-  @apply w-full md:w-auto;
-  @apply border border-transparent rounded-lg outline-none;
-  @apply h-10 min-w-[80px] py-2 px-3;
-  @apply relative inline-flex items-center justify-center;
-  @apply text-sm text-center font-medium leading-none;
-  @apply select-none cursor-pointer;
+    @apply w-full md:w-auto;
+    @apply border border-transparent rounded-lg outline-none;
+    @apply h-10 min-w-[80px] py-2 px-3;
+    @apply relative inline-flex items-center justify-center;
+    @apply text-sm text-center font-medium leading-none;
+    @apply select-none cursor-pointer;
 }
 
 .btn:disabled {
-  @apply opacity-80 cursor-not-allowed;
+    @apply opacity-80 cursor-not-allowed;
 }
 
 .btn:not(:disabled):hover {
-  @apply bg-opacity-80;
+    @apply bg-opacity-80;
 }
 
 .btn:not(:disabled):focus {
-  @apply ring-2 ring-gray-400 ring-offset-2 dark:ring-zinc-700;
+    @apply ring-2 ring-gray-400 ring-offset-2 dark:ring-zinc-700;
 }
 
 .btn-fit {
-  @apply min-w-fit;
+    @apply min-w-fit;
 }
 
 .btn-secondary {
-  @apply bg-zinc-200 text-zinc-900 dark:bg-zinc-700 dark:text-white;
+    @apply bg-zinc-200 text-zinc-900 dark:bg-zinc-700 dark:text-white;
 }
 
 .btn-primary {
-  @apply bg-blue-500 text-white;
+    @apply bg-blue-500 text-white;
 }
