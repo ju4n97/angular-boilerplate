@@ -69,7 +69,7 @@ Este es un iniciador de Angular altamente imperativo diseñado para mantenerse a
 >
 > 1. Crear un nuevo repositorio de GitHub a partir de esta plantilla.
 > 2. Clonar este repositorio para comenzar con un historial de git limpio.
-> 3. Crear nuevo proyecto en StackBlitz.
+> 3. Crear un fork del proyecto en StackBlitz.
 
 ### Utilizando plantilla de GitHub
 
