@@ -92,7 +92,7 @@ pnpm install # run `pnpm install -g pnpm` if you don't have pnpm installed
 ### Ejecutar proyecto
 
 ```sh
-pnpm start
+pnpm dev
 ```
 
 ---
@@ -122,7 +122,7 @@ Por favor revise esta lista de verificación y modifíquela según sea necesario
 Crear una imagen del proyecto.
 
 ```sh
-docker build -t angular-boilerplate:latest .
+docker buildx build -t angular-boilerplate:latest .
 ```
 
 Ejecutar la imagen del proyecto.

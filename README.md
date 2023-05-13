@@ -92,7 +92,7 @@ pnpm install # run `pnpm install -g pnpm` if you don't have pnpm installed
 ### Run project
 
 ```sh
-pnpm start
+pnpm dev
 ```
 
 ---
@@ -122,7 +122,7 @@ Please review this checklist and modify it as necessary to meet your project req
 Create an image of the project.
 
 ```sh
-docker build -t angular-boilerplate:latest .
+docker buildx build -t angular-boilerplate:latest .
 ```
 
 Run the image of the project.
@@ -133,16 +133,17 @@ docker run --rm -p 8080:80 -d angular-boilerplate:latest
 
 ## 🧙‍♂️ Commands
 
-| Command         | Description                                              | npm                     | yarn                     | pnpm                     |
-| --------------- | -------------------------------------------------------- | ----------------------- | ------------------------ | ------------------------ |
-| `start`         | Starts the development server                            | `npm start`             | `yarn start`             | `pnpm run start`         |
-| `build`         | Builds the production code                               | `npm run build`         | `yarn build`             | `pnpm run build`         |
-| `watch`         | Builds the production code and watches for changes       | `npm run watch`         | `yarn run watch`         | `pnpm run watch`         |
-| `test`          | Runs the unit tests                                      | `npm run test`          | `yarn run test`          | `pnpm run test`          |
-| `test:headless` | Runs the unit tests in headless mode                     | `npm run test:headless` | `yarn run test:headless` | `pnpm run test:headless` |
-| `lint`          | Runs the linter                                          | `npm run lint`          | `yarn run lint`          | `pnpm run lint`          |
-| `lint:fix`      | Runs the linter and fixes any linting errors             | `npm run lint:fix`      | `yarn run lint:fix`      | `pnpm run lint:fix`      |
-| `lint:staged`   | Runs the linter on staged files                          | `npm run lint:staged`   | `yarn run lint:staged`   | `pnpm run lint:staged`   |
-| `stylelint`     | Runs the style linter                                    | `npm run stylelint`     | `yarn run stylelint`     | `pnpm run stylelint`     |
-| `stylelint:fix` | Runs the style linter and fixes any style linting errors | `npm run stylelint:fix` | `yarn run stylelint:fix` | `pnpm run stylelint:fix` |
-| `format`        | Formats the code with prettier                           | `npm run format`        | `yarn run format`        | `pnpm run format`        |
+| Command         | Description                                              | npm                     | yarn                 | pnpm                 |
+| --------------- | -------------------------------------------------------- | ----------------------- | -------------------- | -------------------- |
+| `dev`           | Starts the development server                            | `npm run dev`           | `yarn dev`           | `pnpm dev`           |
+| `dev:host`      | Starts the development server                            | `npm run dev`           | `yarn dev`           | `pnpm dev`           |
+| `build`         | Builds the production code                               | `npm run build`         | `yarn build`         | `pnpm build`         |
+| `watch`         | Builds the production code and watches for changes       | `npm run watch`         | `yarn watch`         | `pnpm watch`         |
+| `test`          | Runs the unit tests                                      | `npm run test`          | `yarn test`          | `pnpm test`          |
+| `test:headless` | Runs the unit tests in headless mode                     | `npm run test:headless` | `yarn test:headless` | `pnpm test:headless` |
+| `lint`          | Runs the linter                                          | `npm run lint`          | `yarn lint`          | `pnpm lint`          |
+| `lint:fix`      | Runs the linter and fixes any linting errors             | `npm run lint:fix`      | `yarn lint:fix`      | `pnpm lint:fix`      |
+| `lint:staged`   | Runs the linter on staged files                          | `npm run lint:staged`   | `yarn lint:staged`   | `pnpm lint:staged`   |
+| `stylelint`     | Runs the style linter                                    | `npm run stylelint`     | `yarn stylelint`     | `pnpm stylelint`     |
+| `stylelint:fix` | Runs the style linter and fixes any style linting errors | `npm run stylelint:fix` | `yarn stylelint:fix` | `pnpm stylelint:fix` |
+| `format`        | Formats the code with prettier                           | `npm run format`        | `yarn format`        | `pnpm format`        |
