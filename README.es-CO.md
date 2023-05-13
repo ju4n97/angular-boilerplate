@@ -19,7 +19,7 @@
 
 <br>
 
-Este es un proyecto de Angular que se enfoca en las últimas características y mejores prácticas de Angular. Ofrece características esenciales para flexibilidad y escalabilidad, minimizando la sobrecarga innecesaria. El código es liviano pero robusto, permitiendo a los desarrolladores elegir sus tecnologías preferidas, como bibliotecas de componentes de interfaz de usuario, gestión del estado, renderización en el servidor, etc. Su esquema flexible permite una personalización y adaptación sencilla a los requisitos únicos del proyecto.
+Este es un proyecto que se enfoca en las últimas características y mejores prácticas de Angular. Ofrece características esenciales para flexibilidad y escalabilidad, minimizando la sobrecarga innecesaria. El código es liviano pero robusto, permitiendo a los desarrolladores elegir sus tecnologías preferidas, como bibliotecas de componentes de interfaz de usuario, gestión del estado, renderización en el servidor, etc. Su esquema flexible permite una personalización y adaptación sencilla a los requisitos únicos del proyecto.
 
 ## ⚗️ Features
 
