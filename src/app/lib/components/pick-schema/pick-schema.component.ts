@@ -1,12 +1,20 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { provideI18nInlineLoader } from '@lib/i18n';
+import { TranslocoModule } from '@ngneat/transloco';
 import { ThemeSchema, ThemeService } from '../../services/theme';
 
 @Component({
     selector: 'app-pick-schema',
     standalone: true,
-    imports: [CommonModule, FormsModule],
+    imports: [CommonModule, TranslocoModule, FormsModule],
+    providers: [
+        provideI18nInlineLoader((lang) => import(`./i18n/${lang}.json`), {
+            scope: 'components/pick-schema',
+            alias: 'pick-schema',
+        }),
+    ],
     templateUrl: './pick-schema.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })

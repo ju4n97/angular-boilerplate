@@ -1,32 +1,34 @@
-<section>
-    <div>
-        <h3>Settings</h3>
+<ng-container *transloco="let t">
+    <section>
+        <div>
+            <h3>{{ t('home.sections.settings.title') }}</h3>
 
-        <ul>
-            <li>
-                <a
-                    class="link text-sm"
-                    [routerLink]="'/settings/accessibility'"
-                >
-                    Accessibility
-                </a>
-            </li>
-            <li>
-                <a
-                    class="link text-sm"
-                    [routerLink]="'/settings/account'"
-                >
-                    Account
-                </a>
-            </li>
-            <li>
-                <a
-                    class="link text-sm"
-                    [routerLink]="'/settings/appearance'"
-                >
-                    Appearance
-                </a>
-            </li>
-        </ul>
-    </div>
-</section>
+            <ul>
+                <li>
+                    <a
+                        class="link text-sm"
+                        [routerLink]="'/settings/accessibility'"
+                    >
+                        {{ t('home.sections.settings.items.accessibility') }}
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="link text-sm"
+                        [routerLink]="'/settings/account'"
+                    >
+                        {{ t('home.sections.settings.items.account') }}
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="link text-sm"
+                        [routerLink]="'/settings/appearance'"
+                    >
+                        {{ t('home.sections.settings.items.appearance') }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</ng-container>

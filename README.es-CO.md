@@ -24,7 +24,7 @@ Este es un proyecto que se enfoca en las últimas características y mejores pr�
 ## ⚗️ Features
 
 - [Angular 16](https://angular.io/docs)
-- [PNPM](https://pnpm.io/), [esbuild](https://esbuild.github.io/)
+- [PNPM](https://pnpm.io/)
 - [Components independientes](https://angular.io/guide/standalone-components)
 - [Señales](https://angular.io/guide/signals)
 - [Carga diferida](https://angular.io/guide/lazy-loading-ngmodules)

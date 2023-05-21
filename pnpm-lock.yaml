@@ -31,6 +31,9 @@ dependencies:
   '@ngneat/transloco':
     specifier: 4.2.7
     version: 4.2.7(@angular/core@16.0.2)(fs-extra@11.1.1)(glob@10.2.5)(rxjs@7.8.1)
+  '@ngneat/transloco-persist-lang':
+    specifier: ^4.0.0
+    version: 4.0.0(@angular/core@16.0.2)(@ngneat/transloco@4.2.7)(rxjs@7.8.1)
   rxjs:
     specifier: ~7.8.1
     version: 7.8.1
@@ -2276,6 +2279,19 @@ packages:
   /@leichtgewicht/ip-codec@2.0.4:
     resolution: {integrity: sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==}
     dev: true
+
+  /@ngneat/transloco-persist-lang@4.0.0(@angular/core@16.0.2)(@ngneat/transloco@4.2.7)(rxjs@7.8.1):
+    resolution: {integrity: sha512-OpYph1obkcB9clC5JGUMkD/Bb8n/jLYkqYUEOHf7/Y/0LcJpLiSTydN99+UhTND03uKAzDcP0WaQvAZaPnXxrw==}
+    peerDependencies:
+      '@angular/core': '>=13.0.0'
+      '@ngneat/transloco': '>=4.0.0'
+      rxjs: '>=6.0.0'
+    dependencies:
+      '@angular/core': 16.0.2(rxjs@7.8.1)(zone.js@0.13.0)
+      '@ngneat/transloco': 4.2.7(@angular/core@16.0.2)(fs-extra@11.1.1)(glob@10.2.5)(rxjs@7.8.1)
+      rxjs: 7.8.1
+      tslib: 2.5.2
+    dev: false
 
   /@ngneat/transloco-utils@3.0.5:
     resolution: {integrity: sha512-Xn9GaLUocXSPMhErNHbUyoloDm9sb+JaYszZJFL9F8em6frPQDSJxcYk9pV0caWpAU8INlksJSYgx1LXAH18mw==}

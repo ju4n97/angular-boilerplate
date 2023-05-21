@@ -24,7 +24,7 @@ This opinionated Angular starter focuses on the latest Angular features and best
 ## ⚗️ Features
 
 - [Angular 16](https://angular.io/docs)
-- [PNPM](https://pnpm.io/), [esbuild](https://esbuild.github.io/)
+- [PNPM](https://pnpm.io/)
 - [Standalone components](https://angular.io/guide/standalone-components)
 - [Signals](https://angular.io/guide/signals)
 - [Lazy loading](https://angular.io/guide/lazy-loading-ngmodules)

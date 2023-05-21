@@ -2,9 +2,9 @@
     [cdkMenuTriggerFor]="menu"
     class="button"
 >
-    <span class="{{ currentLanguage().flag }} !text-2xl"></span>
+    <span class="{{ currentLang().flag }} !text-2xl"></span>
 
-    {{ currentLanguage().title }}
+    {{ currentLang().label }}
 
     <span class="icon-[bx--bxs-chevron-down] ml-2 !text-lg"></span>
 </button>
@@ -12,15 +12,15 @@
 <ng-template #menu>
     <div cdkMenu>
         <button
-            *ngFor="let language of availableLanguages"
+            *ngFor="let lang of availableLangs"
             class="flex items-center gap-2"
             cdkMenuItemRadio
-            [cdkMenuItemChecked]="language.name === currentLanguage().name"
-            (cdkMenuItemTriggered)="handleLanguageChange(language.name)"
+            [cdkMenuItemChecked]="lang.id === currentLang().id"
+            (cdkMenuItemTriggered)="handleLanguageChange(lang.id)"
         >
-            <span class="{{ language.flag }} text-xl"></span>
+            <span class="{{ lang.flag }} text-xl"></span>
 
-            {{ language.title | titlecase }}
+            {{ lang.label | titlecase }}
         </button>
     </div>
 </ng-template>

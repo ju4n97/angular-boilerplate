@@ -36,13 +36,13 @@
                 cdkMenuItem
                 routerLink="/settings/account"
             >
-                Profile
+                {{ 'account-menu.profile' | transloco }}
             </a>
             <a
                 cdkMenuItem
                 routerLink="/settings/appearance"
             >
-                Settings
+                {{ 'account-menu.settings' | transloco }}
             </a>
 
             <hr class="divider" />
@@ -53,7 +53,7 @@
                 class="flex items-center gap-2"
             >
                 <span class="icon-[ph--lifebuoy-duotone] text-xl"></span>
-                Help center
+                {{ 'account-menu.helpCenter' | transloco }}
             </a>
             <a
                 cdkMenuItem
@@ -61,7 +61,7 @@
                 class="flex items-center gap-2"
             >
                 <span class="icon-[ph--git-branch-duotone] text-xl"></span>
-                Submit a feature
+                {{ 'account-menu.submitFeature' | transloco }}
             </a>
             <a
                 cdkMenuItem
@@ -69,7 +69,7 @@
                 class="flex items-center gap-2"
             >
                 <span class="icon-[ph--chat-dots-duotone] text-xl"></span>
-                Open a discussion
+                {{ 'account-menu.openDiscussion' | transloco }}
             </a>
 
             <hr class="divider" />
@@ -87,7 +87,7 @@
             >
                 <span class="icon-[solar--logout-line-duotone] text-xl"></span>
 
-                Logout
+                {{ 'account-menu.logout' | transloco }}
             </button>
         </div>
     </ng-template>

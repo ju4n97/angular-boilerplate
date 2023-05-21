@@ -1,21 +1,23 @@
-<button
-    [cdkMenuTriggerFor]="menu"
-    class="button"
->
-    <span class="icon-[iconoir--font-size]"></span>
+<ng-container *transloco="let t">
+    <button
+        [cdkMenuTriggerFor]="menu"
+        class="button"
+    >
+        <span class="icon-[iconoir--font-size]"></span>
 
-    {{ currentFontSize() | titlecase }}
-</button>
+        {{ t('pick-font-size.' + currentFontSize()) }}
+    </button>
 
-<ng-template #menu>
-    <div cdkMenu>
-        <button
-            *ngFor="let fontSize of availableFontSizes"
-            cdkMenuItemRadio
-            [cdkMenuItemChecked]="fontSize === currentFontSize()"
-            (cdkMenuItemTriggered)="handleFontSizeChange(fontSize)"
-        >
-            {{ fontSize | titlecase }}
-        </button>
-    </div>
-</ng-template>
+    <ng-template #menu>
+        <div cdkMenu>
+            <button
+                *ngFor="let fontSize of availableFontSizes"
+                cdkMenuItemRadio
+                [cdkMenuItemChecked]="fontSize === currentFontSize()"
+                (cdkMenuItemTriggered)="handleFontSizeChange(fontSize)"
+            >
+                {{ t('pick-font-size.' + fontSize) }}
+            </button>
+        </div>
+    </ng-template>
+</ng-container>
