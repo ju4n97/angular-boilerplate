@@ -12,25 +12,29 @@ import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 export class PickLanguageComponent {
     availableLanguages = [
         {
-            name: 'English',
+            name: 'en',
+            title: 'English',
             flag: 'icon-[emojione--flag-for-united-states]',
         },
         {
-            name: 'Español',
+            name: 'es',
+            title: 'Español',
             flag: 'icon-[emojione--flag-for-colombia]',
         },
         {
-            name: 'Japanese',
+            name: 'ja',
+            title: 'Japanese',
             flag: 'icon-[emojione--flag-for-japan]',
         },
     ];
 
     currentLanguage = signal({
-        name: 'English',
+        name: 'en',
+        title: 'English',
         flag: 'icon-[emojione--flag-for-united-states]',
     });
 
-    handleLanguageChange(language: string): void {
-        console.log(language);
+    handleLanguageChange(name: string): void {
+        console.log(name);
     }
 }

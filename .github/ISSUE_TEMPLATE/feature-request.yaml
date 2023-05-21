@@ -1,0 +1,51 @@
+name: Feature Request
+description: Suggest an idea for this project
+
+title: 'Feature Request: [Enter a brief summary of your request]'
+
+body:
+  - type: checkboxes
+    attributes:
+      label: Is there an existing issue for this?
+      description: Please search to see if an issue already exists for the feature you are requesting.
+      options:
+        - label: I have searched the existing issues.
+          required: true
+
+  - type: textarea
+    id: feature-behavior
+    attributes:
+      label: Describe the problem your feature request solves.
+      description: A clear and concise description of what the problem is.
+      placeholder: For example, "I'm always frustrated when..."
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Describe the solution you would like.
+      placeholder: A clear and concise description of what you want to happen.
+
+  - type: textarea
+    id: solution-alternatives
+    attributes:
+      label: Describe any alternative solutions or features you have considered.
+      render: markdown
+      placeholder: A clear and concise description of the current behavior. [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/juanmesa2097/angular-boilerplate)
+      validations:
+        required: true
+
+  - type: textarea
+    id: other
+    attributes:
+      label: Additional context
+      description: Please provide any links or references that will give us more context about the feature you are requesting.
+
+  - Type: Dropdown
+    id: contribution
+    Attributes:
+      Label: Would you like to make a pull request for this feature?
+      Options:
+        - 'Yes 🚀'
+        - 'No'
+      Validations:
+        Required: true

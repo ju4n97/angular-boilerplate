@@ -1,1 +1,1 @@
-export * from './package-json.token';
+export * from './package-json.provider';

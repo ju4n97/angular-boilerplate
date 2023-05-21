@@ -1,0 +1,73 @@
+name: Bug Report
+description: Report a bug on this project
+
+title: 'Bug Report: [Enter a brief summary of the bug]'
+
+body:
+  - type: checkboxes
+    attributes:
+      label: Is there an existing issue for this?
+      description: Please search to see if an issue already exists for the bug you encountered.
+      options:
+        - label: I have searched the existing issues.
+          required: true
+
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: Current behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: input
+    id: reproduction
+    attributes:
+      label: Please provide a link to a minimal reproduction of the bug. [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/juanmesa2097/angular-boilerplate)
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Please provide the environment you discovered this bug in
+      render: markdown
+      value: |
+        Angular: 
+        Node: 
+        Package Manager: 
+        OS:
+
+  - type: textarea
+    id: browser
+    attributes:
+      label: Browser
+      render: markdown
+      placeholder: |
+        Brave (desktop/Android/iOS) version XX
+        Chrome (desktop/Android/iOS) version XX
+        Firefox version XX
+        Safari (desktop/iOS) version XX        
+        Edge version XX
+
+  - type: textarea
+    id: other
+    attributes:
+      label: Additional context
+      description: Please provide any links or references that will give us more context about the feature you are requesting.
+
+  - Type: Dropdown
+    id: contribution
+    Attributes:
+      Label: Would you like to make a pull request for this feature?
+      Options:
+        - 'Yes 🚀'
+        - 'No'
+      Validations:
+        Required: true

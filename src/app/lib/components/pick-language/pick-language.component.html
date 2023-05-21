@@ -4,7 +4,9 @@
 >
     <span class="{{ currentLanguage().flag }} !text-2xl"></span>
 
-    {{ currentLanguage().name }}
+    {{ currentLanguage().title }}
+
+    <span class="icon-[bx--bxs-chevron-down] ml-2 !text-lg"></span>
 </button>
 
 <ng-template #menu>
@@ -18,7 +20,7 @@
         >
             <span class="{{ language.flag }} text-xl"></span>
 
-            {{ language.name | titlecase }}
+            {{ language.title | titlecase }}
         </button>
     </div>
 </ng-template>

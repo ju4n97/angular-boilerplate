@@ -1,8 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AuthService } from '@lib/services';
-import { ThemeService } from '@lib/services/theme';
 import { LayoutHorizontalComponent } from './lib/components/layouts/layout-horizontal/layout-horizontal.component';
 
 @Component({
@@ -11,13 +10,8 @@ import { LayoutHorizontalComponent } from './lib/components/layouts/layout-horiz
     imports: [CommonModule, RouterModule, LayoutHorizontalComponent],
     templateUrl: './app.component.html',
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
     private readonly _authService = inject(AuthService);
-    private readonly _themeService = inject(ThemeService);
 
     isAuthenticated = this._authService.isAuthenticated;
-
-    ngOnInit(): void {
-        this._themeService.initialize();
-    }
 }
