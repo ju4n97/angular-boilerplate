@@ -9,7 +9,8 @@ export const routes: Routes = [
     },
     {
         path: '',
-        loadChildren: async () => (await import('@pages/home')).routes,
+        title: 'Home',
+        loadComponent: async () => (await import('@pages/home')).HomeComponent,
         canMatch: [authGuard()],
     },
     {
@@ -24,6 +25,6 @@ export const routes: Routes = [
     },
     {
         path: '**',
-        loadComponent: async () => (await import('@pages/screens/not-found/not-found.component')).NotFoundComponent,
+        loadComponent: async () => (await import('@pages/screens')).NotFoundComponent,
     },
 ];

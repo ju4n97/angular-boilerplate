@@ -1,0 +1,271 @@
+:root {
+    --color-background: theme('colors.slate.50');
+    --color-background-accent: theme('colors.slate.100');
+    --color-foreground: theme('colors.slate.800');
+    --color-foreground-accent: theme('colors.slate.600');
+    --color-border: theme('colors.slate.200');
+    --color-primary-50: theme('colors.blue.50');
+    --color-primary-100: theme('colors.blue.100');
+    --color-primary-200: theme('colors.blue.200');
+    --color-primary-300: theme('colors.blue.300');
+    --color-primary-400: theme('colors.blue.400');
+    --color-primary-500: theme('colors.blue.500');
+    --color-primary-600: theme('colors.blue.600');
+    --color-primary-700: theme('colors.blue.700');
+    --color-primary-800: theme('colors.blue.800');
+    --color-primary-900: theme('colors.blue.900');
+    --color-primary-950: theme('colors.blue.950');
+    --rounded: theme('borderRadius.lg');
+    --font-size-h1: theme('fontSize.4xl');
+    --font-size-h2: theme('fontSize.3xl');
+    --font-size-h3: theme('fontSize.2xl');
+    --font-size-h4: theme('fontSize.xl');
+    --font-size-h5: theme('fontSize.lg');
+    --font-size-h6: theme('fontSize.base');
+    --font-size-body: theme('fontSize.base');
+
+    &.dark {
+        --color-background: theme('colors.zinc.900');
+        --color-background-accent: theme('colors.zinc.800');
+        --color-foreground: theme('colors.zinc.300');
+        --color-foreground-accent: theme('colors.zinc.400');
+        --color-border: theme('colors.zinc.800');
+
+        color-scheme: dark;
+    }
+
+    /* color primary */
+    &[data-primary-color='green'] {
+        --color-primary-50: theme('colors.green.50');
+        --color-primary-100: theme('colors.green.100');
+        --color-primary-200: theme('colors.green.200');
+        --color-primary-300: theme('colors.green.300');
+        --color-primary-400: theme('colors.green.400');
+        --color-primary-500: theme('colors.green.500');
+        --color-primary-600: theme('colors.green.600');
+        --color-primary-700: theme('colors.green.700');
+        --color-primary-800: theme('colors.green.800');
+        --color-primary-900: theme('colors.green.900');
+        --color-primary-950: theme('colors.green.950');
+    }
+    
+    &[data-primary-color='teal'] {
+        --color-primary-50: theme('colors.teal.50');
+        --color-primary-100: theme('colors.teal.100');
+        --color-primary-200: theme('colors.teal.200');
+        --color-primary-300: theme('colors.teal.300');
+        --color-primary-400: theme('colors.teal.400');
+        --color-primary-500: theme('colors.teal.500');
+        --color-primary-600: theme('colors.teal.600');
+        --color-primary-700: theme('colors.teal.700');
+        --color-primary-800: theme('colors.teal.800');
+        --color-primary-900: theme('colors.teal.900');
+        --color-primary-950: theme('colors.teal.950');
+    }
+
+    &[data-primary-color='lime'] {
+        --color-primary-50: theme('colors.lime.50');
+        --color-primary-100: theme('colors.lime.100');
+        --color-primary-200: theme('colors.lime.200');
+        --color-primary-300: theme('colors.lime.300');
+        --color-primary-400: theme('colors.lime.400');
+        --color-primary-500: theme('colors.lime.500');
+        --color-primary-600: theme('colors.lime.600');
+        --color-primary-700: theme('colors.lime.700');
+        --color-primary-800: theme('colors.lime.800');
+        --color-primary-900: theme('colors.lime.900');
+        --color-primary-950: theme('colors.lime.950');
+    }
+    
+    &[data-primary-color='blue'] {
+        --color-primary-50: theme('colors.blue.50');
+        --color-primary-100: theme('colors.blue.100');
+        --color-primary-200: theme('colors.blue.200');
+        --color-primary-300: theme('colors.blue.300');
+        --color-primary-400: theme('colors.blue.400');
+        --color-primary-500: theme('colors.blue.500');
+        --color-primary-600: theme('colors.blue.600');
+        --color-primary-700: theme('colors.blue.700');
+        --color-primary-800: theme('colors.blue.800');
+        --color-primary-900: theme('colors.blue.900');
+        --color-primary-950: theme('colors.blue.950');
+    }
+
+    &[data-primary-color='indigo'] {
+        --color-primary-50: theme('colors.indigo.50');
+        --color-primary-100: theme('colors.indigo.100');
+        --color-primary-200: theme('colors.indigo.200');
+        --color-primary-300: theme('colors.indigo.300');
+        --color-primary-400: theme('colors.indigo.400');
+        --color-primary-500: theme('colors.indigo.500');
+        --color-primary-600: theme('colors.indigo.600');
+        --color-primary-700: theme('colors.indigo.700');
+        --color-primary-800: theme('colors.indigo.800');
+        --color-primary-900: theme('colors.indigo.900');
+        --color-primary-950: theme('colors.indigo.950');
+    }
+
+    &[data-primary-color='purple'] {
+        --color-primary-50: theme('colors.purple.50');
+        --color-primary-100: theme('colors.purple.100');
+        --color-primary-200: theme('colors.purple.200');
+        --color-primary-300: theme('colors.purple.300');
+        --color-primary-400: theme('colors.purple.400');
+        --color-primary-500: theme('colors.purple.500');
+        --color-primary-600: theme('colors.purple.600');
+        --color-primary-700: theme('colors.purple.700');
+        --color-primary-800: theme('colors.purple.800');
+        --color-primary-900: theme('colors.purple.900');
+        --color-primary-950: theme('colors.purple.950');
+    }
+   
+    &[data-primary-color='violet'] {
+        --color-primary-50: theme('colors.violet.50');
+        --color-primary-100: theme('colors.violet.100');
+        --color-primary-200: theme('colors.violet.200');
+        --color-primary-300: theme('colors.violet.300');
+        --color-primary-400: theme('colors.violet.400');
+        --color-primary-500: theme('colors.violet.500');
+        --color-primary-600: theme('colors.violet.600');
+        --color-primary-700: theme('colors.violet.700');
+        --color-primary-800: theme('colors.violet.800');
+        --color-primary-900: theme('colors.violet.900');
+        --color-primary-950: theme('colors.violet.950');
+    }
+
+    &[data-primary-color='yellow'] {
+        --color-primary-50: theme('colors.yellow.50');
+        --color-primary-100: theme('colors.yellow.100');
+        --color-primary-200: theme('colors.yellow.200');
+        --color-primary-300: theme('colors.yellow.300');
+        --color-primary-400: theme('colors.yellow.400');
+        --color-primary-500: theme('colors.yellow.500');
+        --color-primary-600: theme('colors.yellow.600');
+        --color-primary-700: theme('colors.yellow.700');
+        --color-primary-800: theme('colors.yellow.800');
+        --color-primary-900: theme('colors.yellow.900');
+        --color-primary-950: theme('colors.yellow.950');
+    }
+
+    &[data-primary-color='amber'] {
+        --color-primary-50: theme('colors.amber.50');
+        --color-primary-100: theme('colors.amber.100');
+        --color-primary-200: theme('colors.amber.200');
+        --color-primary-300: theme('colors.amber.300');
+        --color-primary-400: theme('colors.amber.400');
+        --color-primary-500: theme('colors.amber.500');
+        --color-primary-600: theme('colors.amber.600');
+        --color-primary-700: theme('colors.amber.700');
+        --color-primary-800: theme('colors.amber.800');
+        --color-primary-900: theme('colors.amber.900');
+        --color-primary-950: theme('colors.amber.950');
+    }
+
+    &[data-primary-color='pink'] {
+        --color-primary-50: theme('colors.pink.50');
+        --color-primary-100: theme('colors.pink.100');
+        --color-primary-200: theme('colors.pink.200');
+        --color-primary-300: theme('colors.pink.300');
+        --color-primary-400: theme('colors.pink.400');
+        --color-primary-500: theme('colors.pink.500');
+        --color-primary-600: theme('colors.pink.600');
+        --color-primary-700: theme('colors.pink.700');
+        --color-primary-800: theme('colors.pink.800');
+        --color-primary-900: theme('colors.pink.900');
+        --color-primary-950: theme('colors.pink.950');
+    }
+
+    &[data-primary-color='red'] {
+        --color-primary-50: theme('colors.red.50');
+        --color-primary-100: theme('colors.red.100');
+        --color-primary-200: theme('colors.red.200');
+        --color-primary-300: theme('colors.red.300');
+        --color-primary-400: theme('colors.red.400');
+        --color-primary-500: theme('colors.red.500');
+        --color-primary-600: theme('colors.red.600');
+        --color-primary-700: theme('colors.red.700');
+        --color-primary-800: theme('colors.red.800');
+        --color-primary-900: theme('colors.red.900');
+        --color-primary-950: theme('colors.red.950');
+    }
+
+    &[data-primary-color='rose'] {
+        --color-primary-50: theme('colors.rose.50');
+        --color-primary-100: theme('colors.rose.100');
+        --color-primary-200: theme('colors.rose.200');
+        --color-primary-300: theme('colors.rose.300');
+        --color-primary-400: theme('colors.rose.400');
+        --color-primary-500: theme('colors.rose.500');
+        --color-primary-600: theme('colors.rose.600');
+        --color-primary-700: theme('colors.rose.700');
+        --color-primary-800: theme('colors.rose.800');
+        --color-primary-900: theme('colors.rose.900');
+        --color-primary-950: theme('colors.rose.950');
+    }
+
+    /* border radius */
+    &[data-rounded='none'] {
+        --rounded: theme('borderRadius.none');
+    }
+    
+    &[data-rounded='sm'] {
+        --rounded: theme('borderRadius.sm');
+    }
+    
+    &[data-rounded='md'] {
+        --rounded: theme('borderRadius.md');
+    }
+    
+    &[data-rounded='lg'] {
+        --rounded: theme('borderRadius.lg');
+    }
+    
+    &[data-rounded='xl'] {
+        --rounded: theme('borderRadius.xl');
+    }
+    
+    &[data-rounded='2xl'] {
+        --rounded: theme('borderRadius.2xl');
+    }
+    
+    &[data-rounded='3xl'] {
+        --rounded: theme('borderRadius.3xl');
+    }
+    
+    &[data-rounded='full'] {
+        --rounded: theme('borderRadius.full');
+    }
+
+    /* font size */    
+    &[data-font-size='sm'] {
+        --font-size-h1: theme('fontSize.3xl');
+        --font-size-h2: theme('fontSize.2xl');
+        --font-size-h3: theme('fontSize.xl');
+        --font-size-h4: theme('fontSize.lg');
+        --font-size-h5: theme('fontSize.base');
+        --font-size-h6: theme('fontSize.sm');
+        --font-size-body: theme('fontSize.sm');
+    }
+    
+    &[data-font-size='base'] {
+        --font-size-h1: theme('fontSize.4xl');
+        --font-size-h2: theme('fontSize.3xl');
+        --font-size-h3: theme('fontSize.2xl');
+        --font-size-h4: theme('fontSize.xl');
+        --font-size-h5: theme('fontSize.lg');
+        --font-size-h6: theme('fontSize.base');
+        --font-size-body: theme('fontSize.base');
+    }
+    
+    &[data-font-size='lg'] {
+        --font-size-h1: theme('fontSize.5xl');
+        --font-size-h2: theme('fontSize.4xl');
+        --font-size-h3: theme('fontSize.3xl');
+        --font-size-h4: theme('fontSize.2xl');
+        --font-size-h5: theme('fontSize.xl');
+        --font-size-h6: theme('fontSize.lg');
+        --font-size-body: theme('fontSize.lg');
+    }
+
+    @apply bg-color-base text-color-base;
+}

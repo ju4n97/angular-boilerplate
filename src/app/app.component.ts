@@ -12,11 +12,12 @@ import { LayoutHorizontalComponent } from './lib/components/layouts/layout-horiz
     templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {
-    isAuthenticated$ = inject(AuthService).isAuthenticated$;
-
+    private readonly _authService = inject(AuthService);
     private readonly _themeService = inject(ThemeService);
 
+    isAuthenticated = this._authService.isAuthenticated;
+
     ngOnInit(): void {
-        this._themeService.init();
+        this._themeService.initialize();
     }
 }

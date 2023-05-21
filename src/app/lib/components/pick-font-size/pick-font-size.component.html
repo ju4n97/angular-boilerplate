@@ -1,0 +1,21 @@
+<button
+    [cdkMenuTriggerFor]="menu"
+    class="button"
+>
+    <span class="icon-[iconoir--font-size]"></span>
+
+    {{ currentFontSize() | titlecase }}
+</button>
+
+<ng-template #menu>
+    <div cdkMenu>
+        <button
+            *ngFor="let fontSize of availableFontSizes"
+            cdkMenuItemRadio
+            [cdkMenuItemChecked]="fontSize === currentFontSize()"
+            (cdkMenuItemTriggered)="handleFontSizeChange(fontSize)"
+        >
+            {{ fontSize | titlecase }}
+        </button>
+    </div>
+</ng-template>

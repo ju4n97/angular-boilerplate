@@ -1,1 +1,5 @@
-<p>account works!</p>
+<ng-container *ngIf="session() as session">
+    <p>User: {{ session.user.username }}</p>
+    <p>Email: {{ session.user.email }}</p>
+    <p>Role: {{ session.user.role }}</p>
+</ng-container>

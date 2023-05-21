@@ -1,0 +1,24 @@
+<button
+    [cdkMenuTriggerFor]="menu"
+    class="button"
+>
+    <span class="{{ currentLanguage().flag }} !text-2xl"></span>
+
+    {{ currentLanguage().name }}
+</button>
+
+<ng-template #menu>
+    <div cdkMenu>
+        <button
+            *ngFor="let language of availableLanguages"
+            class="flex items-center gap-2"
+            cdkMenuItemRadio
+            [cdkMenuItemChecked]="language.name === currentLanguage().name"
+            (cdkMenuItemTriggered)="handleLanguageChange(language.name)"
+        >
+            <span class="{{ language.flag }} text-xl"></span>
+
+            {{ language.name | titlecase }}
+        </button>
+    </div>
+</ng-template>

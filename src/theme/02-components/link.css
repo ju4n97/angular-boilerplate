@@ -1,17 +1,23 @@
 a.link {
-    @apply font-semibold;
-    @apply text-indigo-500 dark:text-indigo-300;
-}
+    @apply text-xs font-medium;
+    @apply text-primary-700 dark:text-primary-100;
 
-a.link:hover {
-    @apply underline;
-    @apply text-indigo-400;
-}
+    &:hover {
+        @apply underline;
+        @apply text-primary-600 dark:text-primary-50;
+    }
 
-a.link:focus {
-    @apply text-indigo-800 dark:text-indigo-400;
-}
+    &:focus {
+        @apply underline;
+        @apply text-primary-600 dark:text-primary-50;
+    }
 
-a.link:visited {
-    @apply text-rose-500 dark:text-rose-400;
+    &:visited {
+        @apply text-primary-800 dark:text-primary-50;
+    }
+
+    /* variants */
+    &.link-ext {
+        @apply after:content-['_↗'];
+    }
 }

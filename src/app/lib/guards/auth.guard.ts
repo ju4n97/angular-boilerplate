@@ -40,21 +40,23 @@ const defaultAuthGuardOptions = (): AuthGuardOptions => ({
  *   },
  * ];
  */
-export const authGuard = (options: AuthGuardOptions = defaultAuthGuardOptions()): CanMatchFn => {
+export const authGuard = ({ requiresAuthentication } = defaultAuthGuardOptions()): CanMatchFn => {
     return (_: Route, segments: UrlSegment[]) => {
         const router = inject(Router);
         const authService = inject(AuthService);
 
-        if (options.requiresAuthentication === authService.isAuthenticated) {
-            return true;
+        const isAuthenticated = authService.isAuthenticated();
+
+        if (requiresAuthentication && !isAuthenticated) {
+            return router.createUrlTree(['/auth/login'], {
+                queryParams: { returnUrl: segments.map((s) => s.path).join('/') },
+            });
         }
 
-        return options.requiresAuthentication
-            ? router.createUrlTree(['/auth/login'], {
-                  queryParams: {
-                      returnUrl: segments.map((s) => s.path).join('/'),
-                  },
-              })
-            : router.createUrlTree(['/']);
+        if (!requiresAuthentication && isAuthenticated) {
+            return router.createUrlTree(['/']);
+        }
+
+        return true;
     };
 };

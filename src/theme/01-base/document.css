@@ -1,14 +1,13 @@
+:root {
+    font-synthesis: none;
+    text-rendering: optimizelegibility;
+    text-size-adjust: 100%;
+
+    @apply font-sans text-body font-normal leading-6;
+    @apply antialiased;
+}
+
 html,
 body {
     @apply h-full;
-}
-
-body {
-    @apply bg-slate-100;
-    @apply text-slate-900;
-}
-
-body.dark {
-    @apply bg-zinc-900;
-    @apply text-zinc-200;
 }

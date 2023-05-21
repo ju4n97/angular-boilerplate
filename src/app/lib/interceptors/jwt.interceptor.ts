@@ -14,7 +14,7 @@ import { AuthService } from '@lib/services';
 export const jwtInterceptor: HttpInterceptorFn = (request, next) => {
     const authService = inject(AuthService);
 
-    const isRequestAuthorized = authService.isAuthenticated && request.url.startsWith(environment.apiUrl);
+    const isRequestAuthorized = authService.isAuthenticated() && request.url.startsWith(environment.apiUrl);
 
     if (isRequestAuthorized) {
         const clonedRequest = request.clone({

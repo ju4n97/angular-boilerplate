@@ -1,0 +1,23 @@
+<div class="flex flex-wrap gap-2">
+    <label
+        *ngFor="let color of availablePrimaryColors"
+        role="button"
+        tabindex="0"
+        [title]="color | titlecase"
+        class="button"
+        [ngClass]="{
+            'button-primary': color === currentPrimaryColor()
+        }"
+    >
+        <input
+            type="radio"
+            name="schema"
+            [checked]="color === currentPrimaryColor()"
+            [ngModel]="color"
+            (ngModelChange)="handlePrimaryColorChange(color)"
+            class="hidden"
+        />
+
+        <span class="icon-[ic--twotone-invert-colors] text-{{ color }}-500"></span>
+    </label>
+</div>

@@ -1,15 +1,17 @@
+@import url('@angular/cdk/overlay-prebuilt.css');
+
 /* base */
-@import './tailwindcss/base.css';
-@import './01-base/variables.css';
-@import './01-base/document.css';
-@import './01-base/font.css';
-@import './01-base/heading.css';
+@import url('./tailwindcss/base.css');
+@import url('./01-base/theme.css');
+@import url('./01-base/document.css');
+@import url('./01-base/heading.css');
 
 /* components */
-@import './tailwindcss/components.css';
-@import './02-components/link.css';
-@import './02-components/button.css';
+@import url('./tailwindcss/components.css');
+@import url('./02-components/link.css');
+@import url('./02-components/button.css');
+@import url('./02-components/menu.css');
 
 /* utilities */
-@import './tailwindcss/utilities.css';
-@import './03-utilities/border.css';
+@import url('./tailwindcss/utilities.css');
+@import url('./03-utilities/divider.css');

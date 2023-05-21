@@ -14,5 +14,6 @@ import { LogoComponent } from '../logo/logo.component';
 })
 export class FooterComponent {
     readonly packageJson = inject(PACKAGE_JSON);
+
     readonly currentYear = new Date().getFullYear();
 }

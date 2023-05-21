@@ -1,0 +1,3 @@
+.divider {
+    @apply my-2 border-t border-color-base;
+}

@@ -1,1 +1,107 @@
-Accessibility works!
+<section class="mx-auto max-w-3xl">
+    <header class="mb-12 text-center font-serif overline">
+        <h2 class="font-serif">Prose with Serif</h2>
+    </header>
+    <article class="prose prose-2xl prose-stone max-w-none font-serif dark:prose-invert prose-headings:font-serif">
+        <h1>Garlic bread with cheese: What the science tells us</h1>
+        <p>
+            For years parents have espoused the health benefits of eating garlic bread with cheese to their children,
+            with the food earning such an iconic status in our culture that kids will often dress up as warm, cheesy
+            loaf for Halloween.
+        </p>
+        <p>
+            But a recent study shows that the celebrated appetizer may be linked to a series of rabies cases springing
+            up around the country.
+        </p>
+    </article>
+</section>
+
+<section class="mx-auto mt-16 max-w-3xl">
+    <header class="mb-12 text-center overline">
+        <h2 class="font-sans">Prose with Sans Serif</h2>
+    </header>
+    <article class="prose prose-2xl prose-stone max-w-none font-sans dark:prose-invert prose-headings:font-sans">
+        <h1>Garlic bread with cheese: What the science tells us</h1>
+        <p>
+            For years parents have espoused the health benefits of eating garlic bread with cheese to their children,
+            with the food earning such an iconic status in our culture that kids will often dress up as warm, cheesy
+            loaf for Halloween.
+        </p>
+        <p>
+            But a recent study shows that the celebrated appetizer may be linked to a series of rabies cases springing
+            up around the country.
+        </p>
+    </article>
+</section>
+
+<section class="mx-auto mt-16 max-w-3xl">
+    <header class="mb-12 text-center overline">
+        <h2 class="font-handwriting">Prose with Handwriting</h2>
+    </header>
+    <article
+        class="prose prose-2xl prose-stone max-w-none font-handwriting dark:prose-invert prose-headings:font-handwriting"
+    >
+        <h1>Garlic bread with cheese: What the science tells us</h1>
+        <p>
+            For years parents have espoused the health benefits of eating garlic bread with cheese to their children,
+            with the food earning such an iconic status in our culture that kids will often dress up as warm, cheesy
+            loaf for Halloween.
+        </p>
+        <p>
+            But a recent study shows that the celebrated appetizer may be linked to a series of rabies cases springing
+            up around the country.
+        </p>
+    </article>
+</section>
+
+<section class="mx-auto mt-16 max-w-3xl">
+    <header class="mb-12 text-center overline">
+        <h2 class="font-mono">Code block with Monospace</h2>
+    </header>
+
+    <form
+        [formGroup]="form"
+        class="my-4 flex items-center justify-center gap-4"
+    >
+        <label>
+            <input
+                type="radio"
+                formControlName="algorithm"
+                value="factorial"
+                class="mr-1"
+            />
+
+            Factorial
+        </label>
+
+        <label>
+            <input
+                type="radio"
+                formControlName="algorithm"
+                value="fibonacci"
+                class="mr-1"
+            />
+
+            Fibonacci
+        </label>
+
+        <label>
+            <input
+                type="radio"
+                formControlName="algorithm"
+                value="bubbleSort"
+                class="mr-1"
+            />
+
+            Bubble Sort
+        </label>
+    </form>
+
+    <div class="overflow-auto rounded-base bg-gradient-to-br from-lime-900 via-rose-950 to-blue-950 text-white">
+        <pre contenteditable>
+            <code>
+            {{ selectedAlgorithm() }}
+            </code>
+        </pre>
+    </div>
+</section>

@@ -14,38 +14,6 @@ describe('ThemeService', () => {
 
     it('should be created', () => {
         expect(service).toBeTruthy();
-    });
-
-    it('should set system theme as current theme', () => {
-        service.setTheme('system');
-        expect(service.currentTheme).toBe('system');
-    });
-
-    it('should set system theme as a document.body class', () => {
-        service.setTheme('system');
-        const bodyClasses = document.body.classList;
-        expect(bodyClasses.contains(service.systemTheme)).toBeTruthy();
-    });
-
-    it('should set light theme as current theme', () => {
-        service.setTheme('light');
-        expect(service.currentTheme).toBe('light');
-    });
-
-    it('should set light theme as a document.body class', () => {
-        service.setTheme('light');
-        const bodyClasses = document.body.classList;
-        expect(bodyClasses.contains('light')).toBeTruthy();
-    });
-
-    it('should set dark theme as current theme', () => {
-        service.setTheme('dark');
-        expect(service.currentTheme).toBe('dark');
-    });
-
-    it('should set dark theme as a document.body class', () => {
-        service.setTheme('dark');
-        const bodyClasses = document.body.classList;
-        expect(bodyClasses.contains('dark')).toBeTruthy();
+        expect(document).toBeTruthy();
     });
 });

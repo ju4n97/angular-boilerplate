@@ -1,3 +1,8 @@
-import { AppTheme } from './services/theme';
-
-export const DEFAULT_BASE_THEME: AppTheme = 'system' as const;
+export const STORAGE = {
+    session: 'session',
+    theme: {
+        schema: 'theme::schema',
+        fontSize: 'theme::fontSize',
+        primaryColor: 'theme::primaryColor',
+    },
+} as const;
