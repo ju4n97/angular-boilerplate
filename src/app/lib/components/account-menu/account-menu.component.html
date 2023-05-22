@@ -1,6 +1,7 @@
 <ng-container *ngIf="currentSession() as session">
     <button
         [cdkMenuTriggerFor]="menu"
+        [cdkMenuPosition]="menuPosition"
         class="button"
     >
         <span class="icon-[ph--fingerprint] !text-2xl"></span>

@@ -1,4 +1,5 @@
 import { CdkMenuModule } from '@angular/cdk/menu';
+import { ConnectionPositionPair } from '@angular/cdk/overlay';
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
@@ -23,6 +24,19 @@ import { PickSchemaComponent } from '../pick-schema/pick-schema.component';
 export class AccountMenuComponent {
     private readonly _router = inject(Router);
     private readonly _authService = inject(AuthService);
+
+    readonly menuPosition = [
+        new ConnectionPositionPair(
+            {
+                originX: 'end',
+                originY: 'bottom',
+            },
+            {
+                overlayX: 'end',
+                overlayY: 'top',
+            },
+        ),
+    ];
 
     currentSession = this._authService.session;
 

@@ -1,6 +1,7 @@
 .cdk-menu {
+    @apply translate-y-3;
     @apply inline-flex flex-col;
-    @apply my-4 min-w-[200px] p-3;
+    @apply min-w-[200px] p-3;
     @apply border-color-base bg-color-base-accent;
     @apply rounded-base;
     @apply border border-color-base;

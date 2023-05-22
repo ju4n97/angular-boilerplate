@@ -1,4 +1,5 @@
 import { CdkMenuModule } from '@angular/cdk/menu';
+import { ConnectionPositionPair } from '@angular/cdk/overlay';
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
@@ -23,6 +24,19 @@ export class PickLanguageComponent {
     ]);
 
     private readonly _langChanges = toSignal(this._i18nService.langChanges$);
+
+    readonly menuPosition = [
+        new ConnectionPositionPair(
+            {
+                originX: 'end',
+                originY: 'bottom',
+            },
+            {
+                overlayX: 'end',
+                overlayY: 'top',
+            },
+        ),
+    ];
 
     availableLangs: ComposedLang[] = (this._i18nService.getAvailableLangs() as LangDefinition[]).map((lang) => {
         return {
