@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "settings": {
+      "title": "設定",
+      "items": {
+        "accessibility": "アクセシビリティ",
+        "account": "アカウント",
+        "appearance": "外観"
+      }
+    }
+  }
+}
