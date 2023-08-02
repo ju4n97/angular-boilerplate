@@ -5,24 +5,9 @@
         <nav class="flex items-center space-x-2">
             <app-pick-language></app-pick-language>
 
-            <ng-container *ngIf="isAuthenticated(); else notAuthenticated">
+            <ng-container *ngIf="isAuthenticated()">
                 <app-account-menu />
             </ng-container>
-
-            <ng-template #notAuthenticated>
-                <a
-                    [routerLink]="['/auth/login']"
-                    class="button button-sm button-text"
-                >
-                    Login
-                </a>
-                <a
-                    [routerLink]="['/auth/register']"
-                    class="button button-sm button-primary"
-                >
-                    Register
-                </a>
-            </ng-template>
         </nav>
     </div>
 </header>
