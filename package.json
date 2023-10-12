@@ -16,7 +16,8 @@
     "lint:staged": "pnpm lint-staged",
     "stylelint": "stylelint **/*.{css,pcss,less,scss,sass} --quiet-deprecation-warnings",
     "stylelint:fix": "stylelint **/*.{css,pcss,less,scss,sass} --quiet-deprecation-warnings --fix",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "cypress:open": "cypress open"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged",
@@ -24,7 +25,6 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "pnpm lint:fix",
       "pnpm prettier"
     ],
     "*.{css,pcss,less,scss,sass}": [
