@@ -13,16 +13,3 @@ Cypress.Commands.add('login', () => {
     window.localStorage.setItem('appSession', '{"user":"some-user-id","token":"abc"}');
     cy.visit('/');
 });
-
-declare global {
-    namespace Cypress {
-        interface Chainable {
-            /**
-             * Custom command to type a few random words into input elements
-             * @param count=3
-             * @example cy.get('input').typeRandomWords()
-             */
-            login(): Chainable<any>;
-        }
-    }
-}
