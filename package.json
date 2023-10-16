@@ -25,6 +25,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
+      "pnpm lint:fix",
       "pnpm prettier"
     ],
     "*.{css,pcss,less,scss,sass}": [
