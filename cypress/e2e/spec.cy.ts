@@ -5,19 +5,20 @@ describe('auth flow', () => {
     });
 
     it('Succesfully redirect to home when log in', () => {
-        cy.login()
+        cy.login();
         cy.location('pathname').should('eq', '/');
     });
 
     it('succesfully route to home if user is present in storage', () => {
-        cy.setAuthSession()
+        cy.setAuthSession();
         cy.visit('/');
         cy.location('pathname').should('eq', '/');
     });
 
     it('succesfully log out if logout button is pressed', () => {
-        cy.login()
-        cy.location('pathname').should('eq', '/');
+        cy.login();
+        cy.get('#logout-button').click();
+        cy.location('pathname').should('eq', '/auth/login');
     });
 });
 
