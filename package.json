@@ -10,14 +10,14 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "test:e2e": "cypress open",
     "test:headless": "ng test --watch=false --browsers ChromeHeadless",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:staged": "pnpm lint-staged",
     "stylelint": "stylelint **/*.{css,pcss,less,scss,sass} --quiet-deprecation-warnings",
     "stylelint:fix": "stylelint **/*.{css,pcss,less,scss,sass} --quiet-deprecation-warnings --fix",
-    "format": "prettier --write .",
-    "cypress:open": "cypress open"
+    "format": "prettier --write ."
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged",
