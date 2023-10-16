@@ -10,6 +10,10 @@
 // ***********************************************
 
 Cypress.Commands.add('login', () => {
+    cy.visit('/auth/login');
+    cy.get('#login-button').click();
+});
+
+Cypress.Commands.add('setAuthSession', () => {
     window.localStorage.setItem('appSession', '{"user":"some-user-id","token":"abc"}');
-    cy.visit('/');
 });

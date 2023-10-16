@@ -4,15 +4,19 @@ describe('auth flow', () => {
         cy.location('pathname').should('eq', '/auth/login');
     });
 
-    it('Succesfully redirect to home at log in', () => {
-        cy.visit('/auth/login');
-        cy.get('#login-button').click();
+    it('Succesfully redirect to home when log in', () => {
+        cy.login()
         cy.location('pathname').should('eq', '/');
     });
 
     it('succesfully route to home if user is present in storage', () => {
-        window.localStorage.setItem('appSession', '{"user":"some-user-id","token":"abc"}');
+        cy.setAuthSession()
         cy.visit('/');
+        cy.location('pathname').should('eq', '/');
+    });
+
+    it('succesfully log out if logout button is pressed', () => {
+        cy.login()
         cy.location('pathname').should('eq', '/');
     });
 });

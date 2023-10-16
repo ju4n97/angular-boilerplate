@@ -8,5 +8,6 @@ declare namespace Cypress {
          * @example cy.get('input').typeRandomWords()
          */
         login(): Chainable<AUTWindow>;
+        setAuthSession(): Chainable<void>;
     }
 }
