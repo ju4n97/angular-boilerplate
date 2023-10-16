@@ -27,15 +27,13 @@ describe('home spec', () => {
         cy.login();
         const darkThemeBtn = cy.get('#theme-dark-button');
         darkThemeBtn.click();
-        cy.get('body').should('have.class', 'dark')
+        cy.get('body').should('have.class', 'dark');
     });
 
     it('Succesfully switch theme to light', () => {
         cy.login();
         const darkThemeBtn = cy.get('#theme-light-button');
         darkThemeBtn.click();
-        cy.get('body').should('have.class', 'light')
+        cy.get('body').should('have.class', 'light');
     });
-
 });
-

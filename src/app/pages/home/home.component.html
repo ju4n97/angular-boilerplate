@@ -4,22 +4,28 @@
     <h2 class="mb-4">Choose your theme</h2>
 
     <div class="flex flex-wrap gap-3 mb-6">
-        <button class="min-w-[150px] btn {{ currentTheme === 'system' ? 'btn-primary' : 'btn-secondary' }}"
-            (click)="handleThemeChange('system')">
+        <button
+            class="min-w-[150px] btn {{ currentTheme === 'system' ? 'btn-primary' : 'btn-secondary' }}"
+            (click)="handleThemeChange('system')"
+        >
             <span class="icon-[carbon--screen] text-2xl mr-2"></span>
 
             System
         </button>
-        <button id="theme-light-button"
+        <button
+            id="theme-light-button"
             class="min-w-[150px] btn {{ currentTheme === 'light' ? 'btn-primary' : 'btn-secondary' }}"
-            (click)="handleThemeChange('light')">
+            (click)="handleThemeChange('light')"
+        >
             <span class="icon-[carbon--sun] text-2xl mr-2"></span>
 
             Light
         </button>
-        <button id="theme-dark-button"
+        <button
+            id="theme-dark-button"
             class="min-w-[150px] btn {{ currentTheme === 'dark' ? 'btn-primary' : 'btn-secondary' }}"
-            (click)="handleThemeChange('dark')">
+            (click)="handleThemeChange('dark')"
+        >
             <span class="icon-[carbon--moon] text-2xl mr-2"></span>
 
             Dark
@@ -30,17 +36,26 @@
         <h3 class="h5">Settings</h3>
         <ul>
             <li>
-                <a class="text-sm link" [routerLink]="'/settings/accessibility'">
+                <a
+                    class="text-sm link"
+                    [routerLink]="'/settings/accessibility'"
+                >
                     Accessibility
                 </a>
             </li>
             <li>
-                <a class="text-sm link" [routerLink]="'/settings/account'">
+                <a
+                    class="text-sm link"
+                    [routerLink]="'/settings/account'"
+                >
                     Account
                 </a>
             </li>
             <li>
-                <a class="text-sm link" [routerLink]="'/settings/appearance'">
+                <a
+                    class="text-sm link"
+                    [routerLink]="'/settings/appearance'"
+                >
                     Appearance
                 </a>
             </li>
@@ -51,17 +66,29 @@
         <h3 class="h5">Profiles</h3>
         <ul>
             <li>
-                <a class="text-sm link" [routerLink]="'/users/maria'" text-sm>
+                <a
+                    class="text-sm link"
+                    [routerLink]="'/users/maria'"
+                    text-sm
+                >
                     Maria
                 </a>
             </li>
             <li>
-                <a class="text-sm link" [routerLink]="'/users/pedro'" text-sm>
+                <a
+                    class="text-sm link"
+                    [routerLink]="'/users/pedro'"
+                    text-sm
+                >
                     Pedro
                 </a>
             </li>
             <li>
-                <a class="text-sm link" [routerLink]="'/users/sara'" text-sm>
+                <a
+                    class="text-sm link"
+                    [routerLink]="'/users/sara'"
+                    text-sm
+                >
                     Sara
                 </a>
             </li>
