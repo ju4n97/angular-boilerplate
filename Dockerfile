@@ -1,12 +1,15 @@
-# ;-------------;
-# ; Build stage ;
-# ;-------------;
-FROM node:20-alpine as builder
+FROM node:20-alpine as base
 
 WORKDIR /app
 
+# ;-------------;
+# ; Build stage ;
+# ;-------------;
+FROM base as builder
+
 RUN npm i -g pnpm
 
+COPY .npmrc package.json pnpm-lock.yaml ./
 COPY . .
 
 RUN --mount=type=cache,id=pnpm-store,target=/root/.pnpm-store \

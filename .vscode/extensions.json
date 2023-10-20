@@ -1,9 +1,3 @@
 {
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
-  "recommendations": [
-    "angular.ng-template",
-    "bradlc.vscode-tailwindcss",
-    "dbaeumer.vscode-eslint",
-    "stylelint.vscode-stylelint"
-  ]
+  "recommendations": ["angular.ng-template", "esbenp.prettier-vscode", "dbaeumer.vscode-eslint"]
 }

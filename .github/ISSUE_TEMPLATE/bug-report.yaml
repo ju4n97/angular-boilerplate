@@ -29,7 +29,7 @@ body:
   - type: input
     id: reproduction
     attributes:
-      label: Please provide a link to a minimal reproduction of the bug. [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/juanmesa2097/angular-boilerplate)
+      label: Please provide a link to a minimal reproduction of the bug. [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/jm2097/angular-boilerplate)
     validations:
       required: true
 

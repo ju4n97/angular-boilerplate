@@ -48,7 +48,7 @@
         --color-primary-900: theme('colors.green.900');
         --color-primary-950: theme('colors.green.950');
     }
-    
+
     &[data-primary-color='teal'] {
         --color-primary-50: theme('colors.teal.50');
         --color-primary-100: theme('colors.teal.100');
@@ -76,7 +76,7 @@
         --color-primary-900: theme('colors.lime.900');
         --color-primary-950: theme('colors.lime.950');
     }
-    
+
     &[data-primary-color='blue'] {
         --color-primary-50: theme('colors.blue.50');
         --color-primary-100: theme('colors.blue.100');
@@ -118,7 +118,7 @@
         --color-primary-900: theme('colors.purple.900');
         --color-primary-950: theme('colors.purple.950');
     }
-   
+
     &[data-primary-color='violet'] {
         --color-primary-50: theme('colors.violet.50');
         --color-primary-100: theme('colors.violet.100');
@@ -207,36 +207,36 @@
     &[data-rounded='none'] {
         --rounded: theme('borderRadius.none');
     }
-    
+
     &[data-rounded='sm'] {
         --rounded: theme('borderRadius.sm');
     }
-    
+
     &[data-rounded='md'] {
         --rounded: theme('borderRadius.md');
     }
-    
+
     &[data-rounded='lg'] {
         --rounded: theme('borderRadius.lg');
     }
-    
+
     &[data-rounded='xl'] {
         --rounded: theme('borderRadius.xl');
     }
-    
+
     &[data-rounded='2xl'] {
         --rounded: theme('borderRadius.2xl');
     }
-    
+
     &[data-rounded='3xl'] {
         --rounded: theme('borderRadius.3xl');
     }
-    
+
     &[data-rounded='full'] {
         --rounded: theme('borderRadius.full');
     }
 
-    /* font size */    
+    /* font size */
     &[data-font-size='sm'] {
         --font-size-h1: theme('fontSize.3xl');
         --font-size-h2: theme('fontSize.2xl');
@@ -246,7 +246,7 @@
         --font-size-h6: theme('fontSize.sm');
         --font-size-body: theme('fontSize.sm');
     }
-    
+
     &[data-font-size='base'] {
         --font-size-h1: theme('fontSize.4xl');
         --font-size-h2: theme('fontSize.3xl');
@@ -256,7 +256,7 @@
         --font-size-h6: theme('fontSize.base');
         --font-size-body: theme('fontSize.base');
     }
-    
+
     &[data-font-size='lg'] {
         --font-size-h1: theme('fontSize.5xl');
         --font-size-h2: theme('fontSize.4xl');

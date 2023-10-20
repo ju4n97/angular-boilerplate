@@ -30,7 +30,7 @@ body:
     attributes:
       label: Describe any alternative solutions or features you have considered.
       render: markdown
-      placeholder: A clear and concise description of the current behavior. [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/juanmesa2097/angular-boilerplate)
+      placeholder: A clear and concise description of the current behavior. [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/jm2097/angular-boilerplate)
       validations:
         required: true
 

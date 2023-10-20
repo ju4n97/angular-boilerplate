@@ -26,10 +26,10 @@
 
             <span
                 [ngClass]="{
-                'icon-[carbon--screen]': schema === SCHEMA.System,                    
-                'icon-[carbon--sun]': schema === SCHEMA.Light,                    
-                'icon-[carbon--moon]': schema === SCHEMA.Dark,                    
-            }"
+                    'icon-[carbon--screen]': schema === SCHEMA.System,
+                    'icon-[carbon--sun]': schema === SCHEMA.Light,
+                    'icon-[carbon--moon]': schema === SCHEMA.Dark
+                }"
             ></span>
 
             <span *ngIf="displayCaptions">
