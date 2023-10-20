@@ -13,7 +13,7 @@
             System
         </button>
         <button
-            id="theme-light-button"
+            data-cy="theme-light-button"
             class="min-w-[150px] btn {{ currentTheme === 'light' ? 'btn-primary' : 'btn-secondary' }}"
             (click)="handleThemeChange('light')"
         >
@@ -22,7 +22,7 @@
             Light
         </button>
         <button
-            id="theme-dark-button"
+            data-cy="theme-dark-button"
             class="min-w-[150px] btn {{ currentTheme === 'dark' ? 'btn-primary' : 'btn-secondary' }}"
             (click)="handleThemeChange('dark')"
         >

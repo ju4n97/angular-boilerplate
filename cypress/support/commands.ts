@@ -11,7 +11,7 @@
 
 Cypress.Commands.add('login', () => {
     cy.visit('/auth/login');
-    cy.get('#login-button').click();
+    cy.get('[data-cy="login-button"]').click();
 });
 
 Cypress.Commands.add('setAuthSession', () => {
