@@ -59,7 +59,7 @@ This opinionated Angular starter focuses on the latest Angular features and best
 ## ⚙ Prerequisites
 
 - Node.js ([^16.14.0 || ^18.10.0](https://angular.io/guide/versions)): <https://nodejs.org/en/>
-- PNPM: <https://pnpm.io/es/>
+- PNPM: <https://pnpm.io/>
 - Docker (optional): <https://www.docker.com/>
 
 ## 🏹 Start development
@@ -86,7 +86,7 @@ npx degit juanmesa2097/angular-boilerplate my-app && cd my-app && ./scripts/rena
 ### Install dependencies
 
 ```sh
-pnpm install # run `pnpm install -g pnpm` if you don't have pnpm installed
+pnpm install # run `npm install -g pnpm` if you don't have pnpm installed
 ```
 
 ### Run project
